@@ -1,5 +1,5 @@
 class KidsController < ApplicationController
-  before_action :set_kid, only: [:edit, :show, :update]
+  before_action :set_kid, only: [:edit, :show, :update, :profile]
   
   def show
     redirect_to profile_path(current_user) if @kid.nil? 
@@ -30,6 +30,9 @@ class KidsController < ApplicationController
     end
   end
   
+  def profile
+    @allowed_games = @kid.allowed_games
+  end
   private
   
   def kid_params
