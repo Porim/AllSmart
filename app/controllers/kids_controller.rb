@@ -2,6 +2,7 @@ class KidsController < ApplicationController
   before_action :set_kid, only: [:edit, :show, :update]
   
   def show
+    redirect_to profile_path(current_user) if @kid.nil? 
   end
   
   def edit

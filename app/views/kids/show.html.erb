@@ -11,7 +11,11 @@
       <%= @kid.age %>
     </li>
     <li>Allowed games:
-      <%= @kid.allowed_games %>
+      <ol>
+      <% @kid.allowed_games.each do |allowed_game| %>
+      <li>Title: <%= allowed_game.game.title %>. Subject: <%= allowed_game.game.subject %> </li>
+      <% end %>
+      </ol>
     </li>
     <li>Total_score:
       <%= @kid.total_score %>
