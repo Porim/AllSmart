@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>
+    <%= @kid.first_name.possessive %> Profile</h1>
+  <h3 class='py-3'>
+    <%= @kid.first_name.possessive %> summary</h3>
+  <ul>
+    <li>Name:
+      <%= @kid.first_name %>
+    </li>
+    <li>Age:
+      <%= @kid.age %>
+    </li>
+    <li>Allowed games:
+      <%= @kid.allowed_games %>
+    </li>
+    <li>Total_score:
+      <%= @kid.total_score %>
+    </li>
+  </ul>
+  <%= link_to 'Back to profile', profile_path(@current_user), class: 'btn btn-primary'  %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Edit
+    <%= @kid.first_name.possessive %> Profile </h1>
+  <%= simple_form_for [@kid] do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :age %>
+  <%= f.submit class: 'btn btn-primary'%>
+  <%= link_to 'Back to profile', profile_path(@current_user), class: 'btn btn-primary'  %>
+  <% end %>
+</div>
