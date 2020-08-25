@@ -1,0 +1,30 @@
+  
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path '' %>');">
+  <div class="banner-content">
+    <h1>Games</h1>
+    <p>Play a game and learn new skills!</p>
+  </div>
+</div>
+<div>
+  <%= form_tag games_path, id: "search-bar", method: :get do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Search by game subject"
+    %><%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+</div>
+<div class="container">
+  <div class="row">
+    <% @games.each do |game| %>
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?game');">
+          <div class="card-description">
+            <h2><%= game.title %></h2>
+          </div>
+          <%= link_to "", game_path(game), class: 'card-link' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
