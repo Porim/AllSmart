@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+#rocket {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(90deg);
+}
+
+#link-with-rocket {
+  transform: rotate(-90deg);
+}
+.banner { 
+position: relative; 
+width: 100%;
+// height: calc(100vh - 100vh / 4);
+// background: #42d1f5;
+}
