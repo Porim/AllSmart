@@ -4,15 +4,27 @@
   <h3 class='py-3'>Your kids</h3>
   <div class="p-2">
     <% @kids.each do |kid| %>
-    <p>
-      <%= kid.first_name %>
-      <%= link_to kid_path(kid) do  %>
-      <i class="fas fa-child p-1"></i>
+    <div class="card-product my-5">
+      <% if kid.photo.attached? %>
+        <%= cl_image_tag kid.photo.key %>
+      <% else %>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <% end %>
-      <%= link_to edit_kid_path(kid) do  %>
-      <i class="fas fa-pen p-1"></i>
-      <% end %>
-    </p>
+      <div class="card-product-infos">
+        <h2>
+          <%= kid.first_name %>
+        </h2>
+        <p>
+          <%= kid.first_name %>
+          <%= link_to kid_path(kid) do  %>
+          <i class="fas fa-child p-1"></i>
+          <% end %>
+          <%= link_to edit_kid_path(kid) do  %>
+          <i class="fas fa-pen p-1"></i>
+          <% end %>
+        </p>
+      </div>
+    </div>
     <% end %>
     <%= link_to new_kid_path do %>
     <i class="fas fa-plus-square"></i>
