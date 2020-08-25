@@ -1,0 +1,21 @@
+<div class="container p-5">
+  <h1>
+    <%= @user.first_name.possessive  %> Profile</h1>
+  <h3 class='py-3'>Your kids</h3>
+  <div class="p-2">
+    <% @kids.each do |kid| %>
+    <p>
+      <%= kid.first_name %>
+      <%= link_to kid_path(kid) do  %>
+      <i class="fas fa-child p-1"></i>
+      <% end %>
+      <%= link_to edit_kid_path(kid) do  %>
+      <i class="fas fa-pen p-1"></i>
+      <% end %>
+    </p>
+    <% end %>
+    <%= link_to new_kid_path do %>
+    <i class="fas fa-plus-square"></i>
+    <% end %>
+  </div>
+</div>
