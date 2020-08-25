@@ -1,7 +1,8 @@
 const myMove = () => {
-  var elem = document.getElementById("rocket");
-  var pos = 100;
-  var id = setInterval(frame, 10);
+  const elem = document.getElementById("rocket");
+  let pos = 100;
+  const id = setInterval(frame, 10);
+
   function frame() {
     if (pos == 1800) {
       clearInterval(id);
