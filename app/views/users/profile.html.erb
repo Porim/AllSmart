@@ -2,11 +2,12 @@
   <h1>
     <%= @user.first_name.possessive  %> Profile</h1>
   <h3 class='py-3'>Your kids</h3>
-  <div class="p-2">
+  <div class="p-2 d-flex justify-content-around align-items-center">
     <% @kids.each do |kid| %>
+    <%= link_to kid_path(kid) do  %>
     <div class="card-product my-5">
       <% if kid.photo.attached? %>
-        <%= cl_image_tag kid.photo.key %>
+      <%= cl_image_tag kid.photo.key %>
       <% else %>
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <% end %>
@@ -24,10 +25,12 @@
           <% end %>
         </p>
       </div>
+      <%= link_to 'Enter child mode', kids_profile_path(kid), class: 'btn btn-outline-success'  %>
     </div>
     <% end %>
-    <%= link_to new_kid_path do %>
-    <i class="fas fa-plus-square"></i>
     <% end %>
   </div>
+  <%= link_to new_kid_path do %>
+  <i class="fas fa-plus-square"></i>
+  <% end %>
 </div>
