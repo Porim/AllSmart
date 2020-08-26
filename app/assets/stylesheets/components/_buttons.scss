@@ -1,0 +1,53 @@
+.login-button {
+  font-family: sans-serif;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: white !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.call-to-action {
+  font-family: sans-serif;
+  border-radius: 25px;
+  padding: 14px 45px;
+  color: white !important;
+  font-weight: bold;
+  display: inline-block;
+  width: 180px;
+  text-align: center;
+  background: #E97235;
+}
+
+.call-to-action > * {
+color: white !important;
+text-decoration: none;
+}
+
+#get-started {
+  text-decoration: none;
+  transition: 0.3;
+}
+
+.orange {
+  background: #E97234;
+  border: none;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background:white;
+  color: #023033!important;
+};
+
+.orange:hover {
+  background: #C94727 !important;
+  color: white !important;
+};
+
+#get-started:hover {
+  background: #C94727 !important;
+};

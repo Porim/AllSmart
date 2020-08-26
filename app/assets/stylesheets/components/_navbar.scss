@@ -1,9 +1,10 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
-  padding-top: 8px;
-  padding-bottom: 6px;
-
+  background: transparent;
+  // padding-top: 8px;
+  // padding-bottom: 6px;  
+  width:100%;
+  padding: 24px;
 }
 
 
@@ -18,4 +19,8 @@
 .nav-link {
   color: #155263 !important;
 
+}
+
+#logo {
+  width: calc(100vw / 7);
 }
