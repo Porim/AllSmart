@@ -10,4 +10,11 @@ class AllowedGamesController < ApplicationController
       redirect_to games_path, notice: "Game wasn't added to the list"
     end
   end
+
+  def destroy
+    @allowed_game = AllowedGame.find(params[:id])
+    @kid = @allowed_game.kid
+    @allowed_game.destroy
+    redirect_to kid_path(@kid)
+  end
 end
