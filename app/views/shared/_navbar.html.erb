@@ -1,8 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag("allSmart.png") %>
-    <% end %>
+  <%= image_tag 'Logo with rocket', id: 'logo' %>
+  <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
     aria-expanded="false" aria-label="Toggle navigation">
@@ -26,12 +25,17 @@
         </div>
       </li>
       <% else %>
-      <li class="nav-item">
-        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Signup", new_user_registration_path, class: "nav-link" %>
-      </li>
+      <div class="d-flex align-items-center">
+        <li class="nav-item mx-2" id='about-us'>
+          <%= link_to "About Us", id: 'about-us'%>
+        </li>
+        <li class="nav-item mx-2">
+          <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
+        </li>
+        <li class="nav-item mx-2">
+          <%= link_to "SIGN UP", new_user_session_path, class: "nav-link login-button orange"%>
+        </li>
+      </div>
       <% end %>
     </ul>
   </div>

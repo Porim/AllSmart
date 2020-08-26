@@ -9,9 +9,42 @@
 #link-with-rocket {
   transform: rotate(-90deg);
 }
-.banner { 
-position: relative; 
-width: 100%;
-// height: calc(100vh - 100vh / 4);
-// background: #42d1f5;
+
+
+#bg-image-landing {
+  height: 100vh;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+}
+
+#about-us > * {
+  color: white !important;
+  font-size: 18px;
+  text-decoration: none !important;
+}
+
+#about-us:hover {
+     color: white !important;
+     text-decoration: underline;
+}
+
+.landing-banner {
+  text-align: center;
+  margin: 25vh auto;
+  width: 50%;
+}
+
+#banner-h1 {
+  color: white !important;
+  font-weight: bold;
+}
+
+#rocket-landing {
+  width: 215px;
+  height: 215px;
+  position: absolute;
+  transform: rotate(40deg);
+  top: 35vh;
+  left: 67vw;
 }
