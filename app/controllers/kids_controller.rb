@@ -33,6 +33,7 @@ class KidsController < ApplicationController
   def profile
     @allowed_games = @kid.allowed_games
   end
+
   private
   
   def kid_params
@@ -42,5 +43,4 @@ class KidsController < ApplicationController
   def set_kid
     @kid = Kid.find(params[:id]) 
   end
-  
 end
