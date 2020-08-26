@@ -22,8 +22,10 @@
           <div class="card-description">
             <h2><%= game.title %></h2>
           </div>
-          <%= link_to "", game_path(game), class: 'card-link' %>
         </div>
+        <% current_user.kids.each do |kid| %>
+          <%= link_to  "Add game",  kid_allowed_games_path(kid, game_id: game.id), method: :post %>
+        <% end %>
       </div>
     <% end %>
   </div>

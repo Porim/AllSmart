@@ -6,8 +6,8 @@ Rails.application.routes.draw do
 
   get "/profile", to: "users#profile", as: :profile
   get "/kids/:id/profile", to: "kids#profile", as: :kids_profile
-  resources :games, only: [:show, :index]
-  resources :kids, only: [:show, :create, :index, :edit, :update, :new] do
-  resources :allowed_games, only: [:index, :show, :create, :destroy, :new]
+  resources :games, only: [:index, :show]
+  resources :kids, only: [:show, :create, :edit, :update, :new] do
+    resources :allowed_games, only: [:create, :destroy]
   end
 end
