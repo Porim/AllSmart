@@ -27,7 +27,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://kit.fontawesome.com/62974421cf.js" crossorigin="anonymous"></script>
+  <script>
+  AOS.init()
+  </script>
 </head>
 
 <body>
@@ -37,14 +42,142 @@
     <div class="container landing-banner">
       <h1 id='banner-h1'>Play. Learn. Discover.</h1>
       <div class="login-button orange call-to-action mt-4">
-        <%= link_to 'Get Started', class: '"login-button orange call-to-action"'%>
+        <%= link_to 'Get Started', class: "login-button orange call-to-action"%>
       </div>
     </div>
     <%= cl_image_tag 'piifzgomj06non5hcq8qeip1jp21', id: 'rocket-landing' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <% else %>
   </div>
+  <div class="container mt-5 first-container">
+    <div class="row">
+      <div class="col-md-5 col-sm-12 d-flex align-items-center justify-content-center flex-column position-relative">
+        <h3 class='mb-1'>Encourage you child to learn with AllSmart -
+          in a smart way <span id='arrow' class='orange-arrow ml-3'><i
+              class="fas fa-arrow-right"></i></span>
+        </h3>
+        <p class='paragraph mt-3'>Improve your kids academic
+          performance in a way that makes them want to learn more. At
+          AllSmart we believe that everyone can learn better if they
+          have fun while learning.</p>
+      </div>
+      <div class="col-md-7 col-sm-12 d-flex align-items-center justify-content-center flex-column position-relative">
+        <div class="aligned">
+          <h3 class='subject-pick mb-1' data-aos="fade-up"
+            data-aos-duration="2000">1. Pick a subject</h3>
+          <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center flex-column"
+              data-aos="fade-up" data-aos-duration="1500"
+              data-aos-delay="300">
+              <%= cl_image_tag "medolwcf6nigmrl3cvev", class: 'subject-icon' %>
+              <p class="paragraph mt-3"> Maths</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
+              data-aos-duration="1700" data-aos-delay="350">
+              <%= cl_image_tag "rnrgntaicfrllbnrzlxg", class: 'subject-icon' %>
+              <p class="paragraph mt-3">Science</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
+              data-aos-duration="1900" data-aos-delay="400">
+              <%= cl_image_tag "dkbxbzo5dpzzf0o3kbgy", class: 'subject-icon' %>
+              <p class="paragraph mt-3">English</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
+              data-aos-duration="2000" data-aos-delay="500">
+              <%= cl_image_tag "enssmizahvyzkryyufw0", class: 'subject-icon'%>
+              <p class='paragraph mt-3'>Biology</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-5 col-sm-12 my-5">
+      </div>
+      <div data-aos="flip-down" data-aos-duration="8000" data-aos-delay="800"
+        class="col-lg-7 col-sm-12 my-5 d-flex justify-content-center">
+        <i class="fas fa-long-arrow-alt-down large-arrow orange-arrow"></i>
+      </div>
+      <div class="col-lg-5 col-sm-12" style="width:100%">
+        <h3 class='mb-1' data-aos="fade-up" data-aos-duration="1000"
+          data-aos-delay="300">3. Customize and play!<span id='arrow'
+            class='orange-arrow ml-3'><i class="fas fa-rotate-180 fa-arrow-right"></i></span>
+        </h3>
+        <p class='paragraph mt-5' data-aos="fade-up" data-aos-duration="1200"
+          data-aos-delay="1000">At AllSmart we know, that all children
+          are different. This is why we provide ability for <span style="text-decoration: underline;">you</span>
+          to customize your child's learning experience.</p>
+      </div>
+      <div class="col-md-7 col-sm-12 d-flex align-items-center justify-content-center flex-column position-relative">
+        <div class="aligned">
+          <h3 class='mb-1' data-aos="fade-up" data-aos-duration="1000"
+            data-aos-delay="200">2. Pick a topic
+          </h3>
+          <div class="row mt-5">
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-left"
+              data-aos-duration="1700" data-aos-delay="350">
+              <%= cl_image_tag "snqashrkhfjaubppkbeh", class: 'subject-icon' %>
+              <p class="paragraph mt-3">Counting and arithmetic</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-left"
+              data-aos-duration="1800" data-aos-delay="400">
+              <%= cl_image_tag "ff0nbqgg7hrn00vpvnkw", class: 'subject-icon' %>
+              <p class="paragraph mt-3">Space and Solar System</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-left"
+              data-aos-duration="1900" data-aos-delay="450">
+              <%= cl_image_tag "ysyoo28bbfk4niolrc1j", class: 'subject-icon' %>
+              <p class="paragraph mt-3">Phonics and spelling</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-left"
+              data-aos-duration="2000" data-aos-delay="550">
+              <%= cl_image_tag "kszck3lhkmpwyzkeetud", class: 'subject-icon'%>
+              <p class='paragraph mt-3'>Human Body</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid card-container">
+    <div class="container text-center">
+    <h3 class="py-3 mb-4">Our most popular games</h3>
+    </div>
+    <div class="d-flex flex-row justify-content-lg-around">
+      <div class="game-card">
+        <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
+        <div class="container mt-4">
+          <h4>Smash the spelling!</h4>
+          <p class='paragraph mt2'>For those who are confident with
+            their
+            phonics
+          </p>
+        </div>
+      </div>
+      <div class="game-card">
+        <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
+        <div class="container mt-4">
+          <h4>Smash the spelling!</h4>
+          <p class='paragraph mt2'>For those who are confident with
+            their
+            phonics
+          </p>
+        </div>
+      </div>
+      <div class="game-card">
+        <%= cl_image_tag 'rushhamrellqq7ouohnh', class: 'game-card-image' %>
+        <div class="container mt-4">
+          <h4>Smash the spelling!</h4>
+          <p class='paragraph mt2'>For those who are confident with
+            their
+            phonics
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid testimonial-container">
+    
+  </div>
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <% else %>
   <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
   <%= yield %>
