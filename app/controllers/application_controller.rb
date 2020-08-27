@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
   def after_sign_up_path_for(resource)
     profile_path(current_user) 
   end
+
+  def default_url_options
+    { host: ENV["www.allsmart.uk"] || "localhost:3000" }
+  end
 end
