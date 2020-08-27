@@ -23,7 +23,15 @@
 }
 
 .form-control {
-  width: 750px;
+  width: 550px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+  height: 3rem;
+  margin-bottom: 0;
+  font-size: .9375rem;
+  padding: .625rem 0 0 .9375rem;
+  border: none;
 
 }
 
