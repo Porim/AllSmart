@@ -22,15 +22,10 @@
   background: #E97235;
 }
 
-.call-to-action > * {
-color: white !important;
-text-decoration: none;
+.call-to-action>* {
+  color: white !important;
 }
 
-#get-started {
-  text-decoration: none;
-  transition: 0.3;
-}
 
 .orange {
   background: #E97234;
@@ -39,15 +34,20 @@ text-decoration: none;
 }
 
 .login-button:hover {
-  background:white;
-  color: #023033!important;
-};
+  background: white;
+  color: #023033 !important;
+}
+
 
 .orange:hover {
   background: #C94727 !important;
   color: white !important;
+}
+
+.call-to-action:hover {
+text-decoration: none !important;
 };
 
-#get-started:hover {
-  background: #C94727 !important;
-};
+a:hover {
+  text-decoration: none;
+}
