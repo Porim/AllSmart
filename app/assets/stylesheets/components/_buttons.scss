@@ -8,6 +8,7 @@
   width: 130px;
   text-align: center;
   transition: 0.3s;
+  background: #E97234;
 }
 
 .call-to-action {
@@ -17,10 +18,23 @@
   color: white !important;
   font-weight: bold;
   display: inline-block;
-  width: 180px;
+  width: 130px;
   text-align: center;
-  background: #E97235;
 }
+
+.form-control {
+  width: 550px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+  height: 3rem;
+  margin-bottom: 0;
+  font-size: .9375rem;
+  padding: .625rem 0 0 .9375rem;
+  border: none;
+
+}
+
 
 .call-to-action>* {
   color: white !important;
@@ -33,9 +47,8 @@
   transition: 0.3s;
 }
 
-.login-button:hover {
-  background: white;
-  color: #023033 !important;
+.red {
+  background: red;
 }
 
 
@@ -51,3 +64,5 @@ text-decoration: none !important;
 a:hover {
   text-decoration: none;
 }
+
+
