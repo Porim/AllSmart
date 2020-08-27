@@ -8,6 +8,7 @@
   width: 130px;
   text-align: center;
   transition: 0.3s;
+  background: #E97234;
 }
 
 .call-to-action {
@@ -19,14 +20,9 @@
   display: inline-block;
   width: 180px;
   text-align: center;
-  background: #E97235;
 }
 
-.btn {
-  background: #E97235;
-  border: none;
-  transition: 0.3s;
-}
+
 
 .call-to-action>* {
   color: white !important;
@@ -39,9 +35,8 @@
   transition: 0.3s;
 }
 
-.login-button:hover {
-  background: white;
-  color: #023033 !important;
+.red {
+  background: red;
 }
 
 
