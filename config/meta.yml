@@ -1,5 +1,5 @@
 meta_product_name: "allSmart"
 meta_title: "allSmart - Play.Learn.Discover!"
 meta_description: "tba"
-meta_image: "cover.png" # should exist in `app/assets/images/`
+meta_image: "http://res.cloudinary.com/djznzpxie/image/upload/v1598548061/yu49u0l5blbznornf3zj.png" # should exist in `app/assets/images/`
 twitter_account: "@product_twitter_account"   # required for Twitter Cards
