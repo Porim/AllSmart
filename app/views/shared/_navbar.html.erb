@@ -26,14 +26,14 @@
       </li>
       <% else %>
       <div class="d-flex align-items-center">
-        <li class="nav-item mx-2" id='about-us color:'>
+        <li class="nav-item mx-2" id='about-us'>
           <%= link_to "About Us", id: 'about-us'%>
         </li>
         <li class="nav-item mx-2">
-          <%= link_to "Log in", new_user_session_path, class: "nav-link login-button red"%>
+          <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
         </li>
         <li class="nav-item mx-2">
-          <%= link_to "Sign up", new_user_registration_path, class: "nav-link login-button orange"%>
+          <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
         </li>
       </div>
       <% end %>
