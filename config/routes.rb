@@ -12,4 +12,3 @@ Rails.application.routes.draw do
   end
   resources :allowed_games, only: [:destroy]
 end
-
