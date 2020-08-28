@@ -1,0 +1,28 @@
+.game-card {
+  width: 298px;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 13px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  box-shadow: none;
+  margin-top: 0;
+}
+
+
+.game-card-image {
+  object-fit: cover;
+  object-position: center left;
+  width: 298px;
+  height: 160px;
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+
+.game-card:hover {
+  margin-top: 8px;
+  box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+}
+
+;

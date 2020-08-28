@@ -8,6 +8,13 @@
   width: 130px;
   text-align: center;
   transition: 0.3s;
+  background: transparent;
+}
+
+.login-button:hover {
+  text-decoration: none !important;
+  background: white;
+  color: #023033 !important;
 }
 
 .call-to-action {
@@ -19,8 +26,39 @@
   display: inline-block;
   width: 180px;
   text-align: center;
-  background: #E97235;
 }
+
+.form-control {
+  width: 550px;
+  border-radius: 18px;
+  position: relative;
+  z-index: 1;
+  height: 3rem;
+  margin-bottom: 0;
+  font-size: .9375rem;
+  padding: .625rem 0 0 .9375rem;
+  border: none;
+}
+
+.red-login-button {
+  background: red;
+  width: 130px;
+  font-family: sans-serif;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: white !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.red-login-button:hover {
+border-color: $button;
+color: $button !important;
+background: transparent;  
+};
 
 .call-to-action>* {
   color: white !important;
@@ -33,20 +71,12 @@
   transition: 0.3s;
 }
 
-.login-button:hover {
-  background: white;
-  color: #023033 !important;
-}
 
 
 .orange:hover {
   background: #C94727 !important;
   color: white !important;
 }
-
-.call-to-action:hover {
-text-decoration: none !important;
-};
 
 a:hover {
   text-decoration: none;

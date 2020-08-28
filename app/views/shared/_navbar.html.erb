@@ -1,6 +1,6 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag 'Logo with rocket', id: 'logo' %>
+  <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse"
     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -33,7 +33,7 @@
           <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
         </li>
         <li class="nav-item mx-2">
-          <%= link_to "SIGN UP", new_user_session_path, class: "nav-link login-button orange"%>
+          <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
         </li>
       </div>
       <% end %>
