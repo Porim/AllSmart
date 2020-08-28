@@ -27,12 +27,7 @@
     <%= yield %>
     <% else %>
   </div>
-  
-  <% unless controller_name == "kids" %>
-    <%= render 'shared/navbar' %>
-  <% end %>
-
-
+  <%= render 'shared/navbar' %>
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% end %>
