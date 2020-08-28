@@ -1,0 +1,175 @@
+// .kid-profile {
+//   position: relative;
+//   background: #FF9C07;
+//   height: 100vh;
+// }
+
+// .kid-container {
+//   position: absolute;
+//   width: 100vw;
+//   height: 100vh;
+//   left: 0px;
+//   top: 0px;
+//   background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+//   border-radius: 160px;
+// }
+
+.new-container {
+  width: 100%;
+  height: 100vh;
+  background: #FF9C07;
+}
+
+.new-inner {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+}
+
+.top-inner {
+  height: 50%;
+  position: relative;
+}
+
+.carousel-item {
+  height: 40vh;
+}
+
+.subject {
+  text-align: center;
+  padding: 10px;
+  height: 80%;
+  margin: 10% 0;
+}
+
+.h-100 {
+  height: 100%;
+}
+.r {
+  background-color: red;
+}
+
+.g {
+  background-color: green;
+}
+
+.b {
+  background-color: blue;
+}
+
+.t-50 {
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+}
+
+// #avatar-kid {
+//   position: absolute;
+//   width: 353px;
+//   height: 300px;
+//   left: 0px;
+//   top: 8px;
+//   object-fit: cover;
+// }
+
+#xp-bar {
+  position: absolute;
+  width: 353px;
+  height: 8px;
+  left: 19px;
+  top: 403px;
+  background: #6C2BD6;
+}
+
+#level {
+  position: absolute;
+  width: 353px;
+  height: 8px;
+  left: 19px;
+  top: 360px;
+  font-family: Londrina Shadow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  letter-spacing: -0.06em;
+  background: linear-gradient(#D22C2C 0% rgba(255, 255, 255, 0) 100% #3848D8);
+}
+
+#current-xp {
+  position: absolute;
+  width: 104px;
+  height: 38px;
+  left: 315px;
+  top: 365px;
+  font-family: Londrina Shadow;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: -0.06em;
+}
+
+#trophy {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 292px;
+  top: 296px;
+}
+//                                           CAROUSEL
+// .carousel-item{
+//   display: flex;
+//   width: 1552px;
+//   height: 463px;
+//   left: 184px;
+//   top: 449px;
+// }
+
+// .card-game {
+//   overflow: hidden;
+//   background: white;
+//   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+//   width: 350px;
+//   height: 280px;
+// }
+
+// .card-game > img {
+//   height: 200px;
+//   width: 100%;
+//   object-fit: cover;
+// }
+
+// .card-game h2 {
+//   font-size: 16px;
+//   font-weight: bold;
+//   margin: 0;
+// }
+
+// .card-game p {
+//   font-size: 12px;
+//   opacity: .7;
+//   margin: 0;
+// }
+
+
+// .card-game .card-game-infos {
+//   padding: 16px;
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: flex-end;
+//   position: relative;
+// }
+
+// .card-game-infos .card-game-user {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
+
+//                                                END OF CAROUSEL
