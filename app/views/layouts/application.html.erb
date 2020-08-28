@@ -26,7 +26,8 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap"
+    rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -36,24 +37,24 @@
   AOS.init()
   </script>
   <style>
-.carousel-control-prev-icon {
+  .carousel-control-prev-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
-}
+  }
 
-.carousel-control-next-icon {
+  .carousel-control-next-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
-}
-</style>
+  }
+  </style>
 </head>
 
 <body>
   <% if current_page?(root_path) %>
+  <%= render 'shared/navbar' %>
   <div class='container-fluid' id='bg-image-landing' style="background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')">
-    <%= render 'shared/navbar' %>
     <div class="container landing-banner">
       <h1 id='banner-h1'>Play. Learn. Discover.</h1>
       <div class="login-button orange call-to-action mt-4">
-        <%= link_to 'Get Started', class: "login-button orange call-to-action"%>
+        <%= link_to 'Get Started', class: "login-button orange call-to-action", anchor: "anchor-for-about-us"%>
       </div>
     </div>
     <%= cl_image_tag 'piifzgomj06non5hcq8qeip1jp21', id: 'rocket-landing' %>
@@ -61,7 +62,8 @@
   <div class="container mt-5 first-container">
     <div class="row">
       <div class="col-md-5 col-sm-12 d-flex align-items-center justify-content-center flex-column">
-        <h3 class='mb-1 position-relative' id="anchor-for-about-us">Encourage you child to learn
+        <h3 class='mb-1 position-relative' id="anchor-for-about-us">Encourage
+          you child to learn
           with AllSmart -
           in a smart way <i class="fas fa-arrow-right pl-3 position-absolute"
             id='arrow'></i>
@@ -146,24 +148,26 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid card-container mb-2 pb-4">
+  <div class="container-fluid card-container mb-2">
     <div class="container text-center">
       <h3 class="py-3 mb-4">Our most popular games</h3>
     </div>
     <div class="d-flex flex-row justify-content-lg-around">
       <div class="game-card">
-        <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
+        <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
         <div class="container mt-4">
-          <h4>Addition sprint</h4>
-          <p class='paragraph mt2'>Lets learn arithmetics together. Its fun!
+          <h4>How many eggs for a cake?</h4>
+          <p class='paragraph mt2'>For those who learn how to count
+            from 1 to 10
           </p>
         </div>
       </div>
       <div class="game-card">
-        <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
+        <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
         <div class="container mt-4">
-          <h4>How many eggs for a cake?</h4>
-          <p class='paragraph mt2'>For those who learn how to count from 1 to 10
+          <h4>Addition sprint</h4>
+          <p class='paragraph mt2'>Lets learn arithmetics together. Its
+            fun!
           </p>
         </div>
       </div>
@@ -197,7 +201,7 @@
                   <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
                     <%= cl_image_tag 'isbmx3j00yxldzgku3xq', class: 'avatar-large mr-3' %>
                     <div class="testimonial-text">
-                      <h3>Jada Stevenson</h3>
+                      <h3>Jada Folkner</h3>
                       <p class="paragraph">Proud mom from Steventon</p>
                     </div>
                   </div>
@@ -212,7 +216,9 @@
               <div class="row">
                 <div class="col-lg-12 testimonial-text mb-3 position-relative">
                   <i class="fas fa-quote-left fa-quotes"></i>
-                  <h2 class='pl-3'>Me and my little one love AllSmart! Great educational games for many topics. I recommend spelling section in particular!<span id="quotes">”</span></h2>
+                  <h2 class='pl-3'>Me and my little one love AllSmart!
+                    Great educational games for many topics. I
+                    recommend spelling section in particular!<span id="quotes">”</span></h2>
                 </div>
                 <div class="col-lg-12">
                   <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
@@ -233,7 +239,9 @@
               <div class="row">
                 <div class="col-lg-12 testimonial-text mb-3 position-relative">
                   <i class="fas fa-quote-left fa-quotes"></i>
-                  <h2 class='pl-3'>My little ones love AllSmart! They have so much fun and learn so easily it is unbelievable. Highly recommend.<span id="quotes">”</span></h2>
+                  <h2 class='pl-3'>My little ones love AllSmart! They
+                    have so much fun and learn so easily it is
+                    unbelievable. Highly recommend.<span id="quotes">”</span></h2>
                 </div>
                 <div class="col-lg-12">
                   <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
