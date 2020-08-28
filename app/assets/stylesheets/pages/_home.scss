@@ -31,9 +31,20 @@
   margin-top: 16px;
 }
 
-.first-container {
-  height: 100vh;
+@media (min-width: 992px) {
+  .first-container {
+    height: 100vh;
+  }
 }
+
+@media (min-width: 1200px) {
+  .first-container {
+    height: 90vh;
+  }
+}
+// .first-container {
+//   height: 100vh;
+// }
 
 
 .subject-pick {
@@ -76,6 +87,15 @@
   margin-top: 160px;
   background: rgba(200, 200, 200, 0.05);
 }
+
+.carousel-control-prev-icon {
+  padding-right: 0px;
+}
+
+.carousel-control-next-icon {
+  padding-left: 0px;
+}
+
 // ----------------------IDs----------------------------
 
 
@@ -146,7 +166,6 @@
 
 @media (min-width: 1200px) {
   #arrow {
-    top:36px;
+    top: 36px;
   }
 }
-
