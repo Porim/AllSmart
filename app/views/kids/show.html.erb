@@ -13,7 +13,7 @@
     <li>Allowed games:
       <ol>
       <% @kid.allowed_games.each do |allowed_game| %>
-      <li>Title: <%= allowed_game.game.title %>. Subject: <%= allowed_game.game.subject %> <%= link_to  "Delete",  allowed_game_path(allowed_game), method: :delete %></li>
+      <li>Title: <%= allowed_game.game.title %>. Subject: <%= allowed_game.game.subject %> <%= link_to  "Delete",  allowed_game_path(allowed_game), method: :delete, data: {confirm: "Are you sure you want delete this game?"} %></li>
       <% end %>
       </ol>
     </li>
