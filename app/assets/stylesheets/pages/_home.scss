@@ -1,4 +1,103 @@
 // Specific CSS for your home-page
+
+// -------------------Classes---------------------
+
+.landing-banner {
+  text-align: center;
+  margin: 25vh auto;
+  width: 50%;
+}
+
+.paragraph {
+  width: auto;
+  padding-left: 0;
+  color: #575757;
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.awesome-icons {
+  color: #E97234;
+  margin-top: 16px;
+  position: absolute;
+  top: 4px;
+}
+
+
+.orange-arrow {
+  color: #E97234 !important;
+  margin-top: 16px;
+}
+
+.first-container {
+  height: 100vh;
+}
+
+
+.subject-pick {
+  position: relative;
+  margin-top: 0px;
+
+}
+
+.subject-icon {
+  width: 80px;
+  margin: 0 4px;
+  transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  border-radius: 5px;
+}
+
+.subject-icon:hover {
+  margin-top: 12px;
+}
+
+.aligned {
+  height: 182px;
+  width: 80%;
+  margin-bottom: 18px !important;
+  text-align: center;
+}
+
+.testimonial-container {
+  background: white;
+}
+
+.with-arrow {
+  margin-top: 150px;
+}
+
+.card-container {
+  width: 100vw;
+  margin-top: 160px;
+  background: rgba(200, 200, 200, 0.05);
+}
+// ----------------------IDs----------------------------
+
+
+#banner-h1 {
+  color: white !important;
+  font-weight: bold;
+}
+
+#rocket-landing {
+  width: 215px;
+  height: 215px;
+  position: absolute;
+  transform: rotate(40deg);
+  top: 35vh;
+  left: 67vw;
+}
+
+
+#large-arrow {
+  font-size: 10em;
+}
+
 #rocket {
   position: absolute;
   width: 100px;
@@ -29,45 +128,6 @@
   text-decoration: underline;
 }
 
-.landing-banner {
-  text-align: center;
-  margin: 25vh auto;
-  width: 50%;
-}
-
-#banner-h1 {
-  color: white !important;
-  font-weight: bold;
-}
-
-#rocket-landing {
-  width: 215px;
-  height: 215px;
-  position: absolute;
-  transform: rotate(40deg);
-  top: 35vh;
-  left: 67vw;
-}
-
-.paragraph {
-  width: auto;
-  padding-left: 0;
-  color: #575757;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 400;
-  letter-spacing: 0;
-}
-
-.awesome-icons {
-  color: #E97234;
-  margin-top: 16px;
-  position: absolute;
-  top: 4px;
-}
-
-
-
 #arrow {
   color: #013134 !important;
 }
@@ -90,116 +150,3 @@
   }
 }
 
-.orange-arrow {
-  color: #E97234 !important;
-  margin-top: 16px;
-}
-
-// #kite {
-//   width: 70px;
-//   align-self: flex-start;
-//   // transform: rotate(5deg);
-// }
-
-// @keyframes pick-a-subject {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
-// }
-
-.first-container {
-  height: 100vh;
-}
-
-// @keyframes pick-a-subject-delayed-25 {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   25% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
-// }
-
-
-// @keyframes pick-a-subject-delayed-50 {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   50% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
-// }
-
-
-
-.subject-pick {
-  position: relative;
-  margin-top: 0px;
-
-}
-
-.subject-icon {
-  width: 80px;
-  margin: 0 4px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  border-radius: 5px;
-}
-
-.subject-icon:hover {
-  margin-top: 12px;
-}
-
-.aligned {
-  height: 182px;
-  width: 80%;
-  margin-bottom: 18px !important;
-  text-align: center;
-}
-
-.large-arrow {
-  font-size: 10em;
-}
-
-.testimonial-container {
-  background: white;
-}
-
-.with-arrow {
-  margin-top: 150px;
-}
-
-.card-container {
-  width: 100vw;
-  margin-top: 160px;
-  background: rgba(200, 200, 200, 0.05);
-}
