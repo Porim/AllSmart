@@ -1,5 +1,6 @@
 .container-testimonial-inside {
   width: 50%;
+  height: 100%;
 }
 
 .fa-quotes {
@@ -13,10 +14,12 @@
 
 .testimonial-text {
   text-align: left;
+  height: 100%;
 }
 
 .testimonial-container {
-  padding-bottom: 100px;
+  padding-bottom: 160px;
+  margin-bottom: 18px !important;
 }
 #fa-quotes-right {
   padding-top: 20px;

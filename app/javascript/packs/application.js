@@ -24,6 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
+import { navbar } from './navbar_on_scroll'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -33,4 +34,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // myMove();
   AOS.init();
+  navbar();
 });

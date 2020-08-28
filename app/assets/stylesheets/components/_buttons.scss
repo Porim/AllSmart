@@ -11,6 +11,20 @@
   background: transparent;
 }
 
+#scroll-login {
+  font-family: sans-serif;
+  border: 1px solid #E97234 !important;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: #E97234 !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
+  background: transparent;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
 .login-button:hover {
   text-decoration: none !important;
   background: white;
@@ -55,10 +69,12 @@
 }
 
 .red-login-button:hover {
-border-color: $button;
-color: $button !important;
-background: transparent;  
-};
+  border-color: $button;
+  color: $button !important;
+  background: transparent;
+}
+
+;
 
 .call-to-action>* {
   color: white !important;

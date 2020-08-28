@@ -4,8 +4,6 @@
 
 .landing-banner {
   text-align: center;
-  margin: 25vh auto;
-  width: 50%;
 }
 
 .paragraph {
@@ -33,13 +31,13 @@
 
 @media (min-width: 992px) {
   .first-container {
-    height: 100vh;
+    height: auto;
   }
 }
 
 @media (min-width: 1200px) {
   .first-container {
-    height: 90vh;
+    height: auto;
   }
 }
 
@@ -87,6 +85,7 @@
   width: 100vw;
   margin-top: 160px;
   background: rgba(200, 200, 200, 0.05);
+  padding-bottom: 56px;
 }
 
 .carousel-control-prev-icon {
@@ -136,6 +135,9 @@
   background-position: center bottom;
   background-size: cover;
   position: relative;
+  display:flex;
+  justify-content:center;
+  align-items: center;
 }
 
 #about-us>* {
@@ -144,9 +146,15 @@
   text-decoration: none !important;
 }
 
+#about-us {
+  color: white !important;
+  font-size: 18px;
+  text-decoration: none !important;
+}
+
 #about-us:hover {
   color: white !important;
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
 #arrow {
