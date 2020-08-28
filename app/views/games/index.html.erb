@@ -7,24 +7,24 @@
   </div>
 </div>
 <div>
-    <div class="d-flex justify-content-space-around container mb-5 mt-5">
-        <%= form_tag games_path, id: "search-bar", method: :get do %>
-          <%= text_field_tag :query,
+  <div class="d-flex justify-content-space-around container mb-5 mt-5">
+    <%= form_tag games_path, id: "search-bar", method: :get do %>
+    <%= text_field_tag :query,
             params[:query],
             class: "form-control",
             placeholder: "Search by subject"
-          %><%= submit_tag "Search", class: "btn btn-primary mb-3 mt-3" %>
-          <% end %>
-      </div>
+          %>
+    <%= submit_tag "Search", class: "btn btn-primary mb-3 mt-3" %>
+    <% end %>
   </div>
-  <% end %>
+</div>
 </div>
 </div>
 <div class="games-page container mt-1">
   <div class="row mt-1">
     <% @games.each do |game| %>
     <div class="col-12 col-md-6 col-lg-3">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?game');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?game')">
         <div class="card-description">
           <h2>
             <%= game.title %>
@@ -33,14 +33,13 @@
       </div>
       <div class="taos-dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button"
-          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-          aria-expanded="false">
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           <p>Allow to child:</p>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <% current_user.kids.each do |kid| %>
-           <p class="p-dropdown mb-1">
-              <%= link_to  kid.first_name, kid_allowed_games_path(kid, game_id: game.id), method: :post %>
+          <p class="p-dropdown mb-1">
+            <%= link_to kid.first_name, kid_allowed_games_path(kid), game_id: game.id, method: :post %>
           </p>
           <% end %>
         </div>
