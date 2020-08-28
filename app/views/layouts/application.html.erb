@@ -26,6 +26,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -178,7 +179,7 @@
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% else %>
-  <%= render 'shared/navbar' %>
+  <%= render 'shared/navbar' unless controller_name == "kids" && action_name == "profile" %>
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% end %>
