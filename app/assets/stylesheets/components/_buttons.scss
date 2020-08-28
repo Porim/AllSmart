@@ -40,9 +40,25 @@
   border: none;
 }
 
-.red {
+.red-login-button {
   background: red;
+  width: 130px;
+  font-family: sans-serif;
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: white !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
 }
+
+.red-login-button:hover {
+border-color: $button;
+color: $button !important;
+background: transparent;  
+};
 
 .call-to-action>* {
   color: white !important;
