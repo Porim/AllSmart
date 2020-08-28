@@ -20,7 +20,12 @@
   display: flex;
   justify-content: space-around;
   position: static;
+}
 
+.p-dropdown {
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
 
 }
 
@@ -49,5 +54,3 @@
   margin-top: 8px;
   box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
 }
-
-;
