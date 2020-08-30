@@ -38,11 +38,11 @@
   </script>
   <style>
   .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
   }
 
   .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
   }
   </style>
 </head>
@@ -59,10 +59,11 @@
     </div>
     <%= cl_image_tag 'piifzgomj06non5hcq8qeip1jp21', id: 'rocket-landing' %>
   </div>
-  <div class="container mt-5 first-container">
+  <div id="anchor-for-about-us"></div>
+  <div class="container first-container">
     <div class="row">
       <div class="col-md-5 col-sm-12 d-flex align-items-center justify-content-center flex-column">
-        <h3 class='mb-1 position-relative' id="anchor-for-about-us">Encourage
+        <h3 class='mb-1 position-relative'>Encourage
           you child to learn
           with AllSmart -
           in a smart way <i class="fas fa-arrow-right pl-3 position-absolute"
@@ -269,6 +270,10 @@
       </a>
     </div>
   </div>
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <% elsif user_signed_in? %>
+  <%= render 'shared/navbar_user' unless controller_name == "kids" && action_name == "profile" %>
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% else %>

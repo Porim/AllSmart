@@ -1,9 +1,4 @@
-<% unless user_signed_in? || current_page?(root_path) %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon colored-navbar"
-  id="navbar-lewagon">
-  <% else %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar-lewagon">
-    <% end %>
+ <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
     <% end %>
@@ -36,15 +31,9 @@
             <a class='about-us' id='about-us-js' href="#anchor-for-about-us">About
               Us</a>
           </li>
-          <% unless user_signed_in? || current_page?(root_path) %>
-          <li class="nav-item mx-2">
-            <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button", id:'on-form-button'%>
-          </li>
-          <% else %>
           <li class="nav-item mx-2">
             <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
           </li>
-          <% end %>
           <li class="nav-item mx-2">
             <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
           </li>
