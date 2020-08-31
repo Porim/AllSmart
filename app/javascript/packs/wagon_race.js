@@ -19,4 +19,4 @@ const moveWagons = (event) => {
 
 document.addEventListener("keyup", moveWagons);
 
-export 
+export { moveForward, moveWagons }
