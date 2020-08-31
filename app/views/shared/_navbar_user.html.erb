@@ -15,7 +15,7 @@
       </li>
       <% if current_page?(games_path) %>
       <li class="nav-item">
-        <span class='about-us px-2 mx-1 text-success' id='browse-on-scroll'>
+        <span class='about-us px-2 mx-1 user-tab-highlighter' id='browse-on-scroll'>
           GAMES</span>
       </li>
       <% else %>
@@ -24,10 +24,17 @@
           GAMES</a>
       </li>
       <% end %>
+      <% if current_page?(profile_path(current_user)) %>
+      <li class="nav-item">
+        <span class='about-us px-2 mr-3 user-tab-highlighter' id='browse-on-scroll'>
+          CHILDREN</span>
+      </li>
+      <% else %>
       <li class="nav-item">
         <a class='about-us px-2 mr-3' id='browse-on-scroll' href="http://localhost:3000/profile/<%= current_user.id %>">
           CHILDREN</a>
       </li>
+      <% end %>
       <li class="nav-item dropdown">
         <div class="d-flex align-items-center user-nav-container" id="navbarDropdown"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
