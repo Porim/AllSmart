@@ -13,10 +13,17 @@
       <li class="nav-item active">
         <a class='about-us px-2 mx-1' id='home-on-scroll' href="http://localhost:3000/">HOME</a>
       </li>
+      <% if current_page?(games_path) %>
+      <li class="nav-item">
+        <span class='about-us px-2 mx-1 text-success' id='browse-on-scroll'>
+          GAMES</span>
+      </li>
+      <% else %>
       <li class="nav-item">
         <a class='about-us px-2 mx-1' id='browse-on-scroll' href="http://localhost:3000/games">
           GAMES</a>
       </li>
+      <% end %>
       <li class="nav-item">
         <a class='about-us px-2 mr-3' id='browse-on-scroll' href="http://localhost:3000/profile/<%= current_user.id %>">
           CHILDREN</a>
