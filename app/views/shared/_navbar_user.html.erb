@@ -13,19 +13,37 @@
       <li class="nav-item active">
         <a class='about-us px-2 mx-1' id='home-on-scroll' href="http://localhost:3000/">HOME</a>
       </li>
+      <% if current_page?(games_path) %>
       <li class="nav-item">
-        <a class='about-us px-2 mx-1' id='browse-on-scroll' href="http://localhost:3000/games">
+        <span class='about-us px-2 mx-1 user-tab-highlighter' id='browse-on-scroll'>
+          GAMES</span>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <a class='about-us px-2 mx-1' id='browse-on-scroll' href="http://localhost:3000/games?subject=All">
           GAMES</a>
       </li>
+      <% end %>
+      <% if current_page?(profile_path(current_user)) %>
+      <li class="nav-item">
+        <span class='about-us px-2 mr-3 user-tab-highlighter' id='browse-on-scroll'>
+          CHILDREN</span>
+      </li>
+      <% else %>
       <li class="nav-item">
         <a class='about-us px-2 mr-3' id='browse-on-scroll' href="http://localhost:3000/profile/<%= current_user.id %>">
           CHILDREN</a>
       </li>
+      <% end %>
       <li class="nav-item dropdown">
         <div class="d-flex align-items-center user-nav-container" id="navbarDropdown"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="avatar dropdown-toggle text-white ml-2">
+          <% if current_user.photo.present? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+          <div class="avatar dropdown-toggle text-white ml-4">
             <%= current_user.first_name %>
           </div>
         </div>

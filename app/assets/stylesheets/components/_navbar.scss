@@ -4,7 +4,7 @@
   // padding-top: 8px;
   // padding-bottom: 6px;
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   position: fixed;
   top: 0;
   z-index: 500;
@@ -51,5 +51,22 @@
 }
 
 #about-us-onscroll:hover {
-  text-decoration: underline;  
+  text-decoration: underline;
 }
+
+#name-user-onscroll {
+  color: #575757 !important;
+  width: 51px;
+}
+
+#name-user-onscroll:hover {
+  color: white !important;
+}
+
+// #name-user-onscroll:hover > *{
+//   color: white !important;
+// };
+// #name-user-onscroll:hover {
+//   background: #146c78;
+//   // color: white;
+// };
