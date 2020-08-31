@@ -8,8 +8,8 @@ $font-family-sans-serif: $body-font;
 $headings-font-family: $headers-font;
 $body-bg: $white;
 $font-size-base: 1rem;
-$link-color: #fff;
-$link-hover-color: #fff;
+$link-color: puple;
+$link-hover-color: none;
 $link-decoration: none;
 $link-hover-decoration: none;
 // Colors
@@ -30,4 +30,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
+body {
+  overflow-x: hidden;
+  }

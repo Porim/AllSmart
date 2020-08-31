@@ -21,6 +21,7 @@
   padding-bottom: 160px;
   margin-bottom: 18px !important;
 }
+
 #fa-quotes-right {
   padding-top: 20px;
   font-size: 1em;
@@ -29,4 +30,18 @@
 
 #quotes {
   color: #023033;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    text-align: center;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
 }
