@@ -40,7 +40,7 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <% current_user.kids.each do |kid| %>
           <p class="p-dropdown mb-1">
-            <%= link_to kid.first_name, kid_allowed_games_path(kid), game_id: game.id, method: :post, class: 'text-success' %>
+            <%= link_to kid.first_name, kid_allowed_games_path(kid,game.id), game_id: game.id, method: :post, class: 'text-success' %>
           </p>
           <% end %>
         </div>
