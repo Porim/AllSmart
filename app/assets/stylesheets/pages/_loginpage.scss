@@ -1,8 +1,9 @@
 
-#forgot-password {
-  color: black !important;
-  background-color: black !important;
-
+.forgot-password {
+  color: #0E0000 !important;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .rounded {
@@ -13,4 +14,7 @@
 
 .account {
   color: blue;
+  &:hover {
+  text-decoration: underline;
+}
 }
