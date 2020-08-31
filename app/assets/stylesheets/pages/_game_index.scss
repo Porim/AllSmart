@@ -1,0 +1,32 @@
+.all-games {
+  margin-top: 20vh;
+}
+
+.games {
+  background: white;
+  border: 1px solid #eee;
+}
+
+.games-page{ 
+background: #f6f7f8 ;
+width: 100%;
+height: 100vh; }
+
+.link-color {
+  color: #0E91A1;
+  padding: 4px;
+}
+
+.link-color:hover {
+ padding: 4px;
+ background-color: #EEEEEE;
+ border-radius: 8px;
+ color: #575757;
+ };
+
+.link-selected {
+ padding: 4px;
+ background-color: #888888;
+ border-radius: 8px;
+
+}
