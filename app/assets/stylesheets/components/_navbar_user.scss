@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 16px;
+  padding: 8px;
 }
 
 
@@ -17,6 +17,7 @@
   border-bottom: 0;
   border-left: 0.3em solid transparent;
 }
+
 // .padding-for-user-nav {
 //   padding-right: 60px;
 // }
@@ -38,4 +39,10 @@
 
 .for-user-js:hover {
   color: white !important;
-};
+}
+
+.user-tab-highlighter {
+  background: #146c78;
+  color: white;
+  padding: 8px;
+}
