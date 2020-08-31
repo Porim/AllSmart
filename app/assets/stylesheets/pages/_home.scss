@@ -31,12 +31,14 @@
 
 @media (min-width: 992px) {
   .first-container {
+    margin-top: 92px;
     height: auto;
   }
 }
 
 @media (min-width: 1200px) {
   .first-container {
+    margin-top: 92px;
     height: auto;
   }
 }
@@ -135,26 +137,9 @@
   background-position: center bottom;
   background-size: cover;
   position: relative;
-  display:flex;
-  justify-content:center;
+  display: flex;
+  justify-content: center;
   align-items: center;
-}
-
-#about-us>* {
-  color: white !important;
-  font-size: 18px;
-  text-decoration: none !important;
-}
-
-#about-us {
-  color: white !important;
-  font-size: 18px;
-  text-decoration: none !important;
-}
-
-#about-us:hover {
-  color: white !important;
-  text-decoration: underline !important;
 }
 
 #arrow {

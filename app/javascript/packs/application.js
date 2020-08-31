@@ -24,15 +24,17 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { navbar } from './navbar_on_scroll'
+import { navbarGuest } from './navbar_on_scroll_guest'
+import { navbarUser } from './navbar_on_scroll_user'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-
+//document.onmouseover=function(e){if(e.target.parentNode.classList&&e.target.parentNode.classList.contains('tooltip')){console.dir(e.target)}}
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   // initSelect2();
   // myMove();
   AOS.init();
-  navbar();
+  navbarGuest();
+  navbarUser();
 });
