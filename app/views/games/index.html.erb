@@ -33,13 +33,14 @@
       </div>
       <div class="taos-dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button"
-          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
           <p>Allow to child:</p>
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
           <% current_user.kids.each do |kid| %>
           <p class="p-dropdown mb-1">
-            <%= link_to kid.first_name, kid_allowed_games_path(kid), game_id: game.id, method: :post %>
+            <%= link_to kid.first_name, kid_allowed_games_path(kid), game_id: game.id, method: :post, class: 'text-success' %>
           </p>
           <% end %>
         </div>
