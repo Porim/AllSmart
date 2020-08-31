@@ -26,7 +26,8 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap"
+    rel="stylesheet">
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -35,26 +36,38 @@
   <script>
   AOS.init()
   </script>
+  <style>
+  .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  }
+
+  .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+  }
+  </style>
 </head>
 
 <body>
   <% if current_page?(root_path) %>
+  <%= render 'shared/navbar' %>
   <div class='container-fluid' id='bg-image-landing' style="background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')">
-    <%= render 'shared/navbar' %>
     <div class="container landing-banner">
       <h1 id='banner-h1'>Play. Learn. Discover.</h1>
       <div class="login-button orange call-to-action mt-4">
-        <%= link_to 'Get Started', class: "login-button orange call-to-action"%>
+        <%= link_to 'Get Started', class: "login-button orange call-to-action", anchor: "anchor-for-about-us"%>
       </div>
     </div>
     <%= cl_image_tag 'piifzgomj06non5hcq8qeip1jp21', id: 'rocket-landing' %>
   </div>
-  <div class="container mt-5 first-container">
+  <div id="anchor-for-about-us"></div>
+  <div class="container first-container">
     <div class="row">
-      <div class="col-md-5 col-sm-12 d-flex align-items-center justify-content-center flex-column position-relative">
-        <h3 class='mb-1'>Encourage you child to learn with AllSmart -
-          in a smart way <span id='arrow' class='orange-arrow ml-3'><i
-              class="fas fa-arrow-right"></i></span>
+      <div class="col-md-5 col-sm-12 d-flex align-items-center justify-content-center flex-column">
+        <h3 class='mb-1 position-relative'>Encourage
+          you child to learn
+          with AllSmart -
+          in a smart way <i class="fas fa-arrow-right pl-3 position-absolute"
+            id='arrow'></i>
         </h3>
         <p class='paragraph mt-3'>Improve your kids academic
           performance in a way that makes them want to learn more. At
@@ -66,9 +79,8 @@
           <h3 class='subject-pick mb-1' data-aos="fade-up"
             data-aos-duration="2000">1. Pick a subject</h3>
           <div class="row mt-5">
-            <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-center flex-column"
-              data-aos="fade-up" data-aos-duration="1500"
-              data-aos-delay="300">
+            <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
+              data-aos-duration="1500" data-aos-delay="300">
               <%= cl_image_tag "medolwcf6nigmrl3cvev", class: 'subject-icon' %>
               <p class="paragraph mt-3"> Maths</p>
             </div>
@@ -94,7 +106,7 @@
       </div>
       <div data-aos="flip-down" data-aos-duration="8000" data-aos-delay="800"
         class="col-lg-7 col-sm-12 my-5 d-flex justify-content-center">
-        <i class="fas fa-long-arrow-alt-down large-arrow orange-arrow"></i>
+        <i class="fas fa-long-arrow-alt-down orange-arrow" id="large-arrow"></i>
       </div>
       <div class="col-lg-5 col-sm-12" style="width:100%">
         <h3 class='mb-1' data-aos="fade-up" data-aos-duration="1000"
@@ -129,7 +141,7 @@
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-left"
               data-aos-duration="2000" data-aos-delay="550">
-              <%= cl_image_tag "kszck3lhkmpwyzkeetud", class: 'subject-icon'%>
+              <%= cl_image_tag "uiteramxddoo6pjedzvo", class: 'subject-icon'%>
               <p class='paragraph mt-3'>Human Body</p>
             </div>
           </div>
@@ -137,28 +149,26 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid card-container">
+  <div class="container-fluid card-container mb-2">
     <div class="container text-center">
       <h3 class="py-3 mb-4">Our most popular games</h3>
     </div>
     <div class="d-flex flex-row justify-content-lg-around">
       <div class="game-card">
-        <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
+        <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
         <div class="container mt-4">
-          <h4>Smash the spelling!</h4>
-          <p class='paragraph mt2'>For those who are confident with
-            their
-            phonics
+          <h4>How many eggs for a cake?</h4>
+          <p class='paragraph mt2'>For those who learn how to count
+            from 1 to 10
           </p>
         </div>
       </div>
       <div class="game-card">
-        <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
+        <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
         <div class="container mt-4">
-          <h4>Smash the spelling!</h4>
-          <p class='paragraph mt2'>For those who are confident with
-            their
-            phonics
+          <h4>Addition sprint</h4>
+          <p class='paragraph mt2'>Lets learn arithmetics together. Its
+            fun!
           </p>
         </div>
       </div>
@@ -174,8 +184,96 @@
       </div>
     </div>
   </div>
-  <div class="container-fluid testimonial-container">
+  <div class="container-fluid testimonial-container my-5 pb-5">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container-fluid testimonial-container my-2 pb-3">
+            <div class="container container-testimonial-inside">
+              <div class="row">
+                <div class="col-lg-12 testimonial-text mb-3 position-relative">
+                  <i class="fas fa-quote-left fa-quotes"></i>
+                  <h2 class='pl-3'>Fantastic platform, helped my child
+                    to
+                    improve his school results and find his way in the
+                    world of STEM.<span id="quotes">”</span></h2>
+                </div>
+                <div class="col-lg-12">
+                  <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
+                    <%= cl_image_tag 'isbmx3j00yxldzgku3xq', class: 'avatar-large mr-3' %>
+                    <div class="testimonial-text">
+                      <h3>Jada Folkner</h3>
+                      <p class="paragraph">Proud mom from Steventon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid testimonial-container my-2 pb-3">
+            <div class="container container-testimonial-inside">
+              <div class="row">
+                <div class="col-lg-12 testimonial-text mb-3 position-relative">
+                  <i class="fas fa-quote-left fa-quotes"></i>
+                  <h2 class='pl-3'>Me and my little one love AllSmart!
+                    Great educational games for many topics. I
+                    recommend spelling section in particular!<span id="quotes">”</span></h2>
+                </div>
+                <div class="col-lg-12">
+                  <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
+                    <%= cl_image_tag 'uwpxa5ftaiboconyvghn', class: 'avatar-large mr-3' %>
+                    <div class="testimonial-text">
+                      <h3>Patrick Svenson</h3>
+                      <p class="paragraph">AllSmart dad from London</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container-fluid testimonial-container my-2 pb-3">
+            <div class="container container-testimonial-inside">
+              <div class="row">
+                <div class="col-lg-12 testimonial-text mb-3 position-relative">
+                  <i class="fas fa-quote-left fa-quotes"></i>
+                  <h2 class='pl-3'>My little ones love AllSmart! They
+                    have so much fun and learn so easily it is
+                    unbelievable. Highly recommend.<span id="quotes">”</span></h2>
+                </div>
+                <div class="col-lg-12">
+                  <div class="avatar-container d-flex flex-row align-items-center justify-content-center pb-5">
+                    <%= cl_image_tag 'rfhcylxg2vhnem3igyg9', class: 'avatar-large mr-3' %>
+                    <div class="testimonial-text">
+                      <h3>Prya Triverdi</h3>
+                      <p class="paragraph">Delhi</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls"
+        role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls"
+        role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
+  <%= render 'shared/flashes' %>
+  <%= yield %>
+  <% elsif user_signed_in? %>
+  <%= render 'shared/navbar_user' unless controller_name == "kids" && action_name == "profile" %>
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% else %>

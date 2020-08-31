@@ -1,21 +1,27 @@
-  
 <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('<%= image_path '' %>');">
-  <div class="banner-content">
-    <h1>Games</h1>
+  <div class="banner-content d-flex justify-content-center mt-1">
+    <h3 class="mt-1">Games</h3>
+  </div>
+  <div class="banner-content d-flex justify-content-center">
     <p>Play a game and learn new skills!</p>
   </div>
 </div>
 <div>
-  <%= form_tag games_path, id: "search-bar", method: :get do %>
+  <div class="d-flex justify-content-space-around container mb-5 mt-5">
+    <%= form_tag games_path, id: "search-bar", method: :get do %>
     <%= text_field_tag :query,
-      params[:query],
-      class: "form-control",
-      placeholder: "Search by game subject"
-    %><%= submit_tag "Search", class: "btn btn-primary" %>
-  <% end %>
+            params[:query],
+            class: "form-control",
+            placeholder: "Search by subject"
+          %>
+    <%= submit_tag "Search", class: "btn btn-primary mb-3 mt-3" %>
+    <% end %>
+  </div>
 </div>
-<div class="container">
-  <div class="row">
+</div>
+</div>
+<div class="games-page container mt-1">
+  <div class="row mt-1">
     <% @games.each do |game| %>
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?game');">
@@ -23,17 +29,22 @@
             <h2><%= link_to game.title, game_path(game) %></h2>
           </div>
         </div>
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Allow to child:
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <% current_user.kids.each do |kid| %>
-              <%= link_to  kid.first_name,  kid_allowed_games_path(kid, game_id: game.id), method: :post %>
-            <% end %>
-          </div>
+      </div>
+      <div class="taos-dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button"
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <p>Allow to child:</p>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <% current_user.kids.each do |kid| %>
+          <p class="p-dropdown mb-1">
+            <%= link_to kid.first_name, kid_allowed_games_path(kid,game.id), game_id: game.id, method: :post, class: 'text-success' %>
+          </p>
+          <% end %>
         </div>
       </div>
+    </div>
     <% end %>
   </div>
 </div>

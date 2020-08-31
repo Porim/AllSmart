@@ -1,52 +1,9 @@
 // Specific CSS for your home-page
-#rocket {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  transform: rotate(90deg);
-}
 
-#link-with-rocket {
-  transform: rotate(-90deg);
-}
-
-
-#bg-image-landing {
-  height: 100vh;
-  background-position: center bottom;
-  background-size: cover;
-  position: relative;
-}
-
-#about-us>* {
-  color: white !important;
-  font-size: 18px;
-  text-decoration: none !important;
-}
-
-#about-us:hover {
-  color: white !important;
-  text-decoration: underline;
-}
+// -------------------Classes---------------------
 
 .landing-banner {
   text-align: center;
-  margin: 25vh auto;
-  width: 50%;
-}
-
-#banner-h1 {
-  color: white !important;
-  font-weight: bold;
-}
-
-#rocket-landing {
-  width: 215px;
-  height: 215px;
-  position: absolute;
-  transform: rotate(40deg);
-  top: 35vh;
-  left: 67vw;
 }
 
 .paragraph {
@@ -66,77 +23,29 @@
   top: 4px;
 }
 
-#arrow {
-  color: #013134 !important;
-}
 
 .orange-arrow {
   color: #E97234 !important;
   margin-top: 16px;
 }
 
-// #kite {
-//   width: 70px;
-//   align-self: flex-start;
-//   // transform: rotate(5deg);
-// }
-
-// @keyframes pick-a-subject {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
-// }
-
-.first-container {
-  height: 100vh;
+@media (min-width: 992px) {
+  .first-container {
+    margin-top: 92px;
+    height: auto;
+  }
 }
 
-// @keyframes pick-a-subject-delayed-25 {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
+@media (min-width: 1200px) {
+  .first-container {
+    margin-top: 92px;
+    height: auto;
+  }
+}
 
-//   25% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
+// .first-container {
+//   height: 100vh;
 // }
-
-
-// @keyframes pick-a-subject-delayed-50 {
-//   0% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   50% {
-//     opacity: 0;
-//     top: 200px;
-//     animation-timing-function: ease-out;
-//   }
-
-//   100% {
-//     opacity: 1;
-//     top: 0px;
-//   }
-// }
-
 
 
 .subject-pick {
@@ -152,26 +61,18 @@
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  box-shadow: none;
   border-radius: 5px;
 }
 
 .subject-icon:hover {
-  margin-top: 8px;
-  box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+  margin-top: 12px;
 }
-
-;
 
 .aligned {
   height: 182px;
   width: 80%;
   margin-bottom: 18px !important;
   text-align: center;
-}
-
-.large-arrow {
-  font-size: 10em;
 }
 
 .testimonial-container {
@@ -182,12 +83,83 @@
   margin-top: 150px;
 }
 
-.fa-rotate-45 {
-  transform: rotate(45deg);
-}
-
 .card-container {
   width: 100vw;
   margin-top: 160px;
   background: rgba(200, 200, 200, 0.05);
+  padding-bottom: 56px;
+}
+
+.carousel-control-prev-icon {
+  padding-right: 0px;
+}
+
+.carousel-control-next-icon {
+  padding-left: 0px;
+}
+
+// ----------------------IDs----------------------------
+
+
+#banner-h1 {
+  color: white !important;
+  font-weight: bold;
+}
+
+#rocket-landing {
+  width: 215px;
+  height: 215px;
+  position: absolute;
+  transform: rotate(40deg);
+  top: 35vh;
+  left: 67vw;
+}
+
+
+#large-arrow {
+  font-size: 10em;
+}
+
+#rocket {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  transform: rotate(90deg);
+}
+
+#link-with-rocket {
+  transform: rotate(-90deg);
+}
+
+
+#bg-image-landing {
+  height: 100vh;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#arrow {
+  color: #013134 !important;
+}
+
+@media (min-width: 768px) {
+  #arrow {
+    top: 102px;
+  }
+}
+
+@media (min-width: 992px) {
+  #arrow {
+    top: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #arrow {
+    top: 36px;
+  }
 }

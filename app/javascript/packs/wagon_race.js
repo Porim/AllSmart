@@ -18,3 +18,5 @@ const moveWagons = (event) => {
 };
 
 document.addEventListener("keyup", moveWagons);
+
+export 

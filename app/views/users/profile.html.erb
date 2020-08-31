@@ -1,8 +1,8 @@
-<div class="container p-5">
+  <div class="container p-5">
   <h1>
     <%= @user.first_name.possessive  %> Profile</h1>
   <h3 class='py-3'>Your kids</h3>
-  <div class="p-2 d-flex justify-content-around align-items-center">
+  <div class="cards">
     <% @kids.each do |kid| %>
     <%= link_to kid_path(kid) do  %>
     <div class="card-product my-5">
@@ -12,25 +12,25 @@
       <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
       <% end %>
       <div class="card-product-infos">
-        <h2>
-          <%= kid.first_name %>
-        </h2>
-        <p>
+        <p class="child-text">
           <%= kid.first_name %>
           <%= link_to kid_path(kid) do  %>
-          <i class="fas fa-child p-1"></i>
+          <%= cl_image_tag "vuchcnr52prmg4fybfxb.svg", class: "subject-icon" %>
           <% end %>
           <%= link_to edit_kid_path(kid) do  %>
           <i class="fas fa-pen p-1"></i>
           <% end %>
         </p>
       </div>
-      <%= link_to 'Enter child mode', kids_profile_path(kid), class: 'btn btn-outline-success'  %>
+      <%= link_to 'Enter child mode', kids_profile_path(kid), class: 'btn btn-outline-success btn-mode'  %>
     </div>
     <% end %>
     <% end %>
   </div>
-  <%= link_to new_kid_path do %>
-  <i class="fas fa-plus-square"></i>
-  <% end %>
+  <div class="child-text">
+    <%= link_to new_kid_path do %>
+    <i class="btn btn-success">Add a child</i>
+    <% end %>
+  </div>
 </div>
+

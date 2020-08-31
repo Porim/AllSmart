@@ -1,14 +1,18 @@
-
-
 .navbar-lewagon {
   justify-content: space-between;
   background: transparent;
   // padding-top: 8px;
   // padding-bottom: 6px;
   width: 100%;
-  padding: 24px;
+  padding: 16px;
+  position: fixed;
+  top: 0;
+  z-index: 500;
 }
 
+.colored-navbar {
+  background: #0D92A1;
+}
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
@@ -31,4 +35,21 @@
   #logo {
     width: 80%;
   }
+}
+
+.about-us {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.about-us:hover {
+  text-decoration: underline !important;
+}
+
+#about-us-onscroll {
+  color: #575757 !important;
+}
+
+#about-us-onscroll:hover {
+  text-decoration: underline;  
 }

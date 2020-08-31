@@ -8,7 +8,10 @@ $font-family-sans-serif: $body-font;
 $headings-font-family: $headers-font;
 $body-bg: $white;
 $font-size-base: 1rem;
-
+$link-color: #fff;
+$link-hover-color: #fff;
+$link-decoration: none;
+$link-hover-decoration: none;
 // Colors
 $body-color: $text;
 $primary: $link;
@@ -23,3 +26,10 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  }

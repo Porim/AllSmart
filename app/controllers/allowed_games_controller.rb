@@ -1,9 +1,10 @@
 class AllowedGamesController < ApplicationController
   
   def create
-    @game = Game.find(params[:game_id])
+    @game = Game.find(params[:format])
     @kid = Kid.find(params[:kid_id])
     @allowed_game = AllowedGame.new(game: @game, kid: @kid)
+    @allowed_game.save
     if @allowed_game.save
       redirect_to games_path, notice: "Game was added to the list"
     else
