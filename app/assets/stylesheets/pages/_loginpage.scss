@@ -1,8 +1,9 @@
 
-#forgot-password {
-  color: black !important;
-  background-color: black !important;
-
+.forgot-password {
+  color: #0E0000 !important;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .rounded {
@@ -11,6 +12,17 @@
   width: 130px;
 }
 
+.recover-password {
+  border-radius: 25px !important;
+  display: inline-block;
+  width: 180px;
+  background-color: lightgrey !important;
+
+}
+
 .account {
   color: blue;
+  &:hover {
+  text-decoration: underline;
+ }
 }
