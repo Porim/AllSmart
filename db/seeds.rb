@@ -9,16 +9,49 @@ Kid.destroy_all
 AllowedGame.destroy_all
 User.destroy_all
 puts "creating fake games"
-subjects = %w(Math English Biology Science)
+subjects = %w(Maths English Biology Science)
 difficulty_levels = [1, 2, 3, 4, 5]
 age_categories = %w(4-5 5-7)
-titles = ['Learn how to count', 'Smash the Spelling!', 'Learn about your body', 'Lets go to space']
+
+math_topics = ['Shapes', 'Addition', 'Multiplication', 'Substraction', 'Division']
+science_topics = ['Solar System', 'Magnetism', 'Forces', 'Explosive mixology', 'Electricity']
+biology_topics = ['Cardiovascular system', 'Organs', 'Muscles', 'Senses']
+english_topics =['Vowels', 'Rhymes', 'Reading' ]
+
+math_titles = ['Find the right shape', 'Addition sprint', 'Lets multiply!', 'Tricky minus', 'Divide and conquer']
+science_titles = ['Where we live', 'How do magnets work?', 'Move that block', 'Boom!', 'Zap, and it works!']
+biology_titles = ['Where is your heart?', 'How we work', 'Flex the muscle', 'How do we feel?']
+english_titles = ['Vowels are wow', 'Rhyme it', 'Reading ready?']
+
+maths_img = ['triangle_lgksmb', 'board_n4mwck', 'mathematics_ut3trh', 'minus_edbjg7', 'division_ovbc0v']
+science_img = ['universe_scx81t', 'magnet_adb8wr', 'force_yhvgwa', 'explosion_nypkai', 'energy_rzyips']
+biology_img = ['heart_jgrctf', 'stomach_ttx12e', 'muscle_aitput', 'nervous-system_phgh4s']
+english_img = ['alphabet_fq8qah', 'poem_lqklwp', 'abc_qmratk'] 
+topic_img = {maths: 'medolwcf6nigmrl3cvev', science: 'rnrgntaicfrllbnrzlxg', biology: 'enssmizahvyzkryyufw0', english: 'dkbxbzo5dpzzf0o3kbgy'}
 index = 0
-subjects.each do |subject|
-  Game.create(subject: subject, difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:titles[index] )
-  index += 1
+
+(0..math_topics.length - 1).each do |idx|
+  Game.create(subject: 'Maths', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:math_titles[idx], topic: math_topics[idx], cloud_imag_url: maths_img[idx], topic_image_url: topic_img[:maths] )
 end
-puts "Finished"
+
+(0..science_topics.length - 1).each do |idx|
+  Game.create(subject: 'Science', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:science_titles[idx], topic: english_topics[idx], cloud_imag_url: english_img[idx], topic_image_url: topic_img[:science] )
+end
+
+(0..biology_topics.length - 1).each do |idx|
+  Game.create(subject: 'Biology', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:biology_titles[idx], topic: biology_topics[idx], cloud_imag_url: biology_img[idx], topic_image_url: topic_img[:biology] )
+end
+
+(0..english_topics.length - 1).each do |idx|
+  Game.create(subject: 'English', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:english_titles[idx], topic: math_topics[idx], cloud_imag_url: maths_img[idx], topic_image_url: topic_img[:english])
+end
+
+# subjects.each do |subject|
+#   Game.create(subject: subject, difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:titles[index] )
+#   index += 1
+# end
+
+
 puts "creating 10 fake users with 2 fake kids each"
 
 

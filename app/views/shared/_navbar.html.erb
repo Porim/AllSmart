@@ -19,7 +19,8 @@
           <a class='about-us px-2 mt' id='home-on-scroll' href="https://www.allsmart.uk/">Home</a>
         </li>
         <li class="nav-item">
-          <a class='about-us px-3 mr-1' id='browse-on-scroll' href="https://www.allsmart.uk/games">Browse
+          <a class='about-us px-3 mr-1' id='browse-on-scroll' href="http://localhost:3000/games?subject=All">Browse
+<!--      <a class='about-us px-3 mr-1' id='browse-on-scroll' href="https://www.allsmart.uk/games?subject=All">Browse -->
             Games</a>
         </li>
         <li class="nav-item dropdown">
@@ -27,9 +28,9 @@
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if current_user.photo.present? %>
             <%= cl_image_tag current_user.photo.key, class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% else %>
+            <% else %>
             <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% end %>
+            <% end %>
             <div class="avatar dropdown-toggle text-white ml-4" id="user-toggle">
               <%= current_user.first_name %>
             </div>
