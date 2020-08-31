@@ -25,14 +25,14 @@
                           required: true,
                           input_html: { autocomplete: "new-password" } %>
             <%= f.input :photo, as: :file %>
-                      
+
           </div>
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "login-button orange"%>
+            <%= f.button :submit, "Sign up", class: "login-button orange d-flex justify-content-center"%>
             <p class="mt-4">Already created an account?
               <%= link_to "Log in", new_user_session_path, class: "account"%> instead</p>
+               <%end%>
           </div>
-          <%end%>
         </div>
       </div>
     </div>
