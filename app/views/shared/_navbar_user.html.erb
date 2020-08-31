@@ -1,44 +1,52 @@
- <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
-    <%= link_to root_path, class: "navbar-brand" do %>
-    <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
-      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <% if user_signed_in? %>
-        <li class="nav-item active">
-          <a class='about-us px-2 mt' id='home-on-scroll' href="http://localhost:3000/">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class='about-us px-2' id='browse-on-scroll' href="http://localhost:3000/games">Browse
-            Games</a>
-        </li>
-        <li class="nav-item dropdown">
-          <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right"
-            aria-labelledby="navbarDropdown">
-            <%= link_to "View profile", profile_path(@current_user), class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+<div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
+  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
+  <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <% if user_signed_in? %>
+      <li class="nav-item active">
+        <a class='about-us px-2 mt' id='home-on-scroll' href="http://localhost:3000/">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class='about-us px-2' id='browse-on-scroll' href="http://localhost:3000/games">
+          GAMES</a>
+      </li>
+      <li class="nav-item">
+        <a class='about-us px-2 mr-5' id='browse-on-scroll' href="http://localhost:3000/games">
+          CHILDREN</a>
+      </li>
+      <li class="nav-item dropdown">
+        <div class="d-flex align-items-center user-nav-container" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="avatar dropdown-toggle text-white ml-2">
+            <%= @current_user.first_name %>
           </div>
-        </li>
-        <% else %>
-        <div class="d-flex align-items-center">
-          <li class="nav-item mx-2">
-            <a class='about-us' id='about-us-js' href="#anchor-for-about-us">About
-              Us</a>
-          </li>
-          <li class="nav-item mx-2">
-            <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
-          </li>
-          <li class="nav-item mx-2">
-            <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
-          </li>
         </div>
-        <% end %>
-      </ul>
-    </div>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "View profile", profile_path(@current_user), class: "dropdown-item" %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        </div>
+      </li>
+      <% else %>
+      <div class="d-flex align-items-center">
+        <li class="nav-item mx-2">
+          <a class='about-us' id='about-us-js' href="#anchor-for-about-us">About
+            Us</a>
+        </li>
+        <li class="nav-item mx-2">
+          <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
+        </li>
+        <li class="nav-item mx-2">
+          <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
+        </li>
+      </div>
+      <% end %>
+    </ul>
   </div>
+</div>
