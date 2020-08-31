@@ -38,8 +38,12 @@
       <li class="nav-item dropdown">
         <div class="d-flex align-items-center user-nav-container" id="navbarDropdown"
           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="avatar dropdown-toggle text-white ml-2">
+          <% if current_user.photo.present? %>
+            <%= cl_image_tag current_user.photo.key, class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% else %>
+            <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <% end %>
+          <div class="avatar dropdown-toggle text-white ml-4">
             <%= current_user.first_name %>
           </div>
         </div>
