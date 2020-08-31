@@ -4,7 +4,7 @@
   // padding-top: 8px;
   // padding-bottom: 6px;
   width: 100%;
-  padding: 16px;
+  padding: 12px;
   position: fixed;
   top: 0;
   z-index: 500;
@@ -58,9 +58,11 @@
   color: #575757 !important;
   width: 51px;
 }
+
 #name-user-onscroll:hover {
   color: white !important;
 }
+
 // #name-user-onscroll:hover > *{
 //   color: white !important;
 // };
