@@ -26,18 +26,22 @@ require("channels")
 import "bootstrap";
 import { navbarGuest } from './navbar_on_scroll_guest'
 import { navbarUser } from './navbar_on_scroll_user'
-// import { ask, moveForward, displayQuestion } from './wagon_race'
+import { ask, moveForward, displayQuestion } from './wagon_race'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 //document.onmouseover=function(e){if(e.target.parentNode.classList&&e.target.parentNode.classList.contains('tooltip')){console.dir(e.target)}}
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
-  // if (window.location.href === 'http://localhost:3000/games/1') {
-  //   ask();
-  //   displayQuestion();
-  // };
-  AOS.init();
+  // initSelect2();
+  // myMove();
+  if (document.getElementById("player1-race")) {
+    const index = 0;
+    displayQuestion(index);
+  }
+  if (document.getElementById("bg-image-landing")){
+    AOS.init();
+  }
   navbarGuest();
   navbarUser();
 

@@ -15,13 +15,6 @@ const ask = () => {
   return problem;
 
 };
-console.log(ask());
-
-const questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(),
-  ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(),
-  ask(), ask()
-];
-console.log(questions);
 
 const moveForward = (player) => {
   const wagon = document.querySelector(
@@ -30,28 +23,30 @@ const moveForward = (player) => {
     wagon.nextElementSibling.classList.add('active');
     wagon.classList.remove('active');
   } else {
-    alert(`Player ${player} wins! Play again?`);
+    alert(`Game over!`);
     window.location.reload();
   }
 };
 
 const displayQuestion = (index) => {
+  const questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask()];
   if (index < 20) {
+    const quiz = document.querySelector(".question");
     quiz.innerText = questions[index].question;
     document.addEventListener("keyup", (event) => {
+      console.log(event.key);
+      console.log(Number.isInteger(parseInt(event.key)));
       if (event.key == questions[index].answer) {
         moveForward(1);
         displayQuestion(index + 1);
-      } else {
+      } else if (parseInt(event.key)) {
         moveForward(2);
         displayQuestion(index + 1);
+      } else {
+        displayQuestion(index);
       }
     }, { once: true });
   }
 };
 
-const index = 0;
-const quiz = document.querySelector(".question");
-displayQuestion(index);
-
-export { ask, moveForward, displayQuestion }
+export { displayQuestion, moveForward, ask }

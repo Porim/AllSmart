@@ -93,6 +93,22 @@
   transition: 0.3s;
 }
 
+.greenish {
+  background: #0E91A1;
+  border: none;
+  transition: 0.3s;
+}
+
+.greenish2 {
+  color: #0E91A1;
+  border: none;
+  transition: 0.3s;
+}
+
+.greenish:hover {
+  background: #0E91A1 !important;
+  text-decoration: none !important;
+}
 
 
 .orange:hover {
