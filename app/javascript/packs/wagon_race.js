@@ -24,20 +24,19 @@ const moveForward = (player) => {
 };
 
 const displayQuestion = (index) => {
-  const questions = [ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask(), ask()];
+  const question = ask();
   if (index < 20) {
     const quiz = document.querySelector(".question");
-    quiz.innerText = questions[index].question;
+    quiz.innerText = question.question;
     document.addEventListener("keyup", (event) => {
-      console.log(event.key);
-      console.log(Number.isInteger(parseInt(event.key)));
-      if (event.key == questions[index].answer) {
+      if (event.key == question.answer) {
         moveForward(1);
-        displayQuestion(index + 1);
+        displayQuestion(index);
       } else if (parseInt(event.key)) {
         moveForward(2);
-        displayQuestion(index + 1);
+        displayQuestion(index);
       } else {
+        window.alert(`${event.key} is not a number`);
         displayQuestion(index);
       }
     }, { once: true });
