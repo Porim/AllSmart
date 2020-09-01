@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { navbarGuest } from './navbar_on_scroll_guest'
 import { navbarUser } from './navbar_on_scroll_user'
+import { moveForward, moveWagons } from './wagon_race'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,6 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // myMove();
   AOS.init();
+  wagon_race();
   navbarGuest();
   navbarUser();
 });
