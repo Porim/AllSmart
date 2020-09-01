@@ -198,7 +198,7 @@
       <% end %>
     </div>
   </div>
-  <div class="container-fluid testimonial-container my-5 pb-5">
+  <div class="container-fluid testimonial-container my-5 pb-3">
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -272,18 +272,19 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleControls"
+      <a class="carousel-control-prev" id="prev-control" href="#carouselExampleControls"
         role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleControls"
+      <a class="carousel-control-next" id='next-control' href="#carouselExampleControls"
         role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
     </div>
   </div>
+  <%= render 'shared/call_to_action_landing' %>
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% elsif user_signed_in? %>
