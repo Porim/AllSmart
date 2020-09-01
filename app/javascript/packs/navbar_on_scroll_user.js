@@ -13,12 +13,14 @@ const navbarUser = () => {
       navbar.style.background = "white";
       browse.id = "about-us-onscroll";
       home.id = "about-us-onscroll";
-      navbarToggle.setAttribute('class', 'avatar dropdown-toggle ml-2 name-user-onscroll');
+      navbarToggle.setAttribute('class',
+        'avatar dropdown-toggle ml-4 name-user-onscroll');
     } else {
       navbar.style.background = "transparent";
       browse.id = 'browse-on-scroll';
       home.id = 'home-on-scroll';
-      navbarToggle.setAttribute('class', 'avatar dropdown-toggle text-white ml-2')
+      navbarToggle.setAttribute('class',
+        'avatar dropdown-toggle text-white ml-4')
     }
   })
 }
