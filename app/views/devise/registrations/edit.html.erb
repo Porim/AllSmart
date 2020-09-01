@@ -21,8 +21,8 @@
         <%= f.input :password_confirmation, :include_blank => true, placeholder: "Optional",
                     required: false,
                     input_html: { autocomplete: "new-password" } %>
-        <%= f.input :current_password,
-                    hint: "we need your current password to confirm your changes",
+        <%= f.input :current_password, :include_blank => true, placeholder: "current password required to confirm your changes",
+                    hint: "",
                     required: true,
                     input_html: { autocomplete: "current-password" } %>
          <%= f.input :photo, as: :file %>
