@@ -79,26 +79,34 @@
           <h3 class='subject-pick mb-1' data-aos="fade-up"
             data-aos-duration="2000">1. Pick a subject</h3>
           <div class="row mt-5">
+            <%= link_to maths_path, class: 'paragraph'  do %>
             <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
               data-aos-duration="1500" data-aos-delay="300">
               <%= cl_image_tag "medolwcf6nigmrl3cvev", class: 'subject-icon' %>
               <p class="paragraph mt-3"> Maths</p>
             </div>
+            <% end %>
+            <%= link_to science_path, class: 'paragraph' do  %>
             <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
               data-aos-duration="1700" data-aos-delay="350">
               <%= cl_image_tag "rnrgntaicfrllbnrzlxg", class: 'subject-icon' %>
               <p class="paragraph mt-3">Science</p>
             </div>
+            <% end %>
+            <%= link_to english_path, class: 'paragraph' do %>
             <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
               data-aos-duration="1900" data-aos-delay="400">
               <%= cl_image_tag "dkbxbzo5dpzzf0o3kbgy", class: 'subject-icon' %>
               <p class="paragraph mt-3">English</p>
             </div>
+            <% end %>
+            <%= link_to biology_path, class:'paragraph' do  %>
             <div class="col-sm-12 col-md-6 col-lg-3" data-aos="fade-up"
               data-aos-duration="2000" data-aos-delay="500">
               <%= cl_image_tag "enssmizahvyzkryyufw0", class: 'subject-icon'%>
               <p class='paragraph mt-3'>Biology</p>
             </div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -154,34 +162,40 @@
       <h3 class="py-3 mb-4">Our most popular games</h3>
     </div>
     <div class="d-flex flex-row justify-content-lg-around">
+      <%= link_to all_games_path, class: 'paragraph' do  %>
       <div class="game-card">
         <%= cl_image_tag 'b9ow23pwbktl3skl2tci', class: 'game-card-image' %>
         <div class="container mt-4">
-          <h4>How many eggs for a cake?</h4>
-          <p class='paragraph mt2'>For those who learn how to count
+          <h4>How many eggs?</h4>
+          <p class='paragraph mt-2'>For those who learn how to count
             from 1 to 10
           </p>
         </div>
       </div>
+      <% end %>
+      <%= link_to all_games_path, class: 'paragraph' do %>
       <div class="game-card">
         <%= cl_image_tag 'jhqnuizimqek5hnqtao9', class: 'game-card-image' %>
         <div class="container mt-4">
           <h4>Addition sprint</h4>
-          <p class='paragraph mt2'>Lets learn arithmetics together. Its
+          <p class='paragraph mt-2'>Lets learn arithmetics together. Its
             fun!
           </p>
         </div>
       </div>
+      <% end %>
+      <%= link_to all_games_path, class: 'paragraph' do %>
       <div class="game-card">
         <%= cl_image_tag 'rushhamrellqq7ouohnh', class: 'game-card-image' %>
         <div class="container mt-4">
           <h4>Smash the spelling!</h4>
-          <p class='paragraph mt2'>For those who are confident with
+          <p class='paragraph mt-2'>For those who are confident with
             their
             phonics
           </p>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="container-fluid testimonial-container my-5 pb-5">
