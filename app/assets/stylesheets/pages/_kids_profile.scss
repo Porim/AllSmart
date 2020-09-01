@@ -36,17 +36,6 @@
 .h-100 {
   height: 100%;
 }
-.r {
-  background-color: red;
-}
-
-.g {
-  background-color: green;
-}
-
-.b {
-  background-color: blue;
-}
 
 #xp-bar {
   width: 100%;
@@ -99,8 +88,6 @@
 
 .game-card-kid {
   background-color:#FABC2A;
-  width: 280px;
-  height: 280px;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
   transition: all 0.4s ease;
@@ -120,8 +107,7 @@
 }
 
 .game-card-kid:hover {
-  margin-top: 8px;
-  box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+  transform: scale(1.1);
 }
 
 .carousel-control-prev {
