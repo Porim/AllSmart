@@ -61,6 +61,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .subject-icon {
   width: 80px;
   margin: 0 4px;
@@ -103,6 +104,11 @@
 
 .carousel-control-next-icon {
   padding-left: 0px;
+}
+
+.subject-icon-no-hover {
+  width: 80px;
+  margin: 0 4px;
 }
 
 // ----------------------IDs----------------------------
@@ -156,17 +162,19 @@
 #logo-call-to-action {
   margin: 32px auto;
   width: 30%;
-  
+
 }
 
 #call-button {
   width: 300px;
   margin: 48px auto;
 }
+
 .h2-call {
   width: 50%;
   text-align: center;
 }
+
 @media (min-width: 768px) {
   #arrow {
     top: 102px;

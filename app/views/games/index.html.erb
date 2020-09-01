@@ -30,38 +30,70 @@
         <% end %>
       </div>
       <div class="col-md-9 games py-5">
-        <div class="container-fluid mb-5">
-          <h2 class='pb-5'>
-            <%= @game_title %>
+        <div class="container-fluid mb-1">
+          <div class="d-flex justify-content-start align-items-center">
+            <h2 class='h2-game-title'>
+              <%= @game_title %>
+            </h2>
+            <%= cl_image_tag @subject_image, class: 'subject-icon-no-hover ml-4'%>
+          </div>
+          <% if @all_games.count == @games.count %>
+          <% @subjects.each do |subject| %>
+          <h2>
+            <%= subject %>
           </h2>
-          <div class="row mt-1">
-            <% @games.each do |game| %>
-            <div class="col-12 col-md-6 col-lg-4 my-3">
-              <div class="card">
-                <%= cl_image_tag "universe_scx81t", width: 100 %>
-                <div class="card-description">
-                  <h2>
-                    <%= game.title %>
-                  </h2>
+          <div class="row">
+            <% @games.where(subject: subject).each do |game| %>
+            <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center">
+              <div class="search-game-card">
+                <div>
+                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
                 </div>
-              </div>
-              <div class="taos-dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button"
-                  id="dropdownMenuButton" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <p>Allow to child:</p>
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <% current_user.kids.each do |kid| %>
-                  <p class="p-dropdown mb-1">
-                    <%= link_to kid.first_name, kid_allowed_games_path(kid,game.id), game_id: game.id, method: :post, class: 'text-success' %>
+                <div>
+                  <h5 class='mt-3'>
+                    <%= game.title %>
+                  </h5>
+                  <p class="paragraph game-desc">Age category:
+                    <span class="age-cat">
+                      <%= game.age_category %></span>
                   </p>
-                  <% end %>
+                  <p class="paragraph game-desc">Topic:
+                    <span class="age-cat">
+                      <%= game.topic %></span>
+                  </p>
                 </div>
               </div>
             </div>
             <% end %>
           </div>
+          <hr class="separator my-4">
+          <% end %>
+          <% else %>
+          <div class="row">
+            <% @games.each do |game| %>
+            <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center">
+              <div class="search-game-card">
+                <div>
+                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
+                </div>
+                <div>
+                  <h5 class='mt-3'>
+                    <%= game.title %>
+                  </h5>
+                  <p class="paragraph game-desc">Age category:
+                    <span class="age-cat">
+                      <%= game.age_category %></span>
+                  </p>
+                  <p class="paragraph game-desc">Topic:
+                    <span class="age-cat">
+                      <%= game.topic %></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+          <% end %>
         </div>
       </div>
     </div>
