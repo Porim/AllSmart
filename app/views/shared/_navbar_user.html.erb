@@ -11,7 +11,7 @@
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <% if user_signed_in? %>
       <li class="nav-item active">
-        <a class='about-us px-2 mx-1' id='home-on-scroll' href="https://www.allsmart.uk/">HOME</a>
+        <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1', id: 'home-on-scroll'  %>
       </li>
       <% if current_page?(games_path) %>
       <li class="nav-item">
@@ -20,8 +20,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <a class='about-us px-2 mx-1' id='browse-on-scroll' href="https://www.allsmart.uk/games?subject=All">
-          GAMES</a>
+        <%= link_to 'GAMES', all_games_path, class:'about-us px-2 mx-1', id:'browse-on-scroll' %>
       </li>
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
@@ -31,8 +30,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <a class='about-us px-2 mr-3' id='browse-on-scroll' href="https://www.allsmart.uk/profile/<%= current_user.id %>">
-          CHILDREN</a>
+        <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2 mr-3', id: 'browse-on-scroll' %>
       </li>
       <% end %>
       <li class="nav-item dropdown">
@@ -43,7 +41,7 @@
           <% else %>
           <%= cl_image_tag "wujjeka5nfr6ospjw1s8", class: "avatar-medium dropdown-toggle ml-2", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
-          <div class="avatar dropdown-toggle text-white ml-4">
+          <div class="avatar dropdown-toggle text-white ml-4" style="font-size: 18px;">
             <%= current_user.first_name %>
           </div>
         </div>
