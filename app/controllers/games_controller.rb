@@ -1,19 +1,26 @@
 class GamesController < ApplicationController
   def index
+    @subjects = %w[Maths English Biology Science]
+    @all_games = Game.all
     if params[:subject] == 'Biology'
       @game_title = "Human Biology"
+      @subject_image = 'enssmizahvyzkryyufw0'
       @biology = 1
     elsif params[:subject] == 'All'
       @game_title = "All Games"
+      @subject_image = 'uiprme0fpeh7am66dntp'
       @all = 1
     elsif params[:subject] == 'Maths'
       @game_title = params[:subject]
+      @subject_image = 'medolwcf6nigmrl3cvev'
       @maths = 1
     elsif params[:subject] == 'English'
       @game_title = 'English'
+      @subject_image = 'dkbxbzo5dpzzf0o3kbgy'
       @english = 1
     else
       @game_title = params[:subject]
+      @subject_image = 'rnrgntaicfrllbnrzlxg'
       @science = 1
     end
     
