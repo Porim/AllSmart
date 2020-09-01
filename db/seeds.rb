@@ -11,7 +11,7 @@ User.destroy_all
 puts "creating fake games"
 subjects = %w(Maths English Biology Science)
 difficulty_levels = [1, 2, 3, 4, 5]
-age_categories = %w(4-5 5-7)
+age_categories = %w(4-5 5-6 6-7)
 
 math_topics = ['Shapes', 'Addition', 'Multiplication', 'Substraction', 'Division']
 science_topics = ['Solar System', 'Magnetism', 'Forces', 'Explosive mixology', 'Electricity']
@@ -35,7 +35,7 @@ index = 0
 end
 
 (0..science_topics.length - 1).each do |idx|
-  Game.create(subject: 'Science', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:science_titles[idx], topic: english_topics[idx], cloud_imag_url: english_img[idx], topic_image_url: topic_img[:science] )
+  Game.create(subject: 'Science', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:science_titles[idx], topic: science_topics[idx], cloud_imag_url: science_img[idx], topic_image_url: topic_img[:science] )
 end
 
 (0..biology_topics.length - 1).each do |idx|
@@ -43,7 +43,7 @@ end
 end
 
 (0..english_topics.length - 1).each do |idx|
-  Game.create(subject: 'English', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:english_titles[idx], topic: math_topics[idx], cloud_imag_url: maths_img[idx], topic_image_url: topic_img[:english])
+  Game.create(subject: 'English', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:english_titles[idx], topic: english_topics[idx], cloud_imag_url: english_img[idx], topic_image_url: topic_img[:english])
 end
 
 # subjects.each do |subject|
