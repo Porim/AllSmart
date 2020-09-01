@@ -1,48 +1,46 @@
-<div class="container py-5 my-1 game-container">
-  <div class="game-inner">
-    <h1 class="text-center display-2">Smart Wagon Race</h1>
-    <p class="text-center my-5">Read the question and press the correct number to move the red wagon. If you make a mistake, the yellow wagon will move instead and you may lose, so think twice!</p>
-    <p class="m-2">Correct answers</p>
-    <div>
-      <table class="racer-table pb-2 m-2">
-        <tr id="player1-race">
-          <td class="active"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="finish"></td>
-        </tr>
-      </table>
-    </div>
-    <div>  
-      <h1 class="text-center display-3 p-5 m-2 mt-5 question"></h1>
-    </div>
-    <div>
-      <p class="mt-4 m-2">Incorrect answers</p>
-      <table class="racer-table pt-2">
-        <tr id="player2-race">
-          <td class="active"></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td class="finish"></td>
-        </tr>
-      </table>
-    </div>
-    <div>
-    <%= link_to "Back to profile", kids_profile_path, class: "btn btn-primary m-1 mt-4" %>
-    </div>
+<div class="container py-5 my-1">
+  <h1 class="text-center display-2">Smart Wagon Race</h1>
+  <p class="text-center my-5">Read the question and press the correct number to move the red wagon. If you make a mistake, the yellow wagon will move instead and you may lose, so think twice!</p>
+  <p class="m-2">Correct answers</p>
+  <div>
+    <table class="racer-table pb-2 m-2">
+      <tr id="player1-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+    </table>
+  </div>
+  <div>  
+    <h1 class="text-center display-3 p-5 m-2 mt-5 question"></h1>
+  </div>
+  <div>
+    <p class="mt-4 m-2">Incorrect answers</p>
+    <table class="racer-table pt-2">
+      <tr id="player2-race">
+        <td class="active"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="finish"></td>
+      </tr>
+    </table>
+  </div>
+  <div>
+  <%= link_to "Back to profile", kids_profile_path, class: "btn btn-primary m-1 mt-4" %>
   </div>
 </div>
