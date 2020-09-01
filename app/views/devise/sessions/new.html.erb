@@ -1,8 +1,5 @@
-
   <div class="login-container d-flex justify-content-center mt-5">
-  <div class="container">
-    <div class="container">
-      <div class="container d-flex justify-content-center mt-5">
+      <div class="container d-flex justify-content-space-around mt-5">
         <div>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
@@ -20,16 +17,11 @@
             <%= f.button :submit, "Log in", class: "btn btn-primary rounded mb-3 mt-2"%>
           </div>
           <div style="color:black;">
-          <%= render "devise/shared/links", class: "login-button orange forgot-password" %>
+            <%= render "devise/shared/links", class: "login-button orange forgot-password" %>
+              <% end %>
           </div>
-          <% end %>
-          </div>
-            </div>
-
-          </div>
-
         </div>
       </div>
-    </div>
   </div>
-</div>
+
+
