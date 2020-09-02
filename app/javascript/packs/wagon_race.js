@@ -23,7 +23,7 @@ const moveForward = (player) => {
     wagon.nextElementSibling.classList.add('active');
     wagon.classList.remove('active');
   } else {
-    alert(`Game over!`);
+    alert(`You Win!`);
     window.location.reload();
   }
 };
@@ -41,7 +41,6 @@ const displayQuestion = (index) => {
         moveForward(2);
         displayQuestion(index);
       } else {
-        window.alert(`${event.key} is not a number`);
         displayQuestion(index);
       }
     }, { once: true });
