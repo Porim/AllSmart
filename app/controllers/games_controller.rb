@@ -42,5 +42,6 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    @kid = Kid.find(params[:kid_id])
   end
 end
