@@ -76,11 +76,10 @@
   width: auto;
   padding: 10px 12px;
   display: inline-block;
-}
-
-.back-to-profile:hover {
+ &:hover {
   text-decoration: none !important;
   color: black !important;
-  transition: 0 !important;
+
+ }
 }
 
