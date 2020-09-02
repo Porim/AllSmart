@@ -1,7 +1,6 @@
 .ct-footer {
   justify-content: space-between;
-  background: D9703B;
-  ;
+  background: #D9703B;
   padding-top: 8px;
   padding-bottom: 6px;
   color: black;
@@ -32,7 +31,7 @@
 }
 
 .footer-links a {
-  color: #0E91A1;
+  color: #0A93A1; 
   opacity: 0.50;
   text-decoration: none;
   font-size: 24px;
@@ -44,14 +43,18 @@
 }
 
 .footer .fa-heart {
-  color: #0E91A1;
+  color: #0A93A1;
 }
 
 ul {
   list-style-type: none;
 }
 
+p .footer-links {
+  color: #0A93A1;
+}
+
 #space {
   flex-grow: 1;
-  background: #0E91A1;
+  background: #0A93A1;
 }
