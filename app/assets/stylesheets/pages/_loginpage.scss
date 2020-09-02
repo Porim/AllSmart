@@ -30,5 +30,19 @@
 .login-container {
   width: 110%;
   height: 780px;
-  background-color: yellow;
+  background-color: #0A93A1;
+  /*color: white !important;*/
+}
+
+.signup-button {
+  font-family: sans-serif;
+  border: 1px;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: #FFFFFF !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
+
 }

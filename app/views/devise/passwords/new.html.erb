@@ -1,19 +1,17 @@
-<div class="container d-flex justify-content-center mt-5">
-
-<div class="container d-flex justify-content-center mt-5">
-<%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-  <h4 class="mt-5 mb-5">Recover Password</h4>
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                input_html: { autocomplete: "email" } %>
-  </div>
-  <div class="form-actions">
-    <%= f.button :submit, "Recover Password", class: "recover-password"%>
-  </div>
-<% end %>
+<div class="login-container d-flex justify-content-center mt-5">
+  <div class="container d-flex justify-content-center mt-5">
+    <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <h4 class="mt-5 mb-5">Recover password</h4>
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" } %>
+    </div>
+      <div class="form-actions">
+        <%= f.button :submit, "Recover password", class: "recover-password d-flex justify-content-center"%>
+      </div>
+          <% end %>
   </div>
 </div>

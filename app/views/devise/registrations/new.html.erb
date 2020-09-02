@@ -26,12 +26,13 @@
 
           </div>
           <div class="form-actions">
-            <%= f.button :submit, "Sign up", class: "login-button orange d-flex justify-content-center"%>
+            <%= f.button :submit, "Sign up", class: "signup-button orange d-flex justify-content-center"%>
             <p class="mt-3 mb-4">Already created an account?
-              <%= link_to "Log in", new_user_session_path, class: "account"%> instead</p>
+             <strong><%= link_to "Log in", new_user_session_path, class: "account"%></strong> instead</p>
                <%end%>
           </div>
         </div>
       </div>
     </div>
+
 
