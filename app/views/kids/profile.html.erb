@@ -10,7 +10,7 @@
       <div class="">
         <div class="d-flex justify-content-between">
           <h2 id="level">LV2</h2>
-          <h2 id="current-xp">99%</h2>
+          <h2 id="current-xp"><%= @kid.total_score%>XP</h2>
         </div>
         <div id="xp-bar">
         </div>
@@ -25,7 +25,7 @@
                 <% array.each do |allowed_game| %>
                   <div class="col-4 d-flex justify-content-center">
                     <div class="game-card-kid p-2">
-                      <%= link_to game_path(allowed_game.game_id) do %>
+                      <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
                         <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image' %>
                         <div class="container mt-2">
                           <h4><%= allowed_game.game.subject %></h4>
