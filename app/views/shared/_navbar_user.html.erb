@@ -20,7 +20,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to 'GAMES', all_games_path, class:'about-us px-2 mx-1', id:'browse-on-scroll' %>
+        <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1', id:'browse-on-scroll' %>
       </li>
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
