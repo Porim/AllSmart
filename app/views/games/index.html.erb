@@ -45,55 +45,55 @@
           <div class="row">
             <% @games.where(subject: subject).each do |game| %>
             <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
+              <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}"} do %>
               <div class="search-game-card">
-                <%= link_to game_path(game) do %>
-                  <div>
-                    <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
-                  </div>
-                  <div>
-                    <h5 class='mt-3 pl-1'>
-                      <%= game.title %>
-                    </h5>
-                    <p class="paragraph game-desc">Age category:
-                      <span class="age-cat">
-                        <%= game.age_category %></span>
-                    </p>
-                    <p class="paragraph game-desc">Topic:
-                      <span class="age-cat">
-                        <%= game.topic %></span>
-                    </p>
-                  </div>
-                <% end %>
+                <div>
+                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
+                </div>
+                <div>
+                  <h5 class='mt-3 pl-1 paragraph'>
+                    <%= game.title %>
+                  </h5>
+                  <p class="paragraph game-desc">Age category:
+                    <span class="age-cat">
+                      <%= game.age_category %></span>
+                  </p>
+                  <p class="paragraph game-desc">Topic:
+                    <span class="age-cat">
+                      <%= game.topic %></span>
+                  </p>
+                </div>
               </div>
+              <% end %>
             </div>
             <% end %>
+            <hr class="separator my-4">
           </div>
-          <hr class="separator my-4">
           <% end %>
           <% else %>
           <div class="row">
             <% @games.each do |game| %>
             <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
+              <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}#{game.subject}"} do %>
               <div class="search-game-card">
-                <%= link_to game_path(game) do %>
-                  <div>
-                    <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
-                  </div>
-                  <div>
-                    <h5 class='mt-3 pl-1'>
-                      <%= game.title %>
-                    </h5>
-                    <p class="paragraph game-desc">Age category:
-                      <span class="age-cat">
-                        <%= game.age_category %></span>
-                    </p>
-                    <p class="paragraph game-desc">Topic:
-                      <span class="age-cat">
-                        <%= game.topic %></span>
-                    </p>
-                  </div>
-                <% end %>
+                <div>
+                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
+                </div>
+                <div>
+                  <h5 class='mt-3 pl-1 paragraph'>
+                    <%= game.title %>
+                  </h5>
+                  <p class="paragraph game-desc">Age category:
+                    <span class="age-cat">
+                      <%= game.age_category %></span>
+                  </p>
+                  <p class="paragraph game-desc">Topic:
+                    <span class="age-cat">
+                      <%= game.topic %></span>
+                  </p>
+                </div>
               </div>
+              <% end %>
             </div>
             <% end %>
           </div>
@@ -103,3 +103,124 @@
     </div>
   </div>
 </div>
+<% @games.each do |game| %>
+<div id="record-<%= game.id %>" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <%= game.title %>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex">
+          <p class="paragraph game-desc">Subject:
+            <span class="age-cat">
+              <%= game.subject %></span>
+            <%= cl_image_tag game.topic_image_url, class:'subject-icon-no-hover-modal ml-2' %>
+          </p>
+        </div>
+        <p class="paragraph game-desc mb-2">Topic:
+          <span class="age-cat">
+            <%= game.topic %></span>
+        </p>
+        <p class="paragraph game-desc mb-2">Difficulty:
+          <span class="age-cat">
+            <%= game.difficulty_level %></span>
+        </p>
+        <p class="paragraph game-desc">Age category:
+          <span class="age-cat">
+            <%= game.age_category %></span>
+        </p>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
+        <div class="taos-dropdown">
+          <div class="d-flex align">
+            <button id='game-card-dropdown-button' class="orange call-to-action dropdown-toggle text-center"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <p class='mx-auto d-inline-block allow-button'>Allow to
+                play</p>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <% current_user.kids.each do |kid| %>
+              <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
+                <%= link_to kid.first_name, kid_allowed_games_path(kid,game.id), game_id: game.id, method: :post, class: 'paragraph', remote: true %>
+                <% if kid.photo.attached? %>
+                <%= cl_image_tag kid.photo.key, class: 'avatar ml-3' %>
+                <% end %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="greenish call-to-action"
+            data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+<% @games.each do |game| %>
+<div id="record-<%=game.id%><%=game.subject%>" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <%= game.title %>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex">
+          <p class="paragraph game-desc">Subject:
+            <span class="age-cat">
+              <%= game.subject %></span>
+            <%= cl_image_tag game.topic_image_url, class:'subject-icon-no-hover-modal ml-2' %>
+          </p>
+        </div>
+        <p class="paragraph game-desc mb-2">Topic:
+          <span class="age-cat">
+            <%= game.topic %></span>
+        </p>
+        <p class="paragraph game-desc mb-2">Difficulty:
+          <span class="age-cat">
+            <%= game.difficulty_level %></span>
+        </p>
+        <p class="paragraph game-desc">Age category:
+          <span class="age-cat">
+            <%= game.age_category %></span>
+        </p>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
+        <div class="taos-dropdown">
+          <div class="d-flex align">
+            <button id='game-card-dropdown-button' class="orange call-to-action dropdown-toggle text-center"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <p class='mx-auto d-inline-block allow-button'>Allow to
+                play</p>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <% current_user.kids.each do |kid| %>
+              <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
+                <%= link_to kid.first_name, kid_allowed_games_path(kid,game.id, subject: game.subject), game_id: game.id, method: :post, class: 'paragraph', remote: true %>
+                <% if kid.photo.attached? %>
+                <%= cl_image_tag kid.photo.key, class: 'avatar ml-3' %>
+                <% end %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="greenish call-to-action"
+            data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
