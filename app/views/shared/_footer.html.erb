@@ -11,7 +11,7 @@
           <%= link_to 'Home', root_path %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Games', all_games_path %>
+          <%= link_to 'Games', games_path(subject: 'All') %>
         </li>
         <li class="nav-item">
           <%= link_to 'Log in', new_user_session_path %>
@@ -22,7 +22,7 @@
       </ul>
     </div>
     <div class="footer-links d-flex justify-content-around">
-      <ul> 
+      <ul>
         <h3>Social Media</h3>
         <li>
           <a href="#"><i class="fab fa-github"> GitHub</i></a>
@@ -57,7 +57,7 @@
     </div>
     <div class="footer-links d-flex justify-content-around align-items-start">
       <%= link_to controller: controller_name, action: action_name do %>
-        <i class="fas fa-arrow-circle-up orange-arrow" id="medium-arrow" ></i>
+      <i class="fas fa-arrow-circle-up orange-arrow" id="medium-arrow"></i>
       <% end %>
     </div>
   </div>
