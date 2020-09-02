@@ -1,12 +1,20 @@
-<div class="container">
-  <h1>Edit
-    <%= @kid.first_name.possessive %> Profile </h1>
-  <%= simple_form_for [@kid] do |f| %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :age %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit class: 'btn btn-primary'%>
-  <%= link_to 'Back to profile', profile_path(current_user), class: 'btn btn-primary'  %>
-  <% end %>
+<div class="login-container d-flex justify-content-center mt-5">
+  <div class="container d-flex justify-content-center mt-5">
+    <div>
+      <h4 class="mb-4 mt-5">Edit
+        <%= @kid.first_name.possessive %> profile </h4>
+      <%= simple_form_for [@kid] do |f| %>
+      <%= f.input :first_name, input_html: { class: "name"} %>
+      <%= f.input :last_name, input_html: { class: "name"} %>
+      <%= f.input :age %>
+      <%= f.input :photo, as: :file %>
+    <div class="">
+      <%= f.submit class: "kids-update d-flex justify-content-center" %>
+      <div>
+      <%= link_to 'Back to profile', profile_path(current_user), class: "back-to-profile btn btn-success mt-3" %>
+      </div>
+        <% end %>
+    </div>
+    </div>
+  </div>
 </div>

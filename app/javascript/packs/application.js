@@ -36,8 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // myMove();
   if (document.getElementById("player1-race")) {
-    const index = 0;
-    displayQuestion(index);
+    displayQuestion(0, 0);
   }
   if (document.getElementById("bg-image-landing")){
     AOS.init();

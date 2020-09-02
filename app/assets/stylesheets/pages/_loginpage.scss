@@ -29,6 +29,60 @@
 
 .login-container {
   width: 110%;
-  height: 780px;
-  background-color: yellow;
+  height: 200%;
+  background-color: #0A93A1;
+  /*color: white !important;*/
 }
+
+.signup-button {
+  font-family: sans-serif;
+  border: 1px;
+  border-radius: 25px;
+  padding: 12px 45px;
+  color: #FFFFFF !important;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.recover {
+  font-family: sans-serif;
+  border: 1px;
+  border-radius: 25px;
+  padding: 12px 45px;
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  transition: 0.3s;
+
+}
+
+.hint {
+  color: white !important;
+}
+
+.kids-update {
+  font-family: sans-serif;
+  background: #86B6FE;
+  border: 1px;
+  border-radius: 20px;
+  padding: 10px 30px;
+  width: 130px;
+}
+
+.back-to-profile {
+  border-radius: 20px !important;
+  width: auto;
+  padding: 10px 12px;
+  display: inline-block;
+ &:hover {
+  text-decoration: none !important;
+  color: black !important;
+ }
+}
+
+.name {
+  text-transform: capitalize;
+}
+

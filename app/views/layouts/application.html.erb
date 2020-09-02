@@ -48,6 +48,7 @@
 </head>
 
 <body>
+<div class="flex-wrapper">
   <% if current_page?(root_path) %>
   <%= render 'shared/navbar' %>
   <div class='container-fluid' id='bg-image-landing' style="background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')">
@@ -256,6 +257,8 @@
   <%= render 'shared/flashes' %>
   <%= yield %>
   <% end %>
+  <%= render 'shared/footer' unless (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") %>
+</div>
 </body>
 
 </html>
