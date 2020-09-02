@@ -38,7 +38,13 @@
   width: 100%;
 }
 
-.modal-js{
-  display: none;
-  position: absolute;
+.modal-content {
+  margin: 40vh auto;
+}
+#game-card-dropdown-button {
+width: 200px !important;
+}
+
+.allow-button {
+  margin-bottom: 0;
 }

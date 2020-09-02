@@ -3,12 +3,16 @@ class AllowedGamesController < ApplicationController
   def create
     @game = Game.find(params[:format])
     @kid = Kid.find(params[:kid_id])
-    @allowed_game = AllowedGame.new(game: @game, kid: @kid)
-    @allowed_game.save
-    if @allowed_game.save
-      redirect_to games_path, notice: "Game was added to the list"
+    if @kid.allowed_games.find_by(game_id: @game.id).present?
+     redirect_to games_path(anchor: "record-#{@game.id}"), notice: "  Game is already added"
     else
-      redirect_to games_path, notice: "Game wasn't added to the list"
+      @allowed_game = AllowedGame.new(game: @game, kid: @kid)
+      @allowed_game.save
+        if @allowed_game.save
+          redirect_to games_path(anchor: "record-#{@game.id}"), notice: "    Game was added to the list"
+        else
+          redirect_to games_path(anchor: "record-#{@game.id}"), notice: "    Game wasn't added to the list"
+        end
     end
   end
 
