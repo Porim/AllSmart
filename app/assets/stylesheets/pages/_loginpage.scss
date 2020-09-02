@@ -59,6 +59,30 @@
 }
 
 .hint {
-
   color: white !important;
 }
+
+.kids-update {
+  font-family: sans-serif;
+  background: #86B6FE;
+  border: 1px;
+  border-radius: 20px;
+  padding: 10px 30px;
+  width: 130px;
+}
+
+.back-to-profile {
+  border-radius: 20px !important;
+  width: auto;
+  padding: 10px 12px;
+  display: inline-block;
+ &:hover {
+  text-decoration: none !important;
+  color: black !important;
+ }
+}
+
+.name {
+  text-transform: capitalize;
+}
+
