@@ -48,12 +48,13 @@ const displayQuestion = (correct, incorrect) => {
       }
     }, { once: true });
   } else if (correct == 10) {
-    quiz.innerText = "Congratulations, you've won 15xp"
+    quiz.innerText = "Congratulations, you've earned 20xp!"
     // select button and set its display to block
     document.getElementById("update-score").style.display = "block";
     document.getElementById("back-to").style.display = "none";
   } else {
     quiz.innerText = "You lost! Try again!"
+    document.getElementById("try-again").style.display = "block";
   }
 };
 

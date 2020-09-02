@@ -20,8 +20,8 @@
     </table>
   </div>
   <div>  
-    <%= link_to "Update score", kid_update_score_path(@kid, game_id: @game.id), class: "btn btn-success m-1 mt-4 p-3", id: "update-score" %>
     <h1 class="text-center display-3 p-5 m-2 mt-5 question"></h1>
+    <%= link_to "Update score", kid_update_score_path(@kid, game_id: @game.id), class: "btn btn-success m-1 mt-4 p-3", id: "update-score" %>
   </div>
   <div>
     <p class="mt-4 m-2">Incorrect answers</p>
@@ -40,9 +40,8 @@
         <td class="finish"></td>
       </tr>
     </table>
-      <div>
-        <%= link_to "Back to profile", kids_profile_path(@kid), class: "btn btn-primary m-1 mt-4", id: "back-to" %>
-      </div>
+      <%= link_to "Try again", game_path(@game, kid_id: @kid), class: "btn btn-info mt-4", id: "try-again" %>
+      <%= link_to "Back to profile", kids_profile_path(@kid), class: "btn btn-primary m-1 mt-4", id: "back-to" %>
     </div>
   </div>
 </div>

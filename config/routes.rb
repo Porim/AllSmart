@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   resources :kids, only: [:show, :create, :edit, :update, :new] do
     resources :allowed_games, only: [:create]
     get "/update_score", to: "kids#update_score"
+    get "/update_level", to: "kids#update_level"
   end
   resources :allowed_games, only: [:destroy]
   
