@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => { :registrations => :registrations }
   # post "/games", to: 'games#index'
-    get "/games?subject=All", to: "games#all", as: :all_games
+  get "/games?subject=All", to: "games#all", as: :all_games
   get "/games?subject=Maths", to: "games#maths", as: :maths
   get "/games?subject=Science", to: "games#science", as: :science
   get "/games?subject=Biology", to: "games#biology", as: :biology
