@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_up_path_for(resource)
-    profile_path(current_user) 
+    profile_path(current_user)
   end
 
   def default_url_options

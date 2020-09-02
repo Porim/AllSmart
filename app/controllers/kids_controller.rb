@@ -3,6 +3,8 @@ class KidsController < ApplicationController
   
   def show
     redirect_to profile_path(current_user) if @kid.nil? 
+    @games = @kid.allowed_games
+    @subjects = %w[Maths English Biology Science]
   end
   
   def edit

@@ -15,15 +15,15 @@
 }
 
 #player1_race td.active {
-  background-image: url(images/player_1.png);
+  background-image: url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041220/p9yb3ijwni83jp6sadon.png);
 }
 
 #player2_race td.active {
-  background-image: url(images/player_2.png);
+  background-image: url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041226/ebpw4yrdxycbzv4t8spr.png);
 }
 
 td:last-child {
-  background-image: url(images/finish.png);
+  background-image: url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
   background-size: cover;
 }
 
@@ -33,9 +33,9 @@ td:last-child.active {
 }
 
 #player1_race td:last-child.active {
-  background-image: url(images/player_1.png), url('images/finish.png');
+  background-image: url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041220/p9yb3ijwni83jp6sadon.png), url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
 }
 
 #player2_race td:last-child.active {
-  background-image: url(images/player_2.png), url('images/finish.png');
+  background-image: url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041226/ebpw4yrdxycbzv4t8spr.png), url(http://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
 }
