@@ -1,6 +1,6 @@
 <div class="new-container">
   <div class="new-inner">
-    <div class="top-inner">
+    <div class="top-inner ml-4">
       <div id="kid-avatar">
         <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
       </div>
@@ -9,8 +9,8 @@
       </div>
       <div class="">
         <div class="d-flex justify-content-between">
-          <h2 id="level">LV2</h2>
-          <h2 id="current-xp"><%= @kid.total_score%>XP</h2>
+          <h2 id="level">LV<%= @kid.level %></h2>
+          <h2 id="current-xp"><%= @kid.total_score %>XP</h2>
         </div>
         <div id="xp-bar">
         </div>

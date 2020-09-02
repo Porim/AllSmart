@@ -34,6 +34,7 @@ class KidsController < ApplicationController
   
   def profile
     @allowed_games = @kid.allowed_games
+    update_level
   end
 
   def update_score
@@ -43,6 +44,17 @@ class KidsController < ApplicationController
     @kid.total_score += @game.base_score
     @kid.save
     redirect_to kids_profile_path(@kid)
+  end
+
+  def update_level
+    @kid = Kid.find(params[:id])
+    @kid.level = 1 if @kid.level.nil?
+    @kid.total_score = 0 if @kid.total_score.nil?
+    if @kid.total_score >= 60
+      @kid.level += 1
+      @kid.total_score -= 60
+    end
+    @kid.save
   end
 
   private
