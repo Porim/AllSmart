@@ -5,6 +5,7 @@ class KidsController < ApplicationController
     redirect_to profile_path(current_user) if @kid.nil? 
     @games = @kid.allowed_games
     @subjects = %w[Maths English Biology Science]
+    @total_score = @kid.total_score
   end
   
   def edit
