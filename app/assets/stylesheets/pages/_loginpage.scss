@@ -1,5 +1,6 @@
 .forgot-password {
   color: #0E0000 !important;
+
   &:hover {
     text-decoration: underline;
   }
@@ -21,16 +22,17 @@
 
 .account {
   color: blue;
+
   &:hover {
-  text-decoration: underline;
- }
+    text-decoration: underline;
+  }
 }
 
 .login-container {
   width: 110%;
   height: 200%;
   background-color: #0A93A1;
-  /*color: white !important;*/
+  color: white !important;
 }
 
 .signup-button {
@@ -75,13 +77,13 @@
   width: auto;
   padding: 10px 12px;
   display: inline-block;
- &:hover {
-  text-decoration: none !important;
-  color: black !important;
- }
+
+  &:hover {
+    text-decoration: none !important;
+    color: black !important;
+  }
 }
 
 .name {
   text-transform: capitalize;
 }
-
