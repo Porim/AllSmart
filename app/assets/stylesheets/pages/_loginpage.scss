@@ -79,7 +79,10 @@
  &:hover {
   text-decoration: none !important;
   color: black !important;
-
  }
+}
+
+.name {
+  text-transform: capitalize;
 }
 
