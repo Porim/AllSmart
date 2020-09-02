@@ -94,7 +94,7 @@
 .card-container {
   width: 100vw;
   margin-top: 160px;
-  background: rgba(200, 200, 200, 0.05);
+  background: rgba(200, 200, 200, 0.15);
   padding-bottom: 56px;
 }
 
@@ -141,6 +141,10 @@
 
 #large-arrow {
   font-size: 10em;
+}
+
+#medium-arrow {
+  font-size: 6em;
 }
 
 #rocket {
