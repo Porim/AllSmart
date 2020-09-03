@@ -2,56 +2,56 @@
 <div id="space">
 </div>
 <% end %>
-<div class="footer ">
+<div class="footer">
   <div class="d-flex justify-content-around">
     <div class="footer-links d-flex justify-content-around align-items-start">
       <ul>
-        <h3>allSmart</h3>
-        <li class="nav-item active">
-          <%= link_to 'Home', root_path %>
+        <h4>allSmart</h4>
+        <li class="nav-item">
+          <%= link_to 'Home', root_path, class: "foot" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Games', games_path(subject: 'All') %>
+          <%= link_to 'Games', games_path(subject: 'All'), class: "foot" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Log in', new_user_session_path %>
+          <%= link_to 'Log in', new_user_session_path, class: "foot" %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Sign up', new_user_registration_path %>
+          <%= link_to 'Sign up', new_user_registration_path, class: "foot" %>
         </li>
       </ul>
     </div>
     <div class="footer-links d-flex justify-content-around">
       <ul>
-        <h3>Social Media</h3>
+        <h4>Social Media</h4>
         <li>
-          <a href="#"><i class="fab fa-github"> GitHub</i></a>
+          <a href="#"><i class="fab fa-github footer-i"> GitHub</i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-instagram"> Instagram</i></a>
+          <a href="#"><i class="fab fa-instagram footer-i"> Instagram</i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-facebook"> Facebook</i></a>
+          <a href="#", class="footer-padding"><i class="fab fa-facebook footer-i"> Facebook</i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-twitter"> Twitter</i></a>
+          <a href="#"><i class="fab fa-twitter footer-i"> Twitter</i></a>
         </li>
         <li>
-          <a href="#"><i class="fab fa-linkedin"> Linkedin</i></a>
+          <a href="#"><i class="fab fa-linkedin footer-i"> Linkedin</i></a>
         </li>
       </ul>
     </div>
     <div class="footer-links d-flex justify-content-around align-items-start">
       <ul>
-        <h3>Mobile Apps</h3>
+        <h4>Mobile Apps</h4>
         <li>
-          <%= cl_image_tag("zfplc2v2oprvnvhshypx", :width=>200, :crop=>"scale") %>
+          <%= cl_image_tag("zfplc2v2oprvnvhshypx", :width=>160, :crop=>"scale") %>
         </li>
         <li>
           <p> </p>
         </li>
         <li>
-          <%= cl_image_tag("otdk9zkcdnkws68yfrzy", :width=>200, :crop=>"scale") %>
+          <%= cl_image_tag("otdk9zkcdnkws68yfrzy", :width=>160, :crop=>"scale") %>
         </li>
       </ul>
     </div>
@@ -61,7 +61,7 @@
       <% end %>
     </div>
   </div>
-  <div class="footer-copyright text-center mt-4">
+  <div class="footer-copyright text-center">
     Copyright © 2020 allSmart.uk ®
   </div>
 </div>

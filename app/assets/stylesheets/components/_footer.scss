@@ -1,11 +1,3 @@
-.ct-footer {
-  justify-content: space-between;
-  background: #D9703B;
-  padding-top: 8px;
-  padding-bottom: 6px;
-  color: black;
-}
-
 .flex-wrapper {
   display: flex;
   min-height: 100vh;
@@ -19,10 +11,11 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
-  padding: 0px 50px;
+  padding: 0px 0px;
   color: #E97234;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 15x !important;
 }
 
 .footer-links {
@@ -52,9 +45,24 @@ ul {
 
 p .footer-links {
   color: #0A93A1;
+  font-size: 0.5rem !important;
 }
 
 #space {
   flex-grow: 1;
   background: #0A93A1;
+}
+
+.footer-i {
+  font-size: 20px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.foot {
+  font-size: 22px !important;
+}
+
+.footer-padding {
+  
 }
