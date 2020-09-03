@@ -1,7 +1,7 @@
 <div class="new-container">
   <div class="new-inner">
     <div class="d-flex p-4 background-container">
-      <div class="top-inner">
+      <div class="top-inner d-flex flex-column align-content-center justify-content-center">
         <div id="kid-avatar">
           <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
         </div>
@@ -23,21 +23,29 @@
             </div>
           </div>
         </div>
+        <div class="text-center my-4 text-white font-weight-bold">
+        <h2>Achievements</h2>
+        </div>
+        <div class="row">
+          <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
+          <% counter = 0 %>
+          <% icons_array.each_with_index do |icon,index| %>
+          <% if @kid.level > counter %>
+          
+          <div class="col-lg-6 my-3 mx-0">
+          <%= cl_image_tag(icon, crop: :fill, class: "achievements") %>
+          </div>
+          <% counter += 1 %>
+          <% end %>
+          <% end %>
+        </div>
       </div>
       <div class="kid-name">
         <%= @kid.first_name.upcase %>
       </div>
       <div class="achievements-wrap pl-4 flex-grow-1 text-center">
-        <h2>Achievements</h2>
-        <div class="d-flex justify-content-around align-items-center">
-          <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
-          <% counter = 0 %>
-          <% icons_array.each_with_index do |icon,index| %>
-          <% if @kid.level > counter %>
-          <%= cl_image_tag(icon, crop: :fill, class: "achievements") %>
-          <% counter += 1 %>
-          <% end %>
-          <% end %>
+        <div class='mt-4'>
+          <h2>Games you can play</h2>
         </div>
         <% if @allowed_games.count == 3  %>
         <div class="row">
