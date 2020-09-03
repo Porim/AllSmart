@@ -1,7 +1,7 @@
 <div class="new-container">
   <div class="new-inner">
     <div class="top-inner ml-4">
-      <div id="kid-avatar">
+      <div id="kid-avatar mt-3">
         <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
       </div>
       <div class="d-flex justify-content-end" id="trophy-id">
@@ -12,7 +12,10 @@
           <h2 id="level">LV<%= @kid.level %></h2>
           <h2 id="current-xp"><%= @kid.total_score %>XP</h2>
         </div>
-        <div id="xp-bar">
+        <div id="border-xp">
+            <div id="<%= 'xp-bar20' if @kid.total_score == 20 %>"></div>
+            <div id="<%= 'xp-bar40' if @kid.total_score == 40 %>"></div>
+          </tr>
         </div>
       </div>
     </div>
