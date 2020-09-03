@@ -1,6 +1,5 @@
-<div class="container-fluid p-5">
-  <h1>
-    <%= @user.first_name.possessive %> Profile</h1>
+<div class="container-fluid p-5 mt-5">
+  <% if @kids.count > 0 %>
   <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
       style="color:#458a86">o</span><span style="color:#618679">u</span><span
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
@@ -39,6 +38,22 @@
       <%= link_to new_kid_path do %>
       <button class="login-button orange call-to-action">Add a child</button>
       <% end %>
+      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'call-to-action ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
     </div>
   </div>
+  <% else %>
+  <div class="container">
+    <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+      style="color:#458a86">l</span><span style="color:#618679">l</span><span style="color:#8a8065">S</span><span
+      style="color:#987e5e">m</span><span style="color:#b37a50">a</span><span
+      style="color:#e97234">r</span><span style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
+    <p class="paragraph py-2">To get started, please create child's
+      profile, then create a list of games they are allowed to play.</p>
+    <div>
+      <%= link_to new_kid_path do %>
+      <button class="login-button orange call-to-action">Add a child</button>
+      <% end %>
+    </div>
+  </div>
+  <% end %>
 </div>
