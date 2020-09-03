@@ -1,6 +1,6 @@
 <div class="new-container">
   <div class="new-inner">
-    <div class="d-flex p-4">
+    <div class="d-flex p-4 background-container">
       <div class="top-inner">
         <div id="kid-avatar">
           <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
@@ -100,7 +100,7 @@
           <% end %>
         </div>
         <% elsif @allowed_games.count == 0 %>
-        <p class='paragraph mt-4 text-white font-weight-bold'>Your
+        <p class='paragraph mt-5 text-white font-weight-bold'>Your
           parent have not added any games to your profile 😿</p>
         <% else %>
         <div class="row">
