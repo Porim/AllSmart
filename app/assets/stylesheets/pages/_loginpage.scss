@@ -33,6 +33,8 @@
   height: 100%;
   background-color: #0A93A1;
   color: white !important;
+  margin: 0;
+  padding: 40px 600px;
 }
 
 .signup-button {
@@ -40,7 +42,7 @@
   border: 1px;
   border-radius: 25px;
   padding: 12px 45px;
-  color: #FFFFFF !important;
+  color: white !important;
   display: inline-block;
   width: 130px;
   text-align: center;
@@ -60,16 +62,18 @@
 }
 
 .hint {
-  color: white !important;
+  color: black !important;
+  /*color: white !important;*/
 }
 
 .kids-update {
   font-family: sans-serif;
-  background: #86B6FE;
+  background: #147FFB;
   border: 1px;
   border-radius: 20px;
   padding: 10px 30px;
   width: 130px;
+  color: white;
 }
 
 .back-to-profile {
@@ -77,6 +81,7 @@
   width: auto;
   padding: 10px 12px;
   display: inline-block;
+
 
   &:hover {
     text-decoration: none !important;
