@@ -38,10 +38,13 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
   }
-  if (document.getElementById("bg-image-landing")){
+  if (document.getElementById("bg-image-landing")) {
     AOS.init();
   }
-  navbarGuest();
+  if (document.getElementById('bg-image-landing')) {
   navbarUser();
-
+  }
+  if (document.getElementById('bg-image-landing')) {
+  navbarGuest();
+}
 });
