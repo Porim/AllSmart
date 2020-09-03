@@ -3,7 +3,7 @@
         <div>
           <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="form-inputs">
-            <h4 class="mb-5 mt-5">Log in</h4>
+            <h4 class="mb-4 mt-4">Log in</h4>
             <%= f.input :email,
                   required: false,
                   autofocus: true,
@@ -17,7 +17,7 @@
             <%= f.button :submit, "Log in", class: "btn btn-primary rounded mb-3 mt-2"%>
           </div>
           <div style="color:black">
-            <%= render "devise/shared/links", class: "login-button orange forgot-password" %>
+            <%= render "devise/shared/links", class: "login-button orange forgot-password mb-5" %>
               <% end %>
           </div>
         </div>
