@@ -70,14 +70,14 @@ end
 puts 'Creating test user with kids and games'
 
 me = User.create(first_name: 'Nikita', last_name: 'Visencuk', email: 'nikita@visencuk.com', password: '123456')
-test_kids = [Kid.create(first_name: 'Paul', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me), Kid.create(first_name: 'Anne', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me)]
+# test_kids = [Kid.create(first_name: 'Paul', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me), Kid.create(first_name: 'Anne', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me)]
 
-test_kids.each do |kid|
-  3.times do
-  game = Game.order(Arel.sql('RANDOM()')).first
-      AllowedGame.create(game_id: game.id, kid: kid)
-    end
-end
+# test_kids.each do |kid|
+#   3.times do
+#   game = Game.order(Arel.sql('RANDOM()')).first
+#       AllowedGame.create(game_id: game.id, kid: kid)
+#     end
+# end
 puts "Finished"
 
 
