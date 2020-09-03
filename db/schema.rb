@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2020_09_02_160306) do
     t.integer "total_score"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "level"
     t.index ["user_id"], name: "index_kids_on_user_id"
   end
 
