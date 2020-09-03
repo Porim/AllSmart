@@ -12,7 +12,7 @@ const navbarGuest = () => {
       login.id = 'scroll-login';
       aboutUs.id = "about-us-onscroll";
     } else {
-      // navbar.style.background = "transparent";
+      navbar.style.background = "transparent";
       login.id = '';
       aboutUs.id = 'about-us-js';
     }
