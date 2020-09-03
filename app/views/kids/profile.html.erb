@@ -21,7 +21,7 @@
           </div>
         </div>
       </div>
-      <div class="kid-name">
+      <div class="kid-name d-flex justify-content-center">
         <%= @kid.first_name.upcase %>
       </div>
       <div class="achievements-wrap pl-4 flex-grow-1 text-center">
@@ -39,8 +39,6 @@
       </div>
     </div>
     <div class="container">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner py-5 mt-5">
           <% @allowed_games.each_slice(3).each_with_index do |array, index| %>
             <div class="carousel-item <%= "active" if index == 0 %>">
               <div class="row h-100">
@@ -60,6 +58,8 @@
               </div>
             </div>
           <% end %>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner py-5 mt-5">
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
