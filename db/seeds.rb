@@ -73,7 +73,8 @@ me = User.create(first_name: 'Nikita', last_name: 'Visencuk', email: 'nikita@vis
 test_kids = [Kid.create(first_name: 'Paul', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me), Kid.create(first_name: 'Anne', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me)]
 
 test_kids.each do |kid|
-  Game.all.each do |game|
+  3.times do
+  game = Game.order(Arel.sql('RANDOM()')).first
       AllowedGame.create(game_id: game.id, kid: kid)
     end
 end
