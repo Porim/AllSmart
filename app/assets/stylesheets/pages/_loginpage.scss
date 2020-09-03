@@ -30,11 +30,9 @@
 
 .login-container {
   width: 110%;
-  height: 100vh;
+  height: 100%;
   background-color: #0A93A1;
   color: white !important;
-  padding: 40px 600px;
-
 }
 
 .signup-button {
@@ -62,8 +60,7 @@
 }
 
 .hint {
-  color: black !important;
-  /*color: white !important;*/
+  color: white !important;
 }
 
 .kids-update {
