@@ -1,7 +1,7 @@
 <div class="new-container">
   <div class="new-inner">
-    <div class="d-flex p-4">        
-      <div class="top-inner">
+    <div class="d-flex p-4 background-container">
+      <div class="top-inner d-flex flex-column align-content-center justify-content-center">
         <div id="kid-avatar">
           <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
         </div>
@@ -10,8 +10,11 @@
         </div>
         <div>
           <div class="d-flex justify-content-between">
-            <h2 id="level">LV<%= @kid.level %></h2>
-            <h2 id="current-xp"><%= @kid.total_score %>XP/60</h2>
+            <h2 id="level">LV
+              <%= @kid.level %>
+            </h2>
+            <h2 id="current-xp">
+              <%= @kid.total_score %>XP/60</h2>
           </div>
           <div id="border-xp">
             <div>
@@ -20,56 +23,115 @@
             </div>
           </div>
         </div>
+        <div class="text-center my-4 text-white font-weight-bold">
+        <h2>Achievements</h2>
+        </div>
+        <div class="row">
+          <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
+          <% counter = 0 %>
+          <% icons_array.each_with_index do |icon,index| %>
+          <% if @kid.level > counter %>
+          
+          <div class="col-lg-6 my-3 mx-0">
+          <%= cl_image_tag(icon, crop: :fill, class: "achievements") %>
+          </div>
+          <% counter += 1 %>
+          <% end %>
+          <% end %>
+        </div>
       </div>
       <div class="kid-name d-flex justify-content-center">
         <%= @kid.first_name.upcase %>
       </div>
       <div class="achievements-wrap pl-4 flex-grow-1 text-center">
-      <h2>Achievements</h2>
-        <div class="d-flex justify-content-around align-items-center">
-          <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
-          <% counter = 0 %>
-          <% icons_array.each_with_index do |icon,index| %>
-            <% if @kid.level > counter %>
-              <%= cl_image_tag(icon, crop: :fill, class: "achievements") %>
-              <% counter += 1 %>
-            <% end %>
+        <div class='mt-4'>
+          <h2>Games you can play</h2>
+        </div>
+        <% if @allowed_games.count == 3  %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.title %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
           <% end %>
         </div>
-      </div>
-    </div>
-    <div class="container">
-          <% @allowed_games.each_slice(3).each_with_index do |array, index| %>
-            <div class="carousel-item <%= "active" if index == 0 %>">
-              <div class="row h-100">
-                <% array.each do |allowed_game| %>
-                  <div class="col-4 d-flex justify-content-center">
-                    <div class="game-card-kid p-2">
-                      <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
-                        <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image' %>
-                        <div class="container mt-2">
-                          <h4><%= allowed_game.game.subject %></h4>
-                          <h4><%= allowed_game.game.topic %></h4>
-                        </div>
-                      <% end %>
-                    </div>
-                  </div>
-                <% end %>
+        <% elsif @allowed_games.count == 2 %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-6 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
               </div>
+              <% end %>
             </div>
+          </div>
+          <% end %>
+        </div>
+        <% elsif @allowed_games.count == 1 %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-12 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-large' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% elsif @allowed_games.count == 0 %>
+        <p class='paragraph mt-5 text-white font-weight-bold'>Your
+          parent have not added any games to your profile 😿</p>
+        <% else %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-3 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-small' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
           <% end %>
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner py-5 mt-5">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        <% end %>
       </div>
     </div>
-  </div>
-</div>
