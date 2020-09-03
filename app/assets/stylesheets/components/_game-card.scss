@@ -60,14 +60,16 @@
   object-fit: cover;
   object-position: center center;
   width: 239px;
-  height: 240px;
+  height: 230px;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
+  margin: 0 auto;
+  display: block;
 }
 
 .search-game-card {
-  width: 240px;
-  height: 365px;
+  width: 265px;
+  height: 376px;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
   transition: all 0.4s ease;
@@ -76,6 +78,8 @@
   -o-transition: all 0.4s ease;
   box-shadow: none;
   margin-top: 0;
+  padding-top: 16px;
+
 }
 
 .search-game-card:hover {
@@ -99,7 +103,7 @@
 }
 
 .hover-dimensions {
-  height: calc(365px + 8px) !important;
+  height: calc(365px + 32px) !important;
   width: 240px;
 }
 
