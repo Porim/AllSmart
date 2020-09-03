@@ -67,16 +67,23 @@
   font-family: sans-serif;
   background: #86B6FE;
   border: 1px;
-  border-radius: 20px;
+  border-radius: 25px;
   padding: 10px 30px;
   width: 130px;
+  margin-right: 60px;
+  height: 50px;
+  margin-bottom: 20;
 }
 
 .back-to-profile {
-  border-radius: 20px !important;
+  border-radius: 25px !important;
+  border: 1px;
   width: auto;
   padding: 10px 12px;
   display: inline-block;
+  margin-right: 40px;
+  height: 50px;
+  margin-bottom: 20;
 
   &:hover {
     text-decoration: none !important;
