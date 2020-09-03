@@ -23,7 +23,7 @@ const moveForward = (player) => {
     wagon.classList.remove('active');
   } else {
     const quiz = document.querySelector(".question");
-    quiz.innerText = "Congratulations, you win! You've won 15xp"
+    quiz.innerText = "Congratulations, you win! You've won 20xp"
     // document.addEventListener("")
     // window.location.reload();
   }
