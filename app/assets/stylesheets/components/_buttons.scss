@@ -29,7 +29,7 @@
 #on-form-button:hover {
   background: #E97234;
   color: white !important;
-  border:#E97234;
+  border: #E97234;
 }
 
 #scroll-login:hover {
@@ -106,7 +106,7 @@
 }
 
 .greenish:hover {
-  background: #0E91A1 !important;
+  background: #146c78 !important;
   text-decoration: none !important;
 }
 
@@ -114,4 +114,8 @@
   background: #C94727 !important;
   text-decoration: none !important;
   color: white !important;
+}
+
+#custom-wdith-for-parent-add-button {
+  width: 185px;
 }

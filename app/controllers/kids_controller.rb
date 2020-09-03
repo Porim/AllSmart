@@ -12,7 +12,7 @@ class KidsController < ApplicationController
   
   def update
     if @kid.update(kid_params)
-      redirect_to kid_path(@kid)
+      redirect_to profile_path(current_user)
     else
       render :edit
     end
