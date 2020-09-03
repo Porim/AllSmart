@@ -60,12 +60,12 @@
 }
 
 .hint {
-  color: white !important;
+  color: black !important;
 }
 
 .kids-update {
   font-family: sans-serif;
-  background: #86B6FE;
+  background: #147FFB;
   border: 1px;
   border-radius: 25px;
   padding: 10px 30px;
@@ -73,15 +73,18 @@
   margin-right: 30px;
   height: 50px;
   margin-bottom: 20;
+  color: #FFFFFF;
 }
 
 .back-to-profile {
+  font-family: sans-serif;
   border-radius: 25px !important;
   border: 1px;
-  width: auto;
+  width: 130px;
   padding: 10px 12px;
   display: inline-block;
   height: 50px;
+  color: #FFFFFF;
 
 
   &:hover {
