@@ -16,7 +16,7 @@ const navbarUser = () => {
       navbarToggle.setAttribute('class',
         'avatar dropdown-toggle ml-4 name-user-onscroll');
     } else {
-      navbar.style.background = "transparent";
+      // navbar.style.background = "transparent";
       browse.id = 'browse-on-scroll';
       home.id = 'home-on-scroll';
       navbarToggle.setAttribute('class',
