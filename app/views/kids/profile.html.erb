@@ -48,8 +48,9 @@
       </div>
     </div>
     <div class="right-column pr-4">
-      <div class='mt-4 text-center text-white'>
-        <h2>Games you can play</h2>
+      <div class='mt-4 text-center text-white d-flex justify-content-center'>
+        <h2 style="width: 98%" class="kid-profile-allowed-games">Games you can play</h2>
+        <%= link_to 'Exit', profile_path(current_user), class:"orange login-button kid-prof-back"  %>
       </div>
       <% if @allowed_games.count == 3  %>
       <div class="row">
@@ -112,7 +113,7 @@
         <% end %>
       </div>
       <% elsif @allowed_games.count == 0 %>
-      <p class='paragraph mt-5 text-white font-weight-bold'>Your
+      <p class='paragraph mt-5 text-white text-center font-weight-bold'>Your
         parent have not added any games to your profile 😿</p>
       <% else %>
       <div class="row">
