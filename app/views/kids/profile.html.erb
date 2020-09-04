@@ -34,7 +34,7 @@
             <div class="row my-4">
               <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
               <% counter = 0 %>
-              <% icons_array.each_with_index do |icon,index| %>
+              <% icons_array.each do |icon| %>
               <% if @kid.level > counter %>
               <div class="col-lg-4 mt-1 mb-5">
                 <%= cl_image_tag(icon, crop: :fill, class: "achievements mx-auto px-2") %>
