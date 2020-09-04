@@ -1,12 +1,12 @@
+
+
 #update-score {
   display: none;
   width: 100%;
   border-radius: 30px;
 }
 
-.h1-game {
-  
-}
+.h1-game {}
 
 #try-again {
   display: none;
@@ -23,7 +23,8 @@
   margin: auto;
 }
 
-#player1-race, #player2-race {
+#player1-race,
+#player2-race {
   margin: 0 auto;
 }
 
@@ -37,25 +38,31 @@
   border: 1px solid white;
   box-shadow: 2px 2px 3px #337c72;
 }
+
 .racer-table td.active {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+
 .finish {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
   background-size: 100%;
-  object-fit: cover;}
+  object-fit: cover;
+}
+
 #player1-race td.active {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041220/p9yb3ijwni83jp6sadon.png);
   background-position: top 10px left 0px;
   object-fit: fill;
   box-shadow: 0 0 2px 2px grey;
 }
+
 #player2-race td.active {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041226/ebpw4yrdxycbzv4t8spr.png);
   background-position: top 10px left 0px;
   box-shadow: 0 0 2px 2px grey;
 }
+
 .finish1 {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041220/p9yb3ijwni83jp6sadon.png), url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
   background-size: 100%;
@@ -64,6 +71,7 @@
     top 10px left 0px,
     top left;
 }
+
 .finish2 {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041226/ebpw4yrdxycbzv4t8spr.png), url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
   background-size: 100%;
@@ -72,6 +80,7 @@
     top 10px left 0px,
     top left;
 }
+
 #button-container {
   display: flex;
 }
@@ -89,7 +98,7 @@
   box-shadow: 2px 2px 3px grey;
 }
 
-#game-background{
+#game-background {
   background: #9BE8A6;
   min-height: 100vh;
   padding: 5px;

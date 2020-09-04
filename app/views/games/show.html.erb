@@ -1,7 +1,12 @@
 <div id="game-background">
   <div class="container py-4 my-1 mt-0 game-width">
     <h1 class="text-center display-2 h1-game">Smart Wagon Race</h1>
-    <p class="text-center my-5 font-weight-bold">Read the question and press the correct number to move the red wagon. If you make a mistake, the yellow wagon will move instead and you may lose, so think twice!</p>
+    <p class="text-center my-5 font-weight-bold">Read the question
+      and
+      press the correct number to move the red wagon. If you make a
+      mistake, the yellow wagon will move instead and you may lose,
+      so
+      think twice!</p>
     <p class="m-2 font-weight-bold">Correct answers</p>
     <div>
       <table class="racer-table pb-2 m-2">
@@ -20,7 +25,7 @@
         </tr>
       </table>
     </div>
-    <div>  
+    <div>
       <h1 class="text-center display-3 p-5 m-2 mt-5 question"></h1>
       <%= link_to "Update score", kid_update_score_path(@kid, game_id: @game.id), class: "btn btn-success m-1 mt-4 p-3 game-button", id: "update-score" %>
     </div>
@@ -41,9 +46,9 @@
           <td class="finish"></td>
         </tr>
       </table>
-        <%= link_to "Try again", game_path(@game, kid_id: @kid), class: "btn btn-info mt-4", id: "try-again" %>
-        <%= link_to "Back to profile", kids_profile_path(@kid), class: "btn btn-primary m-1 mt-4 game-button", id: "back-to" %>
-      </div>
+      <%= link_to "Try again", game_path(@game, kid_id: @kid), class: "btn btn-info mt-4", id: "try-again" %>
+      <%= link_to "Back to profile", kids_profile_path(@kid), class: "btn btn-primary m-1 mt-4 game-button", id: "back-to" %>
     </div>
   </div>
+</div>
 </div>
