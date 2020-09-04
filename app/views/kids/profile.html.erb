@@ -3,26 +3,98 @@
       <div class="left-column">
 <h1>lalalallalala</h1>
       </div>
-      <div class="right-column">
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
-        <h1>PAPAPAPA</h1>
+      <div class="kid-name d-flex justify-content-center">
+        <%= @kid.first_name.upcase %>
       </div>
-
-  </div>
-</div>
+      <div class="achievements-wrap pl-4 flex-grow-1 text-center">
+        <div class='mt-4'>
+          <h2>Games you can play</h2>
+        </div>
+        <% if @allowed_games.count == 3  %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.title %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% elsif @allowed_games.count == 2 %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-6 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% elsif @allowed_games.count == 1 %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-12 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-large' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+        <% elsif @allowed_games.count == 0 %>
+        <p class='paragraph mt-5 text-white font-weight-bold'>Your
+          parent have not added any games to your profile 😿</p>
+        <% else %>
+        <div class="row">
+          <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-3 my-5 d-flex flex-column justify-content-center align-items-center">
+            <div class="game-card-kid p-2">
+              <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-small' %>
+              <div class="container mt-2">
+                <h4>
+                  <%= allowed_game.game.subject %>
+                </h4>
+                <h4>
+                  <%= allowed_game.game.topic %>
+                </h4>
+              </div>
+              <% end %>
+            </div>
+          </div>
+          <% end %>
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner py-5 mt-5">
+        </div>
+        <% end %>
+      </div>
+    </div>
