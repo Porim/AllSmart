@@ -1,7 +1,7 @@
 <div class="container container-for-allowed-games">
   <div class="d-flex justify-content-start align-items-center mb-3">
     <h2 class='h2-game-title'>
-      <%= @kid.first_name.possessive %> allowed games
+      <%= @kid.first_name.capitalize.possessive %> allowed games
     </h2>
     <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
   </div>
@@ -33,9 +33,10 @@
     <% end %>
   </div>
   <% else %>
-  <p class="paragraph" style="font-size: 20px"> You haven't added any
+  <p class="paragraph mt-5" style="font-size: 20px"> You haven't added
+    any
     games to
-    <%= @kid.first_name.possessive %> profile 😿. Lets fix this! 😺 </p>
+    <%= @kid.first_name.possessive.capitalize %> profile 😿. Lets fix this! 😺 </p>
   <div class="d-flex align-items-center justify-content-center my-5">
     <%= link_to 'Go Back', profile_path(current_user), class: 'call-to-action ml-2 orange' %>
     <%= link_to 'Add a game', games_path(subject: 'All'), class: 'call-to-action ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>

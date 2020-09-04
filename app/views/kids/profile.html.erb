@@ -5,7 +5,7 @@
         <div class="d-flex justify-content-center align-items-center">
           <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid", class: 'my-3 pl-3 mr-2') %>
           <div class="kid-name mr-4">
-            <%= @kid.first_name.upcase %>
+            <%= @kid.first_name.capitalize %>
           </div>
         </div>
         <div>
@@ -49,8 +49,10 @@
     </div>
     <div class="right-column pr-4">
       <div class='mt-4 text-center text-white d-flex justify-content-center'>
-        <h2 style="width: 60%" class="kid-profile-allowed-games text-start">Games you can play</h2>
-        <button type="button" class="orange login-button kid-prof-back" data-toggle="modal" data-target="#myModal">Exit</button>
+        <h2 style="width: 60%" class="kid-profile-allowed-games text-start">Games
+          you can play</h2>
+        <button type="button" class="orange login-button kid-prof-back"
+          data-toggle="modal" data-target="#myModal">Exit</button>
       </div>
       <% if @allowed_games.count == 3  %>
       <div class="row">
@@ -144,7 +146,8 @@
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -167,10 +170,10 @@
       </div>
       <div class="modal-body">
         <%= simple_form_for @kid do |f| %>
-          <%= f.input :password_confirmation, :include_blank => true, placeholder: "password",
+        <%= f.input :password_confirmation, :include_blank => true, placeholder: "password",
                               required: false,
                               input_html: { autocomplete: "new-password" }, label: "Enter password to go back" %>
-          <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button mt-1"  %>
+        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button mt-1"  %>
         <% end %>
       </div>
       <div class="modal-footer">
@@ -180,4 +183,3 @@
   </div>
 </div>
 </div>
-
