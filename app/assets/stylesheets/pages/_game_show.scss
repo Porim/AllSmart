@@ -4,6 +4,10 @@
   border-radius: 30px;
 }
 
+.h1-game {
+  
+}
+
 #try-again {
   display: none;
   border-radius: 20px;
@@ -26,11 +30,12 @@
 .racer-table td {
   height: 100px;
   width: 100px;
-  background-color: #364156;
+  background-color: #136F63;
   // border: 1px solid rgb(228, 23, 23);
   // border-radius: 50%;
   margin: 16px;
   border: 1px solid white;
+  box-shadow: 2px 2px 3px #337c72;
 }
 .racer-table td.active {
   background-repeat: no-repeat;
@@ -81,15 +86,21 @@
   color: white;
   border-radius: 20px;
   background: #364156;
+  box-shadow: 2px 2px 3px grey;
 }
 
 #game-background{
   background: #9BE8A6;
-  height: 100%;
+  min-height: 100vh;
   padding: 5px;
   color: #364156;
 }
 
 .game-width {
   width: 100%;
+}
+
+.game-button {
+  background: #3f485a;
+  border: 1px solid #454e5f;
 }
