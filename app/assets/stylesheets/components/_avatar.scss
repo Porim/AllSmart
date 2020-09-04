@@ -1,4 +1,13 @@
 .avatar {
+  margin-top: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.avatar-drop {
   width: 40px;
   height: 40px;
   border-radius: 50%;
