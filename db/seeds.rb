@@ -18,7 +18,7 @@ science_topics = ['Solar System', 'Magnetism', 'Forces', 'Explosive mixology', '
 biology_topics = ['Cardiovascular system', 'Organs', 'Muscles', 'Senses']
 english_topics =['Vowels', 'Rhymes', 'Reading' ]
 
-math_titles = ['Find the right shape', 'Addition sprint', 'Lets multiply!', 'Tricky minus', 'Divide and conquer']
+math_titles = ['Find the right shape', 'Arithmetic sprint', 'Lets multiply!', 'Tricky minus', 'Divide and conquer']
 science_titles = ['Where we live', 'How do magnets work?', 'Move that block', 'Boom!', 'Zap, and it works!']
 biology_titles = ['Where is your heart?', 'How we work', 'Flex the muscle', 'How do we feel?']
 english_titles = ['Vowels are wow', 'Rhyme it', 'Reading ready?']
