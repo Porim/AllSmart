@@ -37,7 +37,7 @@
               <% icons_array.each do |icon| %>
               <% if @kid.level > counter %>
               <div class="col-lg-4 mt-1 mb-5">
-                <%= cl_image_tag(icon, crop: :fill, class: "achievements mx-auto px-2") %>
+                <%= cl_image_tag(icon, crop: :fill, class: "achievements mx-auto px-3") %>
               </div>
               <% counter += 1 %>
               <% end %>
