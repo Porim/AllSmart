@@ -37,7 +37,7 @@
     games to
     <%= @kid.first_name.possessive %> profile 😿. Lets fix this! 😺 </p>
   <div class="d-flex align-items-center justify-content-center my-5">
-    <%= link_to 'Go back', profile_path(current_user), class: 'call-to-action ml-2 greenish fixed-width' %>
+    <%= link_to 'Go Back', profile_path(current_user), class: 'call-to-action ml-2 orange' %>
     <%= link_to 'Add a game', games_path(subject: 'All'), class: 'call-to-action ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
   </div>
   <% end %>
