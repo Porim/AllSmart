@@ -1,44 +1,7 @@
-<div class="new-container">
-  <div class="new-inner">
-    <div class="d-flex p-4 background-container">
-      <div class="top-inner d-flex flex-column align-content-center justify-content-center">
-        <div id="kid-avatar">
-          <%= cl_image_tag("vt5sy3uiwvcsywyahm2z", crop: :fill, id: "avatar-kid") %>
-        </div>
-        <div class="d-flex justify-content-end" id="trophy-id">
-          <%= cl_image_tag("m1d2phpreq29s8ngsqtu", crop: :fill, id: "trophy") %>
-        </div>
-        <div>
-          <div class="d-flex justify-content-between">
-            <h2 id="level">LV
-              <%= @kid.level %>
-            </h2>
-            <h2 id="current-xp">
-              <%= @kid.total_score %>XP/60</h2>
-          </div>
-          <div id="border-xp">
-            <div>
-              <div id="<%= 'xp-bar20' if @kid.total_score == 20 %>"></div>
-              <div id="<%= 'xp-bar40' if @kid.total_score == 40 %>"></div>
-            </div>
-          </div>
-        </div>
-        <div class="text-center my-4 text-white font-weight-bold">
-        <h2>Achievements</h2>
-        </div>
-        <div class="row">
-          <% icons_array = ["awzo80loeoay9teydffs", "rdl0tcyxqdmimys2jtqb", "yssqdoctij2kaehrmssa", "yqx0wakn1drwr5qmktl2", "mq94nglz2f6daczcpxef", "fmpcyepakcij0oszgahp", "gbitumpepxxuh5qle58n", "tgbvukl6lit7hlcgtijq", "rs8f6ayvszjryc9i2zd0", "qvzeie3uoo61g5e8zyb2", "lz91nhvjbryezvrpmm86", "ehrobeohrvqjuoxyirfr" ] %>
-          <% counter = 0 %>
-          <% icons_array.each_with_index do |icon,index| %>
-          <% if @kid.level > counter %>
-          
-          <div class="col-lg-6 my-3 mx-0">
-          <%= cl_image_tag(icon, crop: :fill, class: "achievements") %>
-          </div>
-          <% counter += 1 %>
-          <% end %>
-          <% end %>
-        </div>
+<div class="outermost-bg">
+  <div class="innermost-bg">
+      <div class="left-column">
+<h1>lalalallalala</h1>
       </div>
       <div class="kid-name d-flex justify-content-center">
         <%= @kid.first_name.upcase %>
