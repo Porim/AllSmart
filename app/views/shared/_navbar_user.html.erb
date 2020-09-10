@@ -1,4 +1,8 @@
+<% if current_page?(profile_path(current_user)) || current_page?(games_path) %>
 <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
+<% else %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar-lewagon">
+<% end %>
   <%= link_to root_path, class: "navbar-brand" do %>
   <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
@@ -25,7 +29,7 @@
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
       <li class="nav-item">
-        <span class='about-us px-2 mr-3 user-tab-highlighter' id='browse-on-scroll'>
+        <span class='about-us px-2 mx-1 user-tab-highlighter' id='browse-on-scroll'>
           CHILDREN</span>
       </li>
       <% else %>

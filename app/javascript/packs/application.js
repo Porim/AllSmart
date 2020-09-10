@@ -41,10 +41,10 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("bg-image-landing")) {
     AOS.init();
   }
-  if (document.getElementById('bg-image-landing')) {
-  navbarUser();
-  }
-  if (document.getElementById('bg-image-landing')) {
-  navbarGuest();
-}
+  // if (document.getElementById('bg-image-landing')) {
+  //   navbarUser();
+  // }
+  // if (document.getElementById('bg-image-landing')) {
+  //   navbarGuest();
+  // }
 });

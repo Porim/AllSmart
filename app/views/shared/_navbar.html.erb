@@ -63,3 +63,6 @@
   </div>
 </div>
 <% end %>
+<% if user_signed_in?%>
+ <%= render 'shared/navbar_user'%>
+<% end %>

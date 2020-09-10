@@ -48,10 +48,10 @@
 </head>
 
 <body>
+  <%= render 'shared/navbar' %>
   <div class="flex-wrapper">
-    <%= render 'shared/navbar' %>
     <%= yield %>
-    <%= render 'shared/footer' unless (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") %>
+    <%= render 'shared/footer' %>
     <%= render 'shared/flashes' %>
   </div>
 </body>

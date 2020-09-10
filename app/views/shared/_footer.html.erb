@@ -1,4 +1,4 @@
-<% unless controller_name == "users" %>
+<% unless (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") %>
 <div id="space">
 </div>
 <% end %>
