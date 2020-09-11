@@ -23,7 +23,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1' %>
+        <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1', id: 'browse-on-scroll' %>
       </li>
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
@@ -33,7 +33,7 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2 mr-3', id: 'browse-on-scroll' %>
+        <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2 mr-3', id: 'children-on-scroll' %>
       </li>
       <% end %>
       <li class="nav-item dropdown">
