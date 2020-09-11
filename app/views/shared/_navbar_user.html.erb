@@ -23,12 +23,12 @@
       </li>
       <% else %>
       <li class="nav-item">
-        <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1', id:'browse-on-scroll' %>
+        <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1' %>
       </li>
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
       <li class="nav-item">
-        <span class='about-us px-2 mx-1 user-tab-highlighter children' id='browse-on-scroll'>
+        <span class='about-us px-2 mx-1 user-tab-highlighter' id='children-on-scroll'>
           CHILDREN</span>
       </li>
       <% else %>

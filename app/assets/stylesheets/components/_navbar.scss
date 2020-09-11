@@ -51,6 +51,10 @@
   color: #575757 !important;
 }
 
+#children-on-scroll {
+  color: #575757 !important;
+}
+
 #about-us-onscroll:hover {
   text-decoration: underline;
 }
@@ -63,11 +67,3 @@
 #name-user-onscroll:hover {
   color: white !important;
 }
-
-// #name-user-onscroll:hover > *{
-//   color: white !important;
-// };
-// #name-user-onscroll:hover {
-//   background: #146c78;
-//   // color: white;
-// };

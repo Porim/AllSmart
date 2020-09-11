@@ -2,7 +2,7 @@ const navbarUser = () => {
   const elem = document.getElementById('bg-image-landing');
   const browse = document.querySelector('#browse-on-scroll');
   const home = document.getElementById('home-on-scroll');
-  const children = document.querySelector('.children');
+  const children = document.querySelector('#children-on-scroll');
   const navbarToggle = document.querySelector('#user-toggle');
   console.log(navbarToggle)
   const height = elem.getBoundingClientRect().height;
@@ -21,7 +21,7 @@ const navbarUser = () => {
       navbar.style.background = "transparent";
       browse.id = 'browse-on-scroll';
       home.id = 'home-on-scroll';
-      children.id = 'browse-on-scroll';
+      children.id = 'children-on-scroll';
       navbarToggle.setAttribute('class',
         'avatar dropdown-toggle text-white ml-4')
     }
