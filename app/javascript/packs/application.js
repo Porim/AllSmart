@@ -32,17 +32,11 @@ import { ask, moveForward, displayQuestion } from './wagon_race'
 // import { initSelect2 } from '../components/init_select2';
 //document.onmouseover=function(e){if(e.target.parentNode.classList&&e.target.parentNode.classList.contains('tooltip')){console.dir(e.target)}}
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  // myMove();
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
   }
   if (document.getElementById("bg-image-landing")) {
     AOS.init();
-  }
-  if (document.getElementById('bg-image-landing')) {
-    navbarUser();
   }
   if (document.getElementById('bg-image-landing')) {
     navbarGuest();
