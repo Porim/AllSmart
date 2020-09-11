@@ -13,7 +13,6 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
-      <% if user_signed_in? %>
       <li class="nav-item active">
         <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1', id: 'home-on-scroll'  %>
       </li>
@@ -29,7 +28,7 @@
       <% end %>
       <% if current_page?(profile_path(current_user)) %>
       <li class="nav-item">
-        <span class='about-us px-2 mx-1 user-tab-highlighter' id='browse-on-scroll'>
+        <span class='about-us px-2 mx-1 user-tab-highlighter children' id='browse-on-scroll'>
           CHILDREN</span>
       </li>
       <% else %>
@@ -55,20 +54,6 @@
           <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
       </li>
-      <% else %>
-      <div class="d-flex align-items-center">
-        <li class="nav-item mx-2">
-          <a class='about-us' id='about-us-js' href="#anchor-for-about-us">About
-            Us</a>
-        </li>
-        <li class="nav-item mx-2">
-          <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
-        </li>
-        <li class="nav-item mx-2">
-          <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
-        </li>
-      </div>
-      <% end %>
     </ul>
   </div>
 </div>
