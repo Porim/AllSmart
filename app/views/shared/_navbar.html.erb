@@ -61,4 +61,4 @@
   </div>
 </div>
 <% end %>
-<%= render 'shared/navbar_user' if user_signed_in?%>
+  <%= render 'shared/navbar_user' if user_signed_in? && !((controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show")) %>
