@@ -38,7 +38,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("bg-image-landing")) {
     AOS.init();
   }
-  if (document.querySelector('.testimonial-container')) {
+  if (document.getElementById('bg-image-landing')) {
     navbarGuest();
   }
 });

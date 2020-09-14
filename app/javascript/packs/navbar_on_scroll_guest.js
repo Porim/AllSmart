@@ -1,16 +1,13 @@
 const navbarGuest = () => {
-  const landingBanner = document.getElementById('bg-image-landing');
-  const login = document.querySelector('.login-button');
   const aboutUs = document.querySelector('#about-us-link');
   const home = document.getElementById('home-on-scroll');
-  const children = document.querySelector('#children-on-scroll');
-  const browse = document.querySelector('#browse-on-scroll');
-  const navFirstName = document.querySelector('#navbar-first-name');
-  const height = landingBanner.getBoundingClientRect().height;
   addEventListener('scroll', () => {
-    if (document.querySelector('.testimonial-container') && aboutUs) {
+    if (document.querySelector('.testimonial-container') &&
+      aboutUs) {
+      const height = document.getElementById('bg-image-landing').getBoundingClientRect().height;
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
+      const login = document.querySelector('.login-button');
       if (scrollTop > height - 100) {
         navbar.style.transition = "0.5s";
         navbar.style.background = "white";
@@ -25,6 +22,12 @@ const navbarGuest = () => {
     if (document.querySelector('.testimonial-container') && home) {
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
+      const children = document.querySelector(
+        '#children-on-scroll');
+      const browse = document.querySelector('#browse-on-scroll');
+      const navFirstName = document.querySelector(
+        '#navbar-first-name');
+      const height = document.getElementById('bg-image-landing').getBoundingClientRect().height;
       if (scrollTop > height - 100) {
         navbar.style.transition = "0.5s";
         navbar.style.background = "white";
