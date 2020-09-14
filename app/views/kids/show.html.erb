@@ -5,7 +5,6 @@
     </h2>
     <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
   </div>
-  <%= current_user.kids.any? {|kid| kid.id} %>
   <% if @games.count > 0 %>
   <div class="row">
     <% @games.each do |game| %>

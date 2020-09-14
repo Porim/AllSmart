@@ -6,6 +6,10 @@
   padding: 8px;
 }
 
+.navbar-margin {
+  margin-top: calc(16vh + 30px);
+  margin-bottom: calc(10vh + 30px);
+}
 
 .dropdown-toggle::after {
   display: inline-block;
