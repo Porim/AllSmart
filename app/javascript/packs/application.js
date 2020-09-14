@@ -24,7 +24,7 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { navbarGuest } from './navbar_on_scroll_guest'
+import { navbarScroll } from './navbar_on_scroll'
 import { ask, moveForward, displayQuestion } from './wagon_race'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
@@ -38,6 +38,6 @@ document.addEventListener('turbolinks:load', () => {
     AOS.init();
   }
   if (document.getElementById('bg-image-landing')) {
-    navbarGuest();
+    navbarScroll();
   }
 });
