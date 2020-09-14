@@ -27,11 +27,11 @@
         <%= f.input :photo, as: :file %>
       </div>
       <div class='d-flex justify-content-start align-items-center'>
-      <div class="form-actions">
-        <%= f.button :submit, "Update profile", class: "login-button orange d-flex justify-content-center align-items-center" %>
+        <div class="form-actions">
+          <%= f.button :submit, "Update profile", class: "login-button orange d-flex justify-content-center align-items-center" %>
+        </div>
+        <%= link_to 'Back to profile', profile_path(current_user), class: "back-to-profile btn btn-success ml-2 d-flex justify-content-center align-items-center" %>
       </div>
-      <%= link_to 'Back to profile', profile_path(current_user), class: "back-to-profile btn btn-success ml-2 d-flex justify-content-center align-items-center" %>
-    </div>
     </div>
     <% end %>
     <!-- <h4>Cancel my account</h4>
