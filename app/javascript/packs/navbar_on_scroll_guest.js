@@ -19,7 +19,8 @@ const navbarGuest = () => {
         aboutUs.classList.remove('test-navbar-scroll');
       }
     }
-    if (document.querySelector('.testimonial-container') && !aboutUs) {
+    if (document.querySelector('.testimonial-container') && !
+      aboutUs) {
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
       const children = document.querySelector(
