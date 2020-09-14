@@ -16,7 +16,7 @@
         <%= f.input :password, :include_blank => true, placeholder: "Optional",
                             hint: "Leave it blank if you don't want to change it",
                             required: false,
-                            input_html: { autocomplete: "new-password" }, hint_html: { class: "hint"} %>
+                            input_html: { autocomplete: "new-password" }, hint_html: { class: "hint"}, input_wrapper_html: { class: 'text-white' } %>
         <%= f.input :password_confirmation, :include_blank => true, placeholder: "Optional",
                             required: false,
                             input_html: { autocomplete: "new-password" } %>

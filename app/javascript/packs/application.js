@@ -25,7 +25,6 @@ require("channels")
 // External imports
 import "bootstrap";
 import { navbarGuest } from './navbar_on_scroll_guest'
-import { navbarUser } from './navbar_on_scroll_user'
 import { ask, moveForward, displayQuestion } from './wagon_race'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
