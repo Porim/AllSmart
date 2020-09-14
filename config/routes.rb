@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users, :controllers => { :registrations => :registrations }
   get "/profile/:user_id", to: "users#profile", as: :profile
   root to: 'pages#home'
   get "/kids/:id/profile", to: "kids#profile", as: :kids_profile
@@ -10,4 +9,5 @@ Rails.application.routes.draw do
     get "/update_level", to: "kids#update_level"
   end
   resources :allowed_games, only: [:destroy]
+  devise_for :users
 end

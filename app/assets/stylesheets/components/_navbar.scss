@@ -47,8 +47,9 @@
   text-decoration: underline !important;
 }
 
-#about-us-onscroll {
-  color: #575757 !important;
+.test-navbar-scroll {
+  color: #575757;
+  font-size: 18px;
 }
 
 #about-us-onscroll:hover {
@@ -63,11 +64,3 @@
 #name-user-onscroll:hover {
   color: white !important;
 }
-
-// #name-user-onscroll:hover > *{
-//   color: white !important;
-// };
-// #name-user-onscroll:hover {
-//   background: #146c78;
-//   // color: white;
-// };

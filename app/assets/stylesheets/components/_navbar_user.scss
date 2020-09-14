@@ -6,6 +6,10 @@
   padding: 8px;
 }
 
+.navbar-margin {
+  margin-top: calc(16vh + 30px);
+  margin-bottom: calc(10vh + 30px);
+}
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -18,19 +22,27 @@
   border-left: 0.3em solid transparent;
 }
 
-// .padding-for-user-nav {
-//   padding-right: 60px;
-// }
-
 .user-nav-container {
   padding-right: 70px;
   padding-top: 15px;
-  padding-bottom: 15px
+  padding-bottom: 15px;
+  color: white;
 }
 
 .user-nav-container:hover {
   background: #146c78;
-  color: white;
+  color: white !important;
+  border-radius: 8px;
+}
+
+.user-nav-container:hover > * {
+  background: #146c78;
+  color: white !important;
+}
+
+.first-name-avatar-container:hover {
+  background: #146c78;
+  color: white !important;
   border-radius: 8px;
 }
 
@@ -47,4 +59,8 @@
   color: white;
   padding: 8px;
   border-radius: 8px;
+}
+
+#navbar-first-name {
+  font-size: 18px;
 }
