@@ -8,21 +8,21 @@ const navbarGuest = () => {
   const navFirstName = document.querySelector('#navbar-first-name');
   const height = landingBanner.getBoundingClientRect().height;
   addEventListener('scroll', () => {
-    if (aboutUs) {
+    if (document.querySelector('.testimonial-container') && aboutUs) {
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
       if (scrollTop > height - 100) {
         navbar.style.transition = "0.5s";
         navbar.style.background = "white";
         login.id = 'scroll-login';
-        aboutUs.setAttribute('class', 'test-navbar-scroll')
+        aboutUs.classList.add('test-navbar-scroll')
       } else {
         navbar.style.background = "transparent";
         login.id = '';
-        aboutUs.setAttribute('class', 'about-us')
+        aboutUs.classList.remove('test-navbar-scroll');
       }
     }
-    if (home) {
+    if (document.querySelector('.testimonial-container') && home) {
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
       if (scrollTop > height - 100) {
