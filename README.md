@@ -1,25 +1,35 @@
-# allSmart.uk
-allSmart is a demo project that believes 
+# [allSmart.uk](https://www.allsmart.uk)
+[allSmart](https://www.allsmart.uk) is a demo project that believes 
 > **everybody** is **smart** with the right education
 
-allSmart is made for parents to register and have full control over their child's learning experience. Then they will let their child learn by playing educational games, and no matter how smart their child is, it will finish its school with "A" in all subjects.
+[allSmart](https://www.allsmart.uk) is made for parents to create learning experience specifically for their child and to have full control over learning experience through educational games.
 
 ## Stepf of Development
-1. User stories
-2. Figma
-3. DB Schema
-4. installing, github, heroku, routes, models, controllers, views, MVC pattern, devise gem, organised CSS files, 
+1. User stories in Excell
+2. Prototyping in Figma
+3. DB Schema in Wagon's enviroment
+4. Generating rails app with devise included
+5. Setting up GitHub and spliting tasks in the project page
+6. Setting up Heroku with domain and SSL 
+7. Routes
+8. Models
+9. Controllers
+10. Views
+11. MVC pattern
+12. Organising CSS files
 
-
-
-
-## Developed at
-Le Wagon batch #423 in **nine** days (24/8/2020 - 3/9/2020)
-The
-
-## Current problems to solve
+## Current 
 1. allSmart was coded with a very tight schedule, and the code is pretty messy.
 2. It was developed for large screens, so it doesn't work well on smartphones.
+
+### Developed at
+[Le Wagon](https://www.lewagon.com/) batch #423 in **nine** days (24/8/2020 - 3/9/2020).\
+Then further improved over next weeks after end of the Bootcamp.
+
+### Developed By
+Nikita V Visenko, Miroslav Palka, Dobrin Nedyalkov and Taoreed Lawal\
+Project managers: Rodrigo Ruas and Rahul Keerthi\
+Other contributors: Anne De Joly
 
 ### Technologies used
 * Ruby
@@ -32,16 +42,5 @@ The
 * GitHub
 * Heroku
 
-
-
-
 ### Database Schema
-
-
-
-### Detailed Description
-
-## Developed By
-Nikita V Visenko, Miroslav Palka, Dobrin Nedyalkov and Taoreed Lawal\
-Project managers: Rodrigo Ruas and Rahul Keerthi\
-Other contributors: Anne De Joly
+![DB Schema](https://res.cloudinary.com/mirodev/image/upload/v1600135233/dbSchema_m7fkdb.jpg)
