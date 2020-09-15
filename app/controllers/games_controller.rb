@@ -1,7 +1,8 @@
 class GamesController < ApplicationController
   def index
+
     @subject = params[:subject].nil? ? 'All' : params[:subject]
-    @subjects = %w[Maths Science English Biology]
+    @subjects = { 'Maths': 'medolwcf6nigmrl3cvev', 'Science': 'rnrgntaicfrllbnrzlxg', 'English': 'dkbxbzo5dpzzf0o3kbgy', 'Biology': 'enssmizahvyzkryyufw0' }
     @all_games = Game.all
     # if params[:subject] == 'Biology'
     #   @game_title = "Human Biology"

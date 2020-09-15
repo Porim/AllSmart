@@ -8,7 +8,7 @@
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-color mb-3 pl-2"%>
         <% end %>
         <h3 class='mb-3'>Browse by subject</h3>
-        <% @subjects.each do |param| %>
+        <% @subjects.each do |param, image| %>
         <% if @subject == param %>
         <%= link_to param, games_path(subject: param), class: "link-selected mb-3 pl-2"%>
         <% else %>
@@ -20,14 +20,14 @@
         <div class="container-fluid mb-1">
           <div class="d-flex justify-content-start align-items-center">
             <h2 class='h2-game-title'>
-              <%= @game_title %>
+              <%= @subject unless @subject == 'All' %>
             </h2>
-            <%= cl_image_tag @subject_image, class: 'subject-icon-no-hover ml-4'%>
+            <%= cl_image_tag @subjects[@subject.to_sym], class: 'subject-icon-no-hover ml-4'%>
           </div>
           <% if @all_games.count == @games.count %>
-          <% @subjects.each do |subject| %>
+          <% @subjects.each do |subject, image| %>
           <h2>
-            <%= subject %>
+            <%= subject.to_s %>
           </h2>
           <div class="row">
             <% @games.where(subject: subject).each do |game| %>
