@@ -19,8 +19,9 @@
       <div class="col-md-9 games py-5">
         <div class="container-fluid mb-1">
           <div class="d-flex justify-content-start align-items-center">
+            <% if @subject == 'All' %>
             <h2 class='h2-game-title'>
-              <%= @subject unless @subject == 'All' %>
+              <%= 'All Games'%>
             </h2>
             <%= cl_image_tag @subjects[@subject.to_sym], class: 'subject-icon-no-hover ml-4'%>
           </div>
