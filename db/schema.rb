@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(version: 2020_09_02_160306) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "title"
-    t.string "cloud_imag_url"
+    t.string "cloud_image_url"
     t.string "topic_image_url"
   end
 

@@ -31,19 +31,19 @@ topic_img = {maths: 'medolwcf6nigmrl3cvev', science: 'rnrgntaicfrllbnrzlxg', bio
 index = 0
 
 (0..math_topics.length - 1).each do |idx|
-  Game.create(subject: 'Maths', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:math_titles[idx], topic: math_topics[idx], cloud_imag_url: maths_img[idx], topic_image_url: topic_img[:maths] )
+  Game.create(subject: 'Maths', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:math_titles[idx], topic: math_topics[idx], cloud_image_url: maths_img[idx], topic_image_url: topic_img[:maths] )
 end
 
 (0..science_topics.length - 1).each do |idx|
-  Game.create(subject: 'Science', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:science_titles[idx], topic: science_topics[idx], cloud_imag_url: science_img[idx], topic_image_url: topic_img[:science] )
+  Game.create(subject: 'Science', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:science_titles[idx], topic: science_topics[idx], cloud_image_url: science_img[idx], topic_image_url: topic_img[:science] )
 end
 
 (0..biology_topics.length - 1).each do |idx|
-  Game.create(subject: 'Biology', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:biology_titles[idx], topic: biology_topics[idx], cloud_imag_url: biology_img[idx], topic_image_url: topic_img[:biology] )
+  Game.create(subject: 'Biology', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:biology_titles[idx], topic: biology_topics[idx], cloud_image_url: biology_img[idx], topic_image_url: topic_img[:biology] )
 end
 
 (0..english_topics.length - 1).each do |idx|
-  Game.create(subject: 'English', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:english_titles[idx], topic: english_topics[idx], cloud_imag_url: english_img[idx], topic_image_url: topic_img[:english])
+  Game.create(subject: 'English', difficulty_level: difficulty_levels.sample, age_category: age_categories.sample, base_score: 20, title:english_titles[idx], topic: english_topics[idx], cloud_image_url: english_img[idx], topic_image_url: topic_img[:english])
 end
 
 # subjects.each do |subject|
