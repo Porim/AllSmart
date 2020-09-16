@@ -41,5 +41,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById('bg-image-landing')) {
     navbarScroll();
   }
-  topFunction();
+  if (document.getElementById("medium-arrow")) {
+    topFunction();
+  }
 });
