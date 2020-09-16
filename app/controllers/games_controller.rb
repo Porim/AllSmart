@@ -7,14 +7,14 @@ class GamesController < ApplicationController
     @all_games = Game.all
     if params[:subject].present?
       if params[:subject] == 'All'
-      @games = Game.all
+        @games = Game.all
       else
-      sql_query = " \
-        games.title @@ :query \
-        OR games.topic @@ :query \
-        OR games.subject @@ :query \
-      "
-      @games = Game.where(sql_query, query: "%#{params[:subject]}%")
+        sql_query = " \
+          games.title @@ :query \
+          OR games.topic @@ :query \
+          OR games.subject @@ :query \
+        "
+        @games = Game.where(sql_query, query: "%#{params[:subject]}%")
       end
     else
       @games = Game.all
@@ -22,8 +22,6 @@ class GamesController < ApplicationController
   end
 
   def show
-    @game = Game.find(params[:id])
-    @kid = Kid.find(params[:kid_id])
   end
   
   private
