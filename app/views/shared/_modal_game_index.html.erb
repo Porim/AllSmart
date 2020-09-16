@@ -1,0 +1,70 @@
+<% @games.each do |game| %>
+<% modal_id = locals[:subject_param] ? "#{game.id}#{game.subject}" : "#{game.id}" %>
+<% modal_param = game.subject if locals[:subject_param] %>
+<div id="record-<%=modal_id%>" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+          <%= game.title %>
+        </h4>
+      </div>
+      <div class="modal-body">
+        <div class="d-flex">
+          <p class="paragraph game-desc">Subject:
+            <span class="age-cat">
+              <%= game.subject %></span>
+            <%= cl_image_tag game.topic_image_url, class:'subject-icon-no-hover-modal ml-2' %>
+          </p>
+        </div>
+        <p class="paragraph game-desc mb-2">Topic:
+          <span class="age-cat">
+            <%= game.topic %></span>
+        </p>
+        <p class="paragraph game-desc mb-2">Difficulty:
+          <span class="age-cat">
+            <%= game.difficulty_level %></span>
+        </p>
+        <p class="paragraph game-desc">Age category:
+          <span class="age-cat">
+            <%= game.age_category %></span>
+        </p>
+      </div>
+      <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
+        <div class="taos-dropdown">
+          <div class="d-flex align">
+            <button id='game-card-dropdown-button' class="orange call-to-action dropdown-toggle text-center"
+              type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <p class='mx-auto d-inline-block allow-button'>Allow to
+                play</p>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <% current_user.kids.each do |kid| %>
+              <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
+                <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
+                <div class="d-flex justify-content-center align-items-center">
+                  <p class="paragraph">
+                    <%= kid.first_name %>
+                  </p>
+                  <% if kid.photo.attached? %>
+                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
+                  <% else %>
+                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
+                  <% end %>
+                </div>
+                <% end %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div>
+          <button type="button" class="greenish call-to-action"
+            data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

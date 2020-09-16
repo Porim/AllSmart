@@ -22,12 +22,5 @@ class AllowedGamesController < ApplicationController
     @kid = @allowed_game.kid
     @allowed_game.destroy
     redirect_to kid_path(@kid)
-    # if AllowedGame.exists?(id: params[:id].to_i - 1)
-    #   redirect_to kid_path(anchor: "allowed-game-#{@allowed_game.id - 1}")
-    # elsif AllowedGame.exists?(id: params[:id].to_i + 1)
-    #    redirect_to kid_path(anchor: "added-game-#{@allowed_game.id + 1}")
-    # else
-    #   redirect_to kid_path(@kid)
-    # end
   end
 end

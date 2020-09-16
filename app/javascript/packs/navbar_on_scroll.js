@@ -1,4 +1,4 @@
-const navbarGuest = () => {
+const navbarScroll = () => {
   const aboutUs = document.querySelector('#about-us-link');
   addEventListener('scroll', () => {
     if (document.querySelector('.testimonial-container') &&
@@ -49,4 +49,4 @@ const navbarGuest = () => {
   })
 }
 
-export { navbarGuest }
+export { navbarScroll }

@@ -2,45 +2,39 @@
   <div class="container all-games">
     <div class="row">
       <div class="col-md-3 d-flex flex-column filter-container">
-        <% if !@all.nil? %>
+        <% if @subject == 'All'%>
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-selected mb-3 pl-2"%>
         <% else %>
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-color mb-3 pl-2"%>
         <% end %>
         <h3 class='mb-3'>Browse by subject</h3>
-        <% if !@maths.nil? %>
-        <%= link_to 'Maths', games_path(subject: 'Maths'), class: "link-selected mb-2 pl-2" %>
+        <% @subjects.each do |param, image| %>
+        <% if @subject == param.to_s %>
+        <%= link_to param, games_path(subject: param), class: "link-selected mb-3 pl-2"%>
         <% else %>
-        <%= link_to 'Maths', games_path(subject: 'Maths'), class: "link-color mb-2 pl-2" %>
+        <%= link_to param, games_path(subject: param), class: "link-color mb-3 pl-2"%>
         <% end %>
-        <% if !@science.nil? %>
-        <%= link_to 'Science', games_path(subject: 'Science'), class: "link-selected mb-2 pl-2" %>
-        <% else %>
-        <%= link_to 'Science', games_path(subject: 'Science'), class: "link-color mb-2 pl-2" %>
-        <% end %>
-        <% if !@english.nil? %>
-        <%= link_to 'English', games_path(subject: 'English'), class: "link-selected mb-2 pl-2" %>
-        <% else %>
-        <%= link_to 'English', games_path(subject: 'English'), class: "link-color mb-2 pl-2" %>
-        <% end %>
-        <% if !@biology.nil? %>
-        <%= link_to 'Human biology', games_path(subject: 'Biology'), class: "link-selected mb-2 pl-2" %>
-        <% else %>
-        <%= link_to 'Human biology', games_path(subject: 'Biology'), class: "link-color mb-2 pl-2" %>
         <% end %>
       </div>
       <div class="col-md-9 games py-5">
         <div class="container-fluid mb-1">
           <div class="d-flex justify-content-start align-items-center">
+            <% if @subject == 'All' %>
             <h2 class='h2-game-title'>
-              <%= @game_title %>
+              All Games
             </h2>
-            <%= cl_image_tag @subject_image, class: 'subject-icon-no-hover ml-4'%>
+            <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
+            <% else %>
+            <h2 class='h2-game-title'>
+              <%= @subject%>
+            </h2>
+            <%= cl_image_tag @subjects[@subject.to_sym], class: 'subject-icon-no-hover ml-4'%>
+            <% end %>
           </div>
           <% if @all_games.count == @games.count %>
-          <% @subjects.each do |subject| %>
+          <% @subjects.each do |subject, image| %>
           <h2>
-            <%= subject %>
+            <%= subject.to_s %>
           </h2>
           <div class="row">
             <% @games.where(subject: subject).each do |game| %>
@@ -105,139 +99,6 @@
     </div>
   </div>
 </div>
-<% @games.each do |game| %>
-<div id="record-<%= game.id %>" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">
-          <%= game.title %>
-        </h4>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex">
-          <p class="paragraph game-desc">Subject:
-            <span class="age-cat">
-              <%= game.subject %></span>
-            <%= cl_image_tag game.topic_image_url, class:'subject-icon-no-hover-modal ml-2' %>
-          </p>
-        </div>
-        <p class="paragraph game-desc mb-2">Topic:
-          <span class="age-cat">
-            <%= game.topic %></span>
-        </p>
-        <p class="paragraph game-desc mb-2">Difficulty:
-          <span class="age-cat">
-            <%= game.difficulty_level %></span>
-        </p>
-        <p class="paragraph game-desc">Age category:
-          <span class="age-cat">
-            <%= game.age_category %></span>
-        </p>
-      </div>
-      <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
-        <div class="taos-dropdown">
-          <div class="d-flex align">
-            <button id='game-card-dropdown-button' class="orange call-to-action dropdown-toggle text-center"
-              type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <p class='mx-auto d-inline-block allow-button'>Allow to
-                play</p>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <% current_user.kids.each do |kid| %>
-              <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
-                <%= link_to kid_allowed_games_path(kid,game.id), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
-                <div class="d-flex justify-content-center align-items-center">
-                  <p class="paragraph">
-                    <%= kid.first_name %>
-                  </p>
-                  <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                  <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
-                  <% end %>
-                </div>
-                <% end %>
-              </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button type="button" class="greenish call-to-action"
-            data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<% end %>
-<% @games.each do |game| %>
-<div id="record-<%=game.id%><%=game.subject%>" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title">
-          <%= game.title %>
-        </h4>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex">
-          <p class="paragraph game-desc">Subject:
-            <span class="age-cat">
-              <%= game.subject %></span>
-            <%= cl_image_tag game.topic_image_url, class:'subject-icon-no-hover-modal ml-2' %>
-          </p>
-        </div>
-        <p class="paragraph game-desc mb-2">Topic:
-          <span class="age-cat">
-            <%= game.topic %></span>
-        </p>
-        <p class="paragraph game-desc mb-2">Difficulty:
-          <span class="age-cat">
-            <%= game.difficulty_level %></span>
-        </p>
-        <p class="paragraph game-desc">Age category:
-          <span class="age-cat">
-            <%= game.age_category %></span>
-        </p>
-      </div>
-      <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
-        <div class="taos-dropdown">
-          <div class="d-flex align">
-            <button id='game-card-dropdown-button' class="orange call-to-action dropdown-toggle text-center"
-              type="button" id="dropdownMenuButton" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              <p class='mx-auto d-inline-block allow-button'>Allow to
-                play</p>
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <% current_user.kids.each do |kid| %>
-              <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
-                <%= link_to kid_allowed_games_path(kid,game.id, subject: game.subject), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
-                <div class="d-flex justify-content-center align-items-center">
-                  <p class="paragraph">
-                    <%= kid.first_name %>
-                  </p>
-                  <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                  <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
-                  <% end %>
-                </div>
-                <% end %>
-              </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-        <div>
-          <button type="button" class="greenish call-to-action"
-            data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<% end %>
+<%= render 'shared/modal_game_index', locals: {games: @games, subject_param: false} %>
+<%= render 'shared/modal_game_index', locals: {games: @games, subject_param: true} %>
+
