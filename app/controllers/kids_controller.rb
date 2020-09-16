@@ -1,9 +1,9 @@
 class KidsController < ApplicationController
   before_action :set_kid, only: [:edit, :show, :update, :profile]
+  before_action :set_allowed_games, only: [:profile, :show]
   
   def show
     redirect_to profile_path(current_user) if @kid.nil? 
-    @games = @kid.allowed_games
     @subjects = %w[Maths English Biology Science]
   end
   
@@ -33,7 +33,6 @@ class KidsController < ApplicationController
   end
   
   def profile
-    @allowed_games = @kid.allowed_games
     update_level
   end
 
@@ -60,10 +59,14 @@ class KidsController < ApplicationController
   private
   
   def kid_params
-  params.require(:kid).permit(:age, :first_name, :last_name, :photo)
+    params.require(:kid).permit(:age, :first_name, :last_name, :photo)
   end
   
   def set_kid
     @kid = Kid.find(params[:id])
+  end
+  
+  def set_allowed_games
+    @allowed_games = @kid.allowed_games
   end
 end
