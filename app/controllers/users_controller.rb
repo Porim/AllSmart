@@ -2,8 +2,6 @@ class UsersController < ApplicationController
   before_action :set_user, :set_kids, only: [:profile]
   
   def profile
-    @user = current_user
-    @kids = @user.kids
   end
   
   private
