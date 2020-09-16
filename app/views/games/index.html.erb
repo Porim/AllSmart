@@ -1,6 +1,9 @@
 <div class="games-page">
   <div class="container all-games">
     <div class="row">
+      
+      <!-- Creating tabs with All Games and a header-->
+      
       <div class="col-md-3 d-flex flex-column filter-container">
         <% if @subject == 'All'%>
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-selected mb-3 pl-2"%>
@@ -8,6 +11,7 @@
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-color mb-3 pl-2"%>
         <% end %>
         <h3 class='mb-3'>Browse by subject</h3>
+        <!-- Creating tab for each subject -->
         <% @subjects.each do |param, image| %>
         <% if @subject == param.to_s %>
         <%= link_to param, games_path(subject: param), class: "link-selected mb-3 pl-2"%>
@@ -16,6 +20,9 @@
         <% end %>
         <% end %>
       </div>
+      
+      <!-- Rendering results - if all games tab is selected, render all games headed by subject. If particular tab is selected, render only games correspoding to that particular subject -->
+      
       <div class="col-md-9 games py-5">
         <div class="container-fluid mb-1">
           <div class="d-flex justify-content-start align-items-center">
@@ -32,73 +39,16 @@
             <% end %>
           </div>
           <% if @all_games.count == @games.count %>
-          <% @subjects.each do |subject, image| %>
-          <h2>
-            <%= subject.to_s %>
-          </h2>
-          <div class="row">
-            <% @games.where(subject: subject).each do |game| %>
-            <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
-              <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}"} do %>
-              <div class="search-game-card">
-                <div>
-                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
-                </div>
-                <div>
-                  <h5 class='mt-3 pl-1 paragraph'>
-                    <span class="age-cat">
-                      <%= game.title %></span>
-                  </h5>
-                  <p class="paragraph game-desc">Age category:
-                    <span class="age-cat">
-                      <%= game.age_category %></span>
-                  </p>
-                  <p class="paragraph game-desc">Topic:
-                    <span class="age-cat">
-                      <%= game.topic %></span>
-                  </p>
-                </div>
-              </div>
-              <% end %>
-            </div>
-            <% end %>
-            <hr class="separator my-4">
-          </div>
-          <% end %>
+          <%= render 'shared/all_games_index', locals: {games: @games, subjects: @subjects} %>
           <% else %>
-          <div class="row">
-            <% @games.each do |game| %>
-            <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
-              <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}#{game.subject}"} do %>
-              <div class="search-game-card">
-                <div>
-                  <%= cl_image_tag game.cloud_imag_url, class: 'search-game-card-image' %>
-                </div>
-                <div>
-                  <h5 class='mt-3 pl-1 paragraph'>
-                    <span class="age-cat">
-                      <%= game.title %></span>
-                  </h5>
-                  <p class="paragraph game-desc">Age category:
-                    <span class="age-cat">
-                      <%= game.age_category %></span>
-                  </p>
-                  <p class="paragraph game-desc">Topic:
-                    <span class="age-cat">
-                      <%= game.topic %></span>
-                  </p>
-                </div>
-              </div>
-              <% end %>
-            </div>
-            <% end %>
-          </div>
+          <%= render 'shared/subject_game_index', locals: {games: @games} %>
           <% end %>
         </div>
       </div>
     </div>
   </div>
 </div>
+<!-- Create modals for cards on All Games tab. These have id of record-game.id -->
 <%= render 'shared/modal_game_index', locals: {games: @games, subject_param: false} %>
+<!-- Create modals on subjects tab. These have ids of record-game.idgame.subject. Which kind of id is rendered is controlled by subject_param value -->
 <%= render 'shared/modal_game_index', locals: {games: @games, subject_param: true} %>
-
