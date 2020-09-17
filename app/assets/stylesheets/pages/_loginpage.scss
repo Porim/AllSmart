@@ -1,5 +1,16 @@
+.form {
+  min-height: 100%;
+  background-color: #0A93A1;
+  color: white;
+}
+
+.form-position {
+  margin-top: 12vh;
+  margin-bottom: 5vh;
+}
+
 .forgot-password {
-  color: #0E0000 !important;
+  color: rgb(247, 247, 247);
 
   &:hover {
     text-decoration: underline;
@@ -28,12 +39,7 @@
   }
 }
 
-.login-container {
-  width: 110%;
-  min-height: 100%;
-  background-color: #0A93A1;
-  color: white !important;
-}
+
 
 .signup-button {
   font-family: sans-serif;

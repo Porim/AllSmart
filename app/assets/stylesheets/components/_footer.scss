@@ -48,9 +48,10 @@ p .footer-links {
   font-size: 0.5rem !important;
 }
 
+// fills up the empty space above the footer
 #space {
   flex-grow: 1;
-  background: #0A93A1;
+  background: #0A93A1; 
 }
 
 #medium-arrow {

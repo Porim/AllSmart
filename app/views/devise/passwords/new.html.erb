@@ -1,4 +1,4 @@
-<div class="login-container d-flex justify-content-center mt-5">
+<div class="form d-flex justify-content-center mt-5">
   <div class="container d-flex justify-content-center mt-5">
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= f.error_notification %>
@@ -8,10 +8,10 @@
                       required: true,
                       autofocus: true,
                       input_html: { autocomplete: "email" } %>
-    </div>
+      </div>
       <div class="form-actions">
         <%= f.button :submit, "Recover password", class: "recover btn btn-success d-flex justify-content-center"%>
       </div>
-          <% end %>
+    <% end %>
   </div>
 </div>
