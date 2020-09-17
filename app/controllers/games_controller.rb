@@ -25,11 +25,11 @@ class GamesController < ApplicationController
   end
   
   private
- 
+   
   def set_kid
     @kid = Kid.find(params[:kid_id])
   end
-  
+ 
   def set_game
     @game = Game.find(params[:id])
   end
