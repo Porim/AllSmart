@@ -67,6 +67,6 @@ class KidsController < ApplicationController
   end
   
   def set_allowed_games
-    @allowed_games = @kid.allowed_games
+    @allowed_games = @kid.allowed_games.includes(:game)
   end
 end
