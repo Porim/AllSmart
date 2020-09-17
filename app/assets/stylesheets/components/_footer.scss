@@ -24,7 +24,7 @@
 }
 
 .footer-links a {
-  color: #0A93A1; 
+  color: #0A93A1;
   opacity: 0.50;
   text-decoration: none;
   font-size: 24px;
@@ -53,6 +53,14 @@ p .footer-links {
   background: #0A93A1;
 }
 
+#medium-arrow {
+  font-size: 4em;
+}
+
+#medium-arrow:hover {
+  cursor: pointer;
+}
+
 .footer-i {
   font-size: 20px;
   padding: 0 !important;
@@ -63,6 +71,4 @@ p .footer-links {
   font-size: 22px !important;
 }
 
-.footer-padding {
-  
-}
+.footer-padding {}

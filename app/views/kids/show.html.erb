@@ -5,9 +5,9 @@
     </h2>
     <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
   </div>
-  <% if @games.count > 0 %>
+  <% if @allowed_games.count > 0 %>
   <div class="row">
-    <% @games.each do |game| %>
+    <% @allowed_games.each do |game| %>
     <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column   justify-content-center align-items-center hover-dimensions"
       id="allowed-game-<%=game.id%>">
       <div class="search-game-card">

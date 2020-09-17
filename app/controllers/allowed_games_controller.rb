@@ -9,11 +9,11 @@ class AllowedGamesController < ApplicationController
     else
       @allowed_game = AllowedGame.new(game: @game, kid: @kid)
       @allowed_game.save
-        if @allowed_game.save
-          redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game was added to the list"
-        else
-          redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game wasn't added to the list"
-        end
+      if @allowed_game.save
+        redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game was added to the list"
+      else
+        redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game wasn't added to the list"
+      end
     end
   end
 

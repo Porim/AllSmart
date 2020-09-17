@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import { navbarScroll } from './navbar_on_scroll'
 import { ask, moveForward, displayQuestion } from './wagon_race'
+import { topFunction } from './scrollTopButtons'
 // import { myMove } from './animation_test'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -39,5 +40,8 @@ document.addEventListener('turbolinks:load', () => {
   }
   if (document.getElementById('bg-image-landing')) {
     navbarScroll();
+  }
+  if (document.getElementById("medium-arrow")) {
+    topFunction();
   }
 });
