@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 8px;
+  // padding: 8px;
 }
 
 .navbar-margin {
@@ -35,7 +35,7 @@
   border-radius: 8px;
 }
 
-.user-nav-container:hover > * {
+.user-nav-container:hover>* {
   background: #146c78;
   color: white !important;
 }

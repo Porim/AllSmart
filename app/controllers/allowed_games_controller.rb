@@ -4,9 +4,11 @@ class AllowedGamesController < ApplicationController
     @game = Game.find(params[:format])
     @kid = Kid.find(params[:kid_id])
     subject = params[:subject].nil? ? 'All' : params[:subject]
+    # prevents user from adding the same game twice
     if @kid.allowed_games.find_by(game_id: @game.id).present?
       redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game is already added"
     else
+      # Otherwise, creates a new game and keeps user at the same location on the page. This is determined based on subject key: if present, then card was added from one of the tabs, if nil, was added from AllGames tab. If save was not succesfull, gives Game wasnt added flash
       @allowed_game = AllowedGame.new(game: @game, kid: @kid)
       @allowed_game.save
       if @allowed_game.save
