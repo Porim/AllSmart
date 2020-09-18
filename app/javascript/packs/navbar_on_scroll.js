@@ -7,7 +7,7 @@ const navbarScroll = () => {
         .height;
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
-      const login = document.querySelector('.login-button');
+      const login = document.querySelector('.button');
       if (scrollTop > height - 100) {
         navbar.style.transition = "0.5s";
         navbar.style.background = "white";
