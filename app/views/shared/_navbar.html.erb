@@ -16,15 +16,15 @@
       </li>
       <% unless user_signed_in? || current_page?(root_path) %>
       <li class="nav-item mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button", id:'on-form-button'%>
+        <%= link_to "LOG IN", new_user_session_path, class: "nav-link button", id:'on-form-button'%>
       </li>
       <% else %>
       <li class="nav-item mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
+        <%= link_to "LOG IN", new_user_session_path, class: "nav-link button"%>
       </li>
       <% end %>
       <li class="nav-item mx-2">
-        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link button orange"%>
       </li>
     </ul>
   </div>
@@ -47,15 +47,15 @@
       </li>
       <% unless user_signed_in? || current_page?(root_path) %>
       <li class="nav-item mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button", id:'on-form-button'%>
+        <%= link_to "LOG IN", new_user_session_path, class: "nav-link button", id:'on-form-button'%>
       </li>
       <% else %>
       <li class="nav-item mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "nav-link login-button"%>
+        <%= link_to "LOG IN", new_user_session_path, class: "nav-link button"%>
       </li>
       <% end %>
       <li class="nav-item mx-2">
-        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link login-button orange"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "nav-link button orange"%>
       </li>
     </ul>
   </div>

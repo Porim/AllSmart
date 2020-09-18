@@ -1,20 +1,18 @@
-<div class="login-container d-flex justify-content-center">
-  <div class="container d-flex justify-content-center navbar-margin">
-    <div>
-      <h4 class="mb-4">Edit
-        <%= @kid.first_name.capitalize.possessive %> profile </h4>
+<div class="form-page d-flex justify-content-center">
+  <div class="form form-large-navbar">
       <%= simple_form_for [@kid] do |f| %>
+      <h4 class="mb-4">Edit
+        <%= @kid.first_name.capitalize.possessive %>
+        profile 
+      </h4>
       <%= f.input :first_name, input_html: { class: "name"} %>
       <%= f.input :last_name, input_html: { class: "name"} %>
       <%= f.input :age %>
       <%= f.input :photo, as: :file %>
-      <div class="d-flex justify-content-start align-items-center mb-5">
-        <%= f.submit class: "login-button orange d-flex justify-content-center align-items-center" %>
-        <div>
-          <%= link_to 'Back to profile', profile_path(current_user), class: "back-to-profile btn btn-success d-flex justify-content-center align-items-center ml-2" %>
-        </div>
-        <% end %>
+      <div class="d-flex justify-content-start">
+        <%= f.submit class: "call-to-action button orange d-flex justify-content-center" %>
+        <%= link_to 'Back to profile', profile_path(current_user), class: "call-to-action button back-to-profile d-flex justify-content-center align-items-center ml-2" %>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
