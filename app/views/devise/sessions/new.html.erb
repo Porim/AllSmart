@@ -10,7 +10,7 @@
             required: false,
             input_html: { autocomplete: "current-password" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      <%= f.button :submit, "Log in", class: "button orange d-flex justify-content-center mb-3"%>
+      <%= f.button :submit, "Log in", class: "call-to-action button orange d-flex justify-content-center mb-3"%>
       <%= render "devise/shared/links" %>
     <% end %>
   </div>
