@@ -1,9 +1,7 @@
 <div class="games-page">
   <div class="container all-games">
     <div class="row">
-      
       <!-- Creating tabs with All Games and a header-->
-      
       <div class="col-md-3 d-flex flex-column filter-container">
         <% if @subject == 'All'%>
         <%= link_to 'All Games', games_path(subject: 'All'), class: "link-selected mb-3 pl-2"%>
@@ -20,9 +18,7 @@
         <% end %>
         <% end %>
       </div>
-      
       <!-- Rendering results - if all games tab is selected, render all games headed by subject. If particular tab is selected, render only games correspoding to that particular subject -->
-      
       <div class="col-md-9 games py-5">
         <div class="container-fluid mb-1">
           <div class="d-flex justify-content-start align-items-center">
@@ -39,9 +35,9 @@
             <% end %>
           </div>
           <% if @all_games.count == @games.count %>
-          <%= render 'shared/all_games_index', locals: {games: @games, subjects: @subjects} %>
+          <%= render 'shared/games#index/all_games_index', locals: {games: @games, subjects: @subjects} %>
           <% else %>
-          <%= render 'shared/subject_game_index', locals: {games: @games} %>
+          <%= render 'shared/games#index/subject_game_index', locals: {games: @games} %>
           <% end %>
         </div>
       </div>
@@ -49,6 +45,6 @@
   </div>
 </div>
 <!-- Create modals for cards on All Games tab. These have id of record-game.id -->
-<%= render 'shared/modal_game_index', locals: {games: @games, subject_param: false} %>
+<%= render 'shared/games#index/modal_game_index', locals: {games: @games, subject_param: false} %>
 <!-- Create modals on subjects tab. These have ids of record-game.idgame.subject. Which kind of id is rendered is controlled by subject_param value -->
-<%= render 'shared/modal_game_index', locals: {games: @games, subject_param: true} %>
+<%= render 'shared/games#index/modal_game_index', locals: {games: @games, subject_param: true} %>
