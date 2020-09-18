@@ -51,7 +51,7 @@
       <div class='mt-4 text-center text-white d-flex justify-content-center'>
         <h2 style="width: 60%" class="kid-profile-allowed-games text-start">Games
           you can play</h2>
-        <button type="button" class="orange login-button kid-prof-back"
+        <button type="button" class="orange button kid-prof-back"
           data-toggle="modal" data-target="#myModal">Exit</button>
       </div>
       <% if @allowed_games.count == 3  %>
@@ -173,7 +173,7 @@
         <%= f.input :password_confirmation, :include_blank => true, placeholder: "password",
                               required: false,
                               input_html: { autocomplete: "new-password" }, label: "Enter password to go back" %>
-        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button mt-1"  %>
+        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish button mt-1"  %>
         <% end %>
       </div>
       <div class="modal-footer">

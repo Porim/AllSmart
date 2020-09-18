@@ -1,5 +1,4 @@
 .form-page {
-  min-height: 100%;
   color: white;
   min-height: calc(100vh - 286px);
   background: #0A93A1;
@@ -9,8 +8,11 @@
 }
 
 .form {
-  margin-top: 12vh;
-  margin-bottom: 5vh;
+  margin-top: 69px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .forgot-password {
