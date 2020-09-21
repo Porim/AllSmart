@@ -2,7 +2,10 @@
 const landingArrow = () => {
   const arrow = document.getElementById('large-landing-arrow');
   if (window.innerWidth < 1500) {
-    arrow.href = '/#large-arrow'
+    arrow.href = '/#large-arrow';
+  } else {
+    arrow.href = 'javascript:void(0)'
+    arrow.style.cursor = "default";
   }
 }
 
