@@ -31,7 +31,7 @@
         <%= f.input :password_confirmation, :include_blank => true, placeholder: "password",
                               required: false,
                               input_html: { autocomplete: "new-password" }, label: "Enter password to go back" %>
-        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button mt-1"  %>
+        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button call-to-action mt-1"  %>
         <% end %>
       </div>
       <div class="modal-footer">
