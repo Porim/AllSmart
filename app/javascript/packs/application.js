@@ -28,10 +28,9 @@ import { navbarScroll } from './navbar_on_scroll'
 import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
-// import { myMove } from './animation_test'
-// Internal imports, e.g:
-// import { initSelect2 } from '../components/init_select2';
-//document.onmouseover=function(e){if(e.target.parentNode.classList&&e.target.parentNode.classList.contains('tooltip')){console.dir(e.target)}}
+
+//If statements are added to prevent calling of JS functions on irrelevant pages.
+ 
 document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
