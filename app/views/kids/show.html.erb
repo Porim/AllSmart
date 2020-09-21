@@ -8,7 +8,7 @@
   <% if @allowed_games.count > 0 %>
   <div class="row">
     <% @allowed_games.each do |allowed_game| %>
-    <div id="allowed-game-<%=allowed_game.id%>" class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column   justify-content-center align-items-center hover-dimensions" >
+    <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions" id="allowed-game-<%=allowed_game.id%>">
       <div class="search-game-card">
         <div>
           <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'search-game-card-image' %>
@@ -27,7 +27,7 @@
           </p>
         </div>
       </div>
-      <%= link_to  "Delete",  allowed_game_path(allowed_game, kid_id:@kid), class: "  greenish call-to-action mx-auto mt-3", data: {confirm: "Are you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}", remote: true %>
+      <%= link_to  "Delete",  allowed_game_path(allowed_game, kid_id: @kid), class: "  greenish call-to-action mx-auto mt-3", data: {confirm: "Are you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}", remote: true %>
     </div>
     <% end %>
   </div>
