@@ -21,16 +21,16 @@ class AllowedGamesController < ApplicationController
   def destroy
     @allowed_game = AllowedGame.find(params[:id])
     # checking if games which were created before current game exist
-    kid_games = @kid.allowed_games.where("created_at > ?", @allowed_game.created_at).empty?
-    if kid_games
+    kid_games = @kid.allowed_games.where("created_at > ?", @allowed_game.created_at)
+    if kid_games.empty?
       # if earlier created games exit, arrange them in descending 
       # order to find the the most recent one.
-      @existing_games = @kid.allowed_games.where("created_at < ?", @allowed_game.created_at).order('created_at DESC')
+      @existing_games = @kid.allowed_games.where("created_at < ?", @allowed_game.created_at).order('created_at DESC').limit(1)
     else
-      # if such game does not exist, check for the games which were 
-      # created after current game  and arrange in ASC to find the 
+      # if such games do not exist, check for the games which were 
+      # created after current game and arrange in ASC to find the 
       # most recent one
-      @existing_games = @kid.allowed_games.where("created_at > ?", @allowed_game.created_at).order('created_at ASC')
+      @existing_games = kid_games.order('created_at ASC').limit(1)
     end
     @kid = Kid.find(params[:kid_id])
     @allowed_game.destroy
