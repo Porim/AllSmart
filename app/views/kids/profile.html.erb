@@ -1,8 +1,8 @@
 <div class="outermost-bg">
   <div class="innermost-bg d-flex ">
-    <!-- renders left column with avatar, name and achievements -->
+    <!-- renders sticky column on the left with avatar, name and achievements -->
     <%= render 'shared/kids#profile/profile_column', locals: {kid: @kid} %>
-    <!-- renders game grid in right column, partial needs to be modified as it is currently far from optimal -->
+    <!-- renders game grid in right column-->
     <%= render 'shared/kids#profile/games_column', locals: {kid: @kid, allowed_games: @allowed_games} %>
   </div>
 </div>
