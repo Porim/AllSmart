@@ -1,4 +1,5 @@
 <div class="container-fluid p-5 mt-5">
+  <!-- renders kid cards and buttons if children exist -->
   <% if @kids.count > 0 %>
   <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
       style="color:#458a86">o</span><span style="color:#618679">u</span><span
@@ -42,13 +43,16 @@
     </div>
   </div>
   <% else %>
+  <!-- render prompt to create a child if no children were created -->
   <div class="container">
     <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
         style="color:#458a86">l</span><span style="color:#618679">l</span><span
         style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
         style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
         style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
-    <p class="paragraph py-2">To get started, please create your child's profile, then create a list of games they are allowed to play.</p>
+    <p class="paragraph py-2">To get started, please create your
+      child's profile, then create a list of games they are allowed to
+      play.</p>
     <div class="d-flex justify-content-center">
       <%= link_to new_kid_path do %>
       <button class="button orange call-to-action">Add a child</button>

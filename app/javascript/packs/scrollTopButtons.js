@@ -1,3 +1,4 @@
+// Function for the back-to-top button in the footer 
 const topFunction = () => {
   const topButton = document.getElementById("medium-arrow");
   topButton.addEventListener('click', () => {

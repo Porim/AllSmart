@@ -1,8 +1,10 @@
+// Changes apperance of navbar function on scroll, for both cases, when user is sgined in, and when not. aboutUs is a link appearing in navbar is user is not signed. If this element and testimonial container are found, first if statement is executed. If about-us is not found, but testimonial-container is found, then second if statement is execetued applying to navbar rendered for the user who is signed-in.
 const navbarScroll = () => {
   const aboutUs = document.querySelector('#about-us-link');
+  const testimonialContainer = document.querySelector(
+    '.testimonial-container');
   addEventListener('scroll', () => {
-    if (document.querySelector('.testimonial-container') &&
-      aboutUs) {
+    if (testimonialContainer && aboutUs) {
       const height = document.getElementById('bg-image-landing').getBoundingClientRect()
         .height;
       const navbar = document.querySelector('#navbar-lewagon')
@@ -19,8 +21,7 @@ const navbarScroll = () => {
         aboutUs.classList.remove('test-navbar-scroll');
       }
     }
-    if (document.querySelector('.testimonial-container') && !
-      aboutUs) {
+    if (testimonialContainer && !aboutUs) {
       const navbar = document.querySelector('#navbar-lewagon')
       const scrollTop = $(window).scrollTop();
       const children = document.querySelector(
