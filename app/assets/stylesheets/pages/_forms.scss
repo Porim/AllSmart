@@ -1,5 +1,26 @@
+.form-page {
+  color: white;
+  min-height: calc(100vh - 286px);
+  background: #0A93A1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  margin-top: 69px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-large-navbar {
+  margin-top: 98px;
+}
+
 .forgot-password {
-  color: #0E0000 !important;
+  color: rgb(247, 247, 247);
 
   &:hover {
     text-decoration: underline;
@@ -20,20 +41,15 @@
 
 }
 
-.account {
-  color: blue;
+.link-in-text {
+  font-weight: 600;
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-.login-container {
-  width: 110%;
-  min-height: 100%;
-  background-color: #0A93A1;
-  color: white !important;
-}
+
 
 .signup-button {
   font-family: sans-serif;
@@ -60,7 +76,7 @@
 }
 
 .hint {
-  color: black !important;
+  color: white !important;
 }
 
 .kids-update {
@@ -77,21 +93,7 @@
 }
 
 .back-to-profile {
-  font-family: sans-serif;
-  border-radius: 25px !important;
-  border: 1px;
-  width: 130px;
   padding: 10px 12px;
-  display: inline-block;
-  height: 50px;
-  color: #FFFFFF;
-
-
-
-  &:hover {
-    text-decoration: none !important;
-    color: black !important;
-  }
 }
 
 .name {
