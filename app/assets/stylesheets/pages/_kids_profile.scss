@@ -138,11 +138,13 @@
     -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
   -webkit-transform: scale(1);
   transform: scale(1);
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .game-card-kid-image-medium {
   object-fit: fit;
-  width: 224px;
+  width: 100%;
   height: 180px;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
