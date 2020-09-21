@@ -1,3 +1,4 @@
+<!-- this modal take subject_param as a local. If subject_param is true, subject is added to game.id for modal target making sure that redirect takes user to the page on relevant tab. Else, only game,id is passed as modal id and user stays on All Games tab -->
 <% @games.each do |game| %>
 <% modal_id = locals[:subject_param] ? "#{game.id}#{game.subject}" : "#{game.id}" %>
 <% modal_param = game.subject if locals[:subject_param] %>
