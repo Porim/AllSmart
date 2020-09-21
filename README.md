@@ -3,7 +3,13 @@
 [allSmart](https://www.allsmart.uk) is a demo project that believes 
 > **everybody** is **smart** with the right education
 
-[allSmart](https://www.allsmart.uk) is made for parents to create learning experience specifically for their child and to have full control over entertaining learning experience through educational games.
+[allSmart](https://www.allsmart.uk) enables parents to create learning experience specifically tailored to their children and allows full parental control over gamefied learning. Current features include:
+
+* Creating an account
+* Creating multiple profiles for children
+* Filtering, adding and deleting games which given child is allowed to play
+* Access to child mode - page where children can play games without having access to other parts of the web app
+* One fully working game 
 
 ## Currently in progress
 
