@@ -20,11 +20,24 @@ class AllowedGamesController < ApplicationController
 
   def destroy
     @allowed_game = AllowedGame.find(params[:id])
+    # checking if games which were created before current game exist
     kid_games = @kid.allowed_games.where("created_at > ?", @allowed_game.created_at).empty?
-    @allowed_games = kid_games ? @kid.allowed_games.where("created_at < ?", @allowed_game.created_at).order('created_at DESC') : @kid.allowed_games.where("created_at > ?", @allowed_game.created_at).order('created_at ASC')
+    if kid_games
+      # if earlier created games exit, arrange them in descending 
+      # order to find the the most recent one.
+      @existing_games = @kid.allowed_games.where("created_at < ?", @allowed_game.created_at).order('created_at DESC')
+    else
+      # if such game does not exist, check for the games which were 
+      # created after current game  and arrange in ASC to find the 
+      # most recent one
+      @existing_games = @kid.allowed_games.where("created_at > ?", @allowed_game.created_at).order('created_at ASC')
+    end
     @kid = Kid.find(params[:kid_id])
     @allowed_game.destroy
-    redirect_to kid_path(@kid, anchor: "allowed-game-#{@allowed_games.first.id}")
+    # if only one game is left in child profile, @existing_games array # will be empty. In this case we redirect to @kid (anchor is nil),
+    # else to @kid with anchor given by first entry of @existing_games.
+    game_anchor = @existing_games.first.nil? ? nil : "allowed-game-#{@existing_games.first.id}"
+    redirect_to kid_path(@kid, anchor: game_anchor) 
   end
   
   private
