@@ -3,7 +3,6 @@ class AllowedGamesController < ApplicationController
   #if subject is nil, after creation of allowed game user stays at the same location of the page in All Games tab - this is insured by the anchor. Else, user stays on the same location of the page, but on the corresponding tab, rather than All Games tab.
   def create
     @game = Game.find(params[:format])
-    @delete_redirect = []
     subject = params[:subject].nil? ? 'All' : params[:subject]
     if @kid.allowed_games.find_by(game_id: @game.id).present?
       redirect_to games_path(subject: subject, anchor: "record-#{@game.id}"), notice: "Game is already added"
