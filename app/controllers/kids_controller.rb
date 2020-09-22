@@ -23,7 +23,8 @@ class KidsController < ApplicationController
   
   def create
     @kid = Kid.new(kid_params)
-    @kid.user = current_user # this line is neccessary in order to pass validation
+    # this line is neccessary in order to pass validation
+    @kid.user = current_user 
     if @kid.save
       redirect_to profile_path(current_user)
     else
@@ -34,7 +35,9 @@ class KidsController < ApplicationController
   def profile
     update_level
   end
-  # this method is updating child's score once game is played. Every attempt awards 20 points, once 60 are reached, child's level is incremented by update_level method.
+  # this method is updating child's score once game is played. Every 
+  # attempt awards 20 points, once 60 are reached, child's level is 
+  # incremented by update_level method.
   def update_score
     @kid = Kid.find(params[:kid_id])
     @game = Game.find(params[:game_id])

@@ -1,6 +1,9 @@
 class AllowedGamesController < ApplicationController
   before_action :set_kid, only: [:create, :destroy]
-  #if subject is nil, after creation of allowed game user stays at the same location of the page in All Games tab - this is insured by the anchor. Else, user stays on the same location of the page, but on the corresponding tab, rather than All Games tab.
+  # if subject is nil, after creation of allowed game user stays at 
+  # the same location of the page in All Games tab - this is insured 
+  # by the anchor. Else, user stays on the same location of the 
+  # page, but on the corresponding tab, rather than All Games tab.
   def create
     @game = Game.find(params[:format])
     subject = params[:subject].nil? ? 'All' : params[:subject]
