@@ -9,6 +9,15 @@
   text-align: center;
   transition: 0.3s;
   background: transparent;
+
+  font-family: sans-serif;
+  border-radius: 25px;
+  padding: 14px 45px;
+  color: white !important;
+  font-weight: bold;
+  display: inline-block;
+  width: 180px;
+  text-align: center;
 }
 
 #scroll-login {
@@ -43,16 +52,16 @@
   color: #023033 !important;
 }
 
-.call-to-action {
-  font-family: sans-serif;
-  border-radius: 25px;
-  padding: 14px 45px;
-  color: white !important;
-  font-weight: bold;
-  display: inline-block;
-  width: 180px;
-  text-align: center;
-}
+// .call-to-action {
+//   font-family: sans-serif;
+//   border-radius: 25px;
+//   padding: 14px 45px;
+//   color: white !important;
+//   font-weight: bold;
+//   display: inline-block;
+//   width: 180px;
+//   text-align: center;
+// }
 
 .form-control {
   width: 550px;
