@@ -9,7 +9,8 @@
 * One fully working game
 * Attractive front-end, with dynamic elements powered by Javascript ES6 and [AOS package](https://michalsnik.github.io/aos/)
 ## Currently in progress
-* Refactoring the code and bug-fixing ([GitHub Project](https://github.com/Porim/AllSmart/projects/2))
+Refactoring the code and bug-fixing ([GitHub Project](https://github.com/Porim/AllSmart/projects/2))
+
 During the last 9 very intensive days [@Le Wagon bootcamp](https://www.lewagon.com/london) we had a project sprint, with the very strong push to finalise the front-end. As a result, we managed to achieve appealing design, however internals of the code were not completely optimal. As a part of refactoring process, we are currently addressing the following issues:
 * Fixing N+1 queries
 * Adding comments to views, controllers and JS files
