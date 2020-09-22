@@ -28,7 +28,7 @@
                 </div>
               </div>
             </div>
-            <%= link_to 'Child mode', kid_profile_path(kid), class: 'greenish mr-4 fixed-width' %>
+            <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 fixed-width' %>
           </div>
         <% end %>
       <% end %>
@@ -36,7 +36,7 @@
         <%= link_to new_kid_path do %>
           <button class="button orange">Add a child</button>
         <% end %>
-        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
+        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
       </div>
     </div>
   <% else %>
