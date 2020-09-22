@@ -28,15 +28,15 @@
                   </div>
                 </div>
               </div>
-            <%= link_to 'Child mode', kids_profile_path(kid), class: 'greenish call-to-action mr-4 fixed-width' %>
+            <%= link_to 'Child mode', kids_profile_path(kid), class: 'greenish button mr-4 fixed-width' %>
           </div>
         <% end %>
       <% end %>
       <div class="card-button">
         <%= link_to new_kid_path do %>
-        <button class="button orange call-to-action">Add a child</button>
+        <button class="button orange">Add a child</button>
         <% end %>
-        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'call-to-action ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
+        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
       </div>
     </div>
     <% else %>
@@ -52,7 +52,7 @@
         play.</p>
       <div class="d-flex justify-content-center">
         <%= link_to new_kid_path do %>
-        <button class="button orange call-to-action">Add a child</button>
+        <button class="button orange">Add a child</button>
         <% end %>
       </div>
     </div>

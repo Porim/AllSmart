@@ -28,7 +28,7 @@
           </p>
         </div>
       </div>
-      <%= link_to  "Delete",  allowed_game_path(allowed_game), class: "  greenish call-to-action mx-auto mt-3", data: {confirm: "Are   you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}"  %>
+      <%= link_to  "Delete",  allowed_game_path(allowed_game), class: "button greenish mx-auto mt-3", data: {confirm: "Are   you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}"  %>
     </div>
     <% end %>
   </div>
@@ -39,8 +39,8 @@
     <%= @kid.first_name.possessive.capitalize %> profile 😿. Lets fix
     this! 😺 </p>
   <div class="d-flex align-items-center justify-content-center my-5">
-    <%= link_to 'Go Back', profile_path(current_user), class: 'call-to-action ml-2 orange' %>
-    <%= link_to 'Add a game', games_path(subject: 'All'), class: 'call-to-action ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
+    <%= link_to 'Go Back', profile_path(current_user), class: 'button ml-2 orange' %>
+    <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
   </div>
   <% end %>
 </div>

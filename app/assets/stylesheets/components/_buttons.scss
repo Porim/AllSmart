@@ -1,23 +1,37 @@
 .button {
-  font-family: sans-serif;
   border: 1px solid white;
   border-radius: 25px;
-  padding: 12px 85px;
   color: white !important;
   display: inline-block;
-  width: 130px;
-  text-align: center;
-  transition: 0.3s;
-  background: transparent;
-
   font-family: sans-serif;
-  border-radius: 25px;
-  padding: 14px 45px;
-  color: white !important;
   font-weight: bold;
-  display: inline-block;
-  width: 180px;
+  padding: 14px 45px;
   text-align: center;
+  width: 180px;
+  transition: 0.3s;
+
+  &:hover {
+    text-decoration: none !important;
+    background: white;
+    color: #023033 !important;
+    transition: 0.3s;
+  }
+}
+
+.orange {
+  background: #E97234;
+  border: none;
+  transition: 0.3s;
+}
+
+.greenish {
+  background: #0E91A1;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: white !important;
+  }
 }
 
 #scroll-login {
@@ -35,33 +49,10 @@
   padding-left: 0.5em;
 }
 
-#on-form-button:hover {
-  background: #E97234;
-  color: white !important;
-  border: #E97234;
-}
-
 #scroll-login:hover {
   background: #E97234;
   color: white !important;
 }
-
-.button:hover {
-  text-decoration: none !important;
-  background: white;
-  color: #023033 !important;
-}
-
-// .call-to-action {
-//   font-family: sans-serif;
-//   border-radius: 25px;
-//   padding: 14px 45px;
-//   color: white !important;
-//   font-weight: bold;
-//   display: inline-block;
-//   width: 180px;
-//   text-align: center;
-// }
 
 .form-control {
   width: 550px;
@@ -93,19 +84,6 @@
   border-color: $button;
   color: $button !important;
   background: transparent;
-}
-
-
-.orange {
-  background: #E97234;
-  border: none;
-  transition: 0.3s;
-}
-
-.greenish {
-  background: #0E91A1;
-  border: none;
-  transition: 0.3s;
 }
 
 .greenish2 {

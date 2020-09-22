@@ -1,9 +1,9 @@
 <!-- navbar renderd when user is signed in. Not rendered on the same pages as main navbar -->
 <% if current_page?(profile_path(current_user)) || current_page?(games_path) || (controller_name == "kids" && action_name == "show") %>
-<div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
-  <% else %>
+  <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
+<% else %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar-lewagon">
-    <% end %>
+<% end %>
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
     <% end %>
@@ -14,30 +14,30 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto d-flex align-items-center">
-        <li class="nav-item">
+        <li>
           <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1', id: 'home-on-scroll'  %>
         </li>
         <% if current_page?(games_path) %>
-        <li class="nav-item">
+        <li>
           <span class='about-us px-2 mx-1 user-tab-highlighter'>
             GAMES</span>
         </li>
         <% else %>
-        <li class="nav-item">
+        <li>
           <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1', id: 'browse-on-scroll' %>
         </li>
         <% end %>
         <% if current_page?(profile_path(current_user)) %>
-        <li class="nav-item">
+        <li>
           <span class='about-us px-2 mx-1 mr-4 user-tab-highlighter'>
             CHILDREN</span>
         </li>
         <% else %>
-        <li class="nav-item">
+        <li>
           <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2 mr-3', id: 'children-on-scroll' %>
         </li>
         <% end %>
-        <li class="nav-item dropdown">
+        <li class="dropdown">
           <div class="d-flex align-items-center user-nav-container" id="navbarDropdown"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if current_user.photo.present? %>
