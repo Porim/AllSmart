@@ -16,7 +16,7 @@ During the last 9 very intensive days [@Le Wagon bootcamp](https://www.lewagon.c
 * Adding comments to views, controllers and JS files
 * Making code more readable by creating partials and absracting relevant code from views to controllers
 * Reviewing routing
-* Improving organisation of CSS files. During the bootcamp we followed atomic principles bu designing re-usable components, however some of the CSS code is duplicated, and some was never used.
+* Improving organisation of CSS files. During the bootcamp we followed atomic principles by designing re-usable components, however some of the CSS code is duplicated, and some was never used.
 * Refactoring our own UI component library by creating modifier classes, which would allow the same component to be used on every page with additional styling provided by modifer classes (a-la Bootstrap)
 * Focusing on UX, by improving UI design
 ## Next on the agenda
@@ -50,11 +50,7 @@ During the last 9 very intensive days [@Le Wagon bootcamp](https://www.lewagon.c
       resources :allowed_games, only: [:destroy]
     end
     ```
-8. Creating models and validations, corresponding views and controllers following Rails conventions. Our models:
-    * allowed_game
-    * game
-    * kid
-    * user
+8. Creating models and validations, corresponding views and controllers following Rails conventions.    
 11. Organising CSS files (currently being refactored)
     During bootcamp we used atomic framework when writing CSS, however after the project week was finished, we found that some further refactoring is neccessary. Our current way of organising CSS:
     ```
@@ -72,9 +68,9 @@ During the last 9 very intensive days [@Le Wagon bootcamp](https://www.lewagon.c
 [Le Wagon](https://www.lewagon.com/) batch #423 in **nine** days (24/8/2020 - 3/9/2020).\
 Then further improved over next weeks after the end of the Bootcamp.
 ### Developed By
-[Nikita V Visenko](https://www.linkedin.com/in/nikita-visencuk-visenko-74b47b127/), [Miroslav Palka](https://www.linkedin.com/in/mirodev/), Dobrin Nedyalkov and Taoreed Lawal\
-Project managers during bootcamp: Rodrigo Ruas and Rahul Keerthi\
-Other contributors: Anne De Joly
+[Nikita V Visenko](https://www.linkedin.com/in/nikita-visencuk-visenko-74b47b127/), [Miroslav Palka](https://www.linkedin.com/in/mirodev/), [Dobrin Nedyalkov](https://www.linkedin.com/in/dobrin-nedyalkov/) and [Taoreed Lawal](https://www.linkedin.com/in/taoreed-olugbenga-lawal-71952bb0/)\
+Project managers during bootcamp: [Rodrigo Ruas](https://www.linkedin.com/in/rodrigoruas/) and [Rahul Keerthi](https://www.linkedin.com/in/rahulkeerthi/)\
+Other contributors: [Anne De Joly](https://www.linkedin.com/in/annedejoly/)
 ### Technologies used
 * Ruby
 * Ruby on Rails
