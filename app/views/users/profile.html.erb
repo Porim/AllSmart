@@ -8,6 +8,7 @@
         style="color:#e97234">s</span></h1>
     <div class="cards">
       <% @kids.each do |kid| %>
+<<<<<<< HEAD
         <%= link_to kid_path(kid) do  %>
           <div class="card-product py-5 my-5">
             <% if kid.photo.attached? %>
@@ -31,6 +32,31 @@
             <%= link_to 'Child mode', kid_profile_path(kid), class: 'greenish mr-4 fixed-width' %>
           </div>
         <% end %>
+=======
+      <%= link_to kid_path(kid) do  %>
+      <div class="card-product py-5 my-5">
+        <% if kid.photo.attached? %>
+        <%= cl_image_tag kid.photo.key, class: "avatar-profile ml-4", crop: :thumb, gravity: :face %>
+        <% else %>
+        <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile ml-4" %>
+        <% end %>
+        <div class="card-product-infos">
+          <div class="child-text d-flex justify-content-between align-items-center">
+            <%= kid.first_name.capitalize %>
+            -
+            <%= kid.age %>
+            years old
+            <div class="test">
+              <%= link_to edit_kid_path(kid) do  %>
+              <i class="fas fa-pen p-1 greenish2"></i>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <%= link_to 'Child mode', kid_profile_path(kid), class: 'greenish mr-4 fixed-width' %>
+      </div>
+      <% end %>
+>>>>>>> 6d527d804a31086c9e1ea1bc6c48e91ce5284749
       <% end %>
       <div class="card-button">
         <%= link_to new_kid_path do %>
@@ -51,7 +77,11 @@
       play.</p>
     <div class="d-flex justify-content-center">
       <%= link_to new_kid_path do %>
+<<<<<<< HEAD
         <button class="button orange">Add a child</button>
+=======
+      <button class="button orange">Add a child</button>
+>>>>>>> 6d527d804a31086c9e1ea1bc6c48e91ce5284749
       <% end %>
     </div>
   <% end %>
