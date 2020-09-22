@@ -56,3 +56,9 @@
   gap: 1.4rem;
 
 }
+
+.card-grid-kids-show {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
