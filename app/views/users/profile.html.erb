@@ -23,20 +23,20 @@
                 years old
                 <div class="test">
                   <%= link_to edit_kid_path(kid) do  %>
-                    <i class="fas fa-pen p-1 greenish2"></i>
+                    <i class="fas fa-pen p-1 greenish-icon"></i>
                   <% end %>
                 </div>
               </div>
             </div>
-            <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 fixed-width' %>
+            <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 button-wide' %>
           </div>
         <% end %>
       <% end %>
       <div class="card-button">
         <%= link_to new_kid_path do %>
-          <button class="button orange">Add a child</button>
+          <button class="button orange button-wide">Add a child</button>
         <% end %>
-        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish', id: 'custom-wdith-for-parent-add-button' %>
+        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish button-wide' %>
       </div>
     </div>
   <% else %>
