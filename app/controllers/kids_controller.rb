@@ -24,7 +24,8 @@ class KidsController < ApplicationController
   
   def create
     @kid = Kid.new(kid_params)
-    @kid.user = current_user # this line is neccessary in order to pass validation
+    # this line is neccessary in order to pass validation
+    @kid.user = current_user 
     if @kid.save
       redirect_to profile_path(current_user)
     else

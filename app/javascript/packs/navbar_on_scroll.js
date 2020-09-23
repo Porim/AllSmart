@@ -1,4 +1,8 @@
-// Changes apperance of navbar function on scroll, for both cases, when user is sgined in, and when not. aboutUs is a link appearing in navbar is user is not signed. If this element and testimonial container are found, first if statement is executed. If about-us is not found, but testimonial-container is found, then second if statement is execetued applying to navbar rendered for the user who is signed-in.
+// Changes apperance of navbar function on scroll, for both cases, 
+// when user is sgined in, and when not. aboutUs is a link appearing // in navbar is user is not signed. If this element and testimonial 
+// container are found, first if statement is executed. If about-us 
+// is not found, but testimonial-container is found, then second if 
+// statement is execetued applying to navbar rendered for the user who // is signed-in.
 const navbarScroll = () => {
   const aboutUs = document.querySelector('#about-us-link');
   const testimonialContainer = document.querySelector(

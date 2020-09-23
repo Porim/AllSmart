@@ -4,7 +4,6 @@
   align-items: center;
   width: 100%;
   padding: 8px;
-  border-bottom: 1px solid white !important;
 }
 
 .dropdown-toggle::after {
@@ -31,7 +30,7 @@
   border-radius: 8px;
 }
 
-.user-nav-container:hover > * {
+.user-nav-container:hover>* {
   background: #146c78;
   color: white !important;
 }

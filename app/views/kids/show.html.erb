@@ -1,37 +1,43 @@
-<div class="container container-for-allowed-games">
-  <div class="d-flex justify-content-start align-items-center mb-3">
-    <h2 class='h2-game-title'>
-      <%= @kid.first_name.capitalize.possessive %> allowed games
-    </h2>
-    <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
-  </div>
-  <% if @allowed_games.count > 0 %>
-    <div class="row">
-      <% @allowed_games.each do |allowed_game| %>
-        <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions" id="allowed-game-<%=allowed_game.id%>">
-          <div class="search-game-card">
-            <div>
-              <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'search-game-card-image' %>
-            </div>
-            <div>
-              <h5 class='mt-3 pl-1'>
-                <%= allowed_game.game.title %>
-              </h5>
-              <p class="paragraph game-desc">Age category:
-                <span class="age-cat">
-                  <%= allowed_game.game.age_category %></span>
-              </p>
-              <p class="paragraph game-desc">Topic:
-                <span class="age-cat">
-                  <%= allowed_game.game.topic %></span>
-              </p>
+<div class="games-kid-show-page">
+  <div class="container all-games">
+    <div class="d-flex justify-content-start align-items-center">
+      <h2 class='h2-game-title'>
+        <%= @kid.first_name.capitalize.possessive %> allowed games
+      </h2>
+      <%= cl_image_tag 'uiprme0fpeh7am66dntp', class: 'subject-icon-no-hover ml-4'%>
+    </div>
+    <% if @allowed_games.count > 0 %>
+      <div class="row">
+        <% @allowed_games.each do |allowed_game| %>
+          <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center hover-dimensions"
+            id="allowed-game-<%=allowed_game.id%>">
+            <div class="show-card">
+              <div class="search-game-card">
+                <div>
+                  <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'search-game-card-image' %>
+                </div>
+                <div>
+                  <h5 class='mt-3 pl-1'>
+                    <%= allowed_game.game.title %>
+                    <%= link_to allowed_game_path(allowed_game, kid_id: @kid), data: {confirm: "Are you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}", remote: true do %>
+                      <i class="fas fa-trash card-trash ml-2" aria-hidden="true"></i>
+                    <% end %>
+                  </h5>
+                  <p class="paragraph game-desc">Age category:
+                    <span class="age-cat">
+                      <%= allowed_game.game.age_category %></span>
+                  </p>
+                  <p class="paragraph game-desc">Topic:
+                    <span class="age-cat">
+                      <%= allowed_game.game.topic %></span>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <%= link_to  "Delete",  allowed_game_path(allowed_game, kid_id: @kid), class: "button greenish mx-auto mt-3", data: {confirm: "Are you sure you want delete this game?"}, method: :delete, anchor: "allowed-game-#{allowed_game.id}", remote: true %>
-        </div>
-      <% end %>
-    </div>
-  <% else %>
+        <% end %>
+      </div>
+    <% else %>
     <p class="paragraph mt-5 custom-header"> You haven't added
       any
       games to
@@ -41,5 +47,6 @@
       <%= link_to 'Go Back', profile_path(current_user), class: 'button ml-2 orange button-wide' %>
       <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish button-wide' %>
     </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>

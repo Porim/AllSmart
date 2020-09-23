@@ -56,3 +56,32 @@
   gap: 1.4rem;
 
 }
+
+.card-grid-kids-show {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+  gap: 1.4rem;
+}
+
+.child-link-opacity {
+  opacity: 0.7;
+}
+
+.modal-kid-name {
+  width: 80px;
+  margin-bottom: 0;
+}
+
+.dropdown-menu {
+  width: 200px;
+  height: auto;
+  padding: 0;
+}
+
+.allowed-card {
+  font-size: 1.5rem;
+}
+
+.allowed-info-container {
+  border-bottom: 2px solid #E97234;
+}
