@@ -44,7 +44,7 @@
 
 .orange {
   background: #E97234;
-  border: none;
+  border-color:  #E97234;
   transition: 0.3s;
 
   &:hover {
@@ -58,20 +58,13 @@
 
 #scroll-login {
   background: transparent;
-  border: 1px solid #E97234 !important;
-  border-radius: 25px;
-  color: #E97234 !important;
+  border: 1px solid #0E91A1 !important;
+  color: #0E91A1 !important;
   display: inline-block;
-  font-family: sans-serif;
-  padding: 12px 45px;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  text-align: center;
-  transition: 0.3s;
-  width: 130px;
 
   &:hover {
-    background: #E97234;
+    background: #0E91A1;
     color: white !important;
+    border: 1px solid #0E91A1 !important;
   }
 }
