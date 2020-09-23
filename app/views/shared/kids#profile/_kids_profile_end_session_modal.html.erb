@@ -1,27 +1,7 @@
-<!-- modal for exiting child mode. Requires parental confirmation. For now, just a mock up -->
-<div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal"
-          aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<!-- Modal for exiting child mode. Requires parental confirmation. -->
 <div id="myModal" class="modal fade" role="dialog">
   <div class="modal-dialog">
-    <!-- Modal content-->
+    <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Parental confirmation</h4>
@@ -31,7 +11,7 @@
         <%= f.input :password_confirmation, :include_blank => true, placeholder: "password",
                               required: false,
                               input_html: { autocomplete: "new-password" }, label: "Enter password to go back" %>
-        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish login-button call-to-action mt-1"  %>
+        <%= link_to 'Confirm', profile_path(current_user), class:"d-flex justify-content-center align-items-center greenish button mt-1"  %>
         <% end %>
       </div>
       <div class="modal-footer">
