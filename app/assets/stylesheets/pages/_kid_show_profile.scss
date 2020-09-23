@@ -1,5 +1,5 @@
 .container-for-allowed-games {
-  margin-top: 10%;
+  margin-top: 20vh;
 }
 
 .kid-profile-allowed-games {
@@ -9,4 +9,10 @@
 
 .custom-header {
   font-size: 20px;
+}
+
+.games-kid-show-page {
+  width: 100vw;
+  min-height: calc(100vh - 232px - 50px);
+  padding-bottom: 8%;
 }

@@ -59,8 +59,8 @@
 .search-game-card-image {
   object-fit: cover;
   object-position: center center;
-  width: 220px;
-  height: 220px;
+  width: 90%;
+  height: 90%;
   border-top-left-radius: 13px;
   border-top-right-radius: 13px;
   margin: 0 auto;
@@ -69,7 +69,7 @@
 
 .search-game-card {
   width: 265px;
-  height: 376px;
+  min-height: 376px;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
   transition: all 0.4s ease;
@@ -78,7 +78,11 @@
   -o-transition: all 0.4s ease;
   box-shadow: none;
   padding-top: 16px;
+}
 
+.show-card {
+  margin-top: 52%;
+  // margin-bottom: 25%;
 }
 
 .search-game-card:hover {
@@ -108,4 +112,8 @@
 
 .with-delete {
   height: 430px;
+}
+
+.card-trash {
+  color: #E97234;
 }
