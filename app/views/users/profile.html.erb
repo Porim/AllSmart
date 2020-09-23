@@ -41,18 +41,20 @@
     </div>
   <% else %>
     <!-- render prompt to create a child if no children were created -->
-    <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
-        style="color:#458a86">l</span><span style="color:#618679">l</span><span
-        style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
-        style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
-        style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
-    <p class="paragraph py-2">To get started, please create your
-      child's profile, then create a list of games they are allowed to
-      play.</p>
-    <div class="d-flex justify-content-center">
-      <%= link_to new_kid_path do %>
-        <button class="button orange">Add a child</button>
-      <% end %>
+    <div class="text-center">
+      <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+          style="color:#458a86">l</span><span style="color:#618679">l</span><span
+          style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
+          style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
+          style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
+      <p class="paragraph py-2">To get started, please create your
+        child's profile, then create a list of games they are allowed to
+        play.</p>
+      <div class="d-flex justify-content-center">
+        <%= link_to new_kid_path do %>
+          <button class="button orange">Add a child</button>
+        <% end %>
+      </div>
     </div>
   <% end %>
 </div>
