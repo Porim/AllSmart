@@ -44,7 +44,7 @@
               <% current_user.kids.each do |kid| %>
               <div class="p-dropdown mb-1 d-flex flex-row align-items-center">
                 <% if kid.allowed_games.where(game_id: game.id).exists? %>
-                <div class="d-flex justify-content-center align-items-center child-link-opacity">
+                <div class="d-flex justify-content-center align-items-center">
                   <p class="paragraph mt-2">
                     <%= kid.first_name %>
                   </p>
@@ -53,7 +53,7 @@
                   <% else %>
                   <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
                   <% end %>
-                  <span class="tooltiptext">Already allowed 👍</span>
+                  <span><i class="fas fa-check ml-2 text-success"></i></span>
                 </div>
                 <% else %>
                 <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
