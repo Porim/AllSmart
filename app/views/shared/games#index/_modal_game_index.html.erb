@@ -41,40 +41,21 @@
                 play</p>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <% current_user.kids.each do |kid| %>
               <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container mt-1 p-2">
-                <% if kid.allowed_games.where(game_id: game.id).exists? %>
-                  <p class="paragraph modal-kid-name">
-                    <%= kid.first_name %>
-                  </p>
-                  <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                  <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
-                  <% end %>
-                  <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
-                <% else %>
-                <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
+                <%= simple_form_for current_user, :url => allowed_games_path, method: :post do |f| %>
                 <div class="d-flex justify-content-center align-items-center">
-                  <p class="paragraph modal-kid-name">
-                    <%= kid.first_name %>
-                  </p>
-                  <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                  <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
-                  <% end %>
+                  <%= f.input :kid_ids, collection: current_user.kids.collect{ |kid| [kid.first_name, kid.id] }, as: :check_boxes, label: 'Your kids', :input_html => { :checked => false } %>
+                  <%= f.input :game_id, as: :hidden, input_html: { value: params[:game_id] = game.id } %>
+                  <%= f.input :subject, as: :hidden, input_html: { value: params[:subject] } %>
                 </div>
-                <% end %>
+                <%= f.submit %>
                 <% end %>
               </div>
-              <% end %>
             </div>
           </div>
         </div>
         <div>
-          <button type="button" class="greenish button"
-            data-dismiss="modal">Close</button>
+          <button type="button" class="greenish button" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

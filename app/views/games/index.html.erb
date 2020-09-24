@@ -45,6 +45,6 @@
   </div>
 </div>
 <!-- Create modals for cards on All Games tab. These have id of record-game.id -->
-<%= render 'shared/games#index/modal_game_index', locals: {games: @games, subject_param: false} %>
+<%= render 'shared/games#index/modal_game_index', locals: {games: @games, user: @user, subject_param: false} %>
 <!-- Create modals on subjects tab. These have ids of record-game.idgame.subject. Which kind of id is rendered is controlled by subject_param value -->
-<%= render 'shared/games#index/modal_game_index', locals: {games: @games, subject_param: true} %>
+<%= render 'shared/games#index/modal_game_index', locals: {games: @games, user: @user, subject_param: true} %>
