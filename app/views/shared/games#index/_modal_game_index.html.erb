@@ -43,11 +43,11 @@
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container mt-1 p-2">
                 <%= simple_form_for current_user, :url => allowed_games_path, method: :post do |f| %>
-                <div class="d-flex justify-content-center align-items-center">
-                  <%= f.input :kid_ids, collection: current_user.kids.collect{ |kid| [kid.first_name, kid.id] }, as: :check_boxes, label: 'Your kids', :input_html => { :checked => false } %>
-                  <%= f.input :game_id, as: :hidden, input_html: { value: params[:game_id] = game.id } %>
-                  <%= f.input :subject, as: :hidden, input_html: { value: params[:subject] } %>
-                </div>
+                <% current_user.kids.each do |kid| %>
+                <%= f.input :kid_ids, as: :check_boxes, collection: [kid].collect{ |kid| [kid.first_name, kid.id] }, required: false, legend_tag: false, checked: kid %>
+                <% end %>
+                <%= f.input :game_id, as: :hidden, input_html: { value: params[:game_id] = game.id } %>
+                <%= f.input :subject, as: :hidden, input_html: { value: params[:subject] } %>
                 <%= f.submit %>
                 <% end %>
               </div>
@@ -61,4 +61,18 @@
     </div>
   </div>
 </div>
+<% end %>
+<!-- last working form with multiple selection -->
+<% if false %>
+<%= simple_form_for current_user, :url => allowed_games_path, method: :post, remote: true do |f| %>
+<div class="d-flex justify-content-center align-items-center">
+  <%= f.input :kid_ids, collection: current_user.kids.collect{ |kid| [kid.first_name, kid.id] }, as: :check_boxes, label: 'Your kids', :input_html => { :checked => false } %>
+  <%= f.input :game_id, as: :hidden, input_html: { value: params[:game_id] = game.id } %>
+  <%= f.input :subject, as: :hidden, input_html: { value: params[:subject] } %>
+</div>
+<%= f.submit %>
+<% end %>
+<% end %>
+<% if false %>
+<%= f.input :kid_ids, as: :check_boxes, collection: [kid].collect{ |kid| [kid.first_name, kid.id] } %>
 <% end %>
