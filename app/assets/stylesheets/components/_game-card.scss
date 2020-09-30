@@ -1,5 +1,5 @@
 // ------------- Classes -------------
-// ------------- IDs -------------
+
 .banner-content {
   background: lightblue;
   padding: 0px;
@@ -7,15 +7,15 @@
 
 
 .game-card {
-  width: 299px;
+  -o-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
   box-shadow: none;
   margin-top: 0;
+  transition: all 0.4s ease;
+  width: 299px;
 }
 
 .games-page {
@@ -25,16 +25,15 @@
 }
 
 .p-dropdown {
-  padding: 0px;
   display: flex;
   flex-direction: column;
-
+  padding: 0px;
 }
 
 .taos-dropdown {
+  border-radius: 25px;
   display: flex;
   flex-direction: column;
-  border-radius: 25px;
   padding: 0px;
   width: 100%;
 }
@@ -44,27 +43,28 @@
 }
 
 .game-card-image {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  height: 160px;
   object-fit: cover;
   object-position: center left;
   width: 298px;
-  height: 160px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
 }
 
 .game-card:hover {
-  margin-top: 8px;
   box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+  margin-top: 8px;
 }
 
 
 .search-game-card-image {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
   object-fit: cover;
   object-position: center center;
   width: 90%;
   height: 90%;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
+  
   margin: 0 auto;
   display: block;
 }
@@ -119,3 +119,5 @@
 .card-trash {
   color: #E97234;
 }
+
+// ------------- IDs -------------
