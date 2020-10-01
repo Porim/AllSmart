@@ -1,83 +1,11 @@
 // ------------- Classes -------------
 
-.all-games {
-  margin-top: 20vh;
-}
-
-.games {
-  background: white;
-  border: 1px solid #eee;
-}
-
-.games-page {
-  background: #f6f7f8;
-  width: 100%;
-  height: 100%;
-}
-
-.link-color {
-  color: #0E91A1;
-  padding: 4px;
-}
-
-.link-color:hover {
-  padding: 4px;
-  background-color: #EEEEEE;
-  border-radius: 8px;
-  color: #575757;
-}
-
-;
-
-.link-selected {
-  padding: 4px;
-  background-color: #888888;
-  border-radius: 8px;
-
-}
-
-.separator {
-  width: 100%;
-}
-
-.modal-content {
-  margin: 25vh auto;
-}
-
-#game-card-dropdown-button {
-  width: 200px !important;
-}
-
 .allow-button {
   margin-bottom: 0;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.4rem;
-
-}
-
-.card-grid-kids-show {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(180px, 1fr));
-  gap: 1.4rem;
-}
-
-.child-link-opacity {
-  opacity: 0.7;
-}
-
-.modal-kid-name {
-  width: 80px;
-  margin-bottom: 0;
-}
-
-.dropdown-menu {
-  width: 200px;
-  height: auto;
-  padding: 0;
+.all-games {
+  margin-top: 20vh;
 }
 
 .allowed-card {
@@ -88,4 +16,72 @@
   border-bottom: 2px solid #E97234;
 }
 
+.card-grid {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.card-grid-kids-show {
+  display: grid;
+  gap: 1.4rem;
+  grid-template-columns: repeat(3, minmax(180px, 1fr));
+}
+
+.child-link-opacity {
+  opacity: 0.7;
+}
+
+.dropdown-menu {
+  height: auto;
+  padding: 0;
+  width: 200px;
+}
+
+.games {
+  background: white;
+  border: 1px solid #eee;
+}
+
+.games-page {
+  background: #f6f7f8;
+  height: 100%;
+  width: 100%;
+}
+
+.link-color {
+  color: #0E91A1;
+  padding: 4px;
+
+  &:hover {
+    background-color: #EEEEEE;
+    border-radius: 8px;
+    color: #575757;
+    padding: 4px;
+  }  
+}
+
+.link-selected {
+  background-color: #888888;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.modal-content {
+  margin: 25vh auto;
+}
+
+.modal-kid-name {
+  margin-bottom: 0;
+  width: 80px;
+}
+
+.separator {
+  width: 100%;
+}
+
 // ------------- IDs -------------
+
+#game-card-dropdown-button {
+  width: 200px !important;
+}
