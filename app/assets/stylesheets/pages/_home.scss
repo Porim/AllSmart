@@ -1,17 +1,10 @@
 // ------------- Classes -------------
 
-.landing-banner {
+.aligned {
+  height: 182px;
+  margin-bottom: 18px !important;
   text-align: center;
-}
-
-.paragraph {
-  width: auto;
-  padding-left: 0;
-  color: #575757;
-  font-size: 18px;
-  line-height: 25px;
-  font-weight: 400;
-  letter-spacing: 0;
+  width: 80%;
 }
 
 .awesome-icons {
@@ -21,64 +14,83 @@
   top: 4px;
 }
 
+.box-for-hover {
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  height: 284.153px;
+}
+
+.card-container {
+  background: rgba(200, 200, 200, 0.15);
+  margin-top: 160px;
+  padding-bottom: 56px;
+  width: 100vw;
+}
+
+.carousel-control-next-icon {
+  padding-left: 0px;
+}
+
+.carousel-control-prev-icon {
+  padding-right: 0px;
+}
+
+.landing-banner {
+  text-align: center;
+}
 
 .orange-arrow {
   color: #E97234 !important;
   margin-top: 16px;
 }
 
-@media (min-width: 992px) {
-  .first-container {
-    margin-top: 92px;
-    height: auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .first-container {
-    margin-top: 92px;
-    height: auto;
-  }
-}
-
-// .first-container {
-//   height: 100vh;
-// }
-
-
-.subject-pick {
-  position: relative;
-  margin-top: 0px;
-
+.paragraph {
+  color: #575757;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0;
+  padding-left: 0;
+  width: auto;
 }
 
 .start-now {
+  align-items: center;
   background: #146c78;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .subject-icon {
-  width: 80px;
-  margin: 0 4px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
   border-radius: 5px;
+  margin: 0 4px;
+  transition: all 0.4s ease;
+  width: 80px;
+
+  &:hover {
+    margin-top: 12px;
+  }
 }
 
-.subject-icon:hover {
-  margin-top: 12px;
+.subject-icon-no-hover {
+  margin: 0 4px;
+  width: 80px;
 }
 
-.aligned {
-  height: 182px;
-  width: 80%;
-  margin-bottom: 18px !important;
-  text-align: center;
+.subject-icon-no-hover-modal {
+  margin: 0 4px;
+  width: 30px;
+}
+
+.subject-pick {
+  margin-top: 0px;
+  position: relative;
 }
 
 .testimonial-container {
@@ -89,104 +101,75 @@
   margin-top: 150px;
 }
 
-.card-container {
-  width: 100vw;
-  margin-top: 160px;
-  background: rgba(200, 200, 200, 0.15);
-  padding-bottom: 56px;
-}
-
-.box-for-hover {
-  box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important;
-  -ms-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  height: 284.153px;
-  // box-sizing: border-box;
-}
-
-.carousel-control-prev-icon {
-  padding-right: 0px;
-}
-
-.carousel-control-next-icon {
-  padding-left: 0px;
-}
-
-.subject-icon-no-hover {
-  width: 80px;
-  margin: 0 4px;
-}
-
-.subject-icon-no-hover-modal {
-  width: 30px;
-  margin: 0 4px;
-}
-
 // ------------- IDs -------------
 
+#arrow {
+  color: #013134 !important;
+}
 
 #banner-h1 {
   color: white !important;
   font-weight: bold;
 }
 
-#rocket-landing {
-  width: 215px;
-  height: 215px;
-  position: absolute;
-  transform: rotate(40deg);
-  top: 35vh;
-  left: 67vw;
+#bg-image-landing {
+  align-items: center;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: relative;
 }
 
+#call-button {
+  margin: 48px auto;
+  width: 300px;
+}
+
+.h2-call {
+  text-align: center;
+  width: 50%;
+}
 
 #large-arrow {
   font-size: 10em;
-}
-
-#rocket {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  transform: rotate(90deg);
 }
 
 #link-with-rocket {
   transform: rotate(-90deg);
 }
 
-
-#bg-image-landing {
-  height: 100vh;
-  background-position: center bottom;
-  background-size: cover;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#arrow {
-  color: #013134 !important;
-}
-
 #logo-call-to-action {
   margin: 32px auto;
   width: 30%;
-
 }
 
-#call-button {
-  width: 300px;
-  margin: 48px auto;
+#next-control {
+  right: 100px;
 }
 
-.h2-call {
-  width: 50%;
-  text-align: center;
+#prev-control {
+  left: 100px;
 }
+
+#rocket {
+  height: 100px;
+  position: absolute;
+  transform: rotate(90deg);
+  width: 100px;
+}
+
+#rocket-landing {
+  height: 215px;  
+  left: 67vw;
+  position: absolute;
+  top: 35vh;
+  transform: rotate(40deg);
+  width: 215px;
+}
+
+// ------------- Media -------------
 
 @media (min-width: 768px) {
   #arrow {
@@ -206,11 +189,16 @@
   }
 }
 
-#next-control {
-  right: 100px;
-
+@media (min-width: 992px) {
+  .first-container {
+    height: auto;
+    margin-top: 92px;
+  }
 }
 
-#prev-control {
-  left: 100px;
+@media (min-width: 1200px) {
+  .first-container {
+    height: auto;
+    margin-top: 92px;
+  }
 }
