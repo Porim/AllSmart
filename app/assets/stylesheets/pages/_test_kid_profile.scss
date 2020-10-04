@@ -1,36 +1,9 @@
 // ------------- Classes -------------
 
-.outermost-bg {
-  width: 100%;
-  min-height: 100vh;
-  background: #FABC2A;
-}
-
-.innermost-bg {
-  min-height: 100vh;
-  width: 100%;
-  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
-  border-radius: 160px;
-}
-
 .left-column {
   left: 0;
   position: relative;
   width: 30%;
-  // min-height: 100%;
-  // background: transparent;
-}
-
-.right-column {
-  right: 0;
-  width: 70%;
-  min-height: 100%;
-  // background: transparent;
-}
-
-.sticky-div {
-  position: sticky;
-  top: 0;
 }
 
 .level-wrapper {
@@ -41,10 +14,34 @@
   margin: 0 auto;
 }
 
+.innermost-bg {
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.outermost-bg {
+  background: #FABC2A;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.right-column {
+  min-height: 100%;
+  right: 0;
+  width: 70%;
+}
+
+.sticky-div {
+  position: sticky;
+  top: 0;
+}
+
 .trophy-container {
-  width: 60px;
   height: 60px;
   margin-left: 10px;
+  width: 60px;
 }
 
 // ------------- IDs -------------

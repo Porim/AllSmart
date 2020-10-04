@@ -1,18 +1,18 @@
 // ------------- Classes -------------
 
+.btn-mode {
+  color: $icon;
+}
+
 .child-text a {
   color: black;
   font-size: 40px
 }
 
-.btn-mode {
-  color: $icon;
-}
-
 .img-kid {
   height: 100px !important;
-  width: 100px !important;
   object-fit: contain;
+  width: 100px !important;
 }
 
 // ------------- IDs -------------

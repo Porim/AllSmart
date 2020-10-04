@@ -1,167 +1,166 @@
 // ------------- Classes -------------
 
-.background-container {
-  min-height: 100vh;
+.achievements {
+  height: 85px;
+  opacity: 1 !important;
+  width: 85px;
 }
 
 .achievements-wrap h2 {
   color: white;
-  width: 86%;
   margin: 0 auto 36px auto;
+  width: 86%;
 }
 
-.achievements {
-  width: 85px;
-  height: 85px;
-  opacity: 1 !important;
-
-}
-
-.kid-name {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-family: Londrina Shadow;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-}
-
-#border-xp:hover {
-  display: block;
-}
-
-#avatar-kid {
-  max-width: 300px;
-}
-
-.new-container {
-  width: 100%;
+.background-container {
   min-height: 100vh;
-  background: #FABC2A;
-}
-
-.new-inner {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
-  border-radius: 160px;
-}
-
-.top-inner {
-  height: 50%;
-  width: 300px;
-  position: relative;
-}
-
-.subject {
-  text-align: center;
-  padding: 10px;
-  height: 80%;
-  margin: 10% 0;
-}
-
-.xp-area {
-  position: relative;
-  bottom: 300px;
-}
-
-.h-100 {
-  height: 100%;
-}
-
-#border-xp {
-  width: 100%;
-  height: 9px;
-  box-shadow: 0 0 2px 2px grey;
-}
-
-#xp-bar20 {
-  width: 33%;
-  height: 8px;
-  background: #895fcc;
-  box-shadow: 0 0 2px 2px lightgrey;
-}
-
-#xp-bar40 {
-  width: 66%;
-  height: 8px;
-  background: #895fcc;
-  box-shadow: 0 0 2px 2px lightgrey;
-}
-
-#level {
-  width: 353px;
-  height: 8px;
-  left: 19px;
-  top: 360px;
-  font-family: Londrina Shadow;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
-  letter-spacing: -0.06em;
-  background: linear-gradient(#D22C2C 0% rgba(255, 255, 255, 0) 100% #3848D8);
-}
-
-#current-xp {
-  width: 104px;
-  height: 38px;
-  left: 315px;
-  top: 365px;
-  font-family: Londrina Shadow;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
-  display: flex;
-  align-items: center;
-  text-align: right;
-  letter-spacing: -0.06em;
-}
-
-#trophy {
-  width: 60px;
-  height: 60px;
-}
-
-#trophy-id {
-  margin-right: 60px;
-}
-
-.game-card-kid {
-  background-color: #895fcc;
-  border: 1px solid rgb(229, 229, 229);
-  border-radius: 13px;
-  -webkit-transition: -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  -webkit-transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
-    -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
-.game-card-kid-image-medium {
-  object-fit: fit;
-  width: 100%;
-  height: 180px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-}
-
-.game-card-kid:hover {
-  transform: scale(1.1);
 }
 
 .extra-card-margin {
   margin: auto 100px;
 }
 
+.game-card-kid {
+  -webkit-transition: -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
+  -webkit-transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+  -webkit-transform: scale(1);
+  background-color: #895fcc;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 13px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: scale(1);
+  transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
+  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
+    -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.game-card-kid-image-medium {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  height: 180px;
+  object-fit: fit;
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.kid-name {
+  font-family: Londrina Shadow;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+}
+
+.new-container {
+  background: #FABC2A;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.new-inner {
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+  height: 100%;
+  width: 100%;
+}
+
+.subject {
+  height: 80%;
+  margin: 10% 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.top-inner {
+  height: 50%;
+  position: relative;
+  width: 300px;
+}
+
+.xp-area {
+  bottom: 300px;
+  position: relative;
+}
+
+// ------------- IDs -------------
+
+#avatar-kid {
+  max-width: 300px;
+}
+
+#border-xp {
+  box-shadow: 0 0 2px 2px grey;
+  height: 9px;
+  width: 100%;
+
+  &:hover {
+    display: block;
+  }
+}
+
+#current-xp {
+  align-items: center;
+  display: flex;
+  font-family: Londrina Shadow;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  height: 38px;
+  left: 315px;
+  letter-spacing: -0.06em;
+  line-height: 43px;
+  text-align: right;
+  top: 365px;
+  width: 104px;
+}
+
 #kid_password_confirmation {
   width: auto;
 }
 
-// ------------- IDs -------------
+#level {
+  background: linear-gradient(#D22C2C 0% rgba(255, 255, 255, 0) 100% #3848D8);
+  font-family: Londrina Shadow;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  height: 8px;
+  left: 19px;
+  letter-spacing: -0.06em;
+  line-height: 43px;
+  top: 360px; 
+  width: 353px;
+}
+
+#trophy {
+  height: 60px;
+  width: 60px;
+}
+
+#trophy-id {
+  margin-right: 60px;
+}
+
+#xp-bar20 {
+  background: #895fcc;
+  box-shadow: 0 0 2px 2px lightgrey;
+  height: 8px;
+  width: 33%;
+}
+
+#xp-bar40 {
+  background: #895fcc;
+  box-shadow: 0 0 2px 2px lightgrey;
+  height: 8px;
+  width: 66%;
+}
