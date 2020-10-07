@@ -1,4 +1,10 @@
 // ------------- Classes -------------
+.innermost-bg {
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+  min-height: 100vh;
+  width: 100%;
+}
 
 .left-column {
   left: 0;
@@ -8,17 +14,10 @@
 
 .level-wrapper {
   width: 75%;
-}
-
-.level-wrapper>* {
-  margin: 0 auto;
-}
-
-.innermost-bg {
-  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
-  border-radius: 160px;
-  min-height: 100vh;
-  width: 100%;
+  
+  &>* {
+    margin: 0 auto;
+  }
 }
 
 .outermost-bg {
