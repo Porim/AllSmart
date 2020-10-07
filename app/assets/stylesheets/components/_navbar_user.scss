@@ -1,13 +1,4 @@
 // ------------- Classes -------------
-
-.user-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 8px;
-}
-
 .dropdown-toggle::after {
   display: inline-block;
   margin-left: 2em;
@@ -19,36 +10,38 @@
   border-left: 0.3em solid transparent;
 }
 
-.user-nav-container {
-  padding-right: 70px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  color: white;
-}
-
-.user-nav-container:hover {
-  background: #146c78;
-  color: white !important;
-  border-radius: 8px;
-}
-
-.user-nav-container:hover>* {
-  background: #146c78;
-  color: white !important;
-}
-
-.first-name-avatar-container:hover {
-  background: #146c78;
-  color: white !important;
-  border-radius: 8px;
-}
-
 .for-user-js {
   color: #575757 !important;
 
   &:hover {
     color: white !important;
-  }  
+  }
+}
+
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+}
+
+.user-nav-container {
+  padding-right: 70px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: white;
+  
+  &:hover {
+  background: #146c78;
+  color: white !important;
+  border-radius: 8px;  
+  }
+}
+
+.user-nav-container:hover>* {
+  background: #146c78;
+  color: white !important;
 }
 
 .user-tab-highlighter {
