@@ -12,44 +12,15 @@
   width: 86%;
 }
 
-.background-container {
-  min-height: 100vh;
-}
-
-.extra-card-margin {
-  margin: auto 100px;
-}
-
-.game-card-kid {
-  -webkit-transition: -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  -webkit-transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  -webkit-transform: scale(1);
-  background-color: #895fcc;
-  border: 1px solid rgb(229, 229, 229);
-  border-radius: 13px;
-  padding-left: 10px;
-  padding-right: 10px;
-  transform: scale(1);
-  transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
-    -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-
-  &:hover {
-    transform: scale(1.1);
-  }
-}
-
-.game-card-kid-image-medium {
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  height: 180px;
-  object-fit: fit;
-  width: 100%;
-}
-
 .h-100 {
   height: 100%;
+}
+
+.innermost-bg {
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+  min-height: 100vh;
+  width: 100%;
 }
 
 .kid-name {
@@ -61,17 +32,35 @@
   writing-mode: vertical-rl;
 }
 
-.new-container {
+.left-column {
+  left: 0;
+  position: relative;
+  width: 30%;
+}
+
+.level-wrapper {
+  width: 75%;
+
+  &>* {
+    margin: 0 auto;
+  }
+}
+
+.outermost-bg {
   background: #FABC2A;
   min-height: 100vh;
   width: 100%;
 }
 
-.new-inner {
-  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
-  border-radius: 160px;
-  height: 100%;
-  width: 100%;
+.right-column {
+  min-height: 100%;
+  right: 0;
+  width: 70%;
+}
+
+.sticky-div {
+  position: sticky;
+  top: 0;
 }
 
 .subject {
@@ -81,10 +70,10 @@
   text-align: center;
 }
 
-.top-inner {
-  height: 50%;
-  position: relative;
-  width: 300px;
+.trophy-container {
+  height: 60px;
+  margin-left: 10px;
+  width: 60px;
 }
 
 .xp-area {
@@ -93,10 +82,6 @@
 }
 
 // ------------- IDs -------------
-
-#avatar-kid {
-  max-width: 300px;
-}
 
 #border-xp {
   box-shadow: 0 0 2px 2px grey;
@@ -138,7 +123,7 @@
   left: 19px;
   letter-spacing: -0.06em;
   line-height: 43px;
-  top: 360px; 
+  top: 360px;
   width: 353px;
 }
 
@@ -151,7 +136,7 @@
   margin-right: 60px;
 }
 
-#xp-bar20 {
+#xp-bar20, #xp-bar40 {
   background: #895fcc;
   box-shadow: 0 0 2px 2px lightgrey;
   height: 8px;
@@ -159,8 +144,5 @@
 }
 
 #xp-bar40 {
-  background: #895fcc;
-  box-shadow: 0 0 2px 2px lightgrey;
-  height: 8px;
   width: 66%;
 }
