@@ -1,24 +1,4 @@
 // ------------- Classes -------------
-
-.racer-table {
-  margin: auto;
-  text-align: center;
-
-  td {
-    background-color: #136F63;
-    border: 1px solid white;
-    box-shadow: 2px 2px 3px #337c72;
-    height: 100px;
-    margin: 16px;
-    width: 100px;
-  }
-}
-
-.racer-table td.active {
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-
 .finish {
   background-image: url(https://res.cloudinary.com/djznzpxie/image/upload/v1599041231/usgx6yukjimkwucpi1su.png);
   background-size: 100%;
@@ -43,6 +23,17 @@
   background-size: 100%;
 }
 
+.game-button {
+  background: #3f485a;
+  border: 1px solid #454e5f;
+
+  &:hover {
+    background: #313846;
+    transition: 0.3s;
+    border: 1px solid #313846;
+  }
+}
+
 .question {
   background: #364156;
   border-radius: 20px;
@@ -54,18 +45,22 @@
   width: 100%;
 }
 
-.game-width {
-  width: 100%;
-}
+.racer-table {
+  margin: auto;
+  text-align: center;
 
-.game-button {
-  background: #3f485a;
-  border: 1px solid #454e5f;
-
-  &:hover {
-    background: #313846;
-    transition: 0.3s;
-    border: 1px solid #313846;
+  td {
+    background-color: #136F63;
+    border: 1px solid white;
+    box-shadow: 2px 2px 3px #337c72;
+    height: 100px;
+    margin: 16px;
+    width: 100px;
+  }
+  
+  td.active {
+  background-repeat: no-repeat;
+  background-size: 100%;
   }
 }
 
