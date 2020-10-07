@@ -1,0 +1,33 @@
+➜  AllSmart git:(css2)                                                             
+➜  AllSmart git:(css2)                                                             
+➜  AllSmart git:(css2)                                                             
+➜  AllSmart git:(css2) ✗ git add .                                                 
+➜  AllSmart git:(css2) ✗ git commit -m 'renam​‌​
+ed taos-dropdown to children-dropdown, change​‌​
+s names in appropriate html file and position​‌​
+ed class alphabetically'                     
+[css2 68eebc3] renamed taos-dropdown to child​‌​
+ren-dropdown, changes names in appropriate ht​‌​
+ml file and positioned class alphabetically
+ 2 files changed, 19 insertions(+), 20 deleti​‌​
+ons(-)
+➜  AllSmart git:(css2) git push origin css2  
+Enumerating objects: 36, done.
+Counting objects: 100% (36/36), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (22/22), done.
+Writing objects: 100% (22/22), 1.87 KiB | 1.8​‌​
+7 MiB/s, done.
+Total 22 (delta 20), reused 0 (delta 0), pack​‌​
+-reused 0
+remote: Resolving deltas: 100% (20/20), compl​‌​
+eted with 14 local objects.                  
+To github.com:Porim/AllSmart.git
+   f65bcbc..68eebc3  css2 -> css2
+➜  AllSmart git:(css2) ✗ git add .
+➜  AllSmart git:(css2) ✗ git commit -m 'taken​‌​
+ out useless class first-name-avatar-containe​‌​
+r from _navbar_users.scss. In the same file a​‌​
+rrange classes alphabetically, and refactored​‌​
+ :hover for user-nav-container using SASS syn​‌​
+tax'
