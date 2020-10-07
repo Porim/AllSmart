@@ -32,7 +32,7 @@
         </p>
       </div>
       <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
-        <div class="taos-dropdown">
+        <div class="children-dropdown">
           <div class="d-flex align">
             <button id='game-card-dropdown-button' class="orange button dropdown-toggle text-center"
               type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -44,15 +44,15 @@
               <% current_user.kids.each do |kid| %>
               <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container mt-1 p-2">
                 <% if kid.allowed_games.where(game_id: game.id).exists? %>
-                  <p class="paragraph modal-kid-name">
-                    <%= kid.first_name %>
-                  </p>
-                  <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                  <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
-                  <% end %>
-                  <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
+                <p class="paragraph modal-kid-name">
+                  <%= kid.first_name %>
+                </p>
+                <% if kid.photo.attached? %>
+                <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
+                <% else %>
+                <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
+                <% end %>
+                <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
                 <% else %>
                 <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
                 <div class="d-flex justify-content-center align-items-center">
@@ -73,8 +73,7 @@
           </div>
         </div>
         <div>
-          <button type="button" class="greenish button"
-            data-dismiss="modal">Close</button>
+          <button type="button" class="greenish button" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

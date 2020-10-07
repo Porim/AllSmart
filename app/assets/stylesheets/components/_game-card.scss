@@ -14,6 +14,14 @@
   color: #E97234;
 }
 
+.children-dropdown {
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  width: 100%;
+}
+
 .dropdown-menu {
   width: 256px
 }
@@ -102,14 +110,6 @@
 
 .show-card {
   margin-top: 52%;
-}
-
-.taos-dropdown {
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  padding: 0px;
-  width: 100%;
 }
 
 .with-delete {
