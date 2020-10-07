@@ -3,8 +3,11 @@ class GamesController < ApplicationController
   # @subjects is a hash containing cloudinary urls for images 
   # associated with subjects, passed as keys. @subject sets parameter # as 'All' if param[:subject] is empty, else it contains one of the # subjects,i.e Maths, English, Biology, etc. This determines content # of @games array which is rendered on corresponding tabs in the view.
   def index
-    @user = current_user
-    @kids = @user.kids
+    @allowed_games = []
+    current_user.kids.each do |kid|
+      @allowed_games.push(kid.allowed_games).flatten!   
+    end
+    binding.pry
     @subject = params[:subject].nil? ? 'All' : params[:subject]
     @subjects = { 'Maths': 'medolwcf6nigmrl3cvev', 'Science': 'rnrgntaicfrllbnrzlxg', 'English': 'dkbxbzo5dpzzf0o3kbgy', 'Biology': 'enssmizahvyzkryyufw0' }
     @all_games = Game.all

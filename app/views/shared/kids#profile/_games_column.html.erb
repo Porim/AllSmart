@@ -6,21 +6,21 @@
     <button type="button" class="button orange kid-prof-back"
       data-toggle="modal" data-target="#myModal">Exit</button>
   </div>
-    <div class="card-grid mt-5 ml-4">
-      <% @allowed_games.each do |allowed_game| %>
-      <div class="game-card-kid pt-3">
-        <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
-        <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
-        <div class="container mt-3">
-          <h5>
-            <%= allowed_game.game.subject %>
-          </h5>
-          <h5>
-            <%= allowed_game.game.topic %>
-          </h5>
-        </div>
-        <% end %>
+  <div class="card-grid mt-5 ml-4">
+    <% @allowed_games.each do |allowed_game| %>
+    <div class="game-card-kid pt-3">
+      <%= link_to game_path(allowed_game.game_id, kid_id: @kid) do %>
+      <%= cl_image_tag allowed_game.game.cloud_imag_url, class: 'game-card-kid-image-medium' %>
+      <div class="container mt-3">
+        <h5>
+          <%= allowed_game.game.subject %>
+        </h5>
+        <h5>
+          <%= allowed_game.game.topic %>
+        </h5>
       </div>
       <% end %>
     </div>
+    <% end %>
   </div>
+</div>

@@ -42,9 +42,9 @@
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container mt-1 p-2">
-                <%= simple_form_for current_user, :url => allowed_games_path, method: :post do |f| %>
+                <%= simple_form_for current_user, :url => allowed_games_path, method: :post, remote: true do |f| %>
                 <% current_user.kids.each do |kid| %>
-                <%= f.input :kid_ids, as: :check_boxes, collection: [kid].collect{ |kid| [kid.first_name, kid.id] }, required: false, legend_tag: false, checked: kid %>
+                <%= f.input :kid_ids, as: :check_boxes, collection: [kid].collect{ |kid| [kid.first_name, kid.id] }, required: false, legend_tag: false, checked:  %>
                 <% end %>
                 <%= f.input :game_id, as: :hidden, input_html: { value: params[:game_id] = game.id } %>
                 <%= f.input :subject, as: :hidden, input_html: { value: params[:subject] } %>
