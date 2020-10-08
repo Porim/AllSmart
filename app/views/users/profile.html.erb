@@ -1,60 +1,58 @@
 <div class="container-fluid p-5 mt-5">
   <!-- renders kid cards and buttons if children exist -->
   <% if @kids.count > 0 %>
-    <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
-        style="color:#458a86">o</span><span style="color:#618679">u</span><span
-        style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
-        style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
-        style="color:#e97234">s</span></h1>
-    <div class="cards">
-      <% @kids.each do |kid| %>
-        <%= link_to kid_path(kid) do  %>
-          <div class="card-product py-5 my-5">
-            <% if kid.photo.attached? %>
-              <%= cl_image_tag kid.photo.key, class: "avatar-profile ml-4", crop: :thumb, gravity: :face %>
-            <% else %>
-              <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile ml-4" %>
-            <% end %>
-            <div class="card-product-infos">
-              <div class="child-text d-flex justify-content-between align-items-center">
-                <%= kid.first_name.capitalize %>
-                -
-                <%= kid.age %>
-                years old
-                <div class="test">
-                  <%= link_to edit_kid_path(kid) do  %>
-                    <i class="fas fa-pen p-1 greenish-icon"></i>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-            <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 button-wide' %>
-          </div>
-        <% end %>
+  <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
+      style="color:#458a86">o</span><span style="color:#618679">u</span><span
+      style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
+      style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
+      style="color:#e97234">s</span></h1>
+  <div class="cards">
+    <% @kids.each do |kid| %>
+    <%= link_to kid_path(kid) do  %>
+    <div class="card-product py-5 my-5">
+      <% if kid.photo.attached? %>
+      <%= cl_image_tag kid.photo.key, class: "avatar-profile ml-4", crop: :thumb, gravity: :face %>
+      <% else %>
+      <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile ml-4" %>
       <% end %>
-      <div class="card-button">
-        <%= link_to new_kid_path do %>
-          <button class="button orange button-wide">Add a child</button>
-        <% end %>
-        <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish button-wide' %>
+      <div class="card-product-infos">
+        <div class="child-text d-flex justify-content-between align-items-center">
+          <%= kid.first_name.capitalize %>
+          -
+          <%= kid.age %>
+          years old
+          <div class="test">
+            <%= link_to edit_kid_path(kid) do  %>
+            <i class="fas fa-pen p-1 greenish-icon"></i>
+            <% end %>
+          </div>
+        </div>
       </div>
+      <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 button-wide' %>
     </div>
+    <% end %>
+    <% end %>
+    <div class="card-button">
+      <%= link_to new_kid_path do %>
+      <button class="button orange button-wide">Add a child</button>
+      <% end %>
+      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish button-wide' %>
+    </div>
+  </div>
   <% else %>
-    <!-- render prompt to create a child if no children were created -->
-    <div class="text-center">
-      <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
-          style="color:#458a86">l</span><span style="color:#618679">l</span><span
-          style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
-          style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
-          style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
-      <p class="paragraph py-2">To get started, please create your
-        child's profile, then create a list of games they are allowed to
-        play.</p>
-      <div class="d-flex justify-content-center">
-        <%= link_to new_kid_path do %>
-          <button class="button orange">Add a child</button>
-        <% end %>
-      </div>
-    </div>
+  <!-- render prompt to create a child if no children were created -->
+  <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+      style="color:#458a86">l</span><span style="color:#618679">l</span><span
+      style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
+      style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
+      style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
+  <p class="paragraph py-2">To get started, please create your
+    child's profile, then create a list of games they are allowed to
+    play. To enable the child to play a game, enter child mode - their personal page, which they can only leave with your permission.</p>
+  <div class="d-flex justify-content-center">
+    <%= link_to new_kid_path do %>
+    <button class="button orange">Add a child</button>
+    <% end %>
+  </div>
   <% end %>
 </div>
