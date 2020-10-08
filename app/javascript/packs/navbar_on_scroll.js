@@ -11,7 +11,7 @@ const navbarScroll = () => {
     if (testimonialContainer && aboutUs) {
       const height = document.getElementById('bg-image-landing').getBoundingClientRect()
         .height;
-      const navbar = document.querySelector('#navbar-lewagon')
+      const navbar = document.querySelector('#navbar-main')
       const scrollTop = $(window).scrollTop();
       const login = document.querySelector('.button');
       if (scrollTop > height - 100) {
@@ -26,7 +26,7 @@ const navbarScroll = () => {
       }
     }
     if (testimonialContainer && !aboutUs) {
-      const navbar = document.querySelector('#navbar-lewagon')
+      const navbar = document.querySelector('#navbar-main')
       const scrollTop = $(window).scrollTop();
       const children = document.querySelector(
         '#children-on-scroll');
