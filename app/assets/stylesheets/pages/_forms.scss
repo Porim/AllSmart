@@ -5,7 +5,7 @@
 }
 
 .forgot-password {
-  color: rgb(247, 247, 247);
+  color: white;
 
   &:hover {
     text-decoration: underline;
@@ -37,7 +37,7 @@
 
 .form-page {
   align-items: center;
-  background: #0A93A1;
+  background: $green;
   color: white;
   display: flex;
   justify-content: center;
@@ -46,19 +46,6 @@
 
 .hint {
   color: white !important;
-}
-
-.kids-update {
-  background: #147FFB;
-  border: 1px;
-  border-radius: 25px;
-  color: #FFFFFF;
-  font-family: sans-serif;
-  height: 50px;
-  margin-bottom: 20;
-  margin-right: 30px;
-  padding: 10px 30px;
-  width: 130px;
 }
 
 .link-in-text {
@@ -71,42 +58,6 @@
 
 .name {
   text-transform: capitalize;
-}
-
-.recover {
-  border: 1px;
-  border-radius: 25px;
-  display: inline-block;
-  font-family: sans-serif;
-  padding: 12px 45px;
-  text-align: center;
-  transition: 0.3s;
-  width: 160px;
-}
-
-.recover-password {
-  background-color: lightgrey !important;
-  border-radius: 25px !important;
-  display: inline-block;
-  width: 180px;
-}
-
-.rounded {
-  border-radius: 25px !important;
-  display: inline-block;
-  width: 130px;
-}
-
-.signup-button {
-  border: 1px;
-  border-radius: 25px;
-  color: white !important;
-  display: inline-block;
-  font-family: sans-serif;
-  padding: 12px 45px;
-  text-align: center;
-  transition: 0.3s;
-  width: 130px;
 }
 
 // ------------- IDs -------------

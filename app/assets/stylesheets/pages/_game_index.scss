@@ -13,7 +13,7 @@
 }
 
 .allowed-info-container {
-  border-bottom: 2px solid #E97234;
+  border-bottom: 2px solid $orange;
 }
 
 .card-grid {
@@ -44,25 +44,25 @@
 }
 
 .games-page {
-  background: #f6f7f8;
+  background: $background;
   height: 100%;
   width: 100%;
 }
 
 .link-color {
-  color: #0E91A1;
+  color: $green;
   padding: 4px;
 
   &:hover {
-    background-color: #EEEEEE;
+    background-color: #eee;
     border-radius: 8px;
-    color: #575757;
+    color: $text-light;
     padding: 4px;
   }
 }
 
 .link-selected {
-  background-color: #888888;
+  background-color: #888;
   border-radius: 8px;
   padding: 4px;
 }
