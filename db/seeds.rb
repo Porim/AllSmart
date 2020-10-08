@@ -70,6 +70,7 @@ end
 puts 'Creating test user with kids and games'
 
 me = User.create(first_name: 'Nikita', last_name: 'Visencuk', email: 'nikita@visencuk.com', password: '123456')
+User.create(first_name: 'Miro', last_name: 'Developer', email: 'miro@allsmart.uk', password: 'lewagon')
 # test_kids = [Kid.create(first_name: 'Paul', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me), Kid.create(first_name: 'Anne', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me)]
 
 # test_kids.each do |kid|

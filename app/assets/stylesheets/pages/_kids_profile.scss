@@ -1,163 +1,148 @@
-.background-container {
-  min-height: 100vh;
+// ------------- Classes -------------
+
+.achievements {
+  height: 85px;
+  opacity: 1 !important;
+  width: 85px;
 }
 
 .achievements-wrap h2 {
   color: white;
-  width: 86%;
   margin: 0 auto 36px auto;
-}
-
-.achievements {
-  width: 85px;
-  height: 85px;
-  opacity: 1 !important;
-
-}
-
-.kid-name {
-  writing-mode: vertical-rl;
-  text-orientation: upright;
-  font-family: Londrina Shadow;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 36px;
-}
-
-#border-xp:hover {
-  display: block;
-}
-
-#avatar-kid {
-  max-width: 300px;
-}
-
-.new-container {
-  width: 100%;
-  min-height: 100vh;
-  background: #FABC2A;
-}
-
-.new-inner {
-  height: 100%;
-  width: 100%;
-  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
-  border-radius: 160px;
-}
-
-.top-inner {
-  height: 50%;
-  width: 300px;
-  position: relative;
-}
-
-.subject {
-  text-align: center;
-  padding: 10px;
-  height: 80%;
-  margin: 10% 0;
-}
-
-.xp-area {
-  position: relative;
-  bottom: 300px;
+  width: 86%;
 }
 
 .h-100 {
   height: 100%;
 }
 
-#border-xp {
+.innermost-bg {
+  background: linear-gradient(205deg, #2C8CB5 50%, rgba(255, 255, 255, 0) 50.5%, #51DC3B 51%);
+  border-radius: 160px;
+  min-height: 100vh;
   width: 100%;
-  height: 9px;
-  box-shadow: 0 0 2px 2px grey;
 }
 
-#xp-bar20 {
-  width: 33%;
-  height: 8px;
-  background: #895fcc;
-  box-shadow: 0 0 2px 2px lightgrey;
-}
-
-#xp-bar40 {
-  width: 66%;
-  height: 8px;
-  background: #895fcc;
-  box-shadow: 0 0 2px 2px lightgrey;
-}
-
-#level {
-  width: 353px;
-  height: 8px;
-  left: 19px;
-  top: 360px;
+.kid-name {
   font-family: Londrina Shadow;
+  font-size: 36px;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
-  letter-spacing: -0.06em;
-  background: linear-gradient(#D22C2C 0% rgba(255, 255, 255, 0) 100% #3848D8);
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+}
+
+.left-column {
+  left: 0;
+  position: relative;
+  width: 30%;
+}
+
+.level-wrapper {
+  width: 75%;
+
+  &>* {
+    margin: 0 auto;
+  }
+}
+
+.outermost-bg {
+  background: #FABC2A;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.right-column {
+  min-height: 100%;
+  right: 0;
+  width: 70%;
+}
+
+.sticky-div {
+  position: sticky;
+  top: 0;
+}
+
+.subject {
+  height: 80%;
+  margin: 10% 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.trophy-container {
+  height: 60px;
+  margin-left: 10px;
+  width: 60px;
+}
+
+.xp-area {
+  bottom: 300px;
+  position: relative;
+}
+
+// ------------- IDs -------------
+
+#border-xp {
+  box-shadow: 0 0 2px 2px grey;
+  height: 9px;
+  width: 100%;
+
+  &:hover {
+    display: block;
+  }
 }
 
 #current-xp {
-  width: 104px;
-  height: 38px;
-  left: 315px;
-  top: 365px;
+  align-items: center;
+  display: flex;
   font-family: Londrina Shadow;
+  font-size: 36px;
   font-style: normal;
   font-weight: bold;
-  font-size: 36px;
-  line-height: 43px;
-  display: flex;
-  align-items: center;
-  text-align: right;
+  height: 38px;
+  left: 315px;
   letter-spacing: -0.06em;
+  line-height: 43px;
+  text-align: right;
+  top: 365px;
+  width: 104px;
+}
+
+#kid_password_confirmation {
+  width: auto;
+}
+
+#level {
+  background: linear-gradient(#D22C2C 0% rgba(255, 255, 255, 0) 100% #3848D8);
+  font-family: Londrina Shadow;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: bold;
+  height: 8px;
+  left: 19px;
+  letter-spacing: -0.06em;
+  line-height: 43px;
+  top: 360px;
+  width: 353px;
 }
 
 #trophy {
-  width: 60px;
   height: 60px;
+  width: 60px;
 }
 
 #trophy-id {
   margin-right: 60px;
 }
 
-.game-card-kid {
-  background-color: #895fcc;
-  border: 1px solid rgb(229, 229, 229);
-  border-radius: 13px;
-  -webkit-transition: -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  -webkit-transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
-  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
-    -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
-  -webkit-transform: scale(1);
-  transform: scale(1);
-  padding-left: 10px;
-  padding-right: 10px;
+#xp-bar20, #xp-bar40 {
+  background: #895fcc;
+  box-shadow: 0 0 2px 2px lightgrey;
+  height: 8px;
+  width: 33%;
 }
 
-.game-card-kid-image-medium {
-  object-fit: fit;
-  width: 100%;
-  height: 180px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-}
-
-.game-card-kid:hover {
-  transform: scale(1.1);
-}
-
-.extra-card-margin {
-  margin: auto 100px;
-}
-
-#kid_password_confirmation {
-  width: auto;
+#xp-bar40 {
+  width: 66%;
 }

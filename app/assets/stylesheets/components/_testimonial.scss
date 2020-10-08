@@ -1,54 +1,58 @@
-.container-testimonial-inside {
-  width: 50%;
-  height: 100%;
-}
-
-.fa-quotes {
-  color: #023033 !important;
-  font-size: 2em !important;
-  opacity: 0.8;
-  margin-right: 8px;
-}
-
-.testimonial-text {
-  text-align: left;
-  height: 100%;
-}
-
-.testimonial-container {
-  padding-bottom: 160px;
-  margin-bottom: 18px !important;
-}
-
-#fa-quotes-right {
-  padding-top: 20px;
-  font-size: 1em;
-  margin-right: 0 !important;
-}
-
-#quotes {
-  color: #023033;
-}
+// ------------- Classes -------------
 
 .carousel-control-prev,
 .carousel-control-next {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
   align-items: center;
+  bottom: 0;
+  display: flex;
   justify-content: center;
-  width: 15%;
-  text-align: center;
   opacity: 0.5;
+  position: absolute;
+  text-align: center;
+  top: 0;
   transition: opacity 0.15s ease;
+  width: 15%;
+  z-index: 1;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
 }
 
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
 }
 
-.carousel-control-next-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23f00' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+.container-testimonial-inside {
+  height: 100%;
+  width: 50%;
+}
+
+.fa-quotes {
+  color: #023033 !important;
+  font-size: 2em !important;
+  margin-right: 8px;
+  opacity: 0.8;
+}
+
+.testimonial-container {
+  margin-bottom: 18px !important;
+  padding-bottom: 160px;
+}
+
+.testimonial-text {
+  height: 100%;
+  text-align: left;
+}
+
+// ------------- IDs -------------
+
+#fa-quotes-right {
+  font-size: 1em;
+  margin-right: 0 !important;
+  padding-top: 20px;
+}
+
+#quotes {
+  color: #023033;
 }

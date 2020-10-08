@@ -1,10 +1,7 @@
+// ------------- Classes -------------
+
 .container-for-allowed-games {
   margin-top: 20vh;
-}
-
-.kid-profile-allowed-games {
-  margin-left: 10%;
-  width: 60%;
 }
 
 .custom-header {
@@ -12,7 +9,14 @@
 }
 
 .games-kid-show-page {
-  width: 100vw;
   min-height: calc(100vh - 232px - 50px);
   padding-bottom: 8%;
+  width: 100vw;
 }
+
+.kid-profile-allowed-games {
+  margin-left: 10%;
+  width: 60%;
+}
+
+// ------------- IDs -------------

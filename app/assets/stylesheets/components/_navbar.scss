@@ -1,27 +1,42 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: transparent;
-  // padding-top: 8px;
-  // padding-bottom: 6px;
-  width: 100%;
-  padding: 12px;
-  padding-bottom: 4px;
-  position: fixed;
-  top: 0;
-  z-index: 500;
+// ------------- Classes -------------
+
+.about-us {
+  font-size: 18px;
+  font-weight: normal;
+
+  &:hover {
+    text-decoration: underline !important;
+  }
 }
 
 .colored-navbar {
   background: #0D92A1;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.navbar-lewagon {
+  justify-content: space-between;
+  padding: 12px;
+  padding-bottom: 4px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 500;
+
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-brand img {
+    width: 136px;
+  }
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 136px;
+.test-navbar-scroll {
+  color: #575757;
+  font-size: 18px;
 }
+
+// ------------- IDs -------------
 
 #logo {
   width: 100%;
@@ -33,29 +48,11 @@
   }
 }
 
-.about-us {
-  font-size: 18px;
-  font-weight: normal;
-}
-
-.about-us:hover {
-  text-decoration: underline !important;
-}
-
-.test-navbar-scroll {
-  color: #575757;
-  font-size: 18px;
-}
-
-#about-us-onscroll:hover {
-  text-decoration: underline;
-}
-
 #name-user-onscroll {
   color: #575757 !important;
   width: 51px;
-}
 
-#name-user-onscroll:hover {
-  color: white !important;
+  &:hover {
+    color: white !important;
+  }
 }

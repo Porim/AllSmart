@@ -1,79 +1,72 @@
+// ------------- Classes -------------
+
 .flex-wrapper {
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  justify-content: space-between
-}
-
-.footer {
-  background: rgba(200, 200, 200, 0.15);
-  /* display: flex; */
-  align-items: center;
   justify-content: space-between;
-  height: 100%;
-  padding: 0px 0px;
-  color: #E97234;
-  padding-top: 20px;
-  padding-bottom: 10px;
-  font-size: 15x !important;
-}
-
-.footer-links {
-  /* display: flex; */
-  align-items: center;
-}
-
-.footer-links a {
-  color: #0A93A1;
-  opacity: 0.50;
-  text-decoration: none;
-  font-size: 24px;
-  padding: 0px 10px;
-}
-
-.footer-links a:hover {
-  opacity: 1;
-}
-
-.footer .fa-heart {
-  color: #0A93A1;
-}
-
-ul {
-  list-style-type: none;
-}
-
-p .footer-links {
-  color: #0A93A1;
-  font-size: 0.5rem !important;
-}
-
-// fills up the empty space above the footer
-#space {
-  flex-grow: 1;
-  background: #0A93A1; 
-}
-
-#medium-arrow {
-  font-size: 5em;
-  opacity: 0.50;
-  padding: 0px 10px;
-  transition: 0.2s;
-}
-
-#medium-arrow:hover {
-  cursor: pointer;
-  opacity: 1;
-}
-
-.footer-i {
-  font-size: 20px;
-  padding: 0 !important;
-  margin: 0 !important;
+  min-height: 100vh;
 }
 
 .foot {
   font-size: 22px !important;
 }
 
-.footer-padding {}
+.footer {
+  align-items: center;
+  background: rgba(200, 200, 200, 0.15);
+  color: #E97234;
+  font-size: 15px !important;
+  height: 100%;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-top: 20px;
+
+  ul {
+    list-style-type: none;
+  }
+
+  .fa-heart {
+    color: #0A93A1;
+  }
+}
+
+.footer-i {
+  font-size: 20px;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer-links {
+  align-items: center;
+
+  a {
+    color: #0A93A1;
+    font-size: 24px;
+    opacity: 0.50;
+    padding: 0px 10px;
+    text-decoration: none;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  p {
+    color: #0A93A1;
+    font-size: 0.5rem !important;
+  }
+}
+
+// ------------- IDs -------------
+
+#medium-arrow {
+  font-size: 5em;
+  opacity: 0.50;
+  padding: 0px 10px;
+  transition: 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+}

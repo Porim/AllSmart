@@ -1,8 +1,8 @@
-<!-- render footer on all the pages apart from child mode and game show page, where gam is actually being played -->
+<!-- render footer on all the pages apart from child mode and game show page, where game is actually being played -->
 <% unless (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") %>
   <div class="footer">
     <div class="d-flex justify-content-around">
-      <div class="footer-links d-flex justify-content-around align-items-start">
+      <div class="footer-links">
         <ul>
           <h4>allSmart</h4>
           <li>
@@ -19,7 +19,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer-links d-flex justify-content-around">
+      <div class="footer-links">
         <ul>
           <h4>Social Media</h4>
           <li>
@@ -29,7 +29,7 @@
             <a href="#"><i class="fab fa-instagram footer-i"> Instagram</i></a>
           </li>
           <li>
-            <a href="#" , class="footer-padding"><i class="fab fa-facebook footer-i">
+            <a href="#"><i class="fab fa-facebook footer-i">
                 Facebook</i></a>
           </li>
           <li>
@@ -40,7 +40,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer-links d-flex justify-content-around align-items-start">
+      <div class="footer-links">
         <ul>
           <h4>Mobile Apps</h4>
           <li>
@@ -54,7 +54,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer-links d-flex justify-content-around align-items-start">
+      <div class="footer-links">
         <i class="fas fa-arrow-circle-up orange-arrow" id="medium-arrow"></i>
       </div>
     </div>

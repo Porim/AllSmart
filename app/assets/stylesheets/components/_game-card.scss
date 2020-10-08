@@ -1,38 +1,23 @@
+// ------------- Classes -------------
+
+.age-cat {
+  color: #0A93A1;
+  font-weight: bold;
+}
+
 .banner-content {
   background: lightblue;
   padding: 0px;
 }
 
-
-.game-card {
-  width: 299px;
-  border: 1px solid rgb(229, 229, 229);
-  border-radius: 13px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  box-shadow: none;
-  margin-top: 0;
+.card-trash {
+  color: #E97234;
 }
 
-.games-page {
-  display: flex;
-  justify-content: space-around;
-  position: static;
-}
-
-.p-dropdown {
-  padding: 0px;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.taos-dropdown {
-  display: flex;
-  flex-direction: column;
+.children-dropdown {
   border-radius: 25px;
+  display: flex;
+  flex-direction: column;
   padding: 0px;
   width: 100%;
 }
@@ -41,58 +26,58 @@
   width: 256px
 }
 
+.game-card {
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 13px;
+  box-shadow: none;
+  margin-top: 0;
+  transition: all 0.4s ease;
+  width: 299px;
+
+  &:hover {
+    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+    margin-top: 8px;
+  }
+}
+
 .game-card-image {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  height: 160px;
   object-fit: cover;
   object-position: center left;
   width: 298px;
-  height: 160px;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
 }
 
-.game-card:hover {
-  margin-top: 8px;
-  box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-}
-
-
-.search-game-card-image {
-  object-fit: cover;
-  object-position: center center;
-  width: 90%;
-  height: 90%;
-  border-top-left-radius: 13px;
-  border-top-right-radius: 13px;
-  margin: 0 auto;
-  display: block;
-}
-
-.search-game-card {
-  width: 265px;
-  min-height: 376px;
+.game-card-kid {
+  -webkit-transition: -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
+  -webkit-transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+  -webkit-transform: scale(1);
+  background-color: #895fcc;
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
-  transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  -moz-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  box-shadow: none;
-  padding-top: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transform: scale(1);
+  transition: opacity .3s, -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s;
+  transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
+    -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
-.show-card {
-  margin-top: 52%;
-  // margin-bottom: 25%;
-}
-
-.search-game-card:hover {
-  margin-top: 8px;
-  box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-}
-
-.h2-game-title {
-  height: 100%;
-  padding: 0 4px;
+.game-card-kid-image-medium {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  height: 180px;
+  object-fit: fit;
+  width: 100%;
 }
 
 .game-desc {
@@ -100,9 +85,15 @@
   padding: 0 4px;
 }
 
-.age-cat {
-  color: #0A93A1;
-  font-weight: bold;
+.games-page {
+  display: flex;
+  justify-content: space-around;
+  position: static;
+}
+
+.h2-game-title {
+  height: 100%;
+  padding: 0 4px;
 }
 
 .hover-dimensions {
@@ -110,10 +101,47 @@
   width: 240px;
 }
 
+.p-dropdown {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+}
+
+.search-game-card {
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  border: 1px solid rgb(229, 229, 229);
+  border-radius: 13px;
+  box-shadow: none;
+  min-height: 376px;
+  padding-top: 16px;
+  transition: all 0.4s ease;
+  width: 265px;
+
+  &:hover {
+    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+    margin-top: 8px;
+  }
+}
+
+.search-game-card-image {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+  display: block;
+  height: 90%;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: center center;
+  width: 90%;
+}
+
+.show-card {
+  margin-top: 52%;
+}
+
 .with-delete {
   height: 430px;
 }
 
-.card-trash {
-  color: #E97234;
-}
+// ------------- IDs -------------
