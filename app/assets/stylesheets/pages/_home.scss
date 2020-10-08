@@ -8,7 +8,7 @@
 }
 
 .awesome-icons {
-  color: #E97234;
+  color: $orange;
   margin-top: 16px;
   position: absolute;
   top: 4px;
@@ -23,7 +23,7 @@
 }
 
 .card-container {
-  background: rgba(200, 200, 200, 0.15);
+  background: $background;
   margin-top: 160px;
   padding-bottom: 56px;
   width: 100vw;
@@ -38,12 +38,12 @@
 }
 
 .orange-arrow {
-  color: #E97234 !important;
+  color: $orange !important;
   margin-top: 16px;
 }
 
 .paragraph {
-  color: #575757;
+  color: $text-light;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -54,7 +54,7 @@
 
 .start-now {
   align-items: center;
-  background: #146c78;
+  background: $green-hover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +100,7 @@
 // ------------- IDs -------------
 
 #arrow {
-  color: #013134 !important;
+  color: $green-dark !important;
 }
 
 #banner-h1 {

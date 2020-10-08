@@ -1,6 +1,6 @@
 <!-- navbar renderd when user is signed in. Not rendered on the same pages as main navbar -->
 <% if current_page?(profile_path(current_user)) || current_page?(games_path) || (controller_name == "kids" && action_name == "show") %>
-  <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon colored-navbar">
+  <div class="navbar navbar-expand-sm navbar-light user-nav navbar-lewagon greenish">
 <% else %>
   <div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar-lewagon">
 <% end %>

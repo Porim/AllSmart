@@ -9,10 +9,6 @@
   }
 }
 
-.colored-navbar {
-  background: #0D92A1;
-}
-
 .navbar-lewagon {
   justify-content: space-between;
   padding: 12px;
@@ -32,7 +28,7 @@
 }
 
 .test-navbar-scroll {
-  color: #575757;
+  color: $text-light;
   font-size: 18px;
 }
 
@@ -49,7 +45,7 @@
 }
 
 #name-user-onscroll {
-  color: #575757 !important;
+  color: $text-light !important;
   width: 51px;
 
   &:hover {

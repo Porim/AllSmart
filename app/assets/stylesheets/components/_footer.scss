@@ -13,8 +13,8 @@
 
 .footer {
   align-items: center;
-  background: rgba(200, 200, 200, 0.15);
-  color: #E97234;
+  background: $background;
+  color: $orange;
   font-size: 15px !important;
   height: 100%;
   justify-content: space-between;
@@ -26,7 +26,7 @@
   }
 
   .fa-heart {
-    color: #0A93A1;
+    color: $green;
   }
 }
 
@@ -40,7 +40,7 @@
   align-items: center;
 
   a {
-    color: #0A93A1;
+    color: $green;
     font-size: 24px;
     opacity: 0.50;
     padding: 0px 10px;
@@ -52,7 +52,7 @@
   }
 
   p {
-    color: #0A93A1;
+    color: $green;
     font-size: 0.5rem !important;
   }
 }

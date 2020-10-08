@@ -15,7 +15,7 @@
   &:hover {
     text-decoration: none !important;
     background: white;
-    color: #023033 !important;
+    color: $text !important;
     transition: 0.3s;
   }
 }
@@ -25,30 +25,30 @@
 }
 
 .greenish {
-  background: #0E91A1;
+  background: $green;
   border: none;
   transition: 0.3s;
 
   &:hover {
     color: white !important;
-    background: #146c78 !important;
+    background: $green-hover !important;
     text-decoration: none !important;
   }
 }
 
 .greenish-icon {
-  color: #0E91A1;
+  color: $green;
   border: none;
   transition: 0.3s;
 }
 
 .orange {
-  background: #E97234;
-  border-color:  #E97234;
+  background: $orange;
+  border-color:  $orange;
   transition: 0.3s;
 
   &:hover {
-    background: #C94727 !important;
+    background: $orange-hover !important;
     text-decoration: none !important;
     color: white !important;
   }
@@ -58,13 +58,13 @@
 
 #scroll-login {
   background: transparent;
-  border: 1px solid #0E91A1 !important;
-  color: #0E91A1 !important;
+  border: 1px solid $green !important;
+  color: $green !important;
   display: inline-block;
 
   &:hover {
-    background: #0E91A1;
+    background: $green;
     color: white !important;
-    border: 1px solid #0E91A1 !important;
+    border: 1px solid $green !important;
   }
 }
