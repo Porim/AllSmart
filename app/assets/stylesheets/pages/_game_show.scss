@@ -57,10 +57,10 @@
     margin: 16px;
     width: 100px;
   }
-  
+
   td.active {
-  background-repeat: no-repeat;
-  background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 }
 
@@ -69,10 +69,6 @@
 #back-to {
   border-radius: 20px;
   width: 100%;
-}
-
-#button-container {
-  display: flex;
 }
 
 #game-background {
