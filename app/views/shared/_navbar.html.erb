@@ -1,6 +1,6 @@
 <!-- This navbar style is used if user is not signed, and is on the landing page. -->
 <% if !user_signed_in? && current_page?(root_path) %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon" id="navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-main" id="navbar-main">
   <%= link_to root_path, class: "navbar-brand" do %>
   <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
@@ -28,7 +28,7 @@
 <% end %>
 <!-- this navbar style is render is user is not signed in and is not on landing page, the only difference being background color of the navbar div. -->
 <% if !user_signed_in? && !current_page?(root_path) %>
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon navbar-colored">
+<div class="navbar navbar-expand-sm navbar-light navbar-main navbar-colored">
   <%= link_to root_path, class: "navbar-brand" do %>
   <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
