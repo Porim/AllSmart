@@ -51,11 +51,10 @@
   }
 }
 
-// .flex-container {
-//   display: flex;
-//   justify-content: around;
-//   align-items: center;
-// }
+.h2-call {
+  text-align: center;
+  width: 50%;
+}
 
 .orange-arrow {
   color: $orange !important;
@@ -163,10 +162,6 @@
   width: 300px;
 }
 
-.h2-call {
-  text-align: center;
-  width: 50%;
-}
 
 #large-arrow {
   font-size: 10em;
@@ -196,11 +191,29 @@
   width: 100px;
 }
 
-#rocket-landing {
-  height: 215px;
-  left: 67vw;
-  position: absolute;
-  top: 35vh;
-  transform: rotate(40deg);
-  width: 215px;
-}
+// #rocket-landing {
+//   height: 215px;
+//   left: 67vw;
+//   position: absolute;
+//   top: 35vh;
+//   transform: rotate(40deg);
+//   width: 215px;
+// }
+ #rocket-landing {
+    height: clamp(160px,33vw,215px);
+    left: clamp(calc(63vw + 50px), 62vw, 70vw);
+    position: absolute;
+    top: calc(35vh + 20px);
+    transform: rotate(40deg);
+    width: clamp(160px,33vw,215px);
+  }
+// @media (max-width: 600px) {
+//  #rocket-landing {
+//     height: 170px;
+//     left: clamp(calc(67vw + 20px), 67vw, 67vw);
+//     position: absolute;
+//     top: calc(35vh + 40px);
+//     transform: rotate(40deg);
+//     width: 170px;
+//   }
+// }
