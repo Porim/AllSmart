@@ -1,12 +1,30 @@
 // ------------- Classes -------------
 
 .about-us {
-  font-size: 18px;
-  font-weight: normal;
-
   &:hover {
     text-decoration: underline !important;
   }
+}
+
+@media only screen and (max-width: 576px) {
+  .about-us {
+    display: none;
+  }
+}
+
+.about-us-container {
+  font-size: clamp(14px, calc(1vw + 6px), 18px);
+  font-weight: normal;
+  min-width: 70px;
+}
+
+.logo-container {
+  width: 18%;
+}
+
+.my-navbar {
+  display: flex;
+  justify-content: space-between;
 }
 
 .navbar-main {
@@ -17,19 +35,16 @@
   top: 0;
   width: 100%;
   z-index: 500;
+}
 
-  .navbar-collapse {
-    flex-grow: 0;
-  }
-
-  .navbar-brand img {
-    width: 136px;
-  }
+.navbar-nav {
+  flex-direction: row;
 }
 
 .navbar-colored {
   background: $green;
 }
+
 
 .test-navbar-scroll {
   color: $text-light;
@@ -39,13 +54,7 @@
 // ------------- IDs -------------
 
 #logo {
-  width: 100%;
-}
-
-@media only screen and (max-width: 600px) {
-  #logo {
-    width: 80%;
-  }
+  width: clamp(180px, 100%, 240px);
 }
 
 #name-user-onscroll {

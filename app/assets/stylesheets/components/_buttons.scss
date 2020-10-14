@@ -6,11 +6,12 @@
   color: white !important;
   display: inline-block;
   font-family: sans-serif;
+  font-size: clamp(12px, calc(1vw + 4px), 16px);
   font-weight: bold;
-  padding: 14px 45px;
+  padding: 14px clamp(30px, 5vw, 60px);
   text-align: center;
-  width: 180px;
   transition: 0.3s;
+  min-width: 120px;
 
   &:hover {
     text-decoration: none !important;
@@ -44,7 +45,7 @@
 
 .orange {
   background: $orange;
-  border-color:  $orange;
+  border-color: $orange;
   transition: 0.3s;
 
   &:hover {

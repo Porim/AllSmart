@@ -51,6 +51,16 @@
   }
 }
 
+.h2-call {
+  text-align: center;
+  width: 50%;
+}
+
+.orange-arrow {
+  color: $orange !important;
+  margin-top: 16px;
+}
+
 .paragraph {
   color: $text-light;
   font-size: 18px;
@@ -152,10 +162,6 @@
   width: 300px;
 }
 
-.h2-call {
-  text-align: center;
-  width: 50%;
-}
 
 #large-arrow {
   font-size: 10em;
@@ -186,10 +192,10 @@
 }
 
 #rocket-landing {
-  height: 215px;
-  left: 67vw;
+  height: clamp(160px, 33vw, 215px);
+  left: clamp(calc(63vw + 50px), 62vw, 70vw);
   position: absolute;
-  top: 35vh;
+  top: calc(35vh + 20px);
   transform: rotate(40deg);
-  width: 215px;
+  width: clamp(160px, 33vw, 215px);
 }
