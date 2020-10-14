@@ -52,7 +52,6 @@
   }
 }
 
-
 .h2-call {
   text-align: center;
   width: 50%;
@@ -62,7 +61,11 @@
   .h2-call {
   text-align: center;
   width: 100%;
+  }
 }
+
+html,body{
+  overflow-x: hidden;
 }
 
 .orange-arrow {
