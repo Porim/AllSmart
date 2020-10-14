@@ -6,16 +6,16 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .about-us {
-    display: none;
-  }
-}
-
 .about-us-container {
   font-size: clamp(14px, calc(1vw + 6px), 18px);
   font-weight: normal;
   min-width: 70px;
+}
+
+@media only screen and (max-width: 576px) {
+  .about-us-container {
+    display: none;
+  }
 }
 
 .logo-container {
@@ -33,7 +33,7 @@
   padding-bottom: 4px;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 500;
 }
 
@@ -56,6 +56,13 @@
 #logo {
   width: clamp(180px, 100%, 240px);
 }
+
+@media only screen and (max-width: 500px) {
+  #logo {
+    width: 100px;
+  }
+}
+
 
 #name-user-onscroll {
   color: $text-light !important;
