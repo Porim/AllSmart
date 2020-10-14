@@ -1,18 +1,13 @@
 <!-- This navbar style is used if user is not signed, and is on the landing page. -->
 <% if !user_signed_in? && current_page?(root_path) %>
 <div class="navbar navbar-expand-sm navbar-light navbar-main" id="navbar-main">
-  <%= link_to root_path, class: "navbar-brand" do %>
+  <%= link_to root_path, class: 'logo-container' do %>
   <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent" aria-controls="  navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="d-flex align-items-center">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
-      <li class="mx-2">
-        <%= link_to 'About Us', root_path(anchor: 'anchor-for-about-us'), class:'about-us', id: 'about-us-link' %>
+      <li class="mx-2 about-us-container">
+        <%= link_to 'About Us', root_path(anchor: 'anchor-for-about-us'), class: 'about-us', id: 'about-us-link' %>
       </li>
       <% if user_signed_in? || current_page?(root_path) %>
       <li class="mx-2">
@@ -32,11 +27,6 @@
   <%= link_to root_path, class: "navbar-brand" do %>
   <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
   <% end %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse"
-    data-target="#navbarSupportedContent" aria-controls="  navbarSupportedContent"
-    aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
   <div class="d-flex align-items-center">
     <ul class="navbar-nav mr-auto d-flex align-items-center">
       <li class="mx-2">

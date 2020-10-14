@@ -30,8 +30,8 @@
   box-shadow: none;
   margin-top: 0;
   transition: all 0.4s ease;
+  // width: clamp(220px, 50%, 299px);
   width: 299px;
-
   &:hover {
     box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
     margin-top: 8px;
@@ -44,7 +44,7 @@
   height: 160px;
   object-fit: cover;
   object-position: center left;
-  width: 298px;
+  width: 100%;
 }
 
 .game-card-kid {
@@ -93,7 +93,7 @@
 
 .hover-dimensions {
   height: 397px !important;
-  width: 240px;
+  // width: 240px;
 }
 
 .p-dropdown {
