@@ -22,18 +22,13 @@
   width: 18%;
 }
 
-.my-navbar {
-  display: flex;
-  justify-content: space-between;
-}
-
 .navbar-main {
   justify-content: space-between;
-  padding: 12px;
+  padding-top: 12px;
   padding-bottom: 4px;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 500;
 }
 

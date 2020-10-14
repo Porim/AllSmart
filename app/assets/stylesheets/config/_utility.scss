@@ -1,2 +1,8 @@
 // ------------- Classes -------------
+@media only screen and (max-width: 768px) {
+  .hidden-on-md-viewport {
+    display: none;
+  }
+}
+
 // ------------- IDs -------------
