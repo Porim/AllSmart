@@ -57,6 +57,14 @@
   }
 }
 
+
+@media (max-width: 620px) {
+  .phone-footer {
+    display: none;
+  }
+}
+
+
 // ------------- IDs -------------
 
 #arrow-footer {
@@ -70,11 +78,5 @@
   &:hover {
     cursor: pointer;
     opacity: 1;
-  }
-}
-
-@media (max-width: 620px) {
-  #arrow-footer {
-    display: none;
   }
 }
