@@ -25,8 +25,9 @@
 .card-container {
   background: $background;
   margin-top: 160px;
-  padding-bottom: 56px;
+  // padding-bottom: 56px;
   width: 100vw;
+  min-height: 446px;
 }
 
 .carousel-control-next-icon {
@@ -156,12 +157,6 @@
   justify-content: center;
   position: relative;
 }
-
-#call-button {
-  margin: 48px auto;
-  width: 300px;
-}
-
 
 #large-arrow {
   font-size: 10em;

@@ -56,6 +56,10 @@
 }
 
 // ------------- IDs -------------
+#call-button {
+  margin: 48px auto;
+  max-width: clamp(190px, 25vw, 300px);
+}
 
 #scroll-login {
   background: transparent;
