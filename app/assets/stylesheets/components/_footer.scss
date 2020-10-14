@@ -57,10 +57,20 @@
   }
 }
 
+
+@media (max-width: 620px) {
+  .phone-footer {
+    display: none;
+  }
+}
+
+
 // ------------- IDs -------------
 
-#medium-arrow {
+#arrow-footer {
+  color: $orange !important;
   font-size: 5em;
+  margin-top: 16px;
   opacity: 0.50;
   padding: 0px 10px;
   transition: 0.3s;

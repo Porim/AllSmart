@@ -40,7 +40,7 @@ document.addEventListener('turbolinks:load', () => {
     navbarScroll();
     landingArrow();
   }
-  if (document.getElementById("medium-arrow")) {
+  if (document.getElementById("arrow-footer")) {
     topFunction();
   }
 });
