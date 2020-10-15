@@ -22,6 +22,10 @@
   width: 18%;
 }
 
+.nav-button-margin {
+  margin-right: 0.01em;
+}
+
 .navbar-main {
   justify-content: space-between;
   padding-top: 12px;
@@ -54,10 +58,15 @@
 
 @media only screen and (max-width: 500px) {
   #logo {
-    width: 100px;
+    width: 110px;
   }
 }
 
+@media only screen and (orientation: landscape) {
+  #logo {
+    width: 160px;
+  }
+}
 
 #name-user-onscroll {
   color: $text-light !important;

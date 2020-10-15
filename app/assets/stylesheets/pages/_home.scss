@@ -59,12 +59,13 @@
 
 @media (max-width: 1000px) {
   .h2-call {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
   }
 }
 
-html,body{
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -179,6 +180,7 @@ html,body{
 
 #logo-call-to-action {
   margin: 32px auto;
+  min-width: 240px;
   width: 30%;
 }
 

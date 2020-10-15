@@ -39,7 +39,9 @@
   <%= render 'shared/navbar' %>
   <div class="flex-wrapper">
     <%= yield %>
+    <% if false %>
     <%= render 'shared/footer' %>
+    <% end %>
     <%= render 'shared/flashes' %>
   </div>
 </body>
