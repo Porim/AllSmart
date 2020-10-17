@@ -35,7 +35,7 @@ html {
 }
 
 h1 {
-  font-size: clamp(32px, 3.6vw, 40.5px) !important;
+  font-size: clamp(20px, 3.6vw, 40.5px) !important;
 }
 
 h2 {
@@ -52,4 +52,52 @@ h4 {
 
 p {
   font-size: clamp(12px, calc(1vw + 2px), 16px) !important;
+}
+
+@media only screen and (max-width: 500px) {
+
+  h1 {
+    font-size: 26px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  h4 {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 12px !important;
+  }
+
+}
+
+@media only screen and (orientation: landscape) {
+
+  h1 {
+    font-size: 26px !important;
+  }
+
+  h2 {
+    font-size: 22px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+  }
+
+  h4 {
+    font-size: 16px !important;
+  }
+
+  p {
+    font-size: 12px !important;
+  }
+
 }

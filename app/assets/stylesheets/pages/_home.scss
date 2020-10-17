@@ -52,7 +52,6 @@
   }
 }
 
-
 .h2-call {
   text-align: center;
   width: 50%;
@@ -60,9 +59,14 @@
 
 @media (max-width: 1000px) {
   .h2-call {
-  text-align: center;
-  width: 100%;
+    text-align: center;
+    width: 100%;
+  }
 }
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 .orange-arrow {
@@ -176,6 +180,7 @@
 
 #logo-call-to-action {
   margin: 32px auto;
+  min-width: 240px;
   width: 30%;
 }
 
@@ -195,10 +200,10 @@
 }
 
 #rocket-landing {
-  height: clamp(160px, 33vw, 215px);
-  left: clamp(calc(63vw + 50px), 62vw, 70vw);
+  height: clamp(110px, 33vw, 215px);
+  left: clamp(calc(63vw + 20px), 62vw, 70vw);
   position: absolute;
-  top: calc(35vh + 20px);
+  top: calc(40vh + 30px);
   transform: rotate(40deg);
-  width: clamp(160px, 33vw, 215px);
+  width: clamp(110px, 33vw, 215px);
 }
