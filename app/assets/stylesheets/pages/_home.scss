@@ -220,13 +220,13 @@ body {
 //   }
 // }
 
-// @media only screen and (max-width: 376px) {
-//   #rocket-landing {
-//     height: 110.9px;
-//     left: 221.660px;
-//     position: absolute;
-//     top: 157.600px;
-//     transform: rotate(40deg);
-//     width: 110.9px;
-//   }
-// }
+@media only screen and (max-width: 376px) {
+  #rocket-landing {
+    height: 100.9px;
+    left: 107.660px;
+    position: absolute;
+    top: 87.600px;
+    transform: rotate(0deg);
+    width: 100.9px;
+  }
+}
