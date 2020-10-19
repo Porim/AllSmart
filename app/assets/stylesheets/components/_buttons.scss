@@ -14,7 +14,7 @@
   width: auto;
   min-width: 80px;
 
-  &button:hover {
+  &:hover {
     text-decoration: none !important;
     background: white;
     color: $text !important;
@@ -45,7 +45,7 @@
   border: none;
   transition: 0.3s;
 
-  &button:hover {
+  &:hover {
     color: white !important;
     background: $green-hover !important;
     text-decoration: none !important;
@@ -63,7 +63,7 @@
   border-color: $orange;
   transition: 0.3s;
 
-  &button:hover {
+  &:hover {
     background: $orange-hover !important;
     text-decoration: none !important;
     color: white !important;
