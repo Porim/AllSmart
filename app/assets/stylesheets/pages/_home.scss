@@ -209,24 +209,35 @@ body {
   width: clamp(110px, 33vw, 215px);
 }
 
-// @media only screen and (max-width: 768px) {
-//   #rocket-landing {
-//     height: 225.9px;
-//     left: 503.840px;
-//     position: absolute;
-//     top: 439.600px;
-//     transform: rotate(40deg);
-//     width: 225.9px;
-//   }
-// }
-
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 768px) {
   #rocket-landing {
-    height: 100.9px;
-    left: 107.660px;
+    height: 180.9px;
+    left: 503.840px;
     position: absolute;
-    top: 87.600px;
-    transform: rotate(0deg);
-    width: 100.9px;
+    top: 439.600px;
+    transform: rotate(40deg);
+    width: 180.9px;
   }
 }
+
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+  #rocket-landing {
+    height: 180.9px;
+    left: 653.840px;
+    position: absolute;
+    top: 339.600px;
+    transform: rotate(40deg);
+    width: 180.9px;
+  }
+}
+
+  @media only screen and (max-width: 376px) {
+    #rocket-landing {
+      height: 100.9px;
+      left: 107.660px;
+      position: absolute;
+      top: 87.600px;
+      transform: rotate(0deg);
+      width: 100.9px;
+    }
+  }
