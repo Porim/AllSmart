@@ -6,20 +6,24 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .about-us {
-    display: none;
-  }
-}
-
 .about-us-container {
   font-size: clamp(14px, calc(1vw + 6px), 18px);
   font-weight: normal;
   min-width: 70px;
 }
 
+@media only screen and (max-width: 576px) {
+  .about-us-container {
+    display: none;
+  }
+}
+
 .logo-container {
   width: 18%;
+}
+
+.nav-button-margin {
+  margin-right: 0.01em;
 }
 
 .navbar-main {
@@ -50,6 +54,19 @@
 
 #logo {
   width: clamp(180px, 100%, 240px);
+}
+
+@media only screen and (max-width: 500px) {
+  #logo {
+    width: 110px;
+  }
+}
+
+@media only screen and (orientation: landscape)
+and (max-width: 768px) {
+  #logo {
+    width: 160px;
+  }
 }
 
 #name-user-onscroll {
