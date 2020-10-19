@@ -14,11 +14,13 @@
   width: auto;
   min-width: 80px;
 
-  &button:hover {
-    text-decoration: none !important;
-    background: white;
-    color: $text !important;
-    transition: 0.3s;
+  @media all and (min-width: 1024px) {
+    &:hover {
+      text-decoration: none !important;
+      background: white;
+      color: $text !important;
+      transition: 0.3s;
+    }
   }
 }
 
@@ -45,10 +47,12 @@
   border: none;
   transition: 0.3s;
 
-  &button:hover {
-    color: white !important;
-    background: $green-hover !important;
-    text-decoration: none !important;
+  @media all and (min-width: 1024px) {
+    &:hover {
+      color: white !important;
+      background: $green-hover !important;
+      text-decoration: none !important;
+    }
   }
 }
 
@@ -63,10 +67,12 @@
   border-color: $orange;
   transition: 0.3s;
 
-  &button:hover {
-    background: $orange-hover !important;
-    text-decoration: none !important;
-    color: white !important;
+  @media all and (min-width: 1024px) {
+    &:hover {
+      background: $orange-hover !important;
+      text-decoration: none !important;
+      color: white !important;
+    }
   }
 }
 
@@ -84,9 +90,11 @@
   color: $green !important;
   display: inline-block;
 
-  &:hover {
-    background: $green;
-    color: white !important;
-    border: 1px solid $green !important;
+  @media all and (min-width: 1024px) {
+    &:hover {
+      background: $green;
+      color: white !important;
+      border: 1px solid $green !important;
+    }
   }
 }
