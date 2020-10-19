@@ -17,7 +17,7 @@
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
-  padding-top: 69px;
+  margin-top: 69px;
 }
 
 .form-control {
@@ -43,6 +43,7 @@
   display: flex;
   justify-content: center;
   min-height: calc(100vh - 286px);
+  padding: 120px 0;
 }
 
 .hint {
