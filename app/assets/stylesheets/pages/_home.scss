@@ -166,7 +166,7 @@ body {
   background-position: center bottom;
   background-size: cover;
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   justify-content: center;
   position: relative;
 }
@@ -208,3 +208,25 @@ body {
   transform: rotate(40deg);
   width: clamp(110px, 33vw, 215px);
 }
+
+// @media only screen and (max-width: 768px) {
+//   #rocket-landing {
+//     height: 225.9px;
+//     left: 503.840px;
+//     position: absolute;
+//     top: 439.600px;
+//     transform: rotate(40deg);
+//     width: 225.9px;
+//   }
+// }
+
+// @media only screen and (max-width: 376px) {
+//   #rocket-landing {
+//     height: 110.9px;
+//     left: 221.660px;
+//     position: absolute;
+//     top: 157.600px;
+//     transform: rotate(40deg);
+//     width: 110.9px;
+//   }
+// }
