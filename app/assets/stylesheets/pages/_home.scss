@@ -64,9 +64,9 @@
   }
 }
 
-html,
-body {
-  overflow-x: hidden;
+.mobile-rocket-container {
+  display: none;
+
 }
 
 .orange-arrow {
@@ -185,6 +185,38 @@ body {
   width: 30%;
 }
 
+#mobile-rocket {
+  width: clamp(110px, 33vw, 215px);
+  height: clamp(110px, 33vw, 215px);
+
+  @media only screen and (max-width: 1024px) {
+    height: 160px;
+    width: 160px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 135px;
+    width: 135px;
+  }
+
+  @media only screen and (max-width: 500px) {
+    height: 125px;
+    width: 125px;
+  }
+
+  @media only screen and (max-width: 400px) {
+    height: 105px;
+    width: 105px;
+  }
+  
+  @media only screen and (orientation: landscape) and (max-width:900px) {
+    height: 90px;
+    width: 90px;
+  }
+}
+
+
+
 #next-control {
   right: 100px;
 }
@@ -209,35 +241,12 @@ body {
   width: clamp(110px, 33vw, 215px);
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   #rocket-landing {
-    height: 180.9px;
-    left: 503.840px;
-    position: absolute;
-    top: 439.600px;
-    transform: rotate(40deg);
-    width: 180.9px;
+    display: none;
+  }
+
+  .mobile-rocket-container {
+    display: block;
   }
 }
-
-@media only screen and (orientation: landscape) and (max-width: 1024px) {
-  #rocket-landing {
-    height: 180.9px;
-    left: 653.840px;
-    position: absolute;
-    top: 339.600px;
-    transform: rotate(40deg);
-    width: 180.9px;
-  }
-}
-
-  @media only screen and (max-width: 376px) {
-    #rocket-landing {
-      height: 100.9px;
-      left: 107.660px;
-      position: absolute;
-      top: 87.600px;
-      transform: rotate(0deg);
-      width: 100.9px;
-    }
-  }
