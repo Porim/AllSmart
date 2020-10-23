@@ -16,8 +16,7 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 20px;
-  margin-top: 69px;
+  margin-top: 59px;
 }
 
 .form-control {
@@ -42,8 +41,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  min-height: calc(100vh - 286px);
-  padding: 120px 0;
+  min-height: 80vh;
 }
 
 .hint {
@@ -60,6 +58,11 @@
 
 .name {
   text-transform: capitalize;
+}
+
+.form-tall {
+  height: 100vh;
+  min-height: 700px;
 }
 
 // ------------- IDs -------------
