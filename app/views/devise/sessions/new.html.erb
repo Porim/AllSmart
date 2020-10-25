@@ -1,17 +1,16 @@
 <div class="form-page d-flex justify-content-center">
   <div class="form">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-      <h4 class="mb-4">Log in</h4>
-      <%= f.input :email,
+    <%= f.input :email,
             required: false,
             autofocus: true,
             input_html: { autocomplete: "email" } %>
-      <%= f.input :password,
+    <%= f.input :password,
             required: false,
             input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-      <%= f.button :submit, "Log in", class: "button orange d-flex justify-content-center mb-3"%>
-      <%= render "devise/shared/links" %>
+    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+    <%= f.button :submit, "Log in", class: "button orange d-flex justify-content-center mb-3"%>
+    <%= render "devise/shared/links" %>
     <% end %>
   </div>
 </div>
