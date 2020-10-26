@@ -19,7 +19,7 @@
   height: 42vh;
   justify-content: space-between;
   padding-bottom: 10px;
-  padding-top: 20px;
+  padding-top: 10px;
 
   ul {
     list-style-type: none;
@@ -57,6 +57,11 @@
   }
 }
 
+@media (min-width: 620px) {
+  .footer-phone-social {
+    display: none;
+  }
+}
 
 @media (max-width: 620px) {
   .phone-footer {
