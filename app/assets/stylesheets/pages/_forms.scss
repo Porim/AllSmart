@@ -63,4 +63,9 @@
   text-transform: capitalize;
 }
 
+.tall-form {
+  @media (max-width: 340px ) {
+    height: 720px;
+  }
+}
 // ------------- IDs -------------
