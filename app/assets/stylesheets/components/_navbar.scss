@@ -50,6 +50,13 @@
   font-size: 18px;
 }
 
+.sign-up-button-margin {
+  margin-right: 1em;
+  @media (max-width: 600px) {
+    margin-right: 0.05em;
+  }
+}
+
 // ------------- IDs -------------
 
 #logo {
@@ -62,8 +69,7 @@
   }
 }
 
-@media only screen and (orientation: landscape)
-and (max-width: 768px) {
+@media only screen and (orientation: landscape) and (max-width: 768px) {
   #logo {
     width: 160px;
   }
