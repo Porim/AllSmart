@@ -38,5 +38,15 @@
       </div>
     </div>
     <% end %>
+        <%= link_to games_path(subject: 'All'), class: 'paragraph' do %>
+    <div class="game-card">
+      <%= cl_image_tag 'mdavpspdbymhjfofil69', class: 'game-card-image' %>
+      <div class="container mt-4">
+        <h4>Reading ready?</h4>
+        <p class='paragraph mt-2'>Lets read together until we are reading ready
+        </p>
+      </div>
+    </div>
+    <% end %>
   </div>
 </div>
