@@ -31,6 +31,9 @@
   padding-top: 12px;
   padding-bottom: 4px;
   position: fixed;
+  @media (max-width: 600px) {
+    position: absolute;
+  }
   top: 0;
   width: 100vw;
   z-index: 500;
