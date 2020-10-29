@@ -44,13 +44,37 @@
   }
 }
 
+.navbar-nav {
+  min-height: 100vh;
+}
+
+
+// body{
+//   overflow-y: hidden;
+//   height: 100vh;
+//   position: relative;
+  
+// }
+
+.navbar-mobile-flex {
+  display: flex;
+  align-items: center;
+  @media (max-width: 428px) {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+}
+
+.navbar-nav.mr-auto.navbar-mobile-flex > *{
+  margin: 1em 0;
+}
+
 .user-tab-highlighter {
   background: $green-hover;
   border-radius: 8px;
   color: white;
   padding: 8px;
 }
-
 // ------------- IDs -------------
 
 #navbar-first-name {
