@@ -1,5 +1,31 @@
 // ------------- Classes -------------
 
+.aligned {
+  height: 182px;
+  margin-bottom: 18px !important;
+  text-align: center;
+  width: 80%;
+  @media (max-width: 600px) {
+    width: 100% !important;
+  }
+}
+
+.aligned-left {
+  height: 182px;
+  margin-bottom: 18px !important;
+  text-align: left;
+  width: 100%;
+  @media (max-width: 600px) {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+// .align-text-left {
+//   @media (min-width: 768px) {
+//     text-align: left !important;
+//   }
+// }
+
 @media only screen and (max-width: 768px) {
   .hidden-on-md-viewport {
     display: none;
@@ -31,7 +57,7 @@
 
 @media (max-width: 428px) {
   .phone-centered-text {
-    text-align: center;
+    text-align: center !important;
     margin-top: 1em;
   }
 }
