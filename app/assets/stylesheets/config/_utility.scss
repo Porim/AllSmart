@@ -12,10 +12,22 @@
   }
 }
 
+@media (min-width: 428px) {
+  .hidden-on-large-viewport {
+    display: none !important;
+  }
+}
+
 @media (max-width: 428px) {
   .phone-centered-text {
     text-align: center;
     margin-top: 1em;
+  }
+}
+
+@media (max-width: 428px) {
+  .mobile-margin-top {
+    margin-top: 14em;
   }
 }
 

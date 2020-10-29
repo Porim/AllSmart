@@ -25,7 +25,9 @@
 .card-container {
   background: $background;
   margin-top: 160px;
-  // padding-bottom: 56px;
+  @media (max-width: 428px) {
+    margin-top: 40px;
+  }
   width: 100vw;
   min-height: 446px;
 }
