@@ -5,6 +5,20 @@
   }
 }
 
+
+@media (max-width: 428px) {
+  .hidden-on-phone-viewport {
+    display: none !important;
+  }
+}
+
+@media (max-width: 428px) {
+  .phone-centered-text {
+    text-align: center;
+    margin-top: 1em;
+  }
+}
+
 .w-80p {
   width: 80vw;
   min-width: 280px;
