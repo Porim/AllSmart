@@ -26,6 +26,12 @@
   margin-right: 0.01em;
 }
 
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 0;
+  align-items: center;
+}
+
 .navbar-main {
   justify-content: space-between;
   padding-top: 12px;
