@@ -97,11 +97,17 @@
 .testimonial-text h3 {
   font-size: clamp(8px, calc(1.5vw + 4px), 16px) !important;
   margin-top: 16px;
+  @media (max-width: 500px) {
+    font-size: 16px !important;
+  }
 }
 
 .testimonial-text p {
-  font-size: clamp(4px, calc(1vw + 4px), 12px) !important;
+  font-size: clamp(10px, calc(1vw + 4px), 14px) !important;
   min-width: 120px;
+  @media (max-width: 428px) {
+    font-size: 11px !important;
+  }
 }
 
 .signature-wrapper {
