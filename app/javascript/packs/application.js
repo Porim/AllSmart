@@ -35,7 +35,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
   }
-  if (document.getElementById("bg-image-landing")) {
+  if (document.getElementById("bg-image-landing") && screen.width > 428) {
     AOS.init();
     navbarScroll();
     landingArrow();

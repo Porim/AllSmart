@@ -15,7 +15,7 @@ const fullScreenNav = () => {
     } else {
       navbarMain.style.transition = '0.0s';
       navbarNav.style.minHeight = '100vh';
-      navbarNav.style.minWidth = '100vw !important';
+      navbarNav.style.minWidth = '100vw';;
       navbarNav.style.background = '#0E91A1';
       navbarMain.style.background = '#0E91A1';
       document.body.style.height = '100vh';
