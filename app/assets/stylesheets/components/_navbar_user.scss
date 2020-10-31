@@ -49,12 +49,19 @@
   align-items: center;
   @media (max-width: 428px) {
     flex-direction: column-reverse;
-    justify-content: center;
+    justify-content: flex-end;
   }
 }
 
-.navbar-nav.mr-auto.navbar-mobile-flex > *{
-  margin: 2em 0;
+ul.navbar-nav.mr-auto.navbar-mobile-flex>* {
+  @media (max-width: 428px) {
+    margin-top: 4.5em !important;
+    margin-bottom: 1em !important;
+  }
+}
+
+.navbar-mobile-flex > * {
+  margin: 0 !important;
 }
 
 .user-tab-highlighter {
@@ -63,8 +70,14 @@
   color: white;
   padding: 8px;
 }
+
 // ------------- IDs -------------
 
+#children-on-scroll {
+  @media (max-width: 428px) {
+    margin: 0 !important;
+  }
+}
 #navbar-first-name {
   font-size: 18px;
 }
