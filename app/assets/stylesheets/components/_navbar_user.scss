@@ -10,6 +10,12 @@
   border-left: 0.3em solid transparent;
 }
 
+.dropdown-menu.show {
+    display: block;
+    position: absolute !important;
+    z-index: 1000 !important;
+}
+
 .for-user-js {
   color: $text-light !important;
 
@@ -61,7 +67,6 @@ ul.navbar-nav.mr-auto.navbar-mobile-flex>* {
 .navbar-mobile-flex > * {
   margin: 0 !important;
 }
-
 
 .user-tab-highlighter {
   background: $green-hover;
