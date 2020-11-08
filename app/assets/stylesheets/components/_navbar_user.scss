@@ -27,10 +27,8 @@
 }
 
 .user-nav-container {
-  padding-right: 70px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   color: white;
+  padding: 15px 70px 15px 10px;
   
   &:hover {
   background: $green-hover;
@@ -63,6 +61,7 @@ ul.navbar-nav.mr-auto.navbar-mobile-flex>* {
 .navbar-mobile-flex > * {
   margin: 0 !important;
 }
+
 
 .user-tab-highlighter {
   background: $green-hover;
