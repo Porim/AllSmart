@@ -27,10 +27,12 @@
 }
 
 .user-nav-container {
+  color: white;
+  margin-right: 1em;
   padding-right: 70px;
   padding-top: 15px;
   padding-bottom: 15px;
-  color: white;
+  
   
   &:hover {
   background: $green-hover;
@@ -42,6 +44,7 @@
   background: $green-hover;
   color: white !important;
   }
+
 }
 
 .user-tab-highlighter {
