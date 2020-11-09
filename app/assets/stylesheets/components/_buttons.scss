@@ -22,6 +22,7 @@
       transition: 0.3s;
     }
   }
+  white-space: nowrap;
 }
 
 @media only screen and (max-width: 768px) {
@@ -43,15 +44,6 @@
     font-size: 12px;
     padding: 8px 14px;
   }
-}
-
-
-.button-medium {
-  min-width: 160px;
-}
-
-.button-wide {
-  width: 188px;
 }
 
 .greenish {
