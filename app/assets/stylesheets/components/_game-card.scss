@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+.card-margin-fix {
+  @media (min-width: 1200px) {
+    margin-right: 46px !important;
+  }
+}
+
 .card-trash {
   color: $orange;
 }
@@ -33,7 +39,9 @@
   margin-left: auto;
   transition: all 0.4s ease;
   // width: clamp(220px, 50%, 299px);
-  width: clamp(290px, 21vw, 299px);
+  min-width: 230px;
+  max-width: 299px;
+  width: 19vw;
 
   &:hover {
     box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
