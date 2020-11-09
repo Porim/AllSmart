@@ -28,15 +28,15 @@
           </div>
         </div>
       </div>
-      <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4 button-wide' %>
+      <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4' %>
     </div>
     <% end %>
     <% end %>
     <div class="card-button">
       <%= link_to new_kid_path do %>
-      <button class="button orange button-wide">Add a child</button>
+      <button class="button orange">Add a child</button>
       <% end %>
-      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish button-wide' %>
+      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish' %>
     </div>
   </div>
   <% else %>
