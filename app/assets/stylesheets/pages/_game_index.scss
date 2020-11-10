@@ -79,5 +79,6 @@
 // ------------- IDs -------------
 
 #game-card-dropdown-button {
-  width: 200px !important;
+  min-width: 200px;
+  max-width: 230px;
 }

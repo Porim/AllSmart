@@ -18,8 +18,9 @@
   font-size: 15px !important;
   height: 100%;
   justify-content: space-between;
+  max-height: 284px;
   padding-bottom: 10px;
-  padding-top: 10px;
+  padding-top: 20px;
 
   ul {
     list-style-type: none;
@@ -27,6 +28,10 @@
 
   .fa-heart {
     color: $green;
+  }
+
+  @media (max-width: 414px) {
+    padding-top: 10px;
   }
 }
 
@@ -57,14 +62,22 @@
   }
 }
 
-@media (min-width: 620px) {
-  .footer-phone-social {
+.footer-phone-social {
+  @media (min-width: 620px) {
     display: none;
+  }
+  
+  @media (orientation: landscape) and (max-height: 428px) {
+    display: inherit;
   }
 }
 
-@media (max-width: 620px) {
-  .phone-footer {
+.phone-footer {
+  @media (max-width: 620px) {
+    display: none;
+  }
+
+  @media (orientation: landscape) and (max-height: 428px) {
     display: none;
   }
 }
