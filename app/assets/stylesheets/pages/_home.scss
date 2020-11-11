@@ -18,8 +18,11 @@
 
 .card-container {
   background: $background;
-  margin-top: 160px;
+  margin-top: 176px;
   @media (max-width: 428px) {
+    margin-top: 40px;
+  }
+  @media (max-width: 767px) {
     margin-top: 40px;
   }
   width: 100vw;
@@ -37,6 +40,13 @@
   .first-container {
     height: auto;
     margin-top: 92px;
+  }
+}
+
+@media (min-width: 768px) {
+  .first-container {
+    height: auto;
+    margin-top: 20px;
   }
 }
 
@@ -79,6 +89,9 @@
   margin: 0 4px;
   transition: all 0.4s ease;
   width: 80px;
+  @media (max-width: 991px) {
+    width: 60px;
+  }
 
   &:hover {
     margin-top: 12px;
