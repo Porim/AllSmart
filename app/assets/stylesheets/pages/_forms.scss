@@ -45,8 +45,8 @@
   min-height: calc(100vh - 286px);
 
   @media (max-width: 428px) {
-    height: calc(100vh - 58px);
-    padding: 120px 0;
+    height: calc(100vh - 56px);
+    padding-top: 12px;
   }
 }
 
