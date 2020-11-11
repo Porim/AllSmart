@@ -8,6 +8,8 @@
   @media (max-width: 600px) {
     width: 100% !important;
   }
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .aligned-left {
@@ -21,21 +23,26 @@
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 767px) {
   .hidden-on-md-viewport {
-    display: none;
-  }
-}
-
-
-@media (max-width: 428px) {
-  .hidden-on-phone-viewport {
     display: none !important;
   }
 }
 
-@media (min-width: 428px) {
+@media (min-width: 767px) {
   .hidden-on-large-viewport {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hidden-on-smaller-viewports {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hidden-on-991px-viewport {
     display: none !important;
   }
 }
@@ -50,16 +57,16 @@
   width: auto;
 }
 
-@media (max-width: 428px) {
+@media (max-width: 767px) {
   .phone-centered-text {
     text-align: center !important;
     margin-top: 1em;
   }
 }
 
-@media (max-width: 428px) {
+@media (max-width: 767px) {
   .mobile-margin-top {
-    margin-top: 14em;
+    margin-top: 11em;
   }
 }
 
