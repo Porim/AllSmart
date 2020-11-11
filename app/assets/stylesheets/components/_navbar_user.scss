@@ -10,6 +10,12 @@
   border-left: 0.3em solid transparent;
 }
 
+.dropdown-menu.show {
+    display: block;
+    position: absolute !important;
+    z-index: 1000 !important;
+}
+
 .for-user-js {
   color: $text-light !important;
 
@@ -28,11 +34,7 @@
 
 .user-nav-container {
   color: white;
-  margin-right: 1em;
-  padding-right: 70px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  
+  padding: 15px 70px 15px 10px;
   
   &:hover {
   background: $green-hover;
@@ -47,6 +49,26 @@
 
 }
 
+.navbar-mobile-flex {
+  display: flex;
+  align-items: center;
+  @media (max-width: 428px) {
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+}
+
+ul.navbar-nav.mr-auto.navbar-mobile-flex > * {
+  @media (max-width: 428px) {
+    margin-top: 5.5vh !important;
+    margin-bottom: 5.5vh !important;
+  }
+}
+
+.navbar-mobile-flex > * {
+  margin: 0 !important;
+}
+
 .user-tab-highlighter {
   background: $green-hover;
   border-radius: 8px;
@@ -56,6 +78,11 @@
 
 // ------------- IDs -------------
 
+#children-on-scroll {
+  @media (max-width: 428px) {
+    margin: 0 !important;
+  }
+}
 #navbar-first-name {
   font-size: 18px;
 }

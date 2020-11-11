@@ -28,19 +28,24 @@ import { navbarScroll } from './navbar_on_scroll'
 import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
-
+import { fullScreenNav } from './mobileNavbar'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
- 
+
 document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
   }
   if (document.getElementById("bg-image-landing")) {
     AOS.init();
-    navbarScroll();
     landingArrow();
+  }
+  if (document.getElementById('bg-image-landing') && screen.width > 428) {
+    navbarScroll();
   }
   if (document.getElementById("arrow-footer")) {
     topFunction();
+  }
+  if (document.querySelector('.navbar-toggler')) {
+    fullScreenNav();
   }
 });

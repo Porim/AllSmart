@@ -7,13 +7,13 @@
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
     <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse"
+    <button class="navbar-toggler greenish" type="button" data-toggle="collapse"
       data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto d-flex align-items-center">
+      <ul class="navbar-nav mr-auto navbar-mobile-flex">
         <li>
           <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1', id: 'home-on-scroll'  %>
         </li>
@@ -29,7 +29,7 @@
         <% end %>
         <% if current_page?(profile_path(current_user)) %>
         <li>
-          <span class='about-us px-2 mx-1 mr-4 user-tab-highlighter'>
+          <span class='about-us px-2 mx-1 user-tab-highlighter'>
             CHILDREN</span>
         </li>
         <% else %>
