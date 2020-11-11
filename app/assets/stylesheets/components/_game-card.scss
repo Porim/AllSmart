@@ -38,11 +38,10 @@
   transition: all 0.4s ease;
   min-width: 226.5px;
   max-width: 299px;
-  min-height: 316px;
+  min-height: 310px;
   width: calc(19vw - 66px);
   @media (max-width: 1000px) {
-    min-width: 260px !important;
-    width: 19vw !important;
+    min-width: 280px !important;
     min-height: auto;
   }
 
