@@ -1,5 +1,6 @@
 <!-- render footer on all the pages apart from child mode and game show page, where game is actually being played -->
-<% unless (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") %>
+<% no_footer_pages = (controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show") || (request.fullpath == '/users/sign_in') || ((request.fullpath == '/users/sign_up')) %>
+<% unless no_footer_pages %>
   <div class="footer">
     <div class="d-flex justify-content-around">
       <div class="footer-links phone-footer">

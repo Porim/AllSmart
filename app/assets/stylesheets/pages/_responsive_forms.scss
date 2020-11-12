@@ -1,0 +1,46 @@
+.form-container {
+  padding: 5vh 0;
+  min-height: 100vh;
+  background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')
+}
+
+.form-box {
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+}
+
+.hint {
+  color: white !important;
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+.login-form-box {
+    @media (min-width: 768px) {
+    width: 45%;
+  }
+    @media (max-width: 768px) {
+    width: 85%;
+  }
+}
+
+#form-logo {
+  width: 40vw;
+  max-width: 420px;
+  min-width: 260px;
+  margin-bottom: 10vh;
+}
