@@ -1,5 +1,5 @@
-<div class="form-page d-flex justify-content-center">
-  <div class="form form-large-navbar w-80p">
+<div class="form-container d-flex align-items-center justify-content-center flex-column">
+    <div class="text-white form-box container">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <h4 class="mb-4">Edit
         <%= current_user.first_name.possessive %> profile
