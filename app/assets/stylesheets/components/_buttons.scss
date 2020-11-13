@@ -12,9 +12,9 @@
   text-align: center;
   transition: 0.3s;
   width: auto;
-  min-width: 80px;
+  min-width: 82px;
 
-  @media all and (min-width: 1024px) {
+  @media (min-width: 1024px) {
     &:hover {
       text-decoration: none !important;
       background: white;
@@ -25,24 +25,35 @@
   white-space: nowrap;
 }
 
-@media only screen and (max-width: 768px) {
+@media (orientation: landscape) and (max-width: 1024px) {
   .button {
-    font-size: 16px;
-    padding: 12px 21px;
+    font-size: 18px;
+    padding: 12px 32px;
+    min-width: 140px;
   }
 }
 
-@media only screen and (orientation: landscape) and (max-width: 1024px) {
+@media (max-width: 768px) {
   .button {
     font-size: 16px;
-    padding: 12px 21px;
+    padding: 12px 32px;
+    min-width: 86px;
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
+  .button {
+    font-size: 12px;
+    padding: 9px 18px;
+    min-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
   .button {
     font-size: 12px;
     padding: 8px 14px;
+    min-width: 80px;
   }
 }
 
@@ -90,7 +101,13 @@
   margin: 48px auto;
   width: 25vw;
   max-width: 300px;
-  min-width: 200px;
+  min-width: 260px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+    @media (max-width: 428px) {
+    font-size: 16px;
+  }
 }
 
 #scroll-login {
@@ -105,5 +122,22 @@
       color: white !important;
       border: 1px solid $green !important;
     }
+  }
+}
+
+#btn-get-started {
+  @media (max-width: 768px) {
+    min-width: 200px;
+    font-size: 18px;
+  }
+
+  @media (max-width: 428px) {
+    min-width: 180px;
+    font-size: 16px;
+  }
+
+  @media (orientation: landscape) and (max-width: 1024px) {
+      min-width: 200px;
+      font-size: 18px;
   }
 }
