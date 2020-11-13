@@ -7,12 +7,18 @@
 }
 
 .about-us-container {
-  font-size: clamp(14px, calc(1vw + 6px), 18px);
+  font-size: clamp(16px, calc(1vw + 6px), 18px);
   font-weight: normal;
   min-width: 70px;
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+    @media (max-width: 640px) {
+    font-size: 16px;
+  }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 600px) {
   .about-us-container {
     display: none;
   }
