@@ -1,43 +1,35 @@
-<div class="container-fluid p-5 mt-5">
+<div class="container-fluid p-5 mt-5 d-flex flex-column">
   <!-- renders kid cards and buttons if children exist -->
   <% if @kids.count > 0 %>
-  <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
+  <h1 class='py-2 mt-5 card-button text-center my-5'><span style="color:#0E91A1">Y</span><span
       style="color:#458a86">o</span><span style="color:#618679">u</span><span
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
       style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
       style="color:#e97234">s</span></h1>
-  <div class="cards">
-    <% @kids.each do |kid| %>
-    <%= link_to kid_path(kid) do  %>
-    <div class="card-product py-5 my-5">
-      <% if kid.photo.attached? %>
-      <%= cl_image_tag kid.photo.key, class: "avatar-profile ml-4", crop: :thumb, gravity: :face %>
-      <% else %>
-      <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile ml-4" %>
-      <% end %>
-      <div class="card-product-infos">
-        <div class="child-text d-flex justify-content-between align-items-center">
-          <%= kid.first_name.capitalize %>
-          -
-          <%= kid.age %>
-          years old
-          <div class="test">
-            <%= link_to edit_kid_path(kid) do  %>
-            <i class="fas fa-pen p-1 greenish-icon"></i>
-            <% end %>
-          </div>
+  <div class="container my-5 d-flex align-items-center justify-content-center">
+    <div class="row">
+      <% @kids.each do |kid| %>
+      <div class="col-sm-12 col-md-4">
+      <%= link_to kid_path(kid) do  %>
+        <div class="d-flex flex-column align-items-center justify-content-center">
+        <% if kid.photo.attached? %>
+        <%= cl_image_tag kid.photo.key, class: "avatar-profile", crop: :thumb, gravity: :face %>
+        <% else %>
+        <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile" %>
+        <% end %>
+        <p class="paragraph w-100 text-center my-2"> <%= kid.first_name %> </p>
+        <%= link_to 'Child mode', kid_profile_path(kid), class: 'mt-3 button greenish' if false%>
         </div>
-      </div>
-      <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4' %>
-    </div>
-    <% end %>
-    <% end %>
-    <div class="card-button">
-      <%= link_to new_kid_path do %>
-      <button class="button orange">Add a child</button>
       <% end %>
-      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish' %>
+      </div>
+      <% end %>
     </div>
+  </div>
+  <div class="card-button d-flex justify-content-center my-5">
+    <%= link_to new_kid_path do %>
+    <button class="button orange mx-3">Add a child</button>
+    <% end %>
+    <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button mx-3 greenish' %>
   </div>
   <% else %>
   <!-- render prompt to create a child if no children were created -->
