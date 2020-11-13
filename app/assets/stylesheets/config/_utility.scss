@@ -48,6 +48,17 @@
   }
 }
 
+@media (max-width: 576px) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .hidden-on-576px-viewport {
+    display: none !important;
+  }
+}
 
 .paragraph {
   color: $text-light;
