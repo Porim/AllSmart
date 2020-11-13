@@ -21,6 +21,12 @@
   }
 }
 
+.form-padding {
+  @media (min-width: 1200px) {
+    padding-top: 8vh;
+  }
+}
+
 .hint {
   color: white !important;
 }
