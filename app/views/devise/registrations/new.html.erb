@@ -24,12 +24,8 @@
     </div>
     <div class="form-button-container mt-4">
     <%= f.button :submit, "Sign up", class: "btn-form button orange d-flex justify-content-center mb-3"%>
-    <%= link_to 'Go Back', root_path, class: "btn-form mx-3 button greenish d-flex justify-content-center mb-3"  %>
+    <%= link_to 'Log in', new_user_session_path, class: "btn-form mx-3 button greenish d-flex justify-content-center mb-3"  %>
     </div>
-    <p>Already created an account?
-      <%= link_to "Log in", new_user_session_path, class: "link-in-text font-weight-bold" %>
-      instead.
-    </p>
     <% end %>
   </div>
 </div>
