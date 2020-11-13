@@ -1,10 +1,4 @@
-
-
-.form-container {
-  padding: 5vh 0;
-  min-height: 100vh;
-  background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')
-}
+// ------------- Classes -------------
 
 .form-box {
   @media (min-width: 768px) {
@@ -26,6 +20,12 @@
   }
 }
 
+.form-container {
+  padding: 5vh 0;
+  min-height: 100vh;
+  background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')
+}
+
 .form-padding {
   @media (min-width: 1200px) {
     padding-top: 8vh;
@@ -41,10 +41,6 @@
   color: white !important;
 }
 
-.name {
-  text-transform: capitalize;
-}
-
 .login-form-box {
     @media (min-width: 768px) {
     width: 45%;
@@ -53,6 +49,14 @@
     width: 85%;
   }
 }
+
+.name {
+  text-transform: capitalize;
+}
+
+
+// ------------- IDs -------------
+
 
 #form-logo {
   width: 40vw;
