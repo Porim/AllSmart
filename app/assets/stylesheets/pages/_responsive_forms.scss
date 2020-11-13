@@ -10,6 +10,9 @@
   }
   @media (max-width: 768px) {
     width: 95%;
+    h4 {
+      font-size: 18px !important;
+    }
   }
 }
 
@@ -24,7 +27,12 @@
 .form-padding {
   @media (min-width: 1200px) {
     padding-top: 8vh;
+    padding-bottom: 8vh;
   }
+}
+
+.form-padding-for-android {
+  padding-top: 9.5vh;
 }
 
 .hint {
