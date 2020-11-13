@@ -35,17 +35,19 @@
   }
 }
 
-@media (max-width: 1200px) {
-  .hidden-on-smaller-viewports {
-    display: none !important;
-  }
-}
 
 @media (max-width: 991px) {
   .hidden-on-991px-viewport {
     display: none !important;
   }
 }
+
+@media (max-width: 1200px) {
+  .hidden-on-smaller-viewports {
+    display: none !important;
+  }
+}
+
 
 .paragraph {
   color: $text-light;
