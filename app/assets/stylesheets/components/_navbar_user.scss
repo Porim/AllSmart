@@ -52,21 +52,21 @@
 .navbar-mobile-flex {
   display: flex;
   align-items: center;
-  @media (max-width: 428px) {
+  @media (max-width: 576px) {
     flex-direction: column-reverse;
     justify-content: flex-end;
   }
 }
 
-ul.navbar-nav.mr-auto.navbar-mobile-flex > * {
-  @media (max-width: 428px) {
-    margin-top: 5.5vh !important;
-    margin-bottom: 5.5vh !important;
+.navbar-mobile-margin {
+  @media (max-width: 576px) {
+    margin-top: 7.5vh !important;
+    margin-bottom: 7.5vh !important;
   }
 }
 
-.navbar-mobile-flex > * {
-  margin: 0 !important;
+.navbar-mobile-flex>* {
+  margin: 0;
 }
 
 .user-tab-highlighter {

@@ -22,6 +22,7 @@
 </div>
 <% end %>
 <!-- this navbar style is render is user is not signed in and is not on landing page, the only difference being background color of the navbar div. -->
+<% if false %>
 <% if !user_signed_in? && !current_page?(root_path) %>
 <div class="navbar navbar-expand-sm navbar-light navbar-main navbar-colored">
   <%= link_to root_path, class: 'logo-container' do %>
@@ -38,11 +39,12 @@
       </li>
       <% end %>
       <li class="nav-button-margin">
-        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal sign-up-button-margin"%>
       </li>
     </ul>
   </div>
 </div>
+<% end %>
 <% end %>
 <!-- This style is renderd if user is signed in, additional tabs appear -->
 <%= render 'shared/navbar_user' if user_signed_in? && !((controller_name == "kids" && action_name == "profile") || (controller_name == "games" && action_name == "show")) %>

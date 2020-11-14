@@ -1,5 +1,10 @@
-<div class="form-page d-flex justify-content-center">
-  <div class="form">
+<div class="form-container d-flex align-items-center justify-content-center flex-column">
+  <div class="form-logo-container">
+    <%= link_to root_path, class: 'logo-container' do %>
+    <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'form-logo' %>
+    <% end %>
+  </div>
+  <div class="text-white form-box container login-form-box">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.input :email,
             required: false,
@@ -9,7 +14,10 @@
             required: false,
             input_html: { autocomplete: "current-password" } %>
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-    <%= f.button :submit, "Log in", class: "button orange d-flex justify-content-center mb-3"%>
+    <div class="form-button-container">
+      <%= f.button :submit, "Log in", class: "btn-form button orange d-flex justify-content-center mb-3 text-center"%>
+      <%= link_to 'Sign Up', new_user_registration_path, class: "btn-form mx-3 button greenish d-flex justify-content-center mb-3"  %>
+    </div>
     <%= render "devise/shared/links" %>
     <% end %>
   </div>

@@ -44,6 +44,12 @@
     min-width: 280px !important;
     height: 298px;
   }
+  
+   @media (max-width: 428px) {
+    min-width: 270px !important;
+    height: 240px;
+    min-height: 260px;
+  }
 
   &:hover {
     box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);

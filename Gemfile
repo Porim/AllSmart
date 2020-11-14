@@ -22,6 +22,7 @@ gem 'redis', '~> 4.0'
 gem 'cloudinary', '~> 1.12.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'possessive'
+gem 'browser'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
