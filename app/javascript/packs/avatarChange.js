@@ -5,7 +5,7 @@ const avatarChange = () => {
   const imageArray = [
     'https://res.cloudinary.com/djznzpxie/image/upload/v1599132664/qvzeie3uoo61g5e8zyb2.svg',
     'http://res.cloudinary.com/djznzpxie/image/upload/v1605278963/a2arj2cwknqttflqlfyw.jpg',
-    'http://res.cloudinary.com/djznzpxie/image/upload/okd26heqffak0vzi5oi3'
+    'https://res.cloudinary.com/djznzpxie/image/upload/v1599132664/qvzeie3uoo61g5e8zyb2.svg'
   ];
   const avatar = document.querySelector('.avatar-change');
   const avatarField = document.getElementById('kid_avatar_key');
