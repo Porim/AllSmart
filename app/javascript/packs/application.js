@@ -30,6 +30,7 @@ import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
 import { avatarChange } from './avatarChange'
+import { avatarUpload } from './avatarChange'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
 
 document.addEventListener('turbolinks:load', () => {
@@ -53,4 +54,8 @@ document.addEventListener('turbolinks:load', () => {
   if (document.querySelector('.avatar-change')) {
     avatarChange();
   }
+  if (document.querySelector('.avatar-change')) {
+    avatarUpload();
+  }
+
 });

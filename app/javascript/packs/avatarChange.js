@@ -1,5 +1,14 @@
 'use strict'
 
+const avatarUpload = () => {
+  const avatar = document.querySelector('.avatar-change');
+  const uploadedFile = document.getElementById('kid_photo');
+  uploadedFile.addEventListener('change', (event) => {
+    // console.log(e);
+    avatar.src = URL.createObjectURL(event.target.files[0])
+  })
+}
+
 let imageNumber = 0;
 const avatarChange = () => {
   const imageArray = [
@@ -20,8 +29,8 @@ const avatarChange = () => {
       imageNumber = 1;
     }
   })
-
 }
 
 
 export { avatarChange }
+export { avatarUpload }
