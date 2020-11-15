@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_15_152510) do
+ActiveRecord::Schema.define(version: 2020_11_15_200645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,7 +69,7 @@ ActiveRecord::Schema.define(version: 2020_11_15_152510) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "level"
-    t.string "avatar_key"
+    t.string "avatar_key", default: "okd26heqffak0vzi5oi3"
     t.index ["user_id"], name: "index_kids_on_user_id"
   end
 

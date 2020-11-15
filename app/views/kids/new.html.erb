@@ -5,6 +5,7 @@
       <%= f.input :first_name, input_html: { class: "name"}%>
       <%= f.input :last_name, input_html: { class: "name"}%>
       <%= f.input :age %>
+      <%= f.hidden_field :avatar_key %>
       <%= f.input :photo, as: :file %>
       <div class="d-flex justify-content-start">
         <%= f.submit class: ' btn-form button orange d-flex justify-content-center', value:'Add child' %>

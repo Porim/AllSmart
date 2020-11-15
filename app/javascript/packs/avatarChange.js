@@ -8,7 +8,7 @@ const avatarChange = () => {
     'http://res.cloudinary.com/djznzpxie/image/upload/okd26heqffak0vzi5oi3'
   ];
   const avatar = document.querySelector('.avatar-change');
-  const avatarField = document.getElementById('avatar_key');
+  const avatarField = document.getElementById('kid_avatar_key');
   avatar.addEventListener('click', () => {
     if (imageNumber < imageArray.length) {
       avatarField.value = imageArray[imageNumber];
