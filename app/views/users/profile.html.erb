@@ -6,10 +6,8 @@
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
       style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
       style="color:#e97234">s</span></h1>
-  <div class="container my-5 d-flex align-items-center justify-content-center">
-    <div class="row">
+  <div class="my-5 children-grid">
       <% @kids.each do |kid| %>
-      <div class="col-sm-12 col-md-4">
       <%= link_to kid_path(kid) do  %>
         <div class="d-flex flex-column align-items-center justify-content-center">
         <% if kid.photo.attached? %>
@@ -21,9 +19,8 @@
         <%= link_to 'Child mode', kid_profile_path(kid), class: 'mt-3 button greenish' if false%>
         </div>
       <% end %>
-      </div>
       <% end %>
-    </div>
+  </div>
   </div>
   <div class="card-button d-flex justify-content-center my-5">
     <%= link_to new_kid_path do %>

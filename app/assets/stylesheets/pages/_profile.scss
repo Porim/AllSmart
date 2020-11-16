@@ -5,10 +5,18 @@
   font-size: 40px
 }
 
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+}
+
 .img-kid {
   height: 100px !important;
   object-fit: contain;
   width: 100px !important;
 }
 
+.kid-grid-item {
+  width: 200px;
+}
 // ------------- IDs -------------
