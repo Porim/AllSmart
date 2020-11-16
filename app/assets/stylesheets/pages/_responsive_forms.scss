@@ -41,6 +41,10 @@
   color: white !important;
 }
 
+.hidden-upload {
+  display: none;
+}
+
 .login-form-box {
     @media (min-width: 768px) {
     width: 45%;
@@ -54,7 +58,12 @@
   text-transform: capitalize;
 }
 
-
+.upload-container {
+  &>* {
+    margin-left:3vw;
+    margin-right:3vw;
+  }
+}
 // ------------- IDs -------------
 
 

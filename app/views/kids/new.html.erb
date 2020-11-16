@@ -3,11 +3,23 @@
     <%= simple_form_for @kid do |f| %>
       <h4 class="mb-4">Add child to your profile</h4>
       <%= f.input :first_name, input_html: { class: "name"}%>
-      <%= f.input :last_name, input_html: { class: "name"}%>
       <%= f.input :age %>
-      <%= f.input :photo, as: :file %>
+      <%= f.hidden_field :avatar_key %>
+      <div>
+        <p>Choose avatar or upload your own!</p>
+        <div class="upload-container d-flex justify-content-center align-items-center mb-2">
+          <div class="d-flex flex-column align-items-center">
+            <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-large mb-2 avatar-change" %>
+            <p>Tap to change</p>
+          </div>
+          <div class="hidden-upload">
+            <%= f.input :photo, as: :file, label: false %>
+          </div>
+          <label class='button greenish' for="kid_photo">Select file</label>
+        </div>
+      </div>
       <div class="d-flex justify-content-start">
-        <%= f.submit class: ' btn-form button orange d-flex justify-content-center', value:'Add child' %>
+        <%= f.submit class: 'btn-form button orange d-flex justify-content-center', value:'Add child' %>
         <%= link_to 'Back to profile', profile_path(current_user), class: "btn-form white button d-flex justify-content-center align-items-center ml-2" %>
       </div>
     <% end %>
