@@ -53,9 +53,6 @@ document.addEventListener('turbolinks:load', () => {
   
   if (document.querySelector('.avatar-change')) {
     avatarChange();
-  }
-  if (document.querySelector('.avatar-change')) {
     avatarUpload();
   }
-
 });
