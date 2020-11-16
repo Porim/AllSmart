@@ -8,17 +8,17 @@
       style="color:#e97234">s</span></h1>
   <div class="my-5 children-grid">
       <% @kids.each do |kid| %>
-      <%= link_to kid_path(kid) do  %>
         <div class="d-flex flex-column align-items-center justify-content-center">
+      <%= link_to kid_path(kid) do  %>
         <% if kid.photo.attached? %>
         <%= cl_image_tag kid.photo.key, class: "avatar-profile", crop: :thumb, gravity: :face %>
         <% else %>
         <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile" %>
         <% end %>
         <p class="paragraph w-100 text-center my-2"> <%= kid.first_name %> </p>
-        <%= link_to 'Child mode', kid_profile_path(kid), class: 'mt-3 button greenish' if false%>
-        </div>
+        <%= link_to 'Child mode', kid_profile_path(kid), class: 'mt-3 button greenish' %>
       <% end %>
+        </div>
       <% end %>
   </div>
   </div>
