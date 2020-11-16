@@ -4,7 +4,10 @@ const avatarUpload = () => {
   const avatar = document.querySelector('.avatar-change');
   const uploadedFile = document.getElementById('kid_photo');
   uploadedFile.addEventListener('change', (event) => {
-    avatar.src = URL.createObjectURL(event.target.files[0])
+    avatar.src = URL.createObjectURL(event.target.files[0]);
+    uploadedFile.onload = function() {
+      URL.revokeObjectURL(avatar.src) // free memory
+    }
   })
 }
 
