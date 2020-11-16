@@ -29,8 +29,8 @@ import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
-import { avatarChange } from './avatrChoice'
-import { avatarUpload } from './avatrChoice'
+import { avatarChange } from './avatarChoice'
+import { avatarUpload } from './avatarChoice'
 // import { mobileFormScroll } from './focusScrollAndroid'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
 
