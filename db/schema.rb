@@ -69,7 +69,6 @@ ActiveRecord::Schema.define(version: 2020_11_16_142143) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "level"
-    t.string "avatar_key", default: "okd26heqffak0vzi5oi3"
     t.index ["user_id"], name: "index_kids_on_user_id"
   end
 

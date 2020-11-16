@@ -29,8 +29,7 @@ import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
-import { avatarChange } from './avatarChange'
-import { avatarUpload } from './avatarChange'
+// import { mobileFormScroll } from './focusScrollAndroid'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
 
 document.addEventListener('turbolinks:load', () => {
@@ -49,10 +48,5 @@ document.addEventListener('turbolinks:load', () => {
   }
   if (document.querySelector('.navbar-toggler')) {
     fullScreenNav();
-  }
-  
-  if (document.querySelector('.avatar-change')) {
-    avatarChange();
-    avatarUpload();
   }
 });
