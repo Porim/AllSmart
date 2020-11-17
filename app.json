@@ -1,14 +1,15 @@
 {
-  "environments": {
-    "test": {
-      "addons":[
-        "heroku-redis",
-        "heroku-postgresql"
-     ],
-      "scripts": {
-        "test-setup": "gem install rubocop",
-        "test": "rubocop ."
-      }
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
     }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rails db:seed"
   }
 }
