@@ -1,4 +1,9 @@
 {
+  "name": "allsmart-uk",
+  "description": "Learning platform.",
+  "keywords": [
+    "learning"
+  ],
   "addons": [
     {
       "plan": "heroku-postgresql:hobby-dev"
