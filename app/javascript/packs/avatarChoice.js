@@ -32,7 +32,6 @@ const imageArray = [
       avatarField.value = imageArray[imageNumber];
       avatar.src = imageArray[imageNumber];
       imageNumber++;
-      console.log(imageNumber);
     } else {
       avatarField.value = imageArray[imageNumber];
       avatar.src = imageArray[0];
