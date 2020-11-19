@@ -26,15 +26,15 @@ const imageArray = [
     'https://res.cloudinary.com/djznzpxie/image/upload/v1599125065/okd26heqffak0vzi5oi3.svg'
   ];
   const avatar = document.querySelector('.avatar-change');
-  // const avatarField = document.getElementById('kid_avatar_key');
+  const avatarField = document.getElementById('kid_avatar_key');
   avatar.addEventListener('click', () => {
     if (imageNumber < imageArray.length) {
-      // avatarField.value = imageArray[imageNumber];
+      avatarField.value = imageArray[imageNumber];
       avatar.src = imageArray[imageNumber];
       imageNumber++;
       console.log(imageNumber);
     } else {
-      // avatarField.value = imageArray[imageNumber];
+      avatarField.value = imageArray[imageNumber];
       avatar.src = imageArray[0];
       imageNumber = 1;
     }

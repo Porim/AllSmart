@@ -4,6 +4,7 @@
       <h4 class="mb-4">Add child to your profile</h4>
       <%= f.input :first_name, input_html: { class: "name"}%>
       <%= f.input :age %>
+      <%= f.hidden_field :avatar_key %>
       <div>
         <p>Choose avatar or upload your own!</p>
         <div class="upload-container d-flex justify-content-center align-items-center mb-2">
