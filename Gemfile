@@ -66,6 +66,3 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rubocop'
-
-# For email verification to store the host's mailer password
-gem 'dotenv-rails'
