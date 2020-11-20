@@ -7,11 +7,11 @@ Rails.application.configure do
     :enable_starttls_auto => true,
     :address => "mail.privateemail.com",
     :port => 587,
-    :domain => "privateemail.com",
-    :authentication => :login,
+    # :domain => "allsmart.uk",
+    :authentication => :plain,
     :user_name => "support@allsmart.uk",
     :password => ENV['EMAIL_PASSWORD']
-    }
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
