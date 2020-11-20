@@ -1,4 +1,4 @@
-<div class="container-fluid p-5 mt-5">
+<div class="container-fluid p-5 responsive-margin-top">
   <!-- renders kid cards and buttons if children exist -->
   <% if @kids.count > 0 %>
   <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
@@ -41,7 +41,7 @@
   </div>
   <% else %>
   <!-- render prompt to create a child if no children were created -->
-  <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+  <h1 class='welcome-to-profile py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
       style="color:#458a86">l</span><span style="color:#618679">l</span><span
       style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
       style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
