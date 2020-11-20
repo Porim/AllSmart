@@ -1,6 +1,17 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "https://allsmart-email-confirma-hgb9g2.herokuapp.com/" }
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: "localhost:3000" }
+  # Email verification
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "smtp.privateemail.com",
+    :port => 587,
+    :domain => "privateemail.com",
+    :authentication => :login,
+    :user_name => "support@privateemail.com",
+    :password => ENV['EMAIL_PASSWORD']
+  }
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -35,21 +46,6 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
   config.action_mailer.perform_caching = false
-
-  # Email verification
-  config.action_mailer.defailt_url_options = {:host => 'https://allsmart-email-confirma-hgb9g2.herokuapp.com/'}
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => "smtp.privateemail.com",
-    :port => 587,
-    :domain => "privateemail.com",
-    :authentication => :login,
-    :user_name => "support@privateemail.com",
-    :password => ENV['EMAIL_PASSWORD']
-  }
-
-
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
