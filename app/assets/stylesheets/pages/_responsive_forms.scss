@@ -58,9 +58,9 @@
   text-transform: capitalize;
 }
 
-.upload-container > * {
+.upload-container:first-child {
     margin-right: 3vw;
-    margin-left: 3vw;
+    // margin-left: 3vw;
   }
 
 // ------------- IDs -------------
