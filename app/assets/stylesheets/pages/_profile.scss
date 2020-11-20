@@ -11,4 +11,18 @@
   width: 100px !important;
 }
 
+.welcome-to-profile {
+  @media (max-width: 428px) {
+    text-align: center;
+  }
+}
+
+.responsive-margin-top {
+  @media (min-width:768px) {
+    margin-top: 3rem;
+  }
+  @media (max-width: 767px) {
+    margin-top: 0.2rem;
+  }
+}
 // ------------- IDs -------------
