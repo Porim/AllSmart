@@ -9,7 +9,7 @@ Rails.application.configure do
     :port => 587,
     :domain => "privateemail.com",
     :authentication => :login,
-    :user_name => "support@privateemail.com",
+    :user_name => "support@allsmart.uk",
     :password => ENV['EMAIL_PASSWORD']
   }
 

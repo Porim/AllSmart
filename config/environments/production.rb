@@ -5,11 +5,11 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     :enable_starttls_auto => true,
-    :address => "smtp.privateemail.com",
+    :address => "mail.privateemail.com",
     :port => 587,
     :domain => "privateemail.com",
     :authentication => :login,
-    :user_name => "support@privateemail.com",
+    :user_name => "support@allsmart.uk",
     :password => ENV['EMAIL_PASSWORD']
     }
 
