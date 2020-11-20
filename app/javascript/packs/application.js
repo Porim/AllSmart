@@ -29,6 +29,8 @@ import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
+import { avatarChange } from './avatarChoice'
+import { avatarUpload } from './avatarChoice'
 // import { mobileFormScroll } from './focusScrollAndroid'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
 
@@ -40,7 +42,8 @@ document.addEventListener('turbolinks:load', () => {
     AOS.init();
     landingArrow();
   }
-  if (document.getElementById('bg-image-landing') && screen.width > 428) {
+  if (document.getElementById('bg-image-landing') && screen.width >
+    428) {
     navbarScroll();
   }
   if (document.getElementById("arrow-footer")) {
@@ -48,5 +51,9 @@ document.addEventListener('turbolinks:load', () => {
   }
   if (document.querySelector('.navbar-toggler')) {
     fullScreenNav();
+  }
+  if (document.querySelector('.avatar-change')) {
+    avatarChange();
+    avatarUpload();
   }
 });
