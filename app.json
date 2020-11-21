@@ -20,7 +20,8 @@
   "environments": {
     "review": {
       "env": {
-        "CLOUDINARY_URL": "cloudinary://955779675252467:AUDLQ5nDjj_afoHSx8_XsKKUEOQ@djznzpxie"
+        "CLOUDINARY_URL": "cloudinary://955779675252467:AUDLQ5nDjj_afoHSx8_XsKKUEOQ@djznzpxie",
+        "EMAIL_PASSWORD": "leWagon(423)"
       }
     }
   }
