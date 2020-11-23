@@ -14,13 +14,10 @@
       "url": "heroku/ruby"
     }
   ],
-  "scripts": {
-    "postdeploy": "bundle exec rails db:migrate db:seed"
-  },
   "environments": {
     "review": {
-      "env": {
-        "CLOUDINARY_URL": "cloudinary://955779675252467:AUDLQ5nDjj_afoHSx8_XsKKUEOQ@djznzpxie"
+      "scripts": {
+        "postdeploy": "bundle exec rails db:migrate db:seed"
       }
     }
   }

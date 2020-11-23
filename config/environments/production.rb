@@ -1,6 +1,17 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.default_url_options = { host: "allsmart-email-confirma-hgb9g2.herokuapp.com" }
+  # Email verification
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address => "mail.privateemail.com",
+    :port => 587,
+    # :domain => "allsmart.uk",
+    :authentication => :plain,
+    :user_name => "support@allsmart.uk",
+    :password => ENV['EMAIL_PASSWORD']
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
