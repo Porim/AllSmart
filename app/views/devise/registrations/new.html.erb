@@ -16,7 +16,7 @@
                             autofocus: false, input_html: { class: "name"} %>
       <%= f.input :last_name,
                           required: true,
-                          autofocus: true%>
+                          autofocus: false%>
       <%= f.input :password,
                             required: true,
                             hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
