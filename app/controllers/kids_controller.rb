@@ -33,6 +33,11 @@ class KidsController < ApplicationController
     end
   end
   
+  def destroy
+    @kid.destroy
+    redirect_to profile_path(current_user)
+  end
+  
   def profile
     update_level
   end
