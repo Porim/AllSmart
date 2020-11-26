@@ -17,7 +17,7 @@
           <% if kid.photo.attached? %>
             <%= cl_image_tag kid.photo.key, class: "avatar-profile", crop: :thumb, gravity: :face %>
           <% else %>
-            <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile" %>
+            <img src='<%= kid.avatar_key %>' class="avatar-profile">
           <% end %>
         <p class="kids-name text-center my-3"> <%= kid.first_name %> 
           <span>
