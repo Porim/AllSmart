@@ -19,7 +19,7 @@
           <% else %>
             <img src='<%= kid.avatar_key %>' class="avatar-profile">
           <% end %>
-        <p class="kids-name text-center my-3"> <%= kid.first_name %> 
+        <p class="kids-name text-center my-3"> <%= kid.first_name.capitalize %> 
           <span>
             <%= link_to edit_kid_path(kid) do %>
               <i class="fas fa-pen p-1 kids-name"></i>
