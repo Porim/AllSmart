@@ -6,9 +6,9 @@
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
       style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
       style="color:#e97234">s</span></h1>
-  <div class="my-5 children-grid">
+  <div class="my-5 row justify-content-center">
       <% @kids.each do |kid| %>
-        <div class="d-flex flex-column align-items-center justify-content-center">
+        <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center my-4">
       <%= link_to kid_path(kid) do  %>
         <% if kid.photo.attached? %>
         <%= cl_image_tag kid.photo.key, class: "avatar-profile", crop: :thumb, gravity: :face %>
