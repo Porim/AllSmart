@@ -1,7 +1,7 @@
 <div class="container-fluid profile-padding mt-5 d-flex flex-column">
   <!-- renders kid cards and buttons if children exist -->
   <% if @kids.count > 0 %>
-  <h1 class='py-2 card-button text-center profile-margin'><span style="color:#0E91A1">Y</span><span
+  <h1 class='py-2 card-button text-center profile-margin font-weight-bold '><span style="color:#0E91A1">Y</span><span
       style="color:#458a86">o</span><span style="color:#618679">u</span><span
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
       style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
@@ -22,10 +22,10 @@
         <p class="kids-name text-center my-3"> <%= kid.first_name %> 
           <span>
             <%= link_to edit_kid_path(kid) do %>
-              <i class="fas fa-pen p-1 greenish-icon"></i>
+              <i class="fas fa-pen p-1 kids-name"></i>
             <% end %>
             <%= link_to kid_path(kid), method: :delete, remote: true, :data => {:confirm => 'Are you sure?'} do %>
-            <i class="fa fa-trash p-1 greenish-icon" aria-hidden="true"></i>
+            <i class="fa fa-trash p-1 kids-name" aria-hidden="true"></i>
             <% end %>
           </span>
         </p>
