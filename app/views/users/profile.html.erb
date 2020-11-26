@@ -6,7 +6,7 @@
       style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
       style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
       style="color:#e97234">s</span></h1>
-  <div class="my-4 row justify-content-center">
+  <div class="row justify-content-center">
       <% @kids.each do |kid| %>
         <% if (kid == @kids.last) && (browser.device.mobile? || browser.device.tablet?) %>
           <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center mt-4">
@@ -35,7 +35,7 @@
       <% end %>
   </div>
   </div>
-  <div class="card-button d-flex justify-content-center mb-5">
+  <div class="card-button d-flex justify-content-center my-3">
     <%= link_to new_kid_path do %>
     <button class="button orange mx-3">Add a child</button>
     <% end %>
