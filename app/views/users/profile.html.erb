@@ -1,47 +1,51 @@
-<div class="container-fluid p-5 responsive-margin-top">
+<div class="container-fluid profile-padding mt-5 d-flex flex-column">
   <!-- renders kid cards and buttons if children exist -->
-  <% if @kids.count > 0 %>
-  <h1 class='py-2 mt-5 card-button'><span style="color:#0E91A1">Y</span><span
-      style="color:#458a86">o</span><span style="color:#618679">u</span><span
-      style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
-      style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
-      style="color:#e97234">s</span></h1>
-  <div class="cards">
-    <% @kids.each do |kid| %>
-    <%= link_to kid_path(kid) do  %>
-    <div class="card-product py-5 my-5">
-      <% if kid.photo.attached? %>
-      <%= cl_image_tag kid.photo.key, class: "avatar-profile ml-4", crop: :thumb, gravity: :face %>
-      <% else %>
-      <img src="<%= kid.avatar_key %>" class = "avatar-profile ml-4">
-      <% end %>
-      <div class="card-product-infos">
-        <div class="child-text d-flex justify-content-between align-items-center">
-          <%= kid.first_name.capitalize %>
-          -
-          <%= kid.age %>
-          years old
-          <div class="test">
-            <%= link_to edit_kid_path(kid) do  %>
-            <i class="fas fa-pen p-1 greenish-icon"></i>
+  <div>
+    <% if @kids.count > 0 %>
+    <h1 class='py-2 card-button text-center profile-margin font-weight-bold '><span style="color:#0E91A1">Y</span><span
+        style="color:#458a86">o</span><span style="color:#618679">u</span><span
+        style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
+        style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
+        style="color:#e97234">s</span></h1>
+    <div class="row justify-content-center">
+      <% @kids.each do |kid| %>
+        <% if (kid == @kids.last) && (browser.device.mobile? || browser.device.tablet?) %>
+          <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center mt-4">
+        <% else %>
+          <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center my-4">
+        <% end %>
+        <%= link_to kid_path(kid) do  %>
+          <% if kid.photo.attached? %>
+            <%= cl_image_tag kid.photo.key, class: "avatar-profile", crop: :thumb, gravity: :face %>
+          <% else %>
+            <img src='<%= kid.avatar_key %>' class="avatar-profile">
+          <% end %>
+        <p class="kids-name text-center my-3"> <%= kid.first_name.capitalize %> 
+          <span>
+            <%= link_to edit_kid_path(kid) do %>
+              <i class="fas fa-pen p-1 kids-name"></i>
             <% end %>
-          </div>
+            <%= link_to kid_path(kid), method: :delete, remote: true, :data => {:confirm => 'Are you sure?'} do %>
+            <i class="fa fa-trash p-1 kids-name" aria-hidden="true"></i>
+            <% end %>
+          </span>
+        </p>
+        <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish' %>
+        <% end %>
         </div>
-      </div>
-      <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish mr-4' %>
-    </div>
-    <% end %>
-    <% end %>
-    <div class="card-button">
-      <%= link_to new_kid_path do %>
-      <button class="button orange">Add a child</button>
       <% end %>
-      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button ml-2 greenish' %>
+      </div>
     </div>
+    <div class="card-button d-flex justify-content-center justify-content-bottom my-3">
+      <%= link_to new_kid_path do %>
+      <button class="button orange mx-3">Add a child</button>
+      <% end %>
+      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button mx-3 greenish' %>
+    </div>
+    <% else %>
   </div>
-  <% else %>
   <!-- render prompt to create a child if no children were created -->
-  <h1 class='welcome-to-profile py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+  <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
       style="color:#458a86">l</span><span style="color:#618679">l</span><span
       style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
       style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
