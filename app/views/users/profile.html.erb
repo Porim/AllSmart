@@ -1,12 +1,13 @@
 <div class="container-fluid profile-padding mt-5 d-flex flex-column">
   <!-- renders kid cards and buttons if children exist -->
-  <% if @kids.count > 0 %>
-  <h1 class='py-2 card-button text-center profile-margin font-weight-bold '><span style="color:#0E91A1">Y</span><span
-      style="color:#458a86">o</span><span style="color:#618679">u</span><span
-      style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
-      style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
-      style="color:#e97234">s</span></h1>
-  <div class="row justify-content-center">
+  <div>
+    <% if @kids.count > 0 %>
+    <h1 class='py-2 card-button text-center profile-margin font-weight-bold '><span style="color:#0E91A1">Y</span><span
+        style="color:#458a86">o</span><span style="color:#618679">u</span><span
+        style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
+        style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
+        style="color:#e97234">s</span></h1>
+    <div class="row justify-content-center">
       <% @kids.each do |kid| %>
         <% if (kid == @kids.last) && (browser.device.mobile? || browser.device.tablet?) %>
           <div class="col-md-4 col-sm-12 d-flex flex-column align-items-center mt-4">
@@ -33,17 +34,18 @@
         <% end %>
         </div>
       <% end %>
+      </div>
+    </div>
+    <div class="card-button d-flex justify-content-center my-3">
+      <%= link_to new_kid_path do %>
+      <button class="button orange mx-3">Add a child</button>
+      <% end %>
+      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button mx-3 greenish' %>
+    </div>
+    <% else %>
   </div>
-  </div>
-  <div class="card-button d-flex justify-content-center my-3">
-    <%= link_to new_kid_path do %>
-    <button class="button orange mx-3">Add a child</button>
-    <% end %>
-    <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button mx-3 greenish' %>
-  </div>
-  <% else %>
   <!-- render prompt to create a child if no children were created -->
-  <h1 class='welcome-to-profile py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
+  <h1 class='py-2 mt-5'>Welcome to <span style="color:#0E91A1">A</span><span
       style="color:#458a86">l</span><span style="color:#618679">l</span><span
       style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
       style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
