@@ -4,7 +4,8 @@
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'form-logo' %>
     <% end %>
   </div>
-    <div class="text-white form-box container">
+  
+  <div class="text-white form-box container">
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= f.error_notification %>
       <%= f.input :email,
