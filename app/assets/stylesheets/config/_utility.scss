@@ -35,14 +35,27 @@
   }
 }
 
+
+@media (max-width: 991px) {
+  .hidden-on-991px-viewport {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .hidden-on-smaller-viewports {
     display: none !important;
   }
 }
 
-@media (max-width: 991px) {
-  .hidden-on-991px-viewport {
+@media (max-width: 576px) {
+  .hidden-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .hidden-on-576px-viewport {
     display: none !important;
   }
 }

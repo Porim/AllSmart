@@ -1,0 +1,74 @@
+// ------------- Classes -------------
+
+.form-box {
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+  @media (max-width: 768px) {
+    width: 95%;
+    h4 {
+      font-size: 18px !important;
+    }
+  }
+}
+
+.form-button-container {
+  display: flex;
+  justify-content: center;
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+}
+
+.form-container {
+  padding: 5vh 0;
+  min-height: 100vh;
+  background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')
+}
+
+.form-padding {
+  @media (min-width: 1200px) {
+    padding-top: 8vh;
+    padding-bottom: 8vh;
+  }
+}
+
+.form-padding-for-android {
+  padding-top: 9.5vh;
+}
+
+.hint {
+  color: white !important;
+}
+
+.hidden-upload {
+  display: none;
+}
+
+.login-form-box {
+    @media (min-width: 768px) {
+    width: 45%;
+  }
+    @media (max-width: 768px) {
+    width: 85%;
+  }
+}
+
+.name {
+  text-transform: capitalize;
+}
+
+.upload-container:first-child {
+    margin-right: 3vw;
+    // margin-left: 3vw;
+  }
+
+// ------------- IDs -------------
+
+
+#form-logo {
+  width: 40vw;
+  max-width: 420px;
+  min-width: 260px;
+  margin-bottom: 10vh;
+}

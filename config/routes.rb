@@ -10,4 +10,9 @@ Rails.application.routes.draw do
     get "/update_level", to: "kids#update_level"
   end
   resources :allowed_games, only: [:destroy]
+  resources :users do
+    member do
+      get :confirm_email
+    end
+  end
 end

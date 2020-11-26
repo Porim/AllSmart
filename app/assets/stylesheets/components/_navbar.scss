@@ -40,8 +40,7 @@
 
 .navbar-main {
   justify-content: space-between;
-  padding-top: 12px;
-  padding-bottom: 4px;
+  padding: 8px;
   position: fixed;
 
   @media (max-width: 428px) {
@@ -63,7 +62,7 @@
 }
 
 .navbar-colored {
-  background: $green;
+  background: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg');
 }
 
 

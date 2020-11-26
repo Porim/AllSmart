@@ -2,15 +2,14 @@ const fullScreenNav = () => {
   const navToggler = document.querySelector('.navbar-toggler');
   const navbarNav = document.querySelector('.navbar-nav');
   const navbarMain = document.querySelector('.navbar-main');
-  const mobileRocket = document.getElementById('mobile-rocket');
   const decolorNavbarMain = () => {
     navbarMain.style.transition = '0.15s';
-    navbarMain.style.background = 'none';
+    navbarMain.style.background = 'url(https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg)';
   }
   let counter = 0;
   navToggler.addEventListener('click', () => {
     counter += 1
-    if (counter % 2 === 0 && mobileRocket) {
+    if (counter % 2 === 0) {
       setTimeout(decolorNavbarMain, 300);
     } else {
       navbarMain.style.transition = '0.0s';

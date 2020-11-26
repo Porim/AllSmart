@@ -1,13 +1,17 @@
-<div class="form-page d-flex justify-content-center">
-  <div class="form">
+<div class="form-container d-flex align-items-center justify-content-center flex-column text-center">
+  <div class="form-logo-container">
+    <%= link_to root_path, class: 'logo-container' do %>
+    <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'form-logo' %>
+    <% end %>
+  </div>
+    <div class="text-white form-box container">
     <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= f.error_notification %>
       <h4 class="mb-4">Recover password</h4>
       <%= f.input :email,
-                  required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
-      <%= f.button :submit, "Recover password", class: "button orange d-flex justify-content-center"%>
+      <%= f.button :submit, "Recover password", class: "mx-auto  mt-4 button orange d-flex justify-content-center"%>
     <% end %>
   </div>
 </div>

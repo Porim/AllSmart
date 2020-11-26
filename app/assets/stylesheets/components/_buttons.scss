@@ -57,8 +57,10 @@
   }
 }
 
-
-
+.btn-form {
+  min-width: 80px !important;
+  padding: 10px 36px !important;
+}
 
 .greenish {
   background: $green;
@@ -90,6 +92,20 @@
       background: $orange-hover !important;
       text-decoration: none !important;
       color: white !important;
+    }
+  }
+}
+
+.white {
+  background: transparent;
+  border-color: white;
+  transition: 0.3s;
+  max-width: 140px;
+  @media all and (min-width: 1024px) {
+    &:hover {
+      background: white !important;
+      text-decoration: none !important;
+      color: $text !important;
     }
   }
 }

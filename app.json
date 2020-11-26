@@ -1,0 +1,24 @@
+{
+  "name": "allSmart",
+  "description": "Learning platform.",
+  "keywords": [
+    "learning"
+  ],
+  "addons": [
+    {
+      "plan": "heroku-postgresql:hobby-dev"
+    }
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ],
+  "environments": {
+    "review": {
+      "scripts": {
+        "postdeploy": "bundle exec rails db:migrate db:seed"
+      }
+    }
+  }
+}

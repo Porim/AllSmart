@@ -2,7 +2,7 @@
 <% if current_page?(profile_path(current_user)) || current_page?(games_path) || (controller_name == "kids" && action_name == "show") %>
   <div class="navbar navbar-expand-sm navbar-light user-nav navbar-main navbar-colored">
 <% else %>
-  <div class="navbar navbar-expand-sm navbar-light navbar-main" id="navbar-main">
+  <div class="navbar navbar-expand-sm navbar-light user-nav navbar-main" id="navbar-main">
 <% end %>
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>
@@ -14,30 +14,42 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto navbar-mobile-flex">
+        <li class='navbar-mobile-margin'>
+          <%= link_to "LOG OUT", destroy_user_session_path, method: :delete, class: "  hidden-on-576px-viewport" %>
+        </li>
+        <% if current_page?(edit_user_registration_path) %>
+        <li class='navbar-mobile-margin'>
+          <span class='about-us px-2 mx-1 user-tab-highlighter'>PROFILE</span>
+        </li class='navbar-mobile-margin'>
+        <% else %>
+        <li class='navbar-mobile-margin'>
+          <%= link_to "PROFILE", edit_user_registration_path, class: "hidden-on-576px-viewport"   %>
+        </li>
+        <% end %>
         <li>
-          <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1', id: 'home-on-scroll'  %>
+          <%= link_to 'HOME', root_path, class: 'about-us px-2 mx-1 hidden-on-mobile', id: 'home-on-scroll'  %>
         </li>
         <% if current_page?(games_path) %>
-        <li>
+        <li class='navbar-mobile-margin'>
           <span class='about-us px-2 mx-1 user-tab-highlighter'>
             GAMES</span>
         </li>
         <% else %>
-        <li>
+        <li class='navbar-mobile-margin'>
           <%= link_to 'GAMES', games_path(subject: 'All'), class:'about-us px-2 mx-1', id: 'browse-on-scroll' %>
         </li>
         <% end %>
         <% if current_page?(profile_path(current_user)) %>
-        <li>
+        <li class='navbar-mobile-margin'>
           <span class='about-us px-2 mx-1 user-tab-highlighter'>
             CHILDREN</span>
         </li>
         <% else %>
-        <li>
-          <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2 mr-3', id: 'children-on-scroll' %>
+        <li class='navbar-mobile-margin'>
+          <%= link_to 'CHILDREN', profile_path(current_user), class: 'about-us px-2', id: 'children-on-scroll' %>
         </li>
         <% end %>
-        <li class="dropdown">
+        <li class="dropdown hidden-on-mobile">
           <div class="d-flex align-items-center user-nav-container" id="navbarDropdown"
             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <% if current_user.photo.present? %>
