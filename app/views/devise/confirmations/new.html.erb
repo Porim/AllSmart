@@ -1,4 +1,9 @@
 <div class="form-container d-flex align-items-center justify-content-center flex-column">
+  <div class="form-logo-container">
+    <%= link_to root_path, class: 'logo-container' do %>
+    <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'form-logo' %>
+    <% end %>
+  </div>
   <h2>Resend confirmation instructions</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
