@@ -45,6 +45,10 @@
   object-fit: cover;
   object-position: center center;
   width: 160px;
+  @media (max-width: 428px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 // ------------- IDs -------------
