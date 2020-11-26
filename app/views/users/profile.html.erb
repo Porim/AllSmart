@@ -19,7 +19,13 @@
           <% else %>
             <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-profile" %>
           <% end %>
-        <p class="kids-name w-100 text-center my-3"> <%= kid.first_name %> </p>
+        <p class="kids-name w-100 text-center my-3"> <%= kid.first_name %> 
+          <span>
+            <%= link_to edit_kid_path(kid) do
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          end
+          </span>
+        </p>
         <%= link_to 'Child mode', kid_profile_path(kid), class: 'button greenish' %>
         <% end %>
         </div>
