@@ -32,9 +32,6 @@
 .kids-name {
   @extend %profile-font-colors;
   font-size: 20px !important;
-  @media (max-width: 428px) {
-    font-size: 16px !important;
-  }
 }
 
 .profile-margin {
