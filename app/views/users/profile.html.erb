@@ -8,7 +8,7 @@
         style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
         style="color:#e97234">s</span>
         <%= link_to new_kid_path do %> 
-        <% if current_user.allowed_games.count == 0  %>
+        <% if current_user.allowed_games.count == 0 && current_user.kids.count == 1 %>
         <i class="fas fa-plus ml-2 arrow-font-a-orange with-pulse"></i>
         <% else %>
         <i class="fas fa-plus ml-2 arrow-font-a-orange"></i>
