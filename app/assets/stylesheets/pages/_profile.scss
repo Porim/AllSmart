@@ -50,4 +50,22 @@
   }
 }
 
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(233, 114, 52, 0.8);
+    border-radius: 50%;
+  }
+  
+  100% {
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(0,0,0,0);
+  }
+}
+
+.with-pulse {
+  animation-name: pulse-animation;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 3;
+}
 // ------------- IDs -------------
