@@ -1,20 +1,22 @@
-<h2>Resend confirmation instructions</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= f.error_notification %>
-  <%= f.full_error :confirmation_token %>
-
-  <div class="form-inputs">
-    <%= f.input :email,
-                required: true,
-                autofocus: true,
-                value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
-                input_html: { autocomplete: "email" } %>
+<div class="form-container d-flex align-items-center justify-content-center flex-column">
+  <div class="form-logo-container">
+    <%= link_to root_path, class: 'logo-container' do %>
+    <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'form-logo' %>
+    <% end %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
-  </div>
-<% end %>
+  <div class="text-white form-box container login-form-box">
+    <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+      <%= f.error_notification %>
+      <%= f.full_error :confirmation_token %>
+      <%= f.input :email,
+                  autofocus: true,
+                  value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email),
+                  input_html: { autocomplete: "email" } %>
 
-<%= render "devise/shared/links" %>
+      <div class="form-button-container">
+        <%= f.button :submit, "Resend confirmation instructions", class: "mx-auto  mt-4 button orange d-flex justify-content-center" %>
+      </div>
+    <% end %>
+  </div>
+</div>
