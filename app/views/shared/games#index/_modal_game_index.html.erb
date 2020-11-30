@@ -48,9 +48,9 @@
                   <%= kid.first_name %>
                 </p>
                 <% if kid.photo.attached? %>
-                <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
+                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
                 <% else %>
-                <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
+                  <img src='<%= kid.avatar_key %>', class="avatar-drop ml-2" >
                 <% end %>
                 <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
                 <% else %>
@@ -60,9 +60,9 @@
                     <%= kid.first_name %>
                   </p>
                   <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
+                    <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
                   <% else %>
-                  <%= cl_image_tag "okd26heqffak0vzi5oi3", class: "avatar-drop ml-2" %>
+                    <img src='<%= kid.avatar_key %>', class="avatar-drop ml-2" >
                   <% end %>
                 </div>
                 <% end %>
