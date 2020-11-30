@@ -39,11 +39,16 @@
 }
 
 .avatar-profile {
+  border: 4px solid $orange;
   border-radius: 50%;
-  height: 120px;
+  height: 160px;
   object-fit: cover;
   object-position: center center;
-  width: 120px;
+  width: 160px;
+  @media (max-width: 428px) {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 // ------------- IDs -------------

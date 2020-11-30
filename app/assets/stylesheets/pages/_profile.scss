@@ -11,18 +11,34 @@
   width: 100px !important;
 }
 
-.welcome-to-profile {
+.kids-name {
+  font-weight: bold;
+  background-color: #f3ec78;
+  background-image: linear-gradient(160deg, #136C77, #e97234, #f3ec78);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px !important;
   @media (max-width: 428px) {
-    text-align: center;
+    font-size: 16px !important;
   }
 }
 
-.responsive-margin-top {
-  @media (min-width:768px) {
-    margin-top: 3rem;
-  }
-  @media (max-width: 767px) {
-    margin-top: 0.2rem;
+.profile-margin {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  @media (max-width: 428px) {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 }
+
+.profile-padding {
+  padding: 3rem 3rem 3rem 3rem;
+  @media (max-width: 428px) {
+    padding: 3rem 3rem 0.5rem 3rem;
+  }
+}
+
 // ------------- IDs -------------
