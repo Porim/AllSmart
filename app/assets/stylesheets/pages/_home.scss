@@ -1,19 +1,15 @@
 // ------------- Classes -------------
 
+.arrow-font-a {
+  color: $green-dark !important;
+  vertical-align: middle;
+}
 
 .awesome-icons {
   color: $orange;
   margin-top: 16px;
   position: absolute;
   top: 4px;
-}
-
-.box-for-hover {
-  -moz-box-sizing: border-box !important;
-  -ms-box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  box-sizing: border-box !important;
-  height: 284.153px;
 }
 
 .card-container {
@@ -133,28 +129,6 @@
 }
 
 // ------------- IDs -------------
-
-#arrow {
-  color: $green-dark !important;
-}
-
-@media (min-width: 768px) {
-  #arrow {
-    top: 102px;
-  }
-}
-
-@media (min-width: 992px) {
-  #arrow {
-    top: 70px;
-  }
-}
-
-@media (min-width: 1200px) {
-  #arrow {
-    top: 36px;
-  }
-}
 
 #banner-h1 {
   color: white !important;

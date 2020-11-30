@@ -7,6 +7,11 @@
 
 .card-column-margin > * {
   margin-bottom: 1.5rem;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  height: 284.153px;
 }
 
 .card-trash {
