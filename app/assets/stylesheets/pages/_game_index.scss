@@ -6,6 +6,18 @@
 
 .all-games {
   margin-top: 20vh;
+  @media (max-width: 428px) {
+    margin-top: 74px;
+  }
+  @media (min-width: 568px) and (max-width:600px) and (orientation: landscape) {
+    margin-top: 74px;
+  }
+  @media (min-width: 600px) and (max-width:800px) and (orientation: landscape) {
+    margin-top: 114px;
+  }
+  @media (min-width: 801px) and (max-width: 867px) and (orientation: landscape) {
+    margin-top: 32vh;
+  }
 }
 
 .allowed-card {
@@ -38,6 +50,18 @@
   width: 200px;
 }
 
+.filter-container {
+  @media (min-width: 300px) {
+    justify-content: space-around;
+  }
+  @media (min-width: 768px) {
+    justify-content: start;
+  }
+  @media (max-width: 800px) and (orientation: landscape) {
+    justify-content: space-around;
+  }
+
+}
 .games {
   background: white;
   border: 1px solid #eee;

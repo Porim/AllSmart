@@ -1,7 +1,7 @@
 <!-- render games for particular subject tab -->
 <div class="row">
   <% @games.each do |game| %>
-  <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
+  <div class="col-12 col-md-6 col-lg-4 my-sm-2 my-lg-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
     <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}#{game.subject}"} do %>
     <div class="search-game-card">
       <div>
