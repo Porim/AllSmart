@@ -133,10 +133,12 @@
   border: 1px solid rgb(229, 229, 229);
   border-radius: 13px;
   box-shadow: none;
-  min-height: 376px;
+  min-height: calc(100% + 10px);
   padding-top: 16px;
   transition: all 0.4s ease;
-  width: 265px;
+  max-width:265px;
+  min-width: 210px;
+  width: calc(20vw - 40px);
 
   &:hover {
     box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
