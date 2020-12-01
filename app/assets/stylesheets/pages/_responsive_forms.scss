@@ -21,7 +21,13 @@
 }
 
 .form-container {
-  padding: 5vh 0;
+  padding: 5vmax 0;
+  @media (max-width: 320px) {
+    padding: 9vmax 0;
+  }
+  @media (max-width: 600px) and (orientation: landscape) {
+    padding: 9vmax 0;
+  }
   min-height: 100vh;
   background-image: url('https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg')
 }
@@ -45,6 +51,11 @@
   display: none;
 }
 
+.landscape-margin-top {
+  @media (orientation: landscape) and (max-width: 1000px) {
+    margin-top: 6vmax;
+  }
+}
 .login-form-box {
     @media (min-width: 768px) {
     width: 45%;

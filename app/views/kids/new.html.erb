@@ -1,7 +1,7 @@
 <div class="form-container d-flex align-items-center justify-content-center flex-column">
     <div class="text-white form-box container">
     <%= simple_form_for @kid do |f| %>
-      <h4 class="mb-4">Add child to your profile</h4>
+      <h4 class="mb-4 landscape-margin-top">Add child to your profile</h4>
       <%= f.input :first_name, input_html: { class: "name"}%>
       <%= f.input :age %>
       <%= f.hidden_field :avatar_key %>
