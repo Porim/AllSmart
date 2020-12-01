@@ -1,4 +1,5 @@
-<div class="form-container d-flex align-items-center justify-content-center flex-column">
+<% padding = browser.platform.android? && browser.device.mobile? ? 'form-padding-for-android' : '' %>
+<div class="form-container d-flex align-items-center justify-content-center flex-column <%= padding %>">
     <div class="text-white form-box container">
     <%= simple_form_for @kid do |f| %>
       <h4 class="mb-4 landscape-margin-top">Add child to your profile</h4>
