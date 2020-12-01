@@ -6,7 +6,15 @@
         style="color:#458a86">o</span><span style="color:#618679">u</span><span
         style="color:#7c826b">r </span><span style="color:#8a8065">K</span><span
         style="color:#987e5e">i</span><span style="color:#b37a50">d</span><span
-        style="color:#e97234">s</span></h1>
+        style="color:#e97234">s</span>
+        <%= link_to new_kid_path do %> 
+        <% if current_user.allowed_games.count == 0 && current_user.kids.count == 1 %>
+        <i class="fas fa-plus ml-2 arrow-font-a-orange with-pulse"></i>
+        <% else %>
+        <i class="fas fa-plus ml-2 arrow-font-a-orange"></i>
+        <% end %>
+        <% end %>
+    </h1>
     <div class="row justify-content-center">
       <% @kids.each do |kid| %>
         <% if (kid == @kids.last) && (browser.device.mobile? || browser.device.tablet?) %>
@@ -22,11 +30,15 @@
           <% end %>
         <p class="kids-name text-center my-3"> <%= kid.first_name.capitalize %> 
           <span>
+            <%= link_to games_path(subject: 'All') do %>
+              <i class="fas fa-gamepad p-1 kids-name"></i>
+            <% end %>
             <%= link_to edit_kid_path(kid) do %>
               <i class="fas fa-pen p-1 kids-name"></i>
             <% end %>
+            <i class="fas fa-cogs p-1 kids-name"></i>
             <%= link_to kid_path(kid), method: :delete, remote: true, :data => {:confirm => 'Are you sure?'} do %>
-            <i class="fa fa-trash p-1 kids-name" aria-hidden="true"></i>
+              <i class="fa fa-trash p-1 kids-name" aria-hidden="true"></i>
             <% end %>
           </span>
         </p>
@@ -37,10 +49,6 @@
       </div>
     </div>
     <div class="card-button d-flex justify-content-center justify-content-bottom my-3">
-      <%= link_to new_kid_path do %>
-      <button class="button orange mx-3">Add a child</button>
-      <% end %>
-      <%= link_to 'Add a game', games_path(subject: 'All'), class: 'button mx-3 greenish' %>
     </div>
     <% else %>
   </div>
@@ -50,8 +58,8 @@
       style="color:#8a8065">S</span><span style="color:#987e5e">m</span><span
       style="color:#b37a50">a</span><span style="color:#e97234">r</span><span
       style="color:#0E91A1">t</span><span style="color:#8a8065">!</span></h1>
-  <p class="paragraph py-2">To get started, please create your
-    child's profile, then create a list of games they are allowed to
+  <p class="paragraph py-2">To get started, please add
+    child to your profile profile, then create a list of games they are allowed to
     play. To enable the child to play a game, enter child mode - their personal page, which they can only leave with your permission.</p>
   <div class="d-flex justify-content-center">
     <%= link_to new_kid_path do %>
