@@ -1,4 +1,22 @@
+// ------------- SASS Extensions -------------
+
+%profile-font-colors {
+  font-weight: bold;
+  background-color: #f3ec78;
+  background-image: linear-gradient(160deg, #136C77, #e97234, #f3ec78);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 // ------------- Classes -------------
+
+.arrow-font-a-orange {
+  @extend %profile-font-colors;
+  vertical-align: middle;
+}
+
 
 .child-text a {
   color: $text;
@@ -12,17 +30,8 @@
 }
 
 .kids-name {
-  font-weight: bold;
-  background-color: #f3ec78;
-  background-image: linear-gradient(160deg, #136C77, #e97234, #f3ec78);
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @extend %profile-font-colors;
   font-size: 20px !important;
-  @media (max-width: 428px) {
-    font-size: 16px !important;
-  }
 }
 
 .profile-margin {
@@ -41,4 +50,22 @@
   }
 }
 
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px rgba(233, 114, 52, 0.8);
+    border-radius: 50%;
+  }
+  
+  100% {
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px rgba(0,0,0,0);
+  }
+}
+
+.with-pulse {
+  animation-name: pulse-animation;
+  animation-delay: 0s;
+  animation-duration: 1.5s;
+  animation-iteration-count: 3;
+}
 // ------------- IDs -------------

@@ -5,8 +5,13 @@
   font-weight: bold;
 }
 
-.card-column-margin {
+.card-column-margin > * {
   margin-bottom: 1.5rem;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+  height: 284.153px;
 }
 
 .card-trash {
@@ -36,13 +41,13 @@
   margin-right: auto;
   margin-left: auto;
   transition: all 0.4s ease;
-  min-width: 226.5px;
+  min-width: 216px;
   max-width: 299px;
   height: 304px;
   width: calc(19vw - 66px);
   @media (max-width: 1000px) {
     min-width: 280px !important;
-    height: 298px;
+    height: 260px;
   }
   
    @media (max-width: 428px) {
