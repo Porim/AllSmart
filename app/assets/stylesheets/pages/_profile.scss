@@ -32,6 +32,7 @@
 .kids-name {
   @extend %profile-font-colors;
   font-size: 20px !important;
+  white-space: nowrap;
 }
 
 .profile-margin {
