@@ -1,5 +1,8 @@
 <p>Welcome to allSmart <%= @user.first_name %>!</p>
 
+<p>allSmart is a demo project originally started during final two weeks of Le Wagon batch #423 in London Summer 2020.</p>
+<p>If you interested to find out more about the project, please have look at the README on official GitHub page - https://github.com/Porim/AllSmart .</p>
+
 <p>You can confirm your account email through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
