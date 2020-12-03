@@ -2,7 +2,7 @@
 <div class="form-container d-flex align-items-center justify-content-center flex-column">
     <div class="form-padding-for-android text-white form-box container">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-      <h4>Edit
+      <h4 class='landscape-margin-top'>Edit
         <%= current_user.first_name.capitalize.possessive %> profile
       </h4>
       <%= f.error_notification %>

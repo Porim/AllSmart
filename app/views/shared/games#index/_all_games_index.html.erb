@@ -6,7 +6,7 @@
 <!-- renders games in All Games tab seprated by hr and subject -->
 <div class="row">
   <% @games.where(subject: subject).each do |game| %>
-  <div class="col-12 col-md-6 col-lg-4 my-5 d-flex flex-column justify-content-center align-items-center hover-dimensions">
+  <div class="col-12 col-md-6 col-lg-4 d-flex flex-column justify-content-center align-items-center hover-dimensions my-sm-2 my-lg-5">
     <%= link_to '#', data: { toggle: "modal", target: "#record-#{game.id}"} do %>
     <div class="search-game-card">
       <div>
