@@ -9,6 +9,9 @@
         <h4 class="modal-title">
           <%= game.title %>
         </h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
       <div class="modal-body">
         <div class="d-flex">
@@ -33,7 +36,7 @@
       </div>
       <div class="modal-footer d-flex justify-content-between align-items-center flex-nowrap">
         <div class="children-dropdown">
-          <div class="d-flex align">
+          <div class="d-flex justify-content-center align">
             <button id='game-card-dropdown-button' class="orange button dropdown-toggle text-center"
               type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -41,21 +44,10 @@
                 play</p>
             </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <% current_user.kids.each do |kid| %>
-              <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container mt-1 p-2">
-                <% if kid.allowed_games.where(game_id: game.id).exists? %>
-                <p class="paragraph modal-kid-name">
-                  <%= kid.first_name %>
-                </p>
-                <% if kid.photo.attached? %>
-                  <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
-                <% else %>
-                  <img src='<%= kid.avatar_key %>', class="avatar-drop ml-2" >
-                <% end %>
-                <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
-                <% else %>
-                <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id: game.id, method: :post, class: 'paragraph', remote: true do %>
-                <div class="d-flex justify-content-center align-items-center">
+              <% if current_user.kids.length > 0 %>
+                <% current_user.kids.each do |kid| %>
+                <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container   mt-1 p-2">
+                  <% if kid.allowed_games.where(game_id: game.id).exists? %>
                   <p class="paragraph modal-kid-name">
                     <%= kid.first_name %>
                   </p>
@@ -64,16 +56,32 @@
                   <% else %>
                     <img src='<%= kid.avatar_key %>', class="avatar-drop ml-2" >
                   <% end %>
+                  <span><i class="fas fa-check ml-3 allowed-card text-success"></i></span>
+                  <% else %>
+                  <%= link_to kid_allowed_games_path(kid,game.id, subject: modal_param), game_id:   game.id, method: :post, class: 'paragraph', remote: true do %>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <p class="paragraph modal-kid-name">
+                      <%= kid.first_name %>
+                    </p>
+                    <% if kid.photo.attached? %>
+                      <%= cl_image_tag kid.photo.key, class: 'avatar-drop ml-2' %>
+                    <% else %>
+                      <img src='<%= kid.avatar_key %>', class="avatar-drop ml-2" >
+                    <% end %>
+                  </div>
+                  <% end %>
+                  <% end %>
                 </div>
                 <% end %>
-                <% end %>
-              </div>
+              <% else %>
+                <div class="p-dropdown d-flex flex-row align-items-center allowed-info-container   mt-1 p-2">
+                  <p class="age-cat">Please <%= link_to "create", new_kid_path(), class: 'arrow-font-a-orange'  %> child's profile 😝</p>
+                </div>
               <% end %>
             </div>
           </div>
         </div>
         <div>
-          <button type="button" class="greenish button" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
