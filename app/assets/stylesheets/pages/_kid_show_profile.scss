@@ -8,6 +8,7 @@
   font-size: 20px;
 }
 
+
 .games-kid-show-page {
   min-height: calc(100vh - 232px - 50px);
   padding-bottom: 8%;
@@ -19,4 +20,13 @@
   width: 60%;
 }
 
+.margin-top-no-games {
+  @media (min-width: 576px) {
+    margin-top: 3rem;
+  }
+  
+  @media (max-width: 426px) {
+    margin-top: 1rem;
+  }
+}
 // ------------- IDs -------------

@@ -11,11 +11,11 @@
       </li>
       <% if user_signed_in? || current_page?(root_path) %>
       <li class="mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "button font-weight-normal"%>
+        <%= link_to "LOG IN", new_user_session_path, class: "button font-weight-normal button-login"%>
       </li>
       <% end %>
       <li class="nav-button-margin">
-        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal sign-up-button-margin"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal sign-up-button-margin button-login"%>
       </li>
     </ul>
   </div>
@@ -35,11 +35,11 @@
       </li>
       <% unless user_signed_in? || current_page?(root_path) %>
       <li class="mx-2">
-        <%= link_to "LOG IN", new_user_session_path, class: "button font-weight-normal"%>
+        <%= link_to "LOG IN", new_user_session_path, class: "button font-weight-normal button-login"%>
       </li>
       <% end %>
       <li class="nav-button-margin">
-        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal sign-up-button-margin"%>
+        <%= link_to "SIGN UP", new_user_registration_path, class: "button orange font-weight-normal sign-up-button-margin button-login"%>
       </li>
     </ul>
   </div>
