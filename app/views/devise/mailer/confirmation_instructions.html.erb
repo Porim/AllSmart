@@ -1,5 +1,99 @@
-<p>Welcome <%= @email %>!</p>
+<!DOCTYPE html>
+<html>
 
-<p>You can confirm your account email through the link below:</p>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
+  <link href='https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'rel='stylesheet'>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    
+    img {
+      -ms-interpolation-mode:bicubic;
+    }  
+   .paragraph {
+     color: #575757;
+     font-size: 18px;
+     font-weight: 400;
+     line-height: 25px;
+     letter-spacing: 0;
+     padding-left: 0;
+     width: auto;
+ }  
+   
+    body {
+      font-family: "Montserrat", "Helvetica", "sans-serif";
+    }
+    .email-container {
+      max-width: 600px;
+      min-width: 200px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .email-image-container > * {
+      max-width: 600px;
+      min-width: 200px;
+      width: 100%;
+      margin-left: auto;
+      height: calc(100% / 2);
+      max-height: 282px;
+      min-height: 140px;
+      margin-right: auto;
+    }
+    .email-link {
+      font-weight: bold;
+      color: #136C77 !important;
+      font-size: 18px;
+    }
+    
+    .text-center {
+      text-align: center;
+    }
+    .signature > * {
+      font-weight: bold;
+    }
+</style>
+</head>
+<body width='100%' style='margin: 0; padding: 0 !important; mso-line-height-rule: exactly;'>
+  <div class="email-container">
+    <div class="email-image-container">
+      <img src="https://res.cloudinary.com/djznzpxie/image/upload/v1604930354/Screenshot_2020-11-09_at_13.59.03_ltx6s5.png" border='0' alt=""> 
+    </div>
+  <h1 style='text-align: center;'>Welcome to
+    <span style="color:#0E91A1">a</span><span style="color:#458a86">l</span><span
+      style="color:#618679">l</span><span style="color:#8a8065">S</span><span
+      style="color:#987e5e">m</span><span style="color:#b37a50">a</span><span
+      style="color:#e97234">r</span><span style="color:#0E91A1">t</span>
+    <%= @user.first_name %>!</h1>
+  <p class='paragraph'>
+    allSmart is a demo project originally started during final two
+    weeks of <a href="https://www.lewagon.com/" class='email-link'>Le Wagon</a> batch #423 in London, Summer 2020.<br>
+    If you are interested to find out more about the project, please
+    have look at the README on official <a href="https://github.com/Porim/AllSmart"
+      class='email-link'>GitHub page</a>.
+  </p>
+  <p class='paragraph'>Currently we only have one fully working game for demo purposes, but we are working on increasing number of games as well as back-end functionality for parents to have more control over their children learning experience</p>
+  <p class='paragraph'>
+    You can confirm your account email through the following link:
+  </p>
+  <%= link_to confirmation_url(@resource, confirmation_token: @token), style: 'text-decoration: none;' do %>
+    <div class='text-center' style='border:1px solid #E97234; border-radius: 25px; padding: clamp(10px, 3vw, 14px) clamp(10px, 5vw, 60px);'>
+      <span class='email-link'>Confirm my account 🚀</span>
+    </div>
+  <% end %>
+  <p class='paragraph'>Thanks
+    for joining and have a great day!
+  </p>
+  <p class="paragraph signature"> Team 
+  <span style="color:#0E91A1">a</span><span style="color:#458a86">l</span><span
+      style="color:#618679">l</span><span style="color:#8a8065">S</span><span
+      style="color:#987e5e">m</span><span style="color:#b37a50">a</span><span
+      style="color:#e97234">r</span><span style="color:#0E91A1">t</span>
+  </p>
+    </div>
+</body>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+</html>
