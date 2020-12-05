@@ -29,6 +29,11 @@
   }
 }
 
+.dropdown-toggle::after {
+  @media (max-width: 680px) {
+    margin-left: 1rem;
+  }
+}
 @media (min-width: 992px) {
   .first-container {
     height: auto;
