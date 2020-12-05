@@ -107,6 +107,10 @@
 .h2-game-title {
   height: 100%;
   padding: 0 4px;
+  @media (max-width:340px) {
+    font-size: 16px !important;
+  }
+  white-space: nowrap;
 }
 
 .hover-dimensions {
@@ -131,7 +135,7 @@
   padding-top: 16px;
   transition: all 0.4s ease;
   max-width:265px;
-  min-width: 210px;
+  min-width: 230px;
   width: calc(20vw - 40px);
 
   &:hover {
@@ -150,11 +154,7 @@
   object-position: center center;
   width: 90%;
 }
-
-.show-card {
-  margin-top: 52%;
-}
-
+  
 .with-delete {
   height: 430px;
 }

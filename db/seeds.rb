@@ -52,25 +52,29 @@ end
 # end
 
 
-puts "creating 10 fake users with 2 fake kids each"
+# puts "creating 10 fake users with 2 fake kids each"
 
 
-10.times do 
-  first_name = Faker::Name.first_name
-  last_name = Faker::Name.last_name
-  user = User.new(first_name: first_name, last_name: last_name, email: Faker::Internet.email, password: ("a".."z").to_a.sample(8))
-  user.save
-  2.times do
-    kid = Kid.create(first_name: Faker::Name.first_name, last_name: last_name, age: [4, 5, 6, 7].sample, user_id: user.id)
-    Game.all.each do |game|
-      AllowedGame.create(game_id: game.id, kid_id: kid.id)
-    end
-  end
-end
+# 10.times do 
+#   first_name = Faker::Name.first_name
+#   last_name = Faker::Name.last_name
+#   user = User.new(first_name: first_name, last_name: last_name, email: Faker::Internet.email, password: ("a".."z").to_a.sample(8))
+#   user.save
+#   2.times do
+#     kid = Kid.create(first_name: Faker::Name.first_name, last_name: last_name, age: [4, 5, 6, 7].sample, user_id: user.id)
+#     Game.all.each do |game|
+#       AllowedGame.create(game_id: game.id, kid_id: kid.id)
+#     end
+#   end
+# end
 puts 'Creating test user with kids and games'
 
-me = User.create(first_name: 'Nikita', last_name: 'Visencuk', email: 'nikita@visencuk.com', password: '123456')
-User.create(first_name: 'Miro', last_name: 'Developer', email: 'miro@allsmart.uk', password: 'lewagon')
+me = User.new(first_name: 'Nikita', last_name: 'Visencuk', email: 'nikita@visencuk.com', password: '123456')
+miro = User.new(first_name: 'Miro', last_name: 'Developer', email: 'miro@allsmart.uk', password: 'lewagon')
+me.skip_confirmation!
+miro.skip_confirmation!
+miro.save!
+me.save!
 # test_kids = [Kid.create(first_name: 'Paul', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me), Kid.create(first_name: 'Anne', last_name: 'Visencuk', age: [4, 5, 6, 7].sample, user: me)]
 
 # test_kids.each do |kid|

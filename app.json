@@ -17,7 +17,7 @@
   "environments": {
     "review": {
       "scripts": {
-        "postdeploy": "bundle exec rails db:migrate db:seed"
+        "postdeploy": "bundle exec rake db:seed"
       }
     }
   }
