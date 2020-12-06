@@ -76,6 +76,17 @@
   padding: 8px;
 }
 
+@media (max-width: 680px) {
+  .collapse:not(.show) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 680px) {
+  .navbar-expand-sm .navbar-toggler {
+    display: block !important;
+  }
+}
 // ------------- IDs -------------
 
 #children-on-scroll {
