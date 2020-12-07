@@ -18,7 +18,7 @@
   width: auto;
   min-width: 82px;
 
-  @media (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       text-decoration: none !important;
       background: white;
@@ -79,7 +79,7 @@
   border: none;
   transition: 0.3s;
 
-  @media all and (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       color: white !important;
       background: $green-hover !important;
@@ -99,7 +99,7 @@
   border-color: $orange;
   transition: 0.3s;
 
-  @media all and (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: $orange-hover !important;
       text-decoration: none !important;
@@ -113,7 +113,7 @@
   border-color: white;
   transition: 0.3s;
   max-width: 140px;
-  @media all and (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: white !important;
       text-decoration: none !important;
@@ -142,7 +142,7 @@
   color: $green !important;
   display: inline-block;
 
-  @media all and (min-width: 1024px) {
+  @media (hover: hover) {
     &:hover {
       background: $green;
       color: white !important;
