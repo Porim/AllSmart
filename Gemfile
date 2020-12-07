@@ -23,6 +23,8 @@ gem 'cloudinary', '~> 1.12.0'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'possessive'
 gem 'browser'
+gem 'sidekiq'
+gem 'sidekiq-failures', '~> 1.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
