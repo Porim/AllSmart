@@ -19,8 +19,10 @@
 .for-user-js {
   color: $text-light !important;
 
-  &:hover {
-    color: white !important;
+  @media (min-width: 700px) and (hover: hover) {
+    &:hover {
+      color: white !important;
+    }
   }
 }
 
@@ -35,18 +37,19 @@
 .user-nav-container {
   color: white;
   padding: 15px 70px 15px 10px;
-  
-  &:hover {
-  background: $green-hover;
-  color: white !important;
-  border-radius: 8px;  
-  }
-  
-  &:hover>* {
-  background: $green-hover;
-  color: white !important;
-  }
 
+  @media (min-width: 700px) and (hover: hover) {
+    &:hover {
+      background: $green-hover;
+      color: white !important;
+      border-radius: 8px;
+    }
+
+    &:hover>* {
+      background: $green-hover;
+      color: white !important;
+    }
+  }
 }
 
 .navbar-mobile-flex {
