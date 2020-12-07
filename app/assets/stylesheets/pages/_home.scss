@@ -89,12 +89,15 @@
   margin: 0 4px;
   transition: all 0.4s ease;
   width: 80px;
+
   @media (max-width: 991px) {
     width: 60px;
   }
 
-  &:hover {
-    margin-top: 12px;
+  @media (hover: hover) {
+    &:hover {
+      margin-top: 12px;
+    }
   }
 }
 
