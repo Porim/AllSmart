@@ -55,12 +55,13 @@
     height: 240px;
     min-height: 260px;
   }
-
-  &:hover {
-    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-    margin-top: 8px;
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+      margin-top: 8px;
+    }
   }
-}
+  }
 
 .game-card-image {
   border-top-left-radius: 13px;
