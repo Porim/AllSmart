@@ -100,7 +100,9 @@
   color: $text-light !important;
   width: 51px;
 
-  &:hover {
-    color: white !important;
+  @media (min-width: 700px) and (hover: hover) {
+    &:hover {
+      color: white !important;
+    }
   }
 }

@@ -51,8 +51,10 @@
     padding: 0px 10px;
     text-decoration: none;
 
-    &:hover {
-      opacity: 1;
+    @media (min-width: 700px) and (hover: hover) {
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
