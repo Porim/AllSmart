@@ -29,15 +29,12 @@ import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
-import { removeFullScreenNav } from './mobileNavbar'
-import { decolorNavbarMain } from './mobileNavbar'
 import { avatarChange } from './avatarChoice'
 import { avatarUpload } from './avatarChoice'
 // import { mobileFormScroll } from './focusScrollAndroid'
 //If statements are added to prevent calling of JS functions on irrelevant pages.
 
 document.addEventListener('turbolinks:load', () => {
-  removeFullScreenNav();
   if (document.getElementById("player1-race")) {
     displayQuestion(0, 0);
   }
