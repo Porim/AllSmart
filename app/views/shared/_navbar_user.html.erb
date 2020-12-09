@@ -2,7 +2,7 @@
 <% if current_page?(profile_path(current_user)) || current_page?(games_path) || (controller_name == "kids" && action_name == "show") %>
   <div class="navbar navbar-expand-sm navbar-light user-nav navbar-main navbar-colored">
 <% else %>
-  <div class="navbar navbar-expand-sm navbar-light user-nav navbar-main" id="navbar-main">
+  <div class="navbar navbar-expand-md navbar-light user-nav navbar-main" id="navbar-main">
 <% end %>
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= cl_image_tag 'ue0taitpubdpislidb8b', id: 'logo' %>

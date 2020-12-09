@@ -1,9 +1,4 @@
 // ------------- Classes -------------
-@media (max-width: 700px) {
-  .collapse:not(.show) {
-    display: none !important;
-  }
-}
 
 .dropdown-toggle::after {
   display: inline-block;
@@ -53,37 +48,21 @@
 
 }
 
-@media (max-width: 700px) {
-  .navbar-expand-sm .navbar-toggler {
-    display: block !important;
-  }
-}
 
-@media (max-width: 700px) {
-  .navbar-expand-sm {
-    flex-flow: wrap !important;
-  }
-}
 
 .navbar-mobile-flex {
   align-items: center;
-  @media (max-width: 700px) {
+  @media (max-width: 729px) {
     flex-direction: column-reverse !important;
     justify-content: flex-end;
     width: 100%;
   }
 }
 
-@media (min-width: 576px) and (max-width: 700px) {
-  .navbar-expand-sm .navbar-collapse {
-    flex-basis: 100% !important;
-    flex-grow: 0 !important;
-    align-items: center !important;
-  }
-}
+
 
 .navbar-mobile-margin {
-  @media (max-width: 700px) {
+  @media (max-width: 729px) {
     margin-top: 7.5vh !important;
     margin-bottom: 7.5vh !important;
   }
@@ -100,6 +79,49 @@
   padding: 8px;
 }
 
+
+// ------------- Overwriting default bootstrap collapse -------------
+// ------------- breakpoint for navbar collapsing -------------
+
+@media (min-width: 729px) {
+  .navbar-expand-md .navbar-collapse {
+    display: flex !important;
+    flex-basis: auto;
+  }
+}
+
+@media (min-width: 729px) {
+  .navbar-expand-md .navbar-toggler {
+    display: none;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 729px) {
+  .navbar-expand-sm .navbar-collapse {
+    flex-basis: 100% !important;
+    flex-grow: 0 !important;
+    align-items: center !important;
+  }
+}
+
+@media (max-width: 729px) {
+  .navbar-expand-sm .navbar-toggler {
+    display: block !important;
+  }
+}
+
+@media (max-width: 729px) {
+  .navbar-expand-sm {
+    flex-flow: wrap !important;
+  }
+}
+
+@media (max-width: 729px) {
+  .collapse:not(.show) {
+    display: none !important;
+  }
+}
+
 // ------------- IDs -------------
 
 #children-on-scroll {
@@ -110,7 +132,5 @@
 #navbar-first-name {
   font-size: 18px;
 }
-
-
 
 
