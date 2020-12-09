@@ -1,7 +1,7 @@
 // ------------- Classes -------------
 
 .aligned {
-  height: 172px;
+  height: auto;
   margin-bottom: 18px !important;
   text-align: center;
   width: 80%;
@@ -13,7 +13,7 @@
 }
 
 .aligned-left {
-  height: 182px;
+  height: auto;
   margin-bottom: 18px !important;
   text-align: left;
   width: 100%;
@@ -74,12 +74,6 @@
   .phone-centered-text {
     text-align: center !important;
     margin-top: 1em;
-  }
-}
-
-@media (max-width: 767px) {
-  .mobile-margin-top {
-    margin-top: 11em;
   }
 }
 
