@@ -4,7 +4,13 @@ const fullScreenNav = () => {
   const navbarMain = document.querySelector('.navbar-main');
   const decolorNavbarMain = () => {
     navbarMain.style.transition = '0.15s';
-    navbarMain.style.background = 'url(https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg)';
+    navbarMain.style.background =
+      'url(https://res.cloudinary.com/djznzpxie/image/upload/v1598455211/mvtrrjfbxypqirgizjd5.svg)';
+    navbarNav.style.minHeight = '';
+    navbarNav.style.background = '';
+    document.body.style.height = '';
+    document.body.style.position = '';
+    document.body.style.overflow = '';
   }
   let counter = 0;
   navToggler.addEventListener('click', () => {
