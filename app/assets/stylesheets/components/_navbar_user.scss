@@ -79,49 +79,6 @@
   padding: 8px;
 }
 
-
-// ------------- Overwriting default bootstrap collapse -------------
-// ------------- breakpoint for navbar collapsing -------------
-
-@media (min-width: 729px) {
-  .navbar-expand-md .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-}
-
-@media (min-width: 729px) {
-  .navbar-expand-md .navbar-toggler {
-    display: none;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 729px) {
-  .navbar-expand-sm .navbar-collapse {
-    flex-basis: 100% !important;
-    flex-grow: 0 !important;
-    align-items: center !important;
-  }
-}
-
-@media (max-width: 729px) {
-  .navbar-expand-sm .navbar-toggler {
-    display: block !important;
-  }
-}
-
-@media (max-width: 729px) {
-  .navbar-expand-sm {
-    flex-flow: wrap !important;
-  }
-}
-
-@media (max-width: 729px) {
-  .collapse:not(.show) {
-    display: none !important;
-  }
-}
-
 // ------------- IDs -------------
 
 #children-on-scroll {

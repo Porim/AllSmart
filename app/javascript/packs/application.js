@@ -43,7 +43,7 @@ document.addEventListener('turbolinks:load', () => {
     landingArrow();
   }
   if (document.getElementById('bg-image-landing') && screen.width >
-    729) {
+    767) {
     navbarScroll();
   }
   if (document.getElementById("arrow-footer")) {
