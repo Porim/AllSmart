@@ -27,10 +27,12 @@
   background: #3f485a;
   border: 1px solid #454e5f;
 
-  &:hover {
-    background: #313846;
-    transition: 0.3s;
-    border: 1px solid #313846;
+  @media (hover: hover) {
+    &:hover {
+      background: #313846;
+      transition: 0.3s;
+      border: 1px solid #313846;
+    }
   }
 }
 

@@ -14,19 +14,13 @@
 
 .card-container {
   background: $background;
-  margin-top: 176px;
-  @media (max-width: 766px) {
-    margin-top: 40px;
-  }
-  @media (width: 768px) {
-    margin-top: 216px;
+  margin-top: 60px;
+  @media (max-width: 428px) {
+    margin-top: 30px;
   }
   width: 100vw;
   min-height: 446px;
   padding-bottom: 1rem;
-  @media (max-width: 428px) {
-    min-height: 464px;
-  }
 }
 
 .dropdown-toggle::after {
@@ -94,12 +88,15 @@
   margin: 0 4px;
   transition: all 0.4s ease;
   width: 80px;
+
   @media (max-width: 991px) {
     width: 60px;
   }
 
-  &:hover {
-    margin-top: 12px;
+  @media (hover: hover) {
+    &:hover {
+      margin-top: 12px;
+    }
   }
 }
 

@@ -55,12 +55,13 @@
     height: 240px;
     min-height: 260px;
   }
-
-  &:hover {
-    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-    margin-top: 8px;
+  @media (min-width: 700px) and (hover: hover)  {
+    &:hover {
+      box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+      margin-top: 8px;
+    }
   }
-}
+  }
 
 .game-card-image {
   border-top-left-radius: 13px;
@@ -86,8 +87,10 @@
   transition: transform .4s cubic-bezier(.47, 3.32, .31, -.36), opacity .3s,
     -webkit-transform .5s cubic-bezier(.47, 3.32, .31, -.36);
 
-  &:hover {
-    transform: scale(1.1);
+  @media (min-width: 700px) and (hover: hover)  {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
@@ -134,13 +137,15 @@
   min-height: calc(100% + 10px);
   padding-top: 16px;
   transition: all 0.4s ease;
-  max-width:265px;
+  max-width: 265px;
   min-width: 230px;
   width: calc(20vw - 40px);
 
-  &:hover {
-    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-    margin-top: 8px;
+  @media (min-width: 700px) and (hover: hover)  {
+    &:hover {
+      box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+      margin-top: 8px;
+    }
   }
 }
 

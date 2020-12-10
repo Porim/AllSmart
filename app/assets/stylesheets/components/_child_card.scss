@@ -9,12 +9,13 @@
   margin: 0 auto;
   overflow: hidden;
   width: 80%;
-
-  &:hover {
-    box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
-    margin-top: 24px;
-  }
-
+  
+  @media (min-width: 700px) and (hover: hover) {
+   &:hover {
+     box-shadow: 0 0 18px rgba(20, 20, 20, 0.6);
+     margin-top: 24px;
+   }
+ }
   h2 {
     font-size: 16px;
     font-weight: bold;
