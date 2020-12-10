@@ -3,7 +3,7 @@
 <% modal_id = locals[:subject_param] ? "#{game.id}#{game.subject}" : "#{game.id}" %>
 <% modal_param = game.subject if locals[:subject_param] %>
 <div id="record-<%=modal_id%>" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">
