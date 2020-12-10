@@ -1,4 +1,5 @@
 // ------------- Classes -------------
+
 .dropdown-toggle::after {
   display: inline-block;
   margin-left: 2em;
@@ -27,8 +28,6 @@
 }
 
 .user-nav {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 8px;
@@ -52,17 +51,21 @@
   }
 }
 
+
+
 .navbar-mobile-flex {
-  display: flex;
   align-items: center;
-  @media (max-width: 576px) {
-    flex-direction: column-reverse;
+  @media (max-width: 729px) {
+    flex-direction: column-reverse !important;
     justify-content: flex-end;
+    width: 100%;
   }
 }
 
+
+
 .navbar-mobile-margin {
-  @media (max-width: 576px) {
+  @media (max-width: 729px) {
     margin-top: 7.5vh !important;
     margin-bottom: 7.5vh !important;
   }
@@ -89,3 +92,5 @@
 #navbar-first-name {
   font-size: 18px;
 }
+
+

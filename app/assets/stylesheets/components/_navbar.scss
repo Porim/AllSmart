@@ -43,11 +43,11 @@
   padding: 8px;
   position: fixed;
 
-  @media (max-width: 428px) {
+  @media (max-width: 767px) {
     position: absolute;
   }
 
-  @media (orientation: landscape) and (max-height: 428px) {
+  @media (orientation: landscape) and (max-height: 400px) {
     position: absolute;
 
   }

@@ -23,6 +23,11 @@
   padding-bottom: 1rem;
 }
 
+.dropdown-toggle::after {
+  @media (max-width: 680px) {
+    margin-left: 1rem;
+  }
+}
 @media (min-width: 992px) {
   .first-container {
     height: auto;
@@ -113,6 +118,7 @@
 .testimonial-container {
   background: white;
   min-height: 210px;
+  max-height: 360px;
   @media (max-width: 320px) {
     margin: 2.5rem 0;
   }

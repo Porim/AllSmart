@@ -1,12 +1,20 @@
 'use strict'
 
 const avatarUpload = () => {
-  const avatar = document.querySelector('.avatar-change');
-  const uploadedFile = document.getElementById('kid_photo');
-  uploadedFile.addEventListener('change', (event) => {
-    avatar.src = URL.createObjectURL(event.target.files[0]);
-    uploadedFile.onload = function() {
-      URL.revokeObjectURL(avatar.src) // free memory
+  const uploadContainer = document.getElementById('upload-prompt');
+  const avatarPreview = document.querySelector('.avatar-change');
+  const uploadField = document.getElementById('kid_photo');
+  uploadField.addEventListener('change', (event) => {
+    const userUpload = event.target.files;
+    if (userUpload.length === 1 && userUpload[0].size <= 2097152) {
+      uploadContainer.innerText = 'Tap to pick';
+      avatarPreview.src = URL.createObjectURL(userUpload[0]);
+    }
+    else {
+      uploadContainer.innerText = 'Please upload only one image. Maximum size is 2MB';
+    }
+    uploadField.onload = function() {
+      URL.revokeObjectURL(avatarPreview.src) // free memory
     }
   })
 }
