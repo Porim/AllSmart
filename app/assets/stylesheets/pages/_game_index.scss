@@ -13,12 +13,12 @@
     margin-top: 74px;
   }
   
-  @media (min-width: 500px) and (max-width: 700px) {
-    margin-top: 90px;
+  @media (min-width: 500px) and (max-width: 549px) {
+    margin-top: 88px;
   }
   
-  @media (min-width: 701px) and (max-width: 767px) {
-    margin-top: 114px;
+  @media (min-width: 550px) and (max-width: 767px) {
+    margin-top: 80px;
   }
   
   @media (min-width: 768px) {
@@ -60,14 +60,12 @@
   @media (min-width: 300px) and (max-width: 768px) {
     justify-content: space-around;
   }
+
   @media (min-width: 768px) {
     justify-content: start;
   }
-  @media (max-width: 800px) and (orientation: landscape) {
-    justify-content: space-around;
-  }
-
 }
+
 .games {
   background: white;
   border: 1px solid #eee;
