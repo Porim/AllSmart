@@ -1,11 +1,12 @@
 // ------------- Classes -------------
 
 .about-us {
-  &:hover {
-    text-decoration: underline !important;
+  @media (min-width: 700px) and (hover: hover) {
+    &:hover {
+      text-decoration: underline !important;
+    }
   }
 }
-
 .about-us-container {
   font-size: clamp(16px, calc(1vw + 6px), 18px);
   font-weight: normal;
