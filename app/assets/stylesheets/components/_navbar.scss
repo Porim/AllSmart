@@ -47,12 +47,7 @@
   @media (max-width: 767px) {
     position: absolute;
   }
-
-  @media (orientation: landscape) and (max-height: 768px) {
-    position: absolute;
-
-  }
-
+  
   top: 0;
   width: 100vw;
   z-index: 500;
