@@ -27,6 +27,7 @@ import "bootstrap";
 import { navbarScroll } from './navbar_on_scroll'
 import { ask, moveForward, displayQuestion } from './wagon_race'
 import { topFunction } from './scrollTopButtons'
+import { scrollToSection } from './scrollTopButtons'
 import { landingArrow } from './orangeArrow'
 import { fullScreenNav } from './mobileNavbar'
 import { avatarChange } from './avatarChoice'
@@ -41,6 +42,7 @@ document.addEventListener('turbolinks:load', () => {
   if (document.getElementById("bg-image-landing")) {
     AOS.init();
     landingArrow();
+    scrollToSection();
   }
   if (document.getElementById('bg-image-landing') && screen.width >
     767) {

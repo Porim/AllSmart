@@ -7,7 +7,7 @@
   <div class="d-flex align-items-center">
     <ul class="navbar-nav d-flex align-items-center">
       <li class="mx-2 about-us-container">
-        <%= link_to 'About Us', root_path(anchor: 'anchor-for-about-us'), class: 'about-us', id: 'about-us-link' %>
+        <p class='d-inline-block about-us text-white mb-0' id='about-us-link'>About Us</p>
       </li>
       <% if user_signed_in? || current_page?(root_path) %>
       <li class="mx-2">
@@ -31,7 +31,7 @@
   <div class="d-flex align-items-center">
     <ul class="navbar-nav d-flex align-items-center">
       <li class="mx-2 about-us-container">
-        <%= link_to 'About Us', root_path(anchor: 'anchor-for-about-us'), class:'about-us', id: 'about-us-js' %>
+        About Us
       </li>
       <% unless user_signed_in? || current_page?(root_path) %>
       <li class="mx-2">
